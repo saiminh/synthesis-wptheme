@@ -1,0 +1,38 @@
+@use '../utilities/mq';
+.hero-home {
+  min-height: calc( 100vh - 150px) ;
+  position: relative;
+  display: flex;
+}
+.hero-home h1 {
+  align-self: flex-end;
+}
+.home .wp-block-group:not(.synthesis-newsletter-subscribe) > .wp-block-buttons {
+  justify-content: end;
+  @include mq.for-tablet-portrait-up{
+    justify-content: start;
+    margin-left: 66.666%;
+  }
+}
+.home {
+  h1, h2 {
+    margin-left: 0;
+    @include mq.for-tablet-portrait-up {
+      max-width: 85%;
+    }
+    @include mq.for-tablet-portrait-up {
+      max-width: 66.666%;
+    }
+  }
+  .entry-content > p,
+  .entry-content > .wp-block-group > p {
+    @include mq.for-tablet-portrait-up {
+      max-width: 66.666%;
+    }
+  }
+  .wp-block-column {
+    h1, h2, p {
+      max-width: 100%;
+    }
+  }
+}

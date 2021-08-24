@@ -1,0 +1,18 @@
+{
+  "name": "synthesiscapital",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx webpack --watch --mode development & sass sass/style.scss style.css --watch & sass sass/editor/base.scss style-editor.min.css --watch",
+    "prod": "npx webpack --mode production && sass sass/style.scss style.css --style compressed && sass sass/editor/base.scss style-editor.min.css --style compressed"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.38.0",
+    "webpack": "^5.51.0",
+    "webpack-cli": "^4.8.0"
+  }
+}

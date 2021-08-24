@@ -1,0 +1,106 @@
+@use '../utilities/mq';
+@use '../utilities/vars' as vars;
+@use '../utilities/mixins';
+
+#primary-menu {
+  display: none;
+  @include mq.for-tablet-landscape-up {
+    display: flex;
+  }
+}
+.nav-toggled {
+  #primary-menu {
+    @include mq.for-phone-only {
+      display: block;
+      position: absolute;
+    }
+  }
+}
+.site-header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding: vars.$gap-space;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+.site-header .logo {
+  display: inline-block;
+  overflow: auto;
+  width: 140px;
+  height: 58px;
+  position: relative;
+}
+.site-header .logo svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: absolute;
+  bottom: 0;
+}
+.site-header .logo svg #logo-fill {
+  transform: translateY(0%);
+  transition: all 1s ease-out;
+}
+[class*="bluesection"] .site-header .logo svg #logo-fill {
+  transform: translateY(66.666%);
+}
+
+// Nav List
+ul.nav-menu {
+  list-style: none;
+  display: flex;
+  transform: translateY(0%);
+  transition: transform .2s ease-out;
+  & li {
+    display: block;
+  }
+}
+
+.nav-hidden ul.nav-menu {
+  @include mq.for-tablet-portrait-up{
+    transform: translateY(-200%);
+  }
+}
+
+ul.nav-menu a,
+.menu-toggle {
+  @include mixins.poly-btn("blue", "outline");
+  transform: scale(1);
+  transition: transform .05s linear;
+  margin-right: .25em;
+}
+ul.nav-menu .current_page_item a {
+  @include mixins.poly-btn("white", "outline" );
+}
+ul.nav-menu a:hover,
+.menu-toggle:hover {
+  transform: scale(1.05);
+}
+// ul.nav-menu:hover .current_page_item a {
+  // opacity: .5;
+// }
+// ul.nav-menu:hover .current_page_item a:hover {
+  // opacity: 1;
+// }
+// [class*="bluesection"] {
+//   ul.nav-menu a,
+//   .menu-toggle {
+//     @include mixins.poly-btn("white", "outline");
+//   }
+//   ul.nav-menu a:hover,
+//   ul.nav-menu .current_page_item a,
+//   .menu-toggle:hover {
+//     @include mixins.poly-btn("white", "fill" );
+//   }
+// }
+.menu-toggle,
+.home .menu-toggle {
+  @include mq.for-tablet-landscape-up {
+    display: none;
+  }
+}

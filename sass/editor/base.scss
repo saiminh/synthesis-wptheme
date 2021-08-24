@@ -1,0 +1,118 @@
+@use '../utilities/vars' as vars;
+@use '../utilities/mq';
+@use '../utilities/mixins';
+@use '../typography';
+
+h1, h2 {
+  font-size: 31px;
+  line-height: 85%;
+  text-indent: 1em;
+  @include mq.for-tablet-portrait-up {
+    font-size: 35px;
+    line-height: .95;
+  }
+  @include mq.for-tablet-landscape-up {
+    font-size: 55px;
+  }
+}
+.entry-content > h1,
+.entry-content > h2,
+.entry-content > .wp-block-group > h1, 
+.entry-content > .wp-block-group > h2 {
+  @include mq.for-tablet-portrait-up {
+    max-width: 85%;
+  }
+  @include mq.for-tablet-portrait-up {
+    max-width: 66.666%;
+  }
+}
+p {
+  margin-bottom: 1.5em;
+  font-size: 18px;
+  line-height: .94;
+  @include mq.for-tablet-portrait-up {
+    font-size: 22px;
+    line-height: .97;
+  }
+  @include mq.for-tablet-landscape-up {
+    font-size: 36px;
+  }
+}
+.entry-content > p,
+.entry-content > .wp-block-group > p {
+  @include mq.for-tablet-portrait-up {
+    max-width: 66.666%;
+  }
+}
+.wp-block-column {
+  h1, h2, p {
+    max-width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+.label {
+  font-size: 26px;
+  line-height: 1;
+  @include mq.for-tablet-portrait-up {
+    font-size: 20px;
+  }
+  @include mq.for-tablet-landscape-up {
+    font-size: 31px;
+  }
+}
+.wp-block-button__link {
+  border: none;
+  cursor: pointer;
+  @include mixins.poly-btn("green", "fill", 15px);
+  @include mq.for-tablet-landscape-up {
+    font-size: 24px;
+  }
+}
+.synthesis-newsletter-subscribe .wp-block-button__link { 
+  @include mixins.poly-btn("pink", "fill");
+  padding-left: 2em;
+  padding-right: 2em;
+  @include mq.for-tablet-landscape-up {
+    font-size: 24px;
+  }
+  color: vars.$synth-blue;
+}
+
+@mixin blocklabel($blocklabelname) {
+  border: 2px solid rgb(0, 174, 255);
+  padding: 16px 10px 10px 10px;
+  border-radius: 5px;
+  &::before {
+    content: $blocklabelname;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 400;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 174, 255);
+    color: #FFF;
+    padding: 2px 5px;
+    border-radius: 0 0 3px 0;
+    z-index: 4;
+  }
+}
+
+.wp-block-group {
+  @include blocklabel('Section Group');
+  padding: vars.$gap-space;
+  margin-bottom: 1em;
+}
+.wp-block-group.has-synthesis-blue-background-color {
+  @include blocklabel('Section Group Blue Background')
+}
+.wp-block-group.hero-home {
+  @include blocklabel('Home Hero')
+}
+.img-mob_full-tab_por_33_right {
+  @include blocklabel('Image 100% on mobile, 33% on tablet')
+}
+.synthesis-newsletter-subscribe {
+  @include blocklabel('Newsletter Subscription')
+}

@@ -1,0 +1,463 @@
+@font-face {
+  font-family: "SyntheSans";
+  src: url("./assets/fonts/SyntheSans-Neutral.woff2") format("woff2"), url("./assets/fonts/SyntheSans-Neutral.woff") format("woff"), url("./assets/fonts/SyntheSans-Neutral.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+  color: #120A59;
+  font-family: "SyntheSans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  clear: both;
+}
+
+p {
+  margin-bottom: 1.5em;
+}
+
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+
+blockquote {
+  margin: 0 1.5em;
+}
+
+address {
+  margin: 0 0 1.5em;
+}
+
+pre {
+  background: #eee;
+  font-family: "Courier 10 Pitch", courier, monospace;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+  font-family: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+abbr,
+acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+
+mark,
+ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+
+big {
+  font-size: 125%;
+}
+
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+  margin-left: 1.5em;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin: 0 1.5em 1.5em;
+}
+
+/* Links
+--------------------------------------------- */
+a {
+  color: #120A59;
+}
+
+a:visited {
+  color: #120A59;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #120A59;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:hover,
+a:active {
+  outline: 0;
+}
+
+/* Form Elements
+--------------------------------------------- */
+button,
+input[type=button],
+input[type=reset],
+input[type=submit] {
+  border: 1px solid;
+  border-color: #ccc #ccc #bbb;
+  border-radius: 3px;
+  background: #e6e6e6;
+  color: rgba(0, 0, 0, 0.8);
+  line-height: 1;
+  padding: 0.6em 1em 0.4em;
+}
+
+button:hover,
+input[type=button]:hover,
+input[type=reset]:hover,
+input[type=submit]:hover {
+  border-color: #ccc #bbb #aaa;
+}
+
+button:active,
+button:focus,
+input[type=button]:active,
+input[type=button]:focus,
+input[type=reset]:active,
+input[type=reset]:focus,
+input[type=submit]:active,
+input[type=submit]:focus {
+  border-color: #aaa #bbb #bbb;
+}
+
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=password],
+input[type=search],
+input[type=number],
+input[type=tel],
+input[type=range],
+input[type=date],
+input[type=month],
+input[type=week],
+input[type=time],
+input[type=datetime],
+input[type=datetime-local],
+input[type=color],
+textarea {
+  color: #666;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 3px;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=password]:focus,
+input[type=search]:focus,
+input[type=number]:focus,
+input[type=tel]:focus,
+input[type=range]:focus,
+input[type=date]:focus,
+input[type=month]:focus,
+input[type=week]:focus,
+input[type=time]:focus,
+input[type=datetime]:focus,
+input[type=datetime-local]:focus,
+input[type=color]:focus,
+textarea:focus {
+  color: #111;
+}
+
+select {
+  border: 1px solid #ccc;
+}
+
+textarea {
+  width: 100%;
+}
+
+h1, h2 {
+  font-size: 31px;
+  line-height: 85%;
+  text-indent: 1em;
+}
+@media (min-width: 600px) {
+  h1, h2 {
+    font-size: 35px;
+    line-height: 0.95;
+  }
+}
+@media (min-width: 900px) {
+  h1, h2 {
+    font-size: 55px;
+  }
+}
+
+@media (min-width: 600px) {
+  .entry-content > h1,
+.entry-content > h2,
+.entry-content > .wp-block-group > h1,
+.entry-content > .wp-block-group > h2 {
+    max-width: 85%;
+  }
+}
+@media (min-width: 600px) {
+  .entry-content > h1,
+.entry-content > h2,
+.entry-content > .wp-block-group > h1,
+.entry-content > .wp-block-group > h2 {
+    max-width: 66.666%;
+  }
+}
+
+p {
+  margin-bottom: 1.5em;
+  font-size: 18px;
+  line-height: 0.94;
+}
+@media (min-width: 600px) {
+  p {
+    font-size: 22px;
+    line-height: 0.97;
+  }
+}
+@media (min-width: 900px) {
+  p {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 600px) {
+  .entry-content > p,
+.entry-content > .wp-block-group > p {
+    max-width: 66.666%;
+  }
+}
+
+.wp-block-column h1, .wp-block-column h2, .wp-block-column p {
+  max-width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.label {
+  font-size: 26px;
+  line-height: 1;
+}
+@media (min-width: 600px) {
+  .label {
+    font-size: 20px;
+  }
+}
+@media (min-width: 900px) {
+  .label {
+    font-size: 31px;
+  }
+}
+
+.wp-block-button__link {
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 0.833em 20px 0.666em;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  background-color: transparent;
+  display: inline-block;
+  color: #120A59;
+}
+.wp-block-button__link::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-width: 1.277em;
+  border-style: solid;
+  border-color: transparent;
+  border-image: url("./assets/img/button-bg-green-fill.svg") 23;
+}
+@media (min-width: 900px) {
+  .wp-block-button__link {
+    font-size: 24px;
+  }
+}
+
+.synthesis-newsletter-subscribe .wp-block-button__link {
+  font-size: 18px;
+  padding: 0.833em 20px 0.666em;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  background-color: transparent;
+  display: inline-block;
+  color: white;
+  padding-left: 2em;
+  padding-right: 2em;
+  color: #120A59;
+}
+.synthesis-newsletter-subscribe .wp-block-button__link::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-width: 1.277em;
+  border-style: solid;
+  border-color: transparent;
+  border-image: url("./assets/img/button-bg-pink-fill.svg") 23;
+}
+@media (min-width: 900px) {
+  .synthesis-newsletter-subscribe .wp-block-button__link {
+    font-size: 24px;
+  }
+}
+
+.wp-block-group {
+  border: 2px solid #00aeff;
+  padding: 16px 10px 10px 10px;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 1em;
+}
+.wp-block-group::before {
+  content: "Section Group";
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #00aeff;
+  color: #FFF;
+  padding: 2px 5px;
+  border-radius: 0 0 3px 0;
+  z-index: 4;
+}
+
+.wp-block-group.has-synthesis-blue-background-color {
+  border: 2px solid #00aeff;
+  padding: 16px 10px 10px 10px;
+  border-radius: 5px;
+}
+.wp-block-group.has-synthesis-blue-background-color::before {
+  content: "Section Group Blue Background";
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #00aeff;
+  color: #FFF;
+  padding: 2px 5px;
+  border-radius: 0 0 3px 0;
+  z-index: 4;
+}
+
+.wp-block-group.hero-home {
+  border: 2px solid #00aeff;
+  padding: 16px 10px 10px 10px;
+  border-radius: 5px;
+}
+.wp-block-group.hero-home::before {
+  content: "Home Hero";
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #00aeff;
+  color: #FFF;
+  padding: 2px 5px;
+  border-radius: 0 0 3px 0;
+  z-index: 4;
+}
+
+.img-mob_full-tab_por_33_right {
+  border: 2px solid #00aeff;
+  padding: 16px 10px 10px 10px;
+  border-radius: 5px;
+}
+.img-mob_full-tab_por_33_right::before {
+  content: "Image 100% on mobile, 33% on tablet";
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #00aeff;
+  color: #FFF;
+  padding: 2px 5px;
+  border-radius: 0 0 3px 0;
+  z-index: 4;
+}
+
+.synthesis-newsletter-subscribe {
+  border: 2px solid #00aeff;
+  padding: 16px 10px 10px 10px;
+  border-radius: 5px;
+}
+.synthesis-newsletter-subscribe::before {
+  content: "Newsletter Subscription";
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #00aeff;
+  color: #FFF;
+  padding: 2px 5px;
+  border-radius: 0 0 3px 0;
+  z-index: 4;
+}
+
+/*# sourceMappingURL=style-editor.min.css.map */

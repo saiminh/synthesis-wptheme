@@ -1,0 +1,37 @@
+@use 'vars' as vars;
+@use 'mq';
+
+@mixin poly-btn($btncolor:"blue", $border:"outline", $fontsize: 18px) {
+  font-size: $fontsize;
+  padding: 0.833em 20px 0.666em;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  background-color: transparent;
+  display: inline-block;
+  @if $border == "outline" and $btncolor == "blue" {
+    color: vars.$synth-blue;
+  } @else if $border == "outline" and $btncolor == "green" {
+    color: vars.$neon-green;
+  } @else if $border == "fill" and $btncolor == "green" {
+    color: vars.$synth-blue;
+  } @else if $border == "fill" and $btncolor == "white" {
+    color: vars.$synth-blue;
+  } @else {
+    color: white
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-width: 1.277em;
+    border-style: solid;
+    border-color: transparent;
+    border-image: url('./assets/img/button-bg-#{$btncolor}-#{$border}.svg') 23;
+  }
+}

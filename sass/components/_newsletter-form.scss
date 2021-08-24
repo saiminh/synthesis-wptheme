@@ -1,0 +1,35 @@
+@use '../utilities/mq';
+@use '../utilities/mixins';
+@use '../utilities/vars' as vars;
+
+.synthesis-newsletter-subscribe {
+  margin: 0 auto;
+  @include mq.for-tablet-portrait-up {
+    max-width: 45%;
+  }  
+  @include mq.for-desktop-up {
+    max-width: 33.333%;
+  }  
+  input {
+    margin: -1em 0 1em 0;
+  }
+  & .wp-block-buttons {
+    margin-left: 0;
+    justify-content: flex-end;
+    @include mq.for-tablet-portrait-up {
+      justify-content: center;
+    }
+    @include mq.for-tablet-landscape-up {
+      justify-content: flex-end;
+    }
+  }
+  & .wp-block-button__link { 
+    @include mixins.poly-btn("pink", "fill");
+    padding-left: 2em;
+    padding-right: 2em;
+    @include mq.for-tablet-landscape-up {
+      font-size: 24px;
+    }
+    color: vars.$synth-blue;
+  }
+}

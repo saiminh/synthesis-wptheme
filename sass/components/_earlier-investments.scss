@@ -1,0 +1,80 @@
+@use '../utilities/vars' as vars;
+@use '../utilities/mq';
+@use '../utilities/animations';
+
+.earlier-investments {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0;
+  width: 100vw;
+  margin-left: - vars.$gap-space;
+  // margin-right: - vars.$gap-space;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  &::-webkit-scrollbar { /* Chrome, Safari, Opera */
+    display: none;
+  }
+}
+.earlier-investment {
+  scroll-snap-align: center;
+  flex-basis: 250px;
+  flex-shrink: 0;
+  padding: vars.$gap-space * .5;
+  @include mq.for-tablet-landscape-up {
+    flex-basis: 335px;
+  }
+  &:first-child {
+    padding-left: vars.$gap-space;
+    scroll-snap-align: start;
+    @include mq.for-tablet-landscape-up {
+      padding-left: 137px;
+      flex-basis: 472px;
+    }
+  }
+  &:last-child {
+    padding-right: vars.$gap-space;
+  }
+}
+.earlier-investment-image {
+  width: 100%;
+  min-height: 250px;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  margin-bottom: vars.$gap-space;
+  & img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+  }
+  @include animations.img-gradient;
+}
+
+.earlier-investment-text {
+  & p {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: .94;
+    margin: 0;
+    @include mq.for-tablet-portrait-up {
+      font-size: 20px;
+    }
+    @include mq.for-tablet-landscape-up {
+      font-size: 23px;
+    }
+  }
+  & figure {
+    height: 52px;
+    display: flex;
+    align-items: center;
+  }
+  & img, 
+  & .investment-logo {
+    max-height: 52px;
+    max-width: 200px;
+  }
+}

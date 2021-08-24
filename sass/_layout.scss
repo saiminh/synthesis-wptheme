@@ -1,0 +1,33 @@
+@use 'utilities/mq';
+@use 'utilities/animations';
+@use 'utilities/vars' as vars;
+
+.entry-content > :first-child {
+  margin-top: 150px;
+}
+.wp-block-group {
+  padding: vars.$gap-space;
+}
+.img-mob_full-tab_por_33_right {
+  position: relative;
+  max-height: 330px;
+  overflow: hidden;
+  @include mq.for-tablet-landscape-up {
+    max-height: 590px;
+  }
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @include animations.img-gradient;
+}
+.wp-block-column, 
+.wp-block-group {
+  :first-child {
+    margin-top: 0;
+  }
+  :last-child {
+    margin-bottom: 0;
+  }
+}

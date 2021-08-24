@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "settings": {
+    "color": {
+      "custom": false,
+      "palette": [
+        {
+            "name": "Synthesis Blue",
+            "slug": "synthesis-blue",
+            "color": "#120A59"
+        },
+        {
+            "name": "Synthesis Green",
+            "slug": "synthesis-green",
+            "color": "#C4FF63"
+        },
+        {
+            "name": "White",
+            "slug": "white",
+            "color": "#FFFFFF"
+        }
+      ]
+    },
+    "blocks": {
+      "core/paragraph": {
+        "color": {
+          "custom": false,
+          "palette": [
+            {
+              "name": "Synthesis Blue",
+              "slug": "synthesis-blue",
+              "color": "#120A59"
+            },
+            {
+              "name": "Synthesis Green",
+              "slug": "synthesis-green",
+              "color": "#C4FF63"
+            },
+            {
+                "name": "White",
+                "slug": "white",
+                "color": "#FFFFFF"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
