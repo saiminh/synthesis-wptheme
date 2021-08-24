@@ -32,13 +32,15 @@
 	}
 
 	// Toggle the .toggled class and the aria-expanded value each time the button is clicked.
+  let origValue = button.innerHTML;
 	button.addEventListener( 'click', function() {
 		document.body.classList.toggle( 'nav-toggled' );
-
 		if ( button.getAttribute( 'aria-expanded' ) === 'true' ) {
 			button.setAttribute( 'aria-expanded', 'false' );
+      button.innerHTML = origValue;
 		} else {
-			button.setAttribute( 'aria-expanded', 'true' );
+      button.setAttribute( 'aria-expanded', 'true' );
+      button.innerHTML = "X";
 		}
 	} );
 
@@ -99,16 +101,16 @@
 
   // hide and show nav on scroll
   var prevScrollpos = window.pageYOffset;
-  let parentElement = document.body;
+  let body = document.body;
   window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-      if ( parentElement.classList.contains( 'nav-hidden' ) ) {
-        parentElement.classList.remove( 'nav-hidden' );
+    if (prevScrollpos > currentScrollPos || currentScrollPos == 0) {
+      if ( body.classList.contains( 'nav-hidden' ) ) {
+        body.classList.remove( 'nav-hidden' );
       }
     } else {
-      if ( !parentElement.classList.contains( 'nav-hidden' ) ) {
-        parentElement.classList.add( 'nav-hidden' );
+      if ( !body.classList.contains( 'nav-hidden' ) ) {
+        body.classList.add( 'nav-hidden' );
       }
     }
     prevScrollpos = currentScrollPos;

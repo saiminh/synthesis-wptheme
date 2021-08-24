@@ -346,6 +346,14 @@ table {
   width: 100%;
 }
 
+@keyframes quickfadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @font-face {
   font-family: "SyntheSans";
   src: url("./assets/fonts/SyntheSans-Neutral.woff2") format("woff2"), url("./assets/fonts/SyntheSans-Neutral.woff") format("woff"), url("./assets/fonts/SyntheSans-Neutral.otf") format("opentype");
@@ -371,7 +379,6 @@ h1, h2, h3, h4, h5, h6 {
 h1, h2 {
   font-size: 31px;
   line-height: 85%;
-  text-indent: 1em;
 }
 @media (min-width: 600px) {
   h1, h2 {
@@ -383,6 +390,10 @@ h1, h2 {
   h1, h2 {
     font-size: 55px;
   }
+}
+
+h2 {
+  text-indent: 1em;
 }
 
 p {
@@ -525,8 +536,6 @@ a:active {
   outline: 0;
 }
 
-/* Form Elements
---------------------------------------------- */
 button,
 input[type=button],
 input[type=reset],
@@ -541,7 +550,7 @@ input[type=submit],
   z-index: 1;
   text-decoration: none;
   background-color: transparent;
-  display: inline-block;
+  display: block;
   color: #120A59;
   transform: scale(1);
   transition: transform 0.05s ease-out;
@@ -558,10 +567,10 @@ input[type=submit]::before,
   top: 0;
   width: 100%;
   height: 100%;
-  border-width: 1.277em;
-  border-style: solid;
-  border-color: transparent;
+  border: 1.277em solid;
   border-image: url("./assets/img/button-bg-green-fill.svg") 23;
+  opacity: 0;
+  animation: "quickfadein" 1s ease-in forwards;
 }
 @media (min-width: 900px) {
   button,
@@ -579,7 +588,7 @@ input[type=reset]:hover,
 input[type=submit]:hover,
 .wp-block-button__link:hover {
   transform: scale(1.05);
-  color: inherit;
+  color: #120A59;
 }
 
 button:active,
@@ -592,8 +601,7 @@ input[type=submit]:active,
 input[type=submit]:focus,
 .wp-block-button__link:active,
 .wp-block-button__link:focus {
-  position: relative;
-  top: 2px;
+  transform: scale(1);
 }
 
 .wp-block-button__link, .wp-block-button__link:hover, .wp-block-button__link:active {
@@ -721,6 +729,16 @@ textarea {
   padding: 20px;
 }
 
+.wp-block-group .wp-block-group {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.wp-block-column :first-child,
+.wp-block-group :first-child {
+  margin-top: 0;
+}
+
 .img-mob_full-tab_por_33_right {
   position: relative;
   max-height: 330px;
@@ -750,13 +768,13 @@ textarea {
   animation: "img-blue-gradient-up" 1s ease-in-out forwards;
 }
 
-.wp-block-column :first-child,
-.wp-block-group :first-child {
-  margin-top: 0;
+.has-synthesis-blue-background-color .img-mob_full-tab_por_33_right {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
 }
-.wp-block-column :last-child,
-.wp-block-group :last-child {
-  margin-bottom: 0;
+
+[class*=bluesection-] .has-synthesis-blue-background-color .img-mob_full-tab_por_33_right {
+  opacity: 1;
 }
 
 #primary-menu {
@@ -772,6 +790,7 @@ textarea {
   .nav-toggled #primary-menu {
     display: block;
     position: absolute;
+    margin-top: 2px;
   }
 }
 
@@ -838,7 +857,7 @@ ul.nav-menu a,
   z-index: 1;
   text-decoration: none;
   background-color: transparent;
-  display: inline-block;
+  display: block;
   color: #120A59;
   transform: scale(1);
   transition: transform 0.05s linear;
@@ -853,10 +872,10 @@ ul.nav-menu a::before,
   top: 0;
   width: 100%;
   height: 100%;
-  border-width: 1.277em;
-  border-style: solid;
-  border-color: transparent;
+  border: 1.277em solid;
   border-image: url("./assets/img/button-bg-blue-outline.svg") 23;
+  opacity: 0;
+  animation: "quickfadein" 1s ease-in forwards;
 }
 
 ul.nav-menu .current_page_item a {
@@ -867,7 +886,7 @@ ul.nav-menu .current_page_item a {
   z-index: 1;
   text-decoration: none;
   background-color: transparent;
-  display: inline-block;
+  display: block;
   color: white;
 }
 ul.nav-menu .current_page_item a::before {
@@ -878,10 +897,10 @@ ul.nav-menu .current_page_item a::before {
   top: 0;
   width: 100%;
   height: 100%;
-  border-width: 1.277em;
-  border-style: solid;
-  border-color: transparent;
+  border: 1.277em solid;
   border-image: url("./assets/img/button-bg-white-outline.svg") 23;
+  opacity: 0;
+  animation: "quickfadein" 1s ease-in forwards;
 }
 
 ul.nav-menu a:hover,
@@ -999,7 +1018,7 @@ section {
   position: relative;
   margin-bottom: 20px;
 }
-.earlier-investment-image img {
+.earlier-investment-image img, .earlier-investment-image svg {
   width: 100%;
   height: auto;
   position: absolute;
@@ -1039,6 +1058,10 @@ section {
   height: 52px;
   display: flex;
   align-items: center;
+}
+.earlier-investment-text figure svg {
+  height: 52px;
+  width: auto;
 }
 .earlier-investment-text img, .earlier-investment-text .investment-logo {
   max-height: 52px;
@@ -1083,7 +1106,7 @@ section {
   z-index: 1;
   text-decoration: none;
   background-color: transparent;
-  display: inline-block;
+  display: block;
   color: white;
   padding-left: 2em;
   padding-right: 2em;
@@ -1097,10 +1120,10 @@ section {
   top: 0;
   width: 100%;
   height: 100%;
-  border-width: 1.277em;
-  border-style: solid;
-  border-color: transparent;
+  border: 1.277em solid;
   border-image: url("./assets/img/button-bg-pink-fill.svg") 23;
+  opacity: 0;
+  animation: "quickfadein" 1s ease-in forwards;
 }
 @media (min-width: 900px) {
   .synthesis-newsletter-subscribe .wp-block-button__link {
@@ -1199,14 +1222,52 @@ section {
   }
 }
 
+.home .entry-content > :first-child {
+  margin-top: 0;
+}
+
 .hero-home {
-  min-height: calc( 100vh - 150px);
+  min-height: 100vh;
   position: relative;
-  display: flex;
+  padding: 0;
 }
 
 .hero-home h1 {
-  align-self: flex-end;
+  position: absolute;
+  bottom: 1.5em;
+}
+
+.hero-home .wp-block-video {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 100%);
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  height: 100%;
+  overflow: hidden;
+}
+.hero-home .wp-block-video video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: 100%;
+  transform: translateX(-50%) translateY(-50%);
+}
+@media screen and (min-aspect-ratio: 16/9) {
+  .hero-home .wp-block-video video {
+    height: auto;
+    width: 100%;
+  }
+}
+
+[class*=bluesection-] .hero-home .wp-block-video {
+  opacity: 1;
 }
 
 .home .wp-block-group:not(.synthesis-newsletter-subscribe) > .wp-block-buttons {
@@ -1240,6 +1301,16 @@ section {
 }
 .home .wp-block-column h1, .home .wp-block-column h2, .home .wp-block-column p {
   max-width: 100%;
+}
+
+.home-synthesis-icons {
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 600px) {
+  .home-synthesis-icons {
+    max-width: 66.666%;
+  }
 }
 
 /* Accessibility

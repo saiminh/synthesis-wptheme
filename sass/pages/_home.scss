@@ -1,11 +1,47 @@
 @use '../utilities/mq';
+@use '../utilities/animations';
+@use '../utilities/vars' as vars;
+
+.home .entry-content > :first-child {
+  margin-top: 0;
+}
 .hero-home {
-  min-height: calc( 100vh - 150px) ;
-  position: relative;
-  display: flex;
+  min-height: 100vh ;
+  position: relative;  
+  padding: 0;
 }
 .hero-home h1 {
-  align-self: flex-end;
+  position: absolute;
+  bottom: 1.5em;
+}
+.hero-home .wp-block-video {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+  position: absolute;
+  top: - vars.$gap-space;
+  left: - vars.$gap-space;
+  right: - vars.$gap-space;
+  height: 100%;
+  overflow: hidden;
+  & video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: 100%;
+    transform: translateX(-50%) translateY(-50%);
+    @media screen and (min-aspect-ratio: 16/9) {
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+[class*="bluesection-"] .hero-home .wp-block-video {
+  opacity: 1;
 }
 .home .wp-block-group:not(.synthesis-newsletter-subscribe) > .wp-block-buttons {
   justify-content: end;
@@ -34,5 +70,12 @@
     h1, h2, p {
       max-width: 100%;
     }
+  }
+}
+.home-synthesis-icons {
+  display: flex;
+  justify-content: space-between;
+  @include mq.for-tablet-portrait-up {
+    max-width: 66.666%;
   }
 }

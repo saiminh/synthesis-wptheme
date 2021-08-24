@@ -114,5 +114,14 @@ p {
   @include blocklabel('Image 100% on mobile, 33% on tablet')
 }
 .synthesis-newsletter-subscribe {
-  @include blocklabel('Newsletter Subscription')
+  @include blocklabel('Newsletter Subscription');
+}
+.home-synthesis-icons {
+  @include blocklabel('Home Synthesis icons');
+  &::after {
+    content: '';
+    display: block;
+    position: relative;
+    clear: both;
+  }
 }

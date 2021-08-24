@@ -45,7 +45,7 @@
   align-items: flex-end;
   position: relative;
   margin-bottom: vars.$gap-space;
-  & img {
+  & img, & svg {
     width: 100%;
     height: auto;
     position: absolute;
@@ -71,8 +71,12 @@
     height: 52px;
     display: flex;
     align-items: center;
+    & svg {
+      height: 52px;
+      width: auto;
+    }
   }
-  & img, 
+  & img,  
   & .investment-logo {
     max-height: 52px;
     max-width: 200px;

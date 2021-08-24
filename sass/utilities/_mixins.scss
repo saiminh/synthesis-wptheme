@@ -9,7 +9,7 @@
   z-index: 1;
   text-decoration: none;
   background-color: transparent;
-  display: inline-block;
+  display: block;
   @if $border == "outline" and $btncolor == "blue" {
     color: vars.$synth-blue;
   } @else if $border == "outline" and $btncolor == "green" {
@@ -29,9 +29,15 @@
     top: 0;
     width: 100%;
     height: 100%;
-    border-width: 1.277em;
-    border-style: solid;
-    border-color: transparent;
+    border: 1.277em solid;
+    // border-color: transparent;
     border-image: url('./assets/img/button-bg-#{$btncolor}-#{$border}.svg') 23;
+    opacity: 0;
+    animation: 'quickfadein' 1s ease-in forwards;
   }
+}
+
+@keyframes quickfadein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }

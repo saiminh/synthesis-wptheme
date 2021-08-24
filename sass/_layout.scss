@@ -8,6 +8,16 @@
 .wp-block-group {
   padding: vars.$gap-space;
 }
+.wp-block-group .wp-block-group {
+  padding-left: 0;
+  padding-right: 0;
+}
+.wp-block-column, 
+.wp-block-group {
+  :first-child {
+    margin-top: 0;
+  }
+}
 .img-mob_full-tab_por_33_right {
   position: relative;
   max-height: 330px;
@@ -22,12 +32,10 @@
   }
   @include animations.img-gradient;
 }
-.wp-block-column, 
-.wp-block-group {
-  :first-child {
-    margin-top: 0;
-  }
-  :last-child {
-    margin-bottom: 0;
-  }
+.has-synthesis-blue-background-color .img-mob_full-tab_por_33_right {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+[class*="bluesection-"] .has-synthesis-blue-background-color .img-mob_full-tab_por_33_right {
+  opacity: 1;
 }

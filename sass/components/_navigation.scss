@@ -13,6 +13,7 @@
     @include mq.for-phone-only {
       display: block;
       position: absolute;
+      margin-top: 2px;
     }
   }
 }
