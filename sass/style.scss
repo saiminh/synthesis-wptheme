@@ -8,10 +8,12 @@
 @use 'components/navigation';
 @use 'components/bg-gradients';
 @use 'components/earlier-investments';
+@use 'components/food-technologies';
 @use 'components/newsletter-form';
 @use 'components/footer';
 
 @use 'pages/home';
+@use 'pages/focus';
 @use 'accessibility';
 
 body:after{

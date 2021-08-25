@@ -84,6 +84,42 @@ if ( function_exists( 'register_block_pattern' ) ) {
         '
       )
     );
+    
+    //Food Technology 
+    register_block_pattern(
+      'synthesis2021/food-technology',
+      array(
+        'title'         => esc_html( 'Food Technology', 'synthesis2021' ),
+        'description'         => esc_html( 'Block with food technology image and icons displayed on the focus page', 'synthesis2021' ),
+        'categories'    => array( 'synthesis2021' ),
+        'viewportWidth' => 300,
+        'content'       => '
+          <!-- wp:group {"className":"food-technology"} -->
+          <div class="wp-block-group food-technology"><!-- wp:image {"id":101,"sizeSlug":"full","linkDestination":"none","className":"food-technology-image"} -->
+          <figure class="wp-block-image size-full food-technology-image"><img src="" alt=""/></figure>
+          <!-- /wp:image -->
+
+          <!-- wp:separator {"className":"food-technology-separator"} -->
+          <hr class="wp-block-separator food-technology-separator"/>
+          <!-- /wp:separator -->
+
+          <!-- wp:paragraph {"className":"food-technology-title"} -->
+          <p class="food-technology-title">Precision Fermented<br>Dairy</p>
+          <!-- /wp:paragraph -->
+
+          <!-- wp:group {"className":"food-technology-icons"} -->
+          <div class="wp-block-group food-technology-icons"><!-- wp:image {"id":90,"sizeSlug":"large","linkDestination":"none"} -->
+          <figure class="wp-block-image size-large"><img src="" alt=""/></figure>
+          <!-- /wp:image -->
+
+          <!-- wp:image {"id":89,"sizeSlug":"large","linkDestination":"none"} -->
+          <figure class="wp-block-image size-large"><img src="" alt=""/></figure>
+          <!-- /wp:image --></div>
+          <!-- /wp:group --></div>
+          <!-- /wp:group -->
+        '
+      )
+    );
 }
 
 

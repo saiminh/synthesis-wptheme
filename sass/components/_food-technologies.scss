@@ -1,0 +1,60 @@
+@use '../utilities/mq';
+@use '../utilities/vars' as vars;
+
+.food-technologies {
+  display: flex;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+}
+.food-technology {
+  scroll-snap-align: center;
+  flex-basis: calc(60% + 2em);
+  flex-shrink: 0;
+  flex-grow: 0;
+  padding-right: 1em;
+  @include mq.for-tablet-portrait-up {
+    flex-basis: calc(22% + 2em);
+  }
+  @include mq.for-tablet-landscape-up {
+    flex-basis: calc(15% + 2em);
+  }
+}
+.food-technology:first-child {
+  padding-left: 3em;
+  flex-basis: calc(60% + 5em);
+  @include mq.for-tablet-portrait-up {
+    flex-basis: calc(22% + 5em);
+  }
+  @include mq.for-tablet-landscape-up {
+    padding-left: 24%;
+    flex-basis: calc(39% + 2em);
+  }
+}
+.food-technology hr, .food-technology .wp-block-separator {
+  background-color: vars.$synth-blue;
+}
+.food-technology-title{
+  margin: 0 0 .65em 0;
+  font-size: 16px;
+  line-height: .95;
+  @include mq.for-tablet-portrait-up {
+    font-size: 13px;
+  }
+  @include mq.for-tablet-landscape-up {
+    font-size: 16px;
+  }
+}
+.food-technology-icons {
+  display: flex;
+  & .wp-block-image {
+    width: 25px;
+    & img, & svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

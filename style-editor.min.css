@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @keyframes quickfadein {
   0% {
     opacity: 0;
@@ -458,6 +459,217 @@ p {
   display: block;
   position: relative;
   clear: both;
+}
+
+.has-synthesis-blue-background-color .synthesis-icon img {
+  filter: brightness(100);
+}
+
+.food-technologies {
+  border: 2px solid #00aeff;
+  padding: 16px 10px 10px 10px;
+  border-radius: 5px;
+  display: flex;
+}
+.food-technologies::before {
+  content: "Food Technologies";
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #00aeff;
+  color: #FFF;
+  padding: 2px 5px;
+  border-radius: 0 0 3px 0;
+  z-index: 4;
+}
+
+.food-technology {
+  flex-basis: 33.3%;
+  border: 2px solid #00aeff;
+  padding: 16px 10px 10px 10px;
+  border-radius: 5px;
+}
+.food-technology::before {
+  content: "Tech";
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #00aeff;
+  color: #FFF;
+  padding: 2px 5px;
+  border-radius: 0 0 3px 0;
+  z-index: 4;
+}
+
+.food-technology-title {
+  margin: 0;
+  font-size: 16px;
+  line-height: 0.95;
+}
+@media (min-width: 600px) {
+  .food-technology-title {
+    font-size: 13px;
+  }
+}
+@media (min-width: 900px) {
+  .food-technology-title {
+    font-size: 16px;
+  }
+}
+
+.food-technology-icons {
+  border: 2px solid #00aeff;
+  padding: 16px 10px 10px 10px;
+  border-radius: 5px;
+  display: flex;
+}
+.food-technology-icons::before {
+  content: "Food Tech Icons";
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #00aeff;
+  color: #FFF;
+  padding: 2px 5px;
+  border-radius: 0 0 3px 0;
+  z-index: 4;
+}
+
+.focus-protein-spectrum {
+  border: 2px solid #00aeff;
+  padding: 16px 10px 10px 10px;
+  border-radius: 5px;
+  display: flex;
+}
+.focus-protein-spectrum::before {
+  content: "Protein Spectrum";
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #00aeff;
+  color: #FFF;
+  padding: 2px 5px;
+  border-radius: 0 0 3px 0;
+  z-index: 4;
+}
+
+.focus-protein-spectrum-column {
+  border: 2px solid #00aeff;
+  padding: 16px 10px 10px 10px;
+  border-radius: 5px;
+  flex-basis: 25%;
+}
+.focus-protein-spectrum-column::before {
+  content: "Protein Spectrum Column";
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #00aeff;
+  color: #FFF;
+  padding: 2px 5px;
+  border-radius: 0 0 3px 0;
+  z-index: 4;
+}
+.focus-protein-spectrum-column p {
+  margin: 0;
+  padding: 0.5em 0;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+}
+.focus-protein-spectrum-column .wp-block-image {
+  text-align: center;
+}
+.focus-protein-spectrum-column .wp-block-image img {
+  filter: brightness(100);
+}
+
+.focus-enabling-technologies {
+  border: 2px solid #00aeff;
+  padding: 16px 10px 10px 10px;
+  border-radius: 5px;
+}
+.focus-enabling-technologies::before {
+  content: "focus-enabling-technologies";
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #00aeff;
+  color: #FFF;
+  padding: 2px 5px;
+  border-radius: 0 0 3px 0;
+  z-index: 4;
+}
+
+.focus-enabling-technologies-table {
+  border: 2px solid #00aeff;
+  padding: 16px 10px 10px 10px;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1em;
+}
+.focus-enabling-technologies-table::before {
+  content: "focus-enabling-technologies-table";
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #00aeff;
+  color: #FFF;
+  padding: 2px 5px;
+  border-radius: 0 0 3px 0;
+  z-index: 4;
+}
+
+.focus-enabling-technologies-item {
+  border: 2px solid #00aeff;
+  padding: 16px 10px 10px 10px;
+  border-radius: 5px;
+  padding: 0.5em 1.5em 0.5em 0;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+  position: relative;
+}
+.focus-enabling-technologies-item::before {
+  content: "focus-enabling-technologies-item";
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #00aeff;
+  color: #FFF;
+  padding: 2px 5px;
+  border-radius: 0 0 3px 0;
+  z-index: 4;
+}
+.focus-enabling-technologies-item::after {
+  content: "↙";
+  position: absolute;
+  transform: scaleX(-1);
+  right: 0;
+  top: 0.5em;
 }
 
 /*# sourceMappingURL=style-editor.min.css.map */

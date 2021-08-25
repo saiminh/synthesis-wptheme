@@ -5,12 +5,8 @@
 .entry-content > :first-child {
   margin-top: 150px;
 }
-.wp-block-group {
+.entry-content > .wp-block-group {
   padding: vars.$gap-space;
-}
-.wp-block-group .wp-block-group {
-  padding-left: 0;
-  padding-right: 0;
 }
 .wp-block-column, 
 .wp-block-group {

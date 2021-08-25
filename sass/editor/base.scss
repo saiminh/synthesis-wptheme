@@ -125,3 +125,72 @@ p {
     clear: both;
   }
 }
+.has-synthesis-blue-background-color .synthesis-icon img { 
+  filter: brightness(100);
+} 
+.food-technologies {
+  @include blocklabel('Food Technologies');
+  display: flex;
+}
+.food-technology {
+  flex-basis: 33.3%;
+  @include blocklabel('Tech');
+}
+.food-technology-title{
+  margin: 0;
+  font-size: 16px;
+  line-height: .95;
+  @include mq.for-tablet-portrait-up {
+    font-size: 13px;
+  }
+  @include mq.for-tablet-landscape-up {
+    font-size: 16px;
+  }
+}
+.food-technology-icons {
+  @include blocklabel('Food Tech Icons');
+  display: flex;
+}
+.focus-protein-spectrum {
+  @include blocklabel('Protein Spectrum');
+  display: flex;
+}
+.focus-protein-spectrum-column {
+  @include blocklabel('Protein Spectrum Column');
+  flex-basis: 25%;
+  & p {
+    margin: 0;
+    padding: .5em 0;
+    border-top: 1px solid #FFF;
+    border-bottom: 1px solid #FFF;
+  }
+  & .wp-block-image {
+    text-align: center;
+    & img {
+      filter: brightness(100);
+    }
+  }
+}
+.focus-enabling-technologies {
+  @include blocklabel('focus-enabling-technologies');
+}
+.focus-enabling-technologies-table {
+  @include blocklabel('focus-enabling-technologies-table');
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1em;
+}
+.focus-enabling-technologies-item {
+  @include blocklabel('focus-enabling-technologies-item');
+  padding: .5em 1.5em .5em 0;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+  position: relative;
+  &::after {
+    content: '↙';
+    position: absolute;
+    transform: scaleX(-1);
+    right: 0;
+    top: .5em;
+  }
+}

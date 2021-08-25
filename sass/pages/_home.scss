@@ -78,4 +78,19 @@
   @include mq.for-tablet-portrait-up {
     max-width: 66.666%;
   }
+  @include mq.for-tablet-landscape-up {
+    max-width: 50%;
+  }
+  & figure {
+    width: 26px;
+    @include mq.for-tablet-landscape-up {
+      width: 55px;
+    }
+    & img, & svg {
+      width: 100%;
+    }
+    & svg path {
+      fill:#FFFFFF;
+    }
+  }
 }

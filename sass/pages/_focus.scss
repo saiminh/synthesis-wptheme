@@ -1,0 +1,108 @@
+@use '../utilities/mq';
+
+.focus-protein-spectrum {
+  display: flex;
+  @include mq.for-tablet-portrait-up {
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+  }
+  @include mq.for-tablet-landscape-up {
+    margin-left: 10%;
+    margin-right: 0;
+  }
+}
+.focus-protein-spectrum-column {
+  flex-basis: calc(25% + 1em);
+  padding: 0 .5em;
+  @include mq.for-tablet-portrait-up {
+    flex-basis: calc(15% + 2em);
+  }
+  &:first-child {
+    padding-left: 0;
+  }
+  &:last-child {
+    padding-right: 0;
+  }
+  & p {
+    font-size: 11px;
+    margin: 0;
+    padding: .5em 0;
+    border-top: 1px solid #FFF;
+    border-bottom: 1px solid #FFF;
+    @include mq.for-tablet-portrait-up {
+      font-size: 17px;
+    }
+    @include mq.for-tablet-landscape-up {
+      font-size: 31px;
+    }
+  }
+  & .wp-block-image {
+    width: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    @include mq.for-tablet-portrait-up {
+      width: 45px;
+    }
+    @include mq.for-tablet-landscape-up {
+      width: 75px;
+    }
+    & img, & svg {
+      width: 100%;
+      height: auto;
+    }
+    & svg path {
+      fill: #FFFFFF;
+    }
+  }
+}
+.focus-enabling-technologies {
+  margin-bottom: 4em;
+  & .synthesis-icon {
+    @include mq.for-tablet-portrait-up {
+      margin-left: 7.5%;
+      margin-right: 7.5%;
+    }
+    @include mq.for-tablet-landscape-up {
+      margin-left: 10%;
+      margin-right: 0;
+    }
+    & svg path {
+      fill: #FFFFFF;
+    }
+  }
+}
+.focus-enabling-technologies-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  @include mq.for-tablet-portrait-up {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+  }
+  @include mq.for-tablet-landscape-up {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+.focus-enabling-technologies-item {
+  margin: 0;
+  padding: .5em 1em .5em 0;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+  position: relative;
+  font-size: 19px;
+  @include mq.for-tablet-portrait-up {
+    font-size: 17px;
+  }
+  @include mq.for-tablet-landscape-up {
+    font-size: 31px;
+  }
+  &::after {
+    content: '↙';
+    position: absolute;
+    transform: scaleX(-1);
+    right: 0;
+    top: .5em;
+  }
+}

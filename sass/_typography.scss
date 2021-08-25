@@ -24,6 +24,7 @@ textarea {
 }
 h1, h2, h3, h4, h5, h6 {
   clear: both;
+  margin-bottom: 1em;
 }
 h1, h2 {
   font-size: 31px;
@@ -31,9 +32,13 @@ h1, h2 {
   @include mq.for-tablet-portrait-up {
     font-size: 35px;
     line-height: .95;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
   }
   @include mq.for-tablet-landscape-up {
     font-size: 55px;
+    margin-left: 10%;
+    margin-right: 0;
   }
 }
 h2 {
@@ -46,14 +51,19 @@ p {
   @include mq.for-tablet-portrait-up {
     font-size: 22px;
     line-height: .97;
+    margin-left: 15%;
+    margin-right: 15%;
   }
   @include mq.for-tablet-landscape-up {
     font-size: 36px;
+    margin-left: 18%;
+    margin-right: 0;
   }
 }
 .label {
   font-size: 26px;
   line-height: 1;
+  margin-left: 0;
   @include mq.for-tablet-portrait-up {
     font-size: 20px;
   }
@@ -101,8 +111,8 @@ ins {
 big {
   font-size: 125%;
 }
-hr {
-  background-color: #ccc;
+hr, .wp-block-separator {
+  background-color: vars.$synth-blue;
   border: 0;
   height: 1px;
   margin-bottom: 1.5em;

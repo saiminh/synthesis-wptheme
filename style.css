@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: synthesis2021
 Theme URI: http://underscores.me/
@@ -397,6 +398,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   clear: both;
+  margin-bottom: 1em;
 }
 
 h1, h2 {
@@ -407,11 +409,15 @@ h1, h2 {
   h1, h2 {
     font-size: 35px;
     line-height: 0.95;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
   }
 }
 @media (min-width: 900px) {
   h1, h2 {
     font-size: 55px;
+    margin-left: 10%;
+    margin-right: 0;
   }
 }
 
@@ -428,17 +434,22 @@ p {
   p {
     font-size: 22px;
     line-height: 0.97;
+    margin-left: 15%;
+    margin-right: 15%;
   }
 }
 @media (min-width: 900px) {
   p {
     font-size: 36px;
+    margin-left: 18%;
+    margin-right: 0;
   }
 }
 
 .label {
   font-size: 26px;
   line-height: 1;
+  margin-left: 0;
 }
 @media (min-width: 600px) {
   .label {
@@ -499,8 +510,8 @@ big {
   font-size: 125%;
 }
 
-hr {
-  background-color: #ccc;
+hr, .wp-block-separator {
+  background-color: #120A59;
   border: 0;
   height: 1px;
   margin-bottom: 1.5em;
@@ -748,13 +759,8 @@ textarea {
   margin-top: 150px;
 }
 
-.wp-block-group {
+.entry-content > .wp-block-group {
   padding: 20px;
-}
-
-.wp-block-group .wp-block-group {
-  padding-left: 0;
-  padding-right: 0;
 }
 
 .wp-block-column :first-child,
@@ -1091,6 +1097,81 @@ section {
   max-width: 200px;
 }
 
+.food-technologies {
+  display: flex;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+}
+
+.food-technology {
+  scroll-snap-align: center;
+  flex-basis: calc(60% + 2em);
+  flex-shrink: 0;
+  flex-grow: 0;
+  padding-right: 1em;
+}
+@media (min-width: 600px) {
+  .food-technology {
+    flex-basis: calc(22% + 2em);
+  }
+}
+@media (min-width: 900px) {
+  .food-technology {
+    flex-basis: calc(15% + 2em);
+  }
+}
+
+.food-technology:first-child {
+  padding-left: 3em;
+  flex-basis: calc(60% + 5em);
+}
+@media (min-width: 600px) {
+  .food-technology:first-child {
+    flex-basis: calc(22% + 5em);
+  }
+}
+@media (min-width: 900px) {
+  .food-technology:first-child {
+    padding-left: 24%;
+    flex-basis: calc(39% + 2em);
+  }
+}
+
+.food-technology hr, .food-technology .wp-block-separator {
+  background-color: #120A59;
+}
+
+.food-technology-title {
+  margin: 0 0 0.65em 0;
+  font-size: 16px;
+  line-height: 0.95;
+}
+@media (min-width: 600px) {
+  .food-technology-title {
+    font-size: 13px;
+  }
+}
+@media (min-width: 900px) {
+  .food-technology-title {
+    font-size: 16px;
+  }
+}
+
+.food-technology-icons {
+  display: flex;
+}
+.food-technology-icons .wp-block-image {
+  width: 25px;
+}
+.food-technology-icons .wp-block-image img, .food-technology-icons .wp-block-image svg {
+  width: 100%;
+  height: auto;
+}
+
 .synthesis-newsletter-subscribe {
   margin: 0 auto;
 }
@@ -1334,6 +1415,160 @@ section {
   .home-synthesis-icons {
     max-width: 66.666%;
   }
+}
+@media (min-width: 900px) {
+  .home-synthesis-icons {
+    max-width: 50%;
+  }
+}
+.home-synthesis-icons figure {
+  width: 26px;
+}
+@media (min-width: 900px) {
+  .home-synthesis-icons figure {
+    width: 55px;
+  }
+}
+.home-synthesis-icons figure img, .home-synthesis-icons figure svg {
+  width: 100%;
+}
+.home-synthesis-icons figure svg path {
+  fill: #FFFFFF;
+}
+
+.focus-protein-spectrum {
+  display: flex;
+}
+@media (min-width: 600px) {
+  .focus-protein-spectrum {
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+  }
+}
+@media (min-width: 900px) {
+  .focus-protein-spectrum {
+    margin-left: 10%;
+    margin-right: 0;
+  }
+}
+
+.focus-protein-spectrum-column {
+  flex-basis: calc(25% + 1em);
+  padding: 0 0.5em;
+}
+@media (min-width: 600px) {
+  .focus-protein-spectrum-column {
+    flex-basis: calc(15% + 2em);
+  }
+}
+.focus-protein-spectrum-column:first-child {
+  padding-left: 0;
+}
+.focus-protein-spectrum-column:last-child {
+  padding-right: 0;
+}
+.focus-protein-spectrum-column p {
+  font-size: 11px;
+  margin: 0;
+  padding: 0.5em 0;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+}
+@media (min-width: 600px) {
+  .focus-protein-spectrum-column p {
+    font-size: 17px;
+  }
+}
+@media (min-width: 900px) {
+  .focus-protein-spectrum-column p {
+    font-size: 31px;
+  }
+}
+.focus-protein-spectrum-column .wp-block-image {
+  width: 32px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 600px) {
+  .focus-protein-spectrum-column .wp-block-image {
+    width: 45px;
+  }
+}
+@media (min-width: 900px) {
+  .focus-protein-spectrum-column .wp-block-image {
+    width: 75px;
+  }
+}
+.focus-protein-spectrum-column .wp-block-image img, .focus-protein-spectrum-column .wp-block-image svg {
+  width: 100%;
+  height: auto;
+}
+.focus-protein-spectrum-column .wp-block-image svg path {
+  fill: #FFFFFF;
+}
+
+.focus-enabling-technologies {
+  margin-bottom: 4em;
+}
+@media (min-width: 600px) {
+  .focus-enabling-technologies .synthesis-icon {
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+  }
+}
+@media (min-width: 900px) {
+  .focus-enabling-technologies .synthesis-icon {
+    margin-left: 10%;
+    margin-right: 0;
+  }
+}
+.focus-enabling-technologies .synthesis-icon svg path {
+  fill: #FFFFFF;
+}
+
+.focus-enabling-technologies-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+@media (min-width: 600px) {
+  .focus-enabling-technologies-table {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+  }
+}
+@media (min-width: 900px) {
+  .focus-enabling-technologies-table {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+.focus-enabling-technologies-item {
+  margin: 0;
+  padding: 0.5em 1em 0.5em 0;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+  position: relative;
+  font-size: 19px;
+}
+@media (min-width: 600px) {
+  .focus-enabling-technologies-item {
+    font-size: 17px;
+  }
+}
+@media (min-width: 900px) {
+  .focus-enabling-technologies-item {
+    font-size: 31px;
+  }
+}
+.focus-enabling-technologies-item::after {
+  content: "↙";
+  position: absolute;
+  transform: scaleX(-1);
+  right: 0;
+  top: 0.5em;
 }
 
 /* Accessibility
