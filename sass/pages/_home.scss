@@ -92,5 +92,8 @@
     & svg path {
       fill:#FFFFFF;
     }
+    & img {
+      filter: saturate(0) brightness(100);
+    }
   }
 }

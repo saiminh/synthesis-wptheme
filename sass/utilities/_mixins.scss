@@ -3,8 +3,8 @@
 
 @mixin poly-btn($btncolor:"blue", $border:"outline", $fontsize: 18px) {
   font-size: $fontsize;
-  padding: 0.833em 20px 0.666em;
-  line-height: 1;
+  line-height: 0;
+  padding: 2px 0 0 0;
   position: relative;
   z-index: 1;
   text-decoration: none;
@@ -21,21 +21,47 @@
   } @else {
     color: white
   }
-  &::before {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    border: 1.277em solid;
-    // border-color: transparent;
-    border-image: url('./assets/img/button-bg-#{$btncolor}-#{$border}.svg') 23;
-    opacity: 0;
-    animation: 'quickfadein' 1s ease-in forwards;
-  }
+  border-style: solid;
+  border-width: 23px ;
+  border-image: url('./assets/img/button-bg-#{$btncolor}-#{$border}.svg') 49% 23 fill;
+  opacity: 0;
+  animation: quickfadein 1s ease-in forwards;
 }
+// @mixin poly-btn($btncolor:"blue", $border:"outline", $fontsize: 18px) {
+//   font-size: $fontsize;
+//   padding: 0.833em 20px 0.666em;
+//   line-height: 1;
+//   position: relative;
+//   z-index: 1;
+//   text-decoration: none;
+//   background-color: transparent;
+//   display: block;
+//   @if $border == "outline" and $btncolor == "blue" {
+//     color: vars.$synth-blue;
+//   } @else if $border == "outline" and $btncolor == "green" {
+//     color: vars.$neon-green;
+//   } @else if $border == "fill" and $btncolor == "green" {
+//     color: vars.$synth-blue;
+//   } @else if $border == "fill" and $btncolor == "white" {
+//     color: vars.$synth-blue;
+//   } @else {
+//     color: white
+//   }
+//   &::before {
+//     content: '';
+//     position: absolute;
+//     z-index: -1;
+//     left: 0;
+//     top: 0;
+//     width: 100%;
+//     height: 100%;
+//     border: 1.277em solid;
+//     // border-color: transparent;
+//     border-image: url('./assets/img/button-bg-#{$btncolor}-#{$border}.svg') 23;
+//     opacity: 0;
+//     animation: quickfadein 1s ease-in forwards;
+//   }
+// }
 
 @keyframes quickfadein {
   0% { opacity: 0; }
