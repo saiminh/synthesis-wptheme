@@ -45,8 +45,7 @@ input[type="submit"]:focus,
   transform: scale(1);
 }
 .wp-block-button__link, .wp-block-button__link:hover, .wp-block-button__link:active {
-  padding-left: 2em;
-  padding-right: 2em;
+  padding: .2em 1em;
 }
 
 input[type="text"],

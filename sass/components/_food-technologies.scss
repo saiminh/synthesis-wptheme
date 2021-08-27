@@ -9,6 +9,11 @@
   overflow-x: scroll;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.food-technologies::-webkit-scrollbar {
+  display: none;
 }
 .food-technology {
   scroll-snap-align: center;

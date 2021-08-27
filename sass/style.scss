@@ -10,10 +10,14 @@
 @use 'components/earlier-investments';
 @use 'components/food-technologies';
 @use 'components/newsletter-form';
+@use 'components/testimonials';
+@use 'components/image-gallery';
+@use 'components/teammembers';
 @use 'components/footer';
 
 @use 'pages/home';
 @use 'pages/focus';
+@use 'pages/team';
 @use 'accessibility';
 
 body:after{

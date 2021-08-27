@@ -194,3 +194,79 @@ p {
     top: .5em;
   }
 }
+//Testimonials
+.testimonials {
+  @include blocklabel('testimonials');
+  display: flex;
+  flex-wrap: wrap;
+  & blockquote {
+    margin: 0;
+  }
+  & p {
+    margin: 0;
+    font-size: 21px;
+    line-height: 1;
+    @include mq.for-tablet-landscape-up {
+      font-size: 26px;
+    }
+  }
+}
+.testimonial {
+  @include blocklabel('testimonial');
+  flex-basis: 33%;
+}
+.testimonial-preacher-columns {
+  @include blocklabel('testimonial-giver');
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  & .wp-block-image {
+    flex-basis: 30%;
+    mask-image: url(assets/img/img-mask-polygon.svg);
+    mask-size: contain;
+  }
+  & p {
+    flex-basis: 70%;
+    font-size: 16px;
+    line-height: 1;
+  }
+}
+
+//teammembers
+.team-teammembers {
+  @include blocklabel('Team Members');
+  display: flex;
+}
+.team-teammember {
+  @include blocklabel('Team Member');
+  flex-basis: 33.3%;
+}
+.team-teammember-title {
+  @include blocklabel('title');
+  & p {
+    font-size: 1rem;
+    margin: 0 0 1em 0;
+  }
+}
+.team-teammember-quote {
+  @include blocklabel('quote');
+  margin: 0 0 1em 0;
+  & p {
+    font-size: 1rem;
+    margin: 0 0 1em 0;
+  }
+}
+.team-teammember-vita {
+  @include blocklabel('Vita');
+  & p {
+    font-size: 1rem;
+    margin: 0 0 1em 0;
+  }
+}
+.team-teammember-sociallinks {
+  @include blocklabel('Links');
+  & p {
+    font-size: 1rem;
+    margin: 0 0 1em 0;
+  }
+}

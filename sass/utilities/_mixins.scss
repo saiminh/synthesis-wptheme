@@ -27,43 +27,21 @@
   opacity: 0;
   animation: quickfadein 1s ease-in forwards;
 }
-// @mixin poly-btn($btncolor:"blue", $border:"outline", $fontsize: 18px) {
-//   font-size: $fontsize;
-//   padding: 0.833em 20px 0.666em;
-//   line-height: 1;
-//   position: relative;
-//   z-index: 1;
-//   text-decoration: none;
-//   background-color: transparent;
-//   display: block;
-//   @if $border == "outline" and $btncolor == "blue" {
-//     color: vars.$synth-blue;
-//   } @else if $border == "outline" and $btncolor == "green" {
-//     color: vars.$neon-green;
-//   } @else if $border == "fill" and $btncolor == "green" {
-//     color: vars.$synth-blue;
-//   } @else if $border == "fill" and $btncolor == "white" {
-//     color: vars.$synth-blue;
-//   } @else {
-//     color: white
-//   }
-//   &::before {
-//     content: '';
-//     position: absolute;
-//     z-index: -1;
-//     left: 0;
-//     top: 0;
-//     width: 100%;
-//     height: 100%;
-//     border: 1.277em solid;
-//     // border-color: transparent;
-//     border-image: url('./assets/img/button-bg-#{$btncolor}-#{$border}.svg') 23;
-//     opacity: 0;
-//     animation: quickfadein 1s ease-in forwards;
-//   }
-// }
 
 @keyframes quickfadein {
   0% { opacity: 0; }
   100% { opacity: 1; }
+}
+
+@mixin transparent-fade-out-bottom {
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
+}
+
+@mixin hideScrollBar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  &::-webkit-scrollbar { /* Chrome, Safari, Opera */
+    display: none;
+  }
 }

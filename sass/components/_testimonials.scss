@@ -1,0 +1,54 @@
+@use '../utilities/mq';
+
+.testimonials {
+  & p {
+    font-size: 21px;
+    line-height: 1;
+    @include mq.for-tablet-landscape-up {
+      font-size: 26px;
+    }
+  }
+}
+.testimonials-masonry {
+  @include mq.for-tablet-portrait-up {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+}
+.testimonial {
+  width: 75%;
+  @include mq.for-tablet-portrait-up {
+    width: auto;
+    flex-basis: calc(33.3% - .666em);
+  }
+}
+.testimonial:nth-child(2n),
+.testimonial:nth-child(4n) {
+  margin-left: 25%;
+  @include mq.for-tablet-portrait-up {
+    margin: 0;
+  }
+}
+.testimonial:nth-child(6n+3) {
+  @include mq.for-tablet-portrait-up {
+    margin-left: 33.3%;
+    margin-right: 0;
+  }
+}
+.testimonial-preacher-columns {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  & .wp-block-image {
+    flex-basis: 30%;
+    mask-image: url(assets/img/img-mask-polygon.svg);
+    mask-size: contain;
+  }
+  & p {
+    flex-basis: 70%;
+    font-size: 16px;
+    line-height: 1;
+    margin: 0;
+  }
+}

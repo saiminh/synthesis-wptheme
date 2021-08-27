@@ -1,5 +1,5 @@
 @use 'utilities/mq';
-@use 'utilities/animations';
+@use 'utilities/mixins';
 @use 'utilities/vars' as vars;
 
 .entry-content > :first-child {
@@ -7,6 +7,16 @@
 }
 .entry-content > .wp-block-group {
   padding: vars.$gap-space;
+}
+.wp-block-columns {
+  @include mq.for-tablet-portrait-up {
+    flex-wrap: nowrap;
+  }
+}
+.wp-block-column:nth-child(3):last-child {
+  @include mq.for-tablet-portrait-up {
+    margin-left: 2em;
+  }
 }
 .wp-block-column, 
 .wp-block-group {
@@ -26,12 +36,5 @@
     height: 100%;
     object-fit: cover;
   }
-  @include animations.img-gradient;
-}
-.has-synthesis-blue-background-color .img-mob_full-tab_por_33_right {
-  opacity: 0;
-  transition: opacity 1.5s ease-in-out;
-}
-[class*="bluesection-"] .has-synthesis-blue-background-color .img-mob_full-tab_por_33_right {
-  opacity: 1;
+  @include mixins.transparent-fade-out-bottom;
 }

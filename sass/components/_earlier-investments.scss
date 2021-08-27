@@ -1,6 +1,6 @@
 @use '../utilities/vars' as vars;
 @use '../utilities/mq';
-@use '../utilities/animations';
+@use '../utilities/mixins';
 
 .earlier-investments {
   display: flex;
@@ -51,7 +51,7 @@
     position: absolute;
     bottom: 0;
   }
-  @include animations.img-gradient;
+  @include mixins.transparent-fade-out-bottom;
 }
 
 .earlier-investment-text {

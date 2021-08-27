@@ -1,0 +1,47 @@
+@use '../utilities/mq';
+@use '../utilities/vars';
+@use '../utilities/mixins';
+
+.team-teammembers {
+  padding: vars.$gap-space;
+  @include mq.for-tablet-portrait-up {
+    display: flex;
+    gap: 4em;
+  }
+  @include mq.for-tablet-landscape-up {
+    
+  }
+}
+.team-teammember {
+  & p {
+    margin: 0 0 1em 0;
+    font-size: 18px;
+    @include mq.for-tablet-portrait-up {
+      font-size: 21px;
+    }
+  }
+  @include mq.for-tablet-portrait-up {
+    flex-basis: 33.3%;
+  }
+  & .wp-block-image {
+    @include mixins.transparent-fade-out-bottom;
+  }
+}
+.team-teammember-title, 
+.team-teammember-quote {
+  & p {
+    font-size: 22px;
+    @include mq.for-tablet-portrait-up {
+      font-size: 26px;
+    }
+  }
+}
+.team-teammember-title {
+  margin-bottom: 1em;
+  & p {
+    margin-bottom: 0;
+  }
+  & p + p {
+    opacity: .5;
+  }
+}

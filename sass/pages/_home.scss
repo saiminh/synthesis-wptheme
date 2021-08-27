@@ -15,8 +15,6 @@
   bottom: 1.5em;
 }
 .hero-home .wp-block-video {
-  opacity: 0;
-  transition: opacity 1.5s ease-in-out;
   -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
   position: absolute;
@@ -39,9 +37,6 @@
       width: 100%;
     }
   }
-}
-[class*="bluesection-"] .hero-home .wp-block-video {
-  opacity: 1;
 }
 .home .wp-block-group:not(.synthesis-newsletter-subscribe) > .wp-block-buttons {
   justify-content: end;
@@ -69,6 +64,12 @@
   .wp-block-column {
     h1, h2, p {
       max-width: 100%;
+    }
+  }
+  .scroll-section p {
+    @include mq.for-tablet-portrait-up {
+      margin-left: 0;
+      margin-right: 33.33%;
     }
   }
 }

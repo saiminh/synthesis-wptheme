@@ -26,7 +26,7 @@ h1, h2, h3, h4, h5, h6 {
   clear: both;
   margin-bottom: 1em;
 }
-h1, h2 {
+h1, h2{
   font-size: 31px;
   line-height: 85%;
   @include mq.for-tablet-portrait-up {
@@ -43,6 +43,28 @@ h1, h2 {
 }
 h2 {
   text-indent: 1em;
+  &.has-text-align-center {
+    text-indent: 0;
+  }
+}
+h3 {
+  font-size: 31px;
+  line-height: .95;
+  @include mq.for-tablet-portrait-up {
+    font-size: 26px;
+  }
+  @include mq.for-tablet-landscape-up {
+    font-size: 36px;
+  }
+}
+.wp-block-column > p,
+.wp-block-column > blockquote,
+.wp-block-column > blockquote p,
+.wp-block-column > h1,
+.wp-block-column > h2,
+.wp-block-column > h3 {
+  margin-left: 0;
+  margin-right: 0;
 }
 p {
   margin-bottom: 1.5em;
@@ -58,6 +80,13 @@ p {
     font-size: 36px;
     margin-left: 18%;
     margin-right: 0;
+  }
+}
+.wp-block-column > p {
+  font-size: 18px;
+  line-height: .94;
+  @include mq.for-tablet-landscape-up {
+    font-size: 24px;
   }
 }
 .label {
@@ -78,7 +107,7 @@ i {
   font-style: italic;
 }
 blockquote {
-  margin: 0 1.5em;
+  margin: 0;
 }
 address {
   margin: 0 0 1.5em;
@@ -116,8 +145,13 @@ hr, .wp-block-separator {
   border: 0;
   height: 1px;
   margin-bottom: 1.5em;
+  .has-synthesis-blue-background-color & {
+    background-color: white;
+  }
 }
-
+.wp-block-separator + p + .wp-block-separator {
+  margin-top: -.75em;
+}
 ul,
 ol {
   margin: 0;

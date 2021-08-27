@@ -1,0 +1,12 @@
+@use '../utilities/mq';
+
+.team-page {
+  & p,
+  & .team-teammembers {
+    @include mq.for-tablet-landscape-up {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

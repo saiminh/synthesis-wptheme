@@ -1,4 +1,14 @@
 @use '../utilities/mq';
+@use '../utilities/vars';
+@use '../utilities/mixins';
+
+.focus-page .entry-content {
+  width: 100vw;
+  overflow: hidden;
+}
+.focus-page h1 + p {
+  @include mixins.transparent-fade-out-bottom;
+}
 
 .focus-protein-spectrum {
   display: flex;
@@ -11,6 +21,10 @@
     margin-right: 0;
   }
 }
+.focus-protein-spectrum + h2 {
+  margin-top: 4em;
+}
+
 .focus-protein-spectrum-column {
   flex-basis: calc(25% + 1em);
   padding: 0 .5em;
@@ -72,17 +86,22 @@
   }
 }
 .focus-enabling-technologies-table {
+  @include mixins.transparent-fade-out-bottom;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1em;
   @include mq.for-tablet-portrait-up {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     margin-left: 7.5%;
     margin-right: 7.5%;
   }
   @include mq.for-tablet-landscape-up {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-left: 10%;
     margin-right: 10%;
+  }
+  @include mq.for-desktop-up {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 }
 .focus-enabling-technologies-item {
@@ -104,5 +123,44 @@
     transform: scaleX(-1);
     right: 0;
     top: .5em;
+  }
+}
+.focus-alignment-animation {
+  overflow: visible;
+  position: relative;
+  height: 120vh;
+  margin-top: 8em;
+}
+.focus-alignment-animation-headline {
+    text-align: center;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 20em;
+}
+.focus-alignment-animation-polygons {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  & .wp-block-image {
+    margin: 0;
+    position: relative;
+    transform-origin: 50% 50%;
+    flex-basis: 33.3%;
+    & img, & svg {
+      display: block;
+      width: 66.6%;
+      max-width: 250px;
+      height: auto;
+      margin: auto;
+    }
   }
 }

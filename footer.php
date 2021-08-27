@@ -10,7 +10,15 @@
  */
 
 ?>
-
+  <div class="wp-block-group synthesis-newsletter-subscribe">
+    <p class="has-text-align-center">Synthesis insight by email, to whet your appetite.</p>
+    <form action="">
+      <input type="email" placeholder="Enter your email address">
+      <div class="wp-block-buttons">
+        <div class="wp-block-button"><a class="wp-block-button__link">Submit</a></div>
+      </div>
+    </form>
+  </div>
 	<footer id="colophon" class="site-footer has-synthesis-blue-background-color">
 		<div class="footer-address">
       2 Eastbourne Terrace<br />
