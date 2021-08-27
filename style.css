@@ -796,8 +796,8 @@ textarea {
   position: relative;
   max-height: 330px;
   overflow: hidden;
-  -webkit-mask-image: linear-gradient(to bottom, black 40%, rgba(0, 0, 0, 0) 100%);
-  mask-image: linear-gradient(to bottom, black 40%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
+  mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
 }
 @media (min-width: 900px) {
   .img-mob_full-tab_por_33_right {
@@ -994,8 +994,8 @@ section {
   align-items: flex-end;
   position: relative;
   margin-bottom: 20px;
-  -webkit-mask-image: linear-gradient(to bottom, black 40%, rgba(0, 0, 0, 0) 100%);
-  mask-image: linear-gradient(to bottom, black 40%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
+  mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
 }
 .earlier-investment-image img, .earlier-investment-image svg {
   width: 100%;
@@ -1279,8 +1279,8 @@ section {
   flex-grow: 0;
   flex-shrink: 0;
   margin: 0;
-  -webkit-mask-image: linear-gradient(to bottom, black 40%, rgba(0, 0, 0, 0) 100%);
-  mask-image: linear-gradient(to bottom, black 40%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
+  mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
 }
 @media (min-width: 600px) {
   .scroll-gallery.wp-block-gallery .blocks-gallery-item {
@@ -1319,8 +1319,8 @@ section {
   }
 }
 .team-teammember .wp-block-image {
-  -webkit-mask-image: linear-gradient(to bottom, black 40%, rgba(0, 0, 0, 0) 100%);
-  mask-image: linear-gradient(to bottom, black 40%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
+  mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
 }
 
 .team-teammember-title p,
@@ -1574,8 +1574,8 @@ section {
 }
 
 .focus-page h1 + p {
-  -webkit-mask-image: linear-gradient(to bottom, black 40%, rgba(0, 0, 0, 0) 100%);
-  mask-image: linear-gradient(to bottom, black 40%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
+  mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
 }
 
 .focus-protein-spectrum {
@@ -1673,8 +1673,8 @@ section {
 }
 
 .focus-enabling-technologies-table {
-  -webkit-mask-image: linear-gradient(to bottom, black 40%, rgba(0, 0, 0, 0) 100%);
-  mask-image: linear-gradient(to bottom, black 40%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
+  mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1em;
@@ -1768,7 +1768,7 @@ section {
 }
 
 @media (min-width: 900px) {
-  .team-page p, .team-page .team-teammembers {
+  .team-page > p, .team-page .team-teammembers {
     width: 80%;
     margin-left: auto;
     margin-right: auto;

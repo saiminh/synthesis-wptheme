@@ -56,40 +56,13 @@ function bgGradients(){
           trigger: section,
           start: "top 50%",
           end: "bottom 50%",
-          onEnter: () => { fadeToBlueDown.play(0); console.log('in'); },
-          onEnterBack: () => { fadeToWhiteDown.reverse(1); console.log('backin'); },
-          onLeave: () => { fadeToWhiteDown.play(0); console.log('out'); },
-          onLeaveBack: () => { fadeToBlueDown.reverse(1); console.log('backwardsback'); },
+          onEnter: () => { fadeToWhiteDown.pause(); fadeToBlueDown.play(0); console.log('in'); },
+          onEnterBack: () => { fadeToBlueDown.pause(); fadeToWhiteDown.reverse(1); console.log('backin'); },
+          onLeave: () => { fadeToBlueDown.pause(); fadeToWhiteDown.play(0); console.log('out'); },
+          onLeaveBack: () => { fadeToWhiteDown.pause(); fadeToBlueDown.reverse(1); console.log('backwardsback'); },
           // markers: true
-
         })
-        
         section.style.setProperty("--wp--preset--color--synthesis-blue", "transparent"); 
-
-        // let yStart, yEnd;
-        // yStart = section.offsetTop - ( window.innerHeight * .5 );
-        // yEnd = section.offsetTop + ( section.offsetHeight - window.innerHeight * .5 );
-        
-        
-        // window.addEventListener('resize', () => {
-        //   yStart = section.offsetTop - ( window.innerHeight * .5 );
-        //   yEnd = section.offsetTop + ( section.offsetHeight - window.innerHeight * .5 );
-        // })
-        
-        // //check if pagescroll is on a blue background already 
-        // if ( !document.body.classList.contains('bluesection-'+(index + 1)) && window.scrollY >= yStart && window.scrollY <= yEnd ) {
-        //   document.body.classList.add('bluesection-'+(index + 1));
-        // } else if ( window.scrollY > yEnd || window.scrollY < yStart ){
-        //   document.body.classList.remove('bluesection-'+(index + 1));
-        // }
-        
-        // window.addEventListener('scroll', () => {
-        //   if ( !document.body.classList.contains('bluesection-'+(index + 1)) && window.scrollY >= yStart && window.scrollY <= yEnd ) {
-        //     document.body.classList.add('bluesection-'+(index + 1));
-        //   } else if ( window.scrollY > yEnd || window.scrollY < yStart ){
-        //     document.body.classList.remove('bluesection-'+(index + 1));
-        //   }
-        // })
       })
     }
   }
