@@ -1054,45 +1054,59 @@ section {
 
 .food-technology {
   scroll-snap-align: center;
-  flex-basis: calc(60% + 2em);
+  flex-basis: calc(217px + 2em);
   flex-shrink: 0;
   flex-grow: 0;
   padding-right: 1em;
 }
 @media (min-width: 600px) {
   .food-technology {
-    flex-basis: calc(22% + 2em);
+    flex-basis: calc(175px + 2em);
   }
 }
 @media (min-width: 900px) {
   .food-technology {
-    flex-basis: calc(15% + 2em);
+    flex-basis: calc(217px + 2em);
   }
 }
 
 .food-technology:first-child {
   padding-left: 3em;
-  flex-basis: calc(60% + 5em);
+  flex-basis: calc(217px + 5em);
 }
 @media (min-width: 600px) {
   .food-technology:first-child {
-    flex-basis: calc(22% + 5em);
+    flex-basis: calc(175px + 5em);
   }
 }
 @media (min-width: 900px) {
   .food-technology:first-child {
     padding-left: 24%;
-    flex-basis: calc(39% + 2em);
+    flex-basis: calc(217px + 2em + 24%);
   }
 }
 
 .food-technology .wp-block-image {
   width: 100%;
-  height: 0;
-  padding-bottom: 100%;
+  height: 217px;
   mask-image: url("assets/img/img-mask-polygon.svg");
   mask-size: contain;
   mask-repeat: no-repeat;
+}
+@media (min-width: 600px) {
+  .food-technology .wp-block-image {
+    height: 175px;
+  }
+}
+@media (min-width: 900px) {
+  .food-technology .wp-block-image {
+    height: 217px;
+  }
+}
+.food-technology .wp-block-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .food-technology hr, .food-technology .wp-block-separator {
