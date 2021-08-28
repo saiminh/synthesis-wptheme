@@ -41,4 +41,10 @@
     }
     @include mixins.transparent-fade-out-bottom;
   }
+  & .blocks-gallery-grid .blocks-gallery-image img, 
+  & .blocks-gallery-grid .blocks-gallery-item img, 
+  & .wp-block-gallery .blocks-gallery-image img, 
+  & .wp-block-gallery .blocks-gallery-item img {
+    width: 100%;
+  }
 }

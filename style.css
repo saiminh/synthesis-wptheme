@@ -1341,6 +1341,9 @@ section {
   flex-basis: calc(66.6% + vars.$gap-space);
   padding-right: 20px;
 }
+.scroll-gallery .blocks-gallery-grid .blocks-gallery-image img, .scroll-gallery .blocks-gallery-grid .blocks-gallery-item img, .scroll-gallery .wp-block-gallery .blocks-gallery-image img, .scroll-gallery .wp-block-gallery .blocks-gallery-item img {
+  width: 100%;
+}
 
 .team-teammembers {
   padding: 20px;
