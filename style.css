@@ -949,6 +949,7 @@ section {
   gap: 0;
   width: 100vw;
   margin-left: -20px;
+  margin-bottom: 4em;
   overflow-x: scroll;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
@@ -1032,6 +1033,10 @@ section {
 .earlier-investment-text img, .earlier-investment-text .investment-logo {
   max-height: 52px;
   max-width: 200px;
+}
+
+.investment-logo svg path {
+  fill: #120A59;
 }
 
 .food-technologies {

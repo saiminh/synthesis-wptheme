@@ -8,6 +8,7 @@
   gap: 0;
   width: 100vw;
   margin-left: - vars.$gap-space;
+  margin-bottom: 4em;
   // margin-right: - vars.$gap-space;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -80,5 +81,10 @@
   & .investment-logo {
     max-height: 52px;
     max-width: 200px;
+  }
+}
+.investment-logo {
+  & svg path {
+    fill: vars.$synth-blue;
   }
 }
