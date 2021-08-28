@@ -41,11 +41,17 @@
 }
 .earlier-investment-image {
   width: 100%;
-  min-height: 250px;
+  min-height: 316px;
   display: flex;
   align-items: flex-end;
   position: relative;
   margin-bottom: vars.$gap-space;
+  @include mq.for-tablet-portrait-up {
+    min-height: 250px;
+  }
+  @include mq.for-tablet-landscape-up {
+    min-height: 412px;
+  }
   & img, & svg {
     width: 100%;
     height: auto;

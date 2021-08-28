@@ -990,13 +990,23 @@ section {
 
 .earlier-investment-image {
   width: 100%;
-  min-height: 250px;
+  min-height: 316px;
   display: flex;
   align-items: flex-end;
   position: relative;
   margin-bottom: 20px;
   -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
   mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
+}
+@media (min-width: 600px) {
+  .earlier-investment-image {
+    min-height: 250px;
+  }
+}
+@media (min-width: 900px) {
+  .earlier-investment-image {
+    min-height: 412px;
+  }
 }
 .earlier-investment-image img, .earlier-investment-image svg {
   width: 100%;
