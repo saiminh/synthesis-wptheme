@@ -813,7 +813,7 @@ textarea {
 #primary-menu {
   display: none;
 }
-@media (min-width: 900px) {
+@media (min-width: 600px) {
   #primary-menu {
     display: flex;
   }
@@ -915,7 +915,7 @@ ul.nav-menu a:hover,
   transform: scale(1.05);
 }
 
-@media (min-width: 900px) {
+@media (min-width: 600px) {
   .menu-toggle,
 .home .menu-toggle {
     display: none;
@@ -1326,12 +1326,20 @@ section {
     flex-basis: 25%;
   }
 }
+.scroll-gallery.wp-block-gallery .blocks-gallery-item:first-child {
+  flex-basis: calc(66.6% + vars.$gap-space);
+  padding-left: 20px;
+}
 @media (min-width: 600px) {
   .scroll-gallery.wp-block-gallery .blocks-gallery-item:first-child {
     scroll-snap-align: start;
     flex-basis: 45%;
     padding-left: 20%;
   }
+}
+.scroll-gallery.wp-block-gallery .blocks-gallery-item:last-child {
+  flex-basis: calc(66.6% + vars.$gap-space);
+  padding-right: 20px;
 }
 
 .team-teammembers {
@@ -1340,14 +1348,20 @@ section {
 @media (min-width: 600px) {
   .team-teammembers {
     display: flex;
+    gap: 2em;
+  }
+}
+@media (min-width: 1200px) {
+  .team-teammembers {
     gap: 4em;
   }
 }
+
 .team-teammember p {
-  margin: 0 0 1em 0;
+  margin: 0 0 0.5em 0;
   font-size: 18px;
 }
-@media (min-width: 600px) {
+@media (min-width: 900px) {
   .team-teammember p {
     font-size: 21px;
   }
@@ -1362,6 +1376,12 @@ section {
   mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
 }
 
+.team-teammember-title,
+.team-teammember-quote,
+.team-teammember-vita {
+  margin-bottom: 2em;
+}
+
 .team-teammember-title p,
 .team-teammember-quote p {
   font-size: 22px;
@@ -1373,14 +1393,31 @@ section {
   }
 }
 
-.team-teammember-title {
-  margin-bottom: 1em;
-}
 .team-teammember-title p {
   margin-bottom: 0;
 }
 .team-teammember-title p + p {
   opacity: 0.5;
+}
+
+.team-teammember-sociallinks p {
+  margin-bottom: 0.5em;
+}
+.team-teammember-sociallinks a {
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+.team-teammember-sociallinks a::after {
+  content: "↙";
+  position: absolute;
+  transform: scaleX(-1) translate(0, 0);
+  transition: transform 0.2s ease-in-out;
+  left: calc(100% + .25em);
+  top: 0;
+}
+.team-teammember-sociallinks a:hover::after {
+  transform: scaleX(-1) translate(-2px, 2px);
 }
 
 .site-footer {
@@ -1612,6 +1649,10 @@ section {
   overflow: hidden;
 }
 
+.focus-page h1 {
+  text-indent: 1em;
+}
+
 .focus-page h1 + p {
   -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
   mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
@@ -1807,6 +1848,9 @@ section {
   margin: auto;
 }
 
+.team-page h1 {
+  text-indent: 1em;
+}
 @media (min-width: 900px) {
   .team-page > p, .team-page .team-teammembers {
     width: 80%;

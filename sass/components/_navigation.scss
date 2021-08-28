@@ -4,7 +4,7 @@
 
 #primary-menu {
   display: none;
-  @include mq.for-tablet-landscape-up {
+  @include mq.for-tablet-portrait-up {
     display: flex;
   }
 }
@@ -101,7 +101,7 @@ ul.nav-menu a:hover,
 // }
 .menu-toggle,
 .home .menu-toggle {
-  @include mq.for-tablet-landscape-up {
+  @include mq.for-tablet-portrait-up {
     display: none;
   }
 }

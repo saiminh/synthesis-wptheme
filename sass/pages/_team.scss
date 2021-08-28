@@ -1,6 +1,9 @@
 @use '../utilities/mq';
 
 .team-page {
+  & h1 {
+    text-indent: 1em;
+  }
   & > p,
   & .team-teammembers {
     @include mq.for-tablet-landscape-up {

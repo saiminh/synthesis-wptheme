@@ -6,6 +6,9 @@
   width: 100vw;
   overflow: hidden;
 }
+.focus-page h1 {
+  text-indent: 1em;
+}
 .focus-page h1 + p {
   @include mixins.transparent-fade-out-bottom;
   padding-bottom: .5em;

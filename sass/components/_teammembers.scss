@@ -6,17 +6,17 @@
   padding: vars.$gap-space;
   @include mq.for-tablet-portrait-up {
     display: flex;
-    gap: 4em;
+    gap: 2em;
   }
-  @include mq.for-tablet-landscape-up {
-    
+  @include mq.for-desktop-up {
+    gap: 4em;
   }
 }
 .team-teammember {
   & p {
-    margin: 0 0 1em 0;
+    margin: 0 0 .5em 0;
     font-size: 18px;
-    @include mq.for-tablet-portrait-up {
+    @include mq.for-tablet-landscape-up {
       font-size: 21px;
     }
   }
@@ -28,6 +28,11 @@
   }
 }
 .team-teammember-title, 
+.team-teammember-quote, 
+.team-teammember-vita {
+  margin-bottom: 2em;
+}
+.team-teammember-title, 
 .team-teammember-quote {
   & p {
     font-size: 22px;
@@ -37,11 +42,31 @@
   }
 }
 .team-teammember-title {
-  margin-bottom: 1em;
   & p {
     margin-bottom: 0;
   }
   & p + p {
     opacity: .5;
+  }
+}
+.team-teammember-sociallinks {
+  & p {
+    margin-bottom: 0.5em;
+  }
+  & a {
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    &::after {
+      content: "↙";
+      position: absolute;
+      transform: scaleX(-1) translate(0, 0);
+      transition: transform .2s ease-in-out;
+      left: calc(100% + .25em);
+      top: 0;
+    }
+    &:hover::after {
+      transform: scaleX(-1) translate(-2px, 2px);
+    }
   }
 }

@@ -20,7 +20,7 @@ function focusAnimation(){
     paused: true,
     defaults: {
       duration: 1,
-      ease: "power3.inOut"
+      ease: "power2.out"
     }
   })
   .fromTo(polygons[0], 
