@@ -1142,6 +1142,7 @@ section {
 
 .synthesis-newsletter-subscribe {
   transition: color 1.5s ease-in-out;
+  padding: 20px;
   margin: 2em auto 6em;
 }
 [class*=bluesection-] .synthesis-newsletter-subscribe {
@@ -1201,8 +1202,8 @@ section {
   opacity: 0;
   animation: quickfadein 1s ease-in forwards;
   line-height: 1;
-  padding-left: 2em;
-  padding-right: 2em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
   color: #120A59;
 }
 @media (min-width: 900px) {
@@ -1599,6 +1600,7 @@ section {
 .focus-page h1 + p {
   -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
   mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
+  padding-bottom: 0.5em;
 }
 
 .focus-protein-spectrum {

@@ -4,6 +4,7 @@
 
 .synthesis-newsletter-subscribe {
   transition: color 1.5s ease-in-out;
+  padding: vars.$gap-space;
   
   [class*="bluesection-"] & {
     color: white;
@@ -34,8 +35,8 @@
   & .wp-block-button__link { 
     @include mixins.poly-btn("pink", "fill");
     line-height: 1;
-    padding-left: 2em;
-    padding-right: 2em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
     @include mq.for-tablet-landscape-up {
       font-size: 24px;
     }
