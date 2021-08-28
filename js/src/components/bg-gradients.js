@@ -4,6 +4,17 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 function bgGradients(){
+  
+  let fadeinItems = document.querySelectorAll('video');
+  if ( fadeinItems.length ) {
+    fadeinItems.forEach( (item) => {
+      gsap.set(item, { autoAlpha: 0 });
+      item.addEventListener('loadeddata', () => {
+        // alert('loaded');
+        gsap.to(item, { autoAlpha: 1, duration: 3, ease: 'power4.out'})
+      })
+    } )
+  };
 
   function init(){
     let bggrad = document.createElement('div');
