@@ -50,3 +50,7 @@
     color: vars.$synth-blue;
   }
 }
+body:not(.investments-page) .site-footer a.wp-block-button__link, 
+body:not(.investments-page) .site-footer a.wp-block-button__link:visited {
+  color: vars.$synth-blue;
+}

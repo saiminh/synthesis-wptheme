@@ -9,7 +9,7 @@
   z-index: 1;
   text-decoration: none;
   background-color: transparent;
-  display: block;
+  display: inline-block;
   @if $border == "outline" and $btncolor == "blue" {
     color: vars.$synth-blue;
   } @else if $border == "outline" and $btncolor == "green" {

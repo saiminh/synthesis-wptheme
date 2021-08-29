@@ -1,0 +1,53 @@
+@use '../utilities/vars';
+@use '../utilities/mixins';
+
+.cc-banner {
+  background-color: vars.$pink;
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 2em 4em;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(0) scale(1);
+  transition: .5s transform cubic-bezier(.82,.1,.56,.93);
+}
+.cc-banner.cc-invisible {
+  transform: translateY(100%) scale(.8);
+}
+.cc-compliance {
+  text-align: right;
+  align-self: end;
+}
+.cc-btn {
+  @include mixins.poly-btn('white', 'fill');
+  cursor: pointer;
+  transform: scale(1);
+  margin-right: .5em;
+  transition: .1s transform ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.cc-btn.cc-allow {
+  @include mixins.poly-btn('green', 'fill');
+}
+.cc-message {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.cc-link {
+  @include mixins.poly-btn('white', 'fill');
+  display: inline;
+  margin-top: 1em;
+  transition: .1s transform ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.cc-revoke {
+  cursor: pointer;
+}
