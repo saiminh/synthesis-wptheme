@@ -25,6 +25,7 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
   clear: both;
   margin-bottom: 1em;
+  font-weight: normal;
 }
 h1, h2{
   font-size: 31px;
@@ -81,6 +82,12 @@ p {
     margin-left: 18%;
     margin-right: 0;
   }
+}
+strong, b {
+  font-weight: normal;
+}
+em {
+  font-style: normal;
 }
 .wp-block-column > p {
   font-size: 18px;
@@ -183,6 +190,7 @@ dd {
 --------------------------------------------- */
 a {
   color: vars.$synth-blue;
+  cursor: pointer;
 }
 a:visited {
   color: vars.$synth-blue;

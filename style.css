@@ -399,6 +399,7 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
   clear: both;
   margin-bottom: 1em;
+  font-weight: normal;
 }
 
 h1, h2 {
@@ -472,6 +473,14 @@ p {
     margin-left: 18%;
     margin-right: 0;
   }
+}
+
+strong, b {
+  font-weight: normal;
+}
+
+em {
+  font-style: normal;
 }
 
 .wp-block-column > p {
@@ -594,6 +603,7 @@ dd {
 --------------------------------------------- */
 a {
   color: #120A59;
+  cursor: pointer;
 }
 
 a:visited {
@@ -1168,13 +1178,15 @@ section {
     max-width: 66.6%;
   }
 }
-.synthesis-newsletter-subscribe form {
-  display: flex;
-  gap: 0.25em;
-  max-width: 700px;
-  margin: 0 auto;
+@media (min-width: 600px) {
+  .synthesis-newsletter-subscribe form {
+    display: flex;
+    gap: 0.25em;
+    max-width: 700px;
+    margin: 0 auto;
+  }
 }
-.synthesis-newsletter-subscribe input {
+.synthesis-newsletter-subscribe input[type=email] {
   font-size: 18px;
   line-height: 0;
   padding: 2px 0 0 0;
@@ -1192,11 +1204,11 @@ section {
   text-align: left;
 }
 @media (min-width: 900px) {
-  .synthesis-newsletter-subscribe input {
+  .synthesis-newsletter-subscribe input[type=email] {
     font-size: 24px;
   }
 }
-.synthesis-newsletter-subscribe input:focus {
+.synthesis-newsletter-subscribe input[type=email]:focus {
   outline: none;
   color: #120A59;
 }
@@ -1207,6 +1219,11 @@ section {
 }
 .synthesis-newsletter-subscribe .wp-block-button {
   margin: 0;
+}
+@media (max-width: 599px) {
+  .synthesis-newsletter-subscribe .wp-block-button {
+    margin: 0.25em 0 0 auto !important;
+  }
 }
 .synthesis-newsletter-subscribe .wp-block-button__link {
   font-size: 18px;

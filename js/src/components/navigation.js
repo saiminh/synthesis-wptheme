@@ -12,7 +12,7 @@
 		return;
 	}
 
-	const button = siteNavigation.getElementsByTagName( 'button' )[ 0 ];
+	const button = siteNavigation.querySelector( '.menu-toggle' );
 
 	// Return early if the button don't exist.
 	if ( 'undefined' === typeof button ) {
@@ -51,6 +51,7 @@
 		if ( ! isClickInside ) {
       document.body.classList.remove( 'nav-toggled' );
 			button.setAttribute( 'aria-expanded', 'false' );
+      button.innerHTML = origValue;
 		}
 	} );
 
