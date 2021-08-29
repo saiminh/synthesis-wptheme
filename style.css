@@ -475,6 +475,10 @@ p {
   }
 }
 
+blockquote > p {
+  margin-left: 0;
+}
+
 strong, b {
   font-weight: normal;
 }
@@ -1540,9 +1544,15 @@ body:not(.investments-page) .site-footer a.wp-block-button__link:visited {
 }
 
 .cc-message {
+  font-size: 18px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+@media (min-width: 900px) {
+  .cc-message {
+    font-size: 21px;
+  }
 }
 
 .cc-link {

@@ -83,6 +83,9 @@ p {
     margin-right: 0;
   }
 }
+blockquote > p {
+  margin-left: 0;
+}
 strong, b {
   font-weight: normal;
 }

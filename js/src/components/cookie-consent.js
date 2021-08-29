@@ -47,7 +47,7 @@ function cookieConsent(){
       var type = this.options.type;
       var didConsent = this.hasConsented();
       if (type == 'opt-in' && didConsent) {
-      // enable cookies
+        // enable cookies
       }
       if (type == 'opt-out' && !didConsent) {
         // disable cookies
@@ -58,7 +58,7 @@ function cookieConsent(){
       var type = this.options.type;
       var didConsent = this.hasConsented();
       if (type == 'opt-in' && didConsent) {
-      // enable cookies
+        // enable cookies
       }
       if (type == 'opt-out' && !didConsent) {
         // disable cookies
@@ -72,16 +72,18 @@ function cookieConsent(){
         clearCookies();
       }
       if (type == 'opt-out') {
-      // enable cookies
-      }
+        // enable cookies
+      }      
+    },
+    onPopupClose: function() {
+      document.querySelector('.footer-copyright').appendChild(document.querySelector('.cc-revoke'));
     },
     law: {
      regionalLaw: true,
     },
     location: true,
    });
-  let revokebtn = document.querySelector('.cc-revoke');
-  document.querySelector('.footer-copyright').appendChild(revokebtn);
+  document.querySelector('.footer-copyright').appendChild(document.querySelector('.cc-revoke'));
 }
 
 export { cookieConsent }
