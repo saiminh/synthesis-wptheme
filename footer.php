@@ -33,7 +33,7 @@
       </div>
       <div class="footer-copyright">
         Synthesis Capital © 2021<br />
-        <a href="">Privacy policy</a> <a href="">Cookie policy</a>
+        <?php the_privacy_policy_link(); ?>
       </div>
       <div class="footer-disclaimer">
         *Placeholder Disclaimer: We use all imagery with the kind permision from the following; Beyond Meat, Impossible Foods, UPSIDE Foods, Perfect Day, Geltor, Redefine Meat, Formo, Aleph Farms, Shiru, Innovopro, Solar Foods, Blue Nalu, JUST and Good Catch.
