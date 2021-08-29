@@ -1,25 +1,38 @@
+@use '../utilities/mq';
 @use '../utilities/vars';
 @use '../utilities/mixins';
 
-.cc-banner {
+.cc-window {
   background-color: vars.$pink;
   position: fixed;
   z-index: 3;
   left: 0;
   bottom: 0;
   width: 100%;
-  padding: 2em 4em;
   display: flex;
   justify-content: space-between;
   transform: translateY(0) scale(1);
   transition: .5s transform cubic-bezier(.82,.1,.56,.93);
+  padding: 2em 4em;
+  @include mq.for-phone-only {
+    padding: 2em vars.$gap-space;
+  }
 }
-.cc-banner.cc-invisible {
+.cc-window.cc-invisible {
   transform: translateY(100%) scale(.8);
 }
 .cc-compliance {
   text-align: right;
   align-self: end;
+  align-self: stretch;
+  display: flex;
+  justify-content: flex-end;
+  @include mq.for-phone-only {
+    flex-direction: column;
+  }
+  & > * {
+   align-self: flex-end; 
+  }
 }
 .cc-btn {
   @include mixins.poly-btn('white', 'fill');

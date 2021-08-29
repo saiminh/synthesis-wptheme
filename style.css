@@ -634,6 +634,7 @@ input[type=submit],
   cursor: pointer;
   font-size: 15px;
   line-height: 0;
+  white-space: nowrap;
   padding: 2px 0 0 0;
   position: relative;
   z-index: 1;
@@ -886,6 +887,7 @@ ul.nav-menu a,
 .menu-toggle {
   font-size: 18px;
   line-height: 0;
+  white-space: nowrap;
   padding: 2px 0 0 0;
   position: relative;
   z-index: 1;
@@ -906,6 +908,7 @@ ul.nav-menu a,
 ul.nav-menu .current_page_item a {
   font-size: 18px;
   line-height: 0;
+  white-space: nowrap;
   padding: 2px 0 0 0;
   position: relative;
   z-index: 1;
@@ -1189,6 +1192,7 @@ section {
 .synthesis-newsletter-subscribe input[type=email] {
   font-size: 18px;
   line-height: 0;
+  white-space: nowrap;
   padding: 2px 0 0 0;
   position: relative;
   z-index: 1;
@@ -1228,6 +1232,7 @@ section {
 .synthesis-newsletter-subscribe .wp-block-button__link {
   font-size: 18px;
   line-height: 0;
+  white-space: nowrap;
   padding: 2px 0 0 0;
   position: relative;
   z-index: 1;
@@ -1452,32 +1457,49 @@ body:not(.investments-page) .site-footer a.wp-block-button__link:visited {
   transform: scaleX(-1) translate(-2px, 2px);
 }
 
-.cc-banner {
+.cc-window {
   background-color: #FFC9FD;
   position: fixed;
   z-index: 3;
   left: 0;
   bottom: 0;
   width: 100%;
-  padding: 2em 4em;
   display: flex;
   justify-content: space-between;
   transform: translateY(0) scale(1);
   transition: 0.5s transform cubic-bezier(0.82, 0.1, 0.56, 0.93);
+  padding: 2em 4em;
+}
+@media (max-width: 599px) {
+  .cc-window {
+    padding: 2em 20px;
+  }
 }
 
-.cc-banner.cc-invisible {
+.cc-window.cc-invisible {
   transform: translateY(100%) scale(0.8);
 }
 
 .cc-compliance {
   text-align: right;
   align-self: end;
+  align-self: stretch;
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 599px) {
+  .cc-compliance {
+    flex-direction: column;
+  }
+}
+.cc-compliance > * {
+  align-self: flex-end;
 }
 
 .cc-btn {
   font-size: 18px;
   line-height: 0;
+  white-space: nowrap;
   padding: 2px 0 0 0;
   position: relative;
   z-index: 1;
@@ -1502,6 +1524,7 @@ body:not(.investments-page) .site-footer a.wp-block-button__link:visited {
 .cc-btn.cc-allow {
   font-size: 18px;
   line-height: 0;
+  white-space: nowrap;
   padding: 2px 0 0 0;
   position: relative;
   z-index: 1;
@@ -1525,6 +1548,7 @@ body:not(.investments-page) .site-footer a.wp-block-button__link:visited {
 .cc-link {
   font-size: 18px;
   line-height: 0;
+  white-space: nowrap;
   padding: 2px 0 0 0;
   position: relative;
   z-index: 1;

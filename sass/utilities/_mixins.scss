@@ -4,6 +4,7 @@
 @mixin poly-btn($btncolor:"blue", $border:"outline", $fontsize: 18px) {
   font-size: $fontsize;
   line-height: 0;
+  white-space: nowrap;
   padding: 2px 0 0 0;
   position: relative;
   z-index: 1;
