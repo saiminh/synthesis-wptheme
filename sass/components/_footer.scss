@@ -2,10 +2,11 @@
 @use '../utilities/mq';
 @use '../utilities/mixins';
 
-.site-footer {
-  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 99%);
-          mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 99%);
-  padding-top: 16em;
+body:not(.investments-page) .site-footer {
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 99%);
+          mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 99%);
+  padding-top: 30em;
+  margin-top: -15em;
   background-color: vars.$synth-blue;
   color: white;
   & a, & a:visited {

@@ -1430,14 +1430,15 @@ section {
   transform: scaleX(-1) translate(-2px, 2px);
 }
 
-.site-footer {
-  -webkit-mask-image: linear-gradient(to top, black 50%, rgba(0, 0, 0, 0) 99%);
-  mask-image: linear-gradient(to top, black 50%, rgba(0, 0, 0, 0) 99%);
-  padding-top: 16em;
+body:not(.investments-page) .site-footer {
+  -webkit-mask-image: linear-gradient(to top, black 20%, rgba(0, 0, 0, 0) 99%);
+  mask-image: linear-gradient(to top, black 20%, rgba(0, 0, 0, 0) 99%);
+  padding-top: 30em;
+  margin-top: -15em;
   background-color: #120A59;
   color: white;
 }
-.site-footer a, .site-footer a:visited {
+body:not(.investments-page) .site-footer a, body:not(.investments-page) .site-footer a:visited {
   color: white;
   text-decoration: none;
 }
