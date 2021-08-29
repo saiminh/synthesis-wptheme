@@ -38,3 +38,6 @@
   }
   @include mixins.transparent-fade-out-bottom;
 }
+.entry-footer .edit-link{
+  display: none;
+}

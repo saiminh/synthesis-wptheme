@@ -13,6 +13,7 @@
   }
 }
 .team-teammember {
+  margin-bottom: 3em;
   & p {
     margin: 0 0 .5em 0;
     font-size: 18px;
@@ -25,6 +26,7 @@
   }
   & .wp-block-image {
     @include mixins.transparent-fade-out-bottom;
+    margin-bottom: 0;
   }
 }
 .team-teammember-title, 

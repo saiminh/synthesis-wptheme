@@ -825,6 +825,10 @@ textarea {
   object-fit: cover;
 }
 
+.entry-footer .edit-link {
+  display: none;
+}
+
 #primary-menu {
   display: none;
 }
@@ -1403,6 +1407,9 @@ body:not(.investments-page) .site-footer a.wp-block-button__link:visited {
   }
 }
 
+.team-teammember {
+  margin-bottom: 3em;
+}
 .team-teammember p {
   margin: 0 0 0.5em 0;
   font-size: 18px;
@@ -1420,6 +1427,7 @@ body:not(.investments-page) .site-footer a.wp-block-button__link:visited {
 .team-teammember .wp-block-image {
   -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
   mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
+  margin-bottom: 0;
 }
 
 .team-teammember-title,
@@ -1591,10 +1599,16 @@ body:not(.investments-page) .site-footer a.wp-block-button__link:visited {
 body:not(.investments-page) .site-footer {
   -webkit-mask-image: linear-gradient(to top, black 20%, rgba(0, 0, 0, 0) 99%);
   mask-image: linear-gradient(to top, black 20%, rgba(0, 0, 0, 0) 99%);
-  padding-top: 30em;
-  margin-top: -15em;
+  padding-top: 10em;
+  margin-top: -5em;
   background-color: #120A59;
   color: white;
+}
+@media (min-width: 900px) {
+  body:not(.investments-page) .site-footer {
+    padding-top: 20em;
+    margin-top: -10em;
+  }
 }
 body:not(.investments-page) .site-footer a, body:not(.investments-page) .site-footer a:visited {
   color: white;
