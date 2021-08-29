@@ -55,9 +55,9 @@ function focusAnimation(){
       start: 'top 50%',
       end: '60% 50%',
       // markers: true,
-      onEnter: () => { console.log('enter'); polygons_back.pause(); polygons_stack.play(0) },
+      onEnter: () => { console.log('enter'); polygons_back.pause(); polygons_stack.play() },
       onEnterBack: () => { console.log('enterback'); polygons_stack.pause();  polygons_back.reverse() },
-      onLeave: () => { console.log('leave'); polygons_stack.pause(); polygons_back.play(0) },
+      onLeave: () => { console.log('leave'); polygons_stack.pause(); polygons_back.play() },
       onLeaveBack: () => { console.log('leaveback'); polygons_back.pause(); polygons_stack.reverse() }
     });
     

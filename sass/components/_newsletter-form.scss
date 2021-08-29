@@ -16,12 +16,19 @@
   } 
   & form {
     display: flex;
+    gap: .25em;
+    max-width: 700px;
+    margin: 0 auto;
   } 
   & input {
     @include mixins.poly-btn('blue', 'outline');  
     text-align: left;
     @include mq.for-tablet-landscape-up {
       font-size: 24px;
+    }
+    &:focus {
+      outline: none;
+      color: vars.$synth-blue;
     }
   }
   & p {

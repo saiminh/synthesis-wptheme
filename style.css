@@ -1170,6 +1170,9 @@ section {
 }
 .synthesis-newsletter-subscribe form {
   display: flex;
+  gap: 0.25em;
+  max-width: 700px;
+  margin: 0 auto;
 }
 .synthesis-newsletter-subscribe input {
   font-size: 18px;
@@ -1192,6 +1195,10 @@ section {
   .synthesis-newsletter-subscribe input {
     font-size: 24px;
   }
+}
+.synthesis-newsletter-subscribe input:focus {
+  outline: none;
+  color: #120A59;
 }
 .synthesis-newsletter-subscribe p {
   max-width: 12em;
@@ -1424,6 +1431,18 @@ section {
 }
 
 .site-footer {
+  -webkit-mask-image: linear-gradient(to top, black 50%, rgba(0, 0, 0, 0) 99%);
+  mask-image: linear-gradient(to top, black 50%, rgba(0, 0, 0, 0) 99%);
+  padding-top: 16em;
+  background-color: #120A59;
+  color: white;
+}
+.site-footer a, .site-footer a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.site-footer-colophon {
   padding: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1432,7 +1451,7 @@ section {
   line-height: 1.29;
 }
 @media (min-width: 600px) {
-  .site-footer {
+  .site-footer-colophon {
     grid-template-columns: 1fr 1.5fr 1fr;
     grid-template-rows: 1fr 1fr;
     font-size: 20px;
@@ -1448,7 +1467,7 @@ section {
   text-decoration: none;
 }
 
-.site-footer > div {
+.site-footer-colophon > div {
   margin-bottom: 1em;
 }
 

@@ -1,7 +1,19 @@
 @use '../utilities/vars' as vars;
 @use '../utilities/mq';
+@use '../utilities/mixins';
 
 .site-footer {
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 99%);
+          mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 99%);
+  padding-top: 16em;
+  background-color: vars.$synth-blue;
+  color: white;
+  & a, & a:visited {
+    color: white;
+    text-decoration: none;
+  }
+}
+.site-footer-colophon {
   padding: vars.$gap-space;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -22,7 +34,7 @@
     text-decoration: none;
   }
 }
-.site-footer > div {
+.site-footer-colophon > div {
   margin-bottom: 1em;
 }
 .footer-address {

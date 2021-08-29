@@ -5,11 +5,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 function bgGradients(){
   
-  let fadeinItems = document.querySelectorAll('video');
-  if ( fadeinItems.length ) {
-    fadeinItems.forEach( (item) => {
+  let fadeinVideo = document.querySelectorAll('video');
+  if ( fadeinVideo.length ) {
+    fadeinVideo.forEach( (item) => {
       gsap.set(item, { autoAlpha: 0 });
-      item.addEventListener('loadeddata', () => {
+      item.addEventListener('canplaythrough', () => {
         // alert('loaded');
         gsap.to(item, { autoAlpha: 1, duration: 3, ease: 'power4.out'})
       })
@@ -75,6 +75,9 @@ function bgGradients(){
         })
         section.style.setProperty("--wp--preset--color--synthesis-blue", "transparent"); 
       })
+    }
+    if ( !document.querySelector('.entry-content div:first-child.has-synthesis-blue-background-color') ) {
+      fadeToWhiteDown.play(0);
     }
   }
   init();
