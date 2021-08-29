@@ -398,7 +398,8 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   clear: both;
-  margin-bottom: 1em;
+  margin-top: 1em;
+  margin-bottom: 0.75em;
   font-weight: normal;
 }
 
@@ -1256,10 +1257,14 @@ section {
   border-image: url("./assets/img/button-bg-pink-fill.svg") 49% 23 fill;
   opacity: 0;
   animation: quickfadein 1s ease-in forwards;
-  line-height: 1;
   padding-left: 1.5em;
   padding-right: 1.5em;
   color: #120A59;
+}
+@media (min-width: 600px) {
+  .synthesis-newsletter-subscribe .wp-block-button__link {
+    line-height: 1;
+  }
 }
 @media (min-width: 900px) {
   .synthesis-newsletter-subscribe .wp-block-button__link {
@@ -1837,6 +1842,36 @@ body:not(.investments-page) .site-footer a, body:not(.investments-page) .site-fo
 }
 .home-synthesis-icons figure img {
   filter: saturate(0) brightness(100);
+}
+
+@media (max-width: 599px) {
+  .page:not(.home-page, .focus-page, .investments-page, .team-page) h1, .page:not(.home-page, .focus-page, .investments-page, .team-page) h2, .page:not(.home-page, .focus-page, .investments-page, .team-page) h3, .page:not(.home-page, .focus-page, .investments-page, .team-page) p,
+.single-post h1,
+.single-post h2,
+.single-post h3,
+.single-post p {
+    padding: 0 20px;
+  }
+}
+
+.single-post .entry-meta, .single-post .entry-footer, .single-post .entry-content {
+  padding: 20px;
+}
+@media (min-width: 600px) {
+  .single-post .entry-meta, .single-post .entry-footer, .single-post .entry-content {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+}
+@media (min-width: 900px) {
+  .single-post .entry-meta, .single-post .entry-footer, .single-post .entry-content {
+    margin-left: 18%;
+    margin-right: 0;
+  }
+}
+.single-post .entry-title {
+  padding: 20px;
+  margin-top: 150px;
 }
 
 .focus-page .entry-content {
