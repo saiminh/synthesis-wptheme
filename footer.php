@@ -10,11 +10,6 @@
  */
 
 ?>
-  <h1>Cookies List</h1>
-  <p id = "list"></p>
-  <button id="addcookie">ADD</button><br>
-  <button id="listcookies">LIST COOKIES</button><br>
-  <button id="removecookies">REMOVE</button>
   <footer id="colophon" class="site-footer">
     <div class="wp-block-group synthesis-newsletter-subscribe">
       <p class="has-text-align-center">Synthesis insight by email, to whet your appetite.</p>
