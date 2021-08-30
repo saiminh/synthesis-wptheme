@@ -83,7 +83,9 @@ function cookieConsent(){
     },
     location: true,
    });
-  document.querySelector('.footer-copyright').appendChild(document.querySelector('.cc-revoke'));
+   if (document.querySelector('.cc-revoke')) {
+     document.querySelector('.footer-copyright').appendChild(document.querySelector('.cc-revoke'));
+   }
 }
 
 export { cookieConsent }

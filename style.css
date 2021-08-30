@@ -1638,7 +1638,8 @@ section {
 }
 
 .cc-window {
-  background-color: #FFC9FD;
+  background: linear-gradient(to top, #120A59 30%, rgba(18, 10, 89, 0) 99%);
+  color: white;
   position: fixed;
   z-index: 3;
   left: 0;
@@ -1648,7 +1649,7 @@ section {
   justify-content: space-between;
   transform: translateY(0) scale(1);
   transition: 0.5s transform cubic-bezier(0.82, 0.1, 0.56, 0.93);
-  padding: 2em 4em;
+  padding: 20em 4em 2em 4em;
 }
 @media (max-width: 599px) {
   .cc-window {

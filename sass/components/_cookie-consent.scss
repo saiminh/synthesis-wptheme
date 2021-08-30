@@ -3,7 +3,8 @@
 @use '../utilities/mixins';
 
 .cc-window {
-  background-color: vars.$pink;
+  background: linear-gradient(to top, vars.$synth-blue 30%, transparentize(vars.$synth-blue, 1) 99%);
+  color: white;
   position: fixed;
   z-index: 3;
   left: 0;
@@ -13,7 +14,7 @@
   justify-content: space-between;
   transform: translateY(0) scale(1);
   transition: .5s transform cubic-bezier(.82,.1,.56,.93);
-  padding: 2em 4em;
+  padding: 20em 4em 2em 4em;
   @include mq.for-phone-only {
     padding: 2em vars.$gap-space;
   }
