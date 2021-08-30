@@ -61,6 +61,7 @@
     position: relative;
     &::after {
       content: "↙";
+      font-family: "SyntheSans", sans-serif;
       position: absolute;
       transform: scaleX(-1) translate(0, 0);
       transition: transform .2s ease-in-out;

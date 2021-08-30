@@ -703,6 +703,7 @@ p {
 }
 .focus-enabling-technologies-item::after {
   content: "↙";
+  font-family: "SyntheSans", sans-serif;
   position: absolute;
   transform: scaleX(-1);
   right: 0;

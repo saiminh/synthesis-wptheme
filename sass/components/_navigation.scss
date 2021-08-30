@@ -70,17 +70,20 @@ ul.nav-menu {
 
 ul.nav-menu a,
 .menu-toggle {
-  @include mixins.poly-btn("blue", "outline");
+  @include mixins.poly-btn("white", "fill");
   transform: scale(1);
   transition: transform .05s linear;
   margin-right: .25em;
 }
 ul.nav-menu .current_page_item a {
-  @include mixins.poly-btn("white", "outline" );
+  @include mixins.poly-btn("blue", "fill" );
 }
 ul.nav-menu a:hover,
 .menu-toggle:hover {
-  transform: scale(1.05);
+  @include mixins.poly-btn("green", "fill" )
+}
+ul.nav-menu .current_page_item a:hover {
+  @include mixins.poly-btn("blue", "fill" );
 }
 // ul.nav-menu:hover .current_page_item a {
   // opacity: .5;

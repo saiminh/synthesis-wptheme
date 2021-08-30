@@ -23,11 +23,12 @@
 @use 'accessibility';
 
 body:after{
-  display:none;
-  content:  url('assets/img/button-bg-blue-fill.svg') 
-            url('assets/img/button-bg-blue-outline.svg') 
-            url('assets/img/button-bg-white-fill.svg') 
-            url('assets/img/button-bg-white-outline.svg')
-            url('assets/img/button-bg-green-fill.svg') 
-            url('assets/img/button-bg-green-outline.svg');
+  visibility: hidden;
+  position: fixed;
+  content:  url(assets/img/button-bg-blue-fill.svg) 
+            url(assets/img/button-bg-blue-outline.svg) 
+            url(assets/img/button-bg-white-fill.svg) 
+            url(assets/img/button-bg-white-outline.svg)
+            url(assets/img/button-bg-green-fill.svg) 
+            url(assets/img/button-bg-green-outline.svg);
  }

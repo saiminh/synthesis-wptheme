@@ -8,11 +8,39 @@
 .hero-home {
   min-height: 100vh ;
   position: relative;  
-  padding: 0;
+  padding: 0 0 4em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .hero-home h1 {
-  position: absolute;
-  bottom: 1.5em;
+  position: relative;
+}
+.home-synthesis-icons {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  @include mq.for-tablet-portrait-up {
+    max-width: 66.666%;
+  }
+  @include mq.for-tablet-landscape-up {
+    max-width: 50%;
+  }
+  & figure {
+    width: 26px;
+    @include mq.for-tablet-landscape-up {
+      width: 55px;
+    }
+    & img, & svg {
+      width: 100%;
+    }
+    & svg path {
+      fill:#FFFFFF;
+    }
+    & img {
+      filter: saturate(0) brightness(100);
+    }
+  }
 }
 .hero-home .wp-block-video {
   -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
@@ -73,28 +101,4 @@
     }
   }
 }
-.home-synthesis-icons {
-  display: flex;
-  justify-content: space-between;
-  @include mq.for-tablet-portrait-up {
-    max-width: 66.666%;
-  }
-  @include mq.for-tablet-landscape-up {
-    max-width: 50%;
-  }
-  & figure {
-    width: 26px;
-    @include mq.for-tablet-landscape-up {
-      width: 55px;
-    }
-    & img, & svg {
-      width: 100%;
-    }
-    & svg path {
-      fill:#FFFFFF;
-    }
-    & img {
-      filter: saturate(0) brightness(100);
-    }
-  }
-}
+

@@ -2,12 +2,12 @@
 @use '../utilities/mq';
 @use '../utilities/mixins';
 
-body:not(.investments-page) .site-footer {
-  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 99%);
-          mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 99%);
+.site-footer {
+  // -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 99%);
+  //         mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 99%);
   padding-top: 10em;
   margin-top: -5em;
-  background-color: vars.$synth-blue;
+  background: linear-gradient(to top, vars.$synth-blue 20%, transparentize(vars.$synth-blue, 1) 99%);;
   color: white;
   @include mq.for-tablet-landscape-up {
     padding-top: 20em;
@@ -30,13 +30,6 @@ body:not(.investments-page) .site-footer {
     grid-template-rows: 1fr 1fr;
     font-size: 20px;
     line-height: 1.21;
-  }
-}
-[class*="bluesection-"] .site-footer {
-  color: white;
-  & a, & a:visited, & a:hover {
-    color: white;
-    text-decoration: none;
   }
 }
 .site-footer-colophon > div {

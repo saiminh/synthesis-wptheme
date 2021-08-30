@@ -9,8 +9,7 @@ function bgGradients(){
   if ( fadeinVideo.length ) {
     fadeinVideo.forEach( (item) => {
       gsap.set(item, { autoAlpha: 0 });
-      item.addEventListener('canplaythrough', () => {
-        // alert('loaded');
+      item.addEventListener('canplay', () => {
         gsap.to(item, { autoAlpha: 1, duration: 3, ease: 'power4.out'})
       })
     } )
@@ -23,41 +22,35 @@ function bgGradients(){
 
     let bluesections = document.querySelectorAll('.has-synthesis-blue-background-color');
 
-    let fadeToBlueDown = gsap.timeline({ paused: true })
-      .fromTo('.bg-grad', {
-        yPercent: 0,
-      },{
-        yPercent: -50,
-        duration: .66,
-        ease: "Power2.out",
-      }, 0)
-      .fromTo('#logo-fill', {
-        yPercent: 0,
-      },{
-        yPercent: 66.666,
-        ease: "Power2.out",
-        duration: .5
-      }, 0);
-              
-    let fadeToWhiteDown = gsap.timeline({ paused: true })
-      .fromTo('.bg-grad', {
-        yPercent: -50,
-      },{
-        yPercent: -100,
-        duration: .66,
-        ease: "Power2.out"
-      }, 0)
-      .fromTo('#logo-fill', {
-        yPercent: 66.666,
-      },{
-        yPercent: 0,
-        ease: "Power2.out",
-        duration: .5
-      }, 0);
-
-    gsap.set('.bg-grad', {
-      yPercent: 0
+    let fade = gsap.timeline({ 
+      paused: true,
+      defaults: {
+        duration: 2,
+        ease: 'none',
+      } 
     })
+      .addLabel('start')
+      .to('body', {
+        color: "#FFFFFF",
+      }, "start")
+      .to('.bg-grad', {
+        yPercent: -40,
+      }, "start+=1.2")
+      .to('#logo-fill', {
+        yPercent: 66.666,
+      }, "start")
+      .addLabel('middle')
+      .to('body', {
+        color: "#120A59",
+      }, "middle")
+      .to('.bg-grad', {
+        yPercent: -80,
+      }, "middle+=1.2")
+      .to('#logo-fill', {
+        yPercent: 0,
+      }, "middle")
+      .addLabel('end')
+      ;
 
     if ( bluesections.length ) {
 
@@ -67,17 +60,19 @@ function bgGradients(){
           trigger: section,
           start: "top 50%",
           end: "bottom 50%",
-          onEnter: () => { fadeToWhiteDown.pause(); fadeToBlueDown.play(0); console.log('in'); },
-          onEnterBack: () => { fadeToBlueDown.pause(); fadeToWhiteDown.reverse(1); console.log('backin'); },
-          onLeave: () => { fadeToBlueDown.pause(); fadeToWhiteDown.play(0); console.log('out'); },
-          onLeaveBack: () => { fadeToWhiteDown.pause(); fadeToBlueDown.reverse(1); console.log('backwardsback'); },
+          // onEnter: () => { fadeToWhiteDown.pause(); fadeToBlueDown.play(); },
+          // onEnterBack: () => { fadeToBlueDown.pause(); fadeToWhiteDown.reverse(); },
+          // onLeave: () => { fadeToBlueDown.pause(); fadeToWhiteDown.play(); },
+          // onLeaveBack: () => { fadeToWhiteDown.pause(); fadeToBlueDown.reverse(); },
+          onEnter: () => { fade.tweenTo('middle', {duration: 4, ease: 'power4.out'}) },
+          onEnterBack: () => { fade.tweenTo('middle', {duration: 4, ease: 'power4.out'}) },
+          onLeave: () => { fade.tweenTo('end', {duration: 4, ease: 'power4.out'}) },
+          onLeaveBack: () => { fade.tweenTo('start', {duration: 4, ease: 'power4.out'}) },
           // markers: true
         })
         section.style.setProperty("--wp--preset--color--synthesis-blue", "transparent"); 
+        section.style.setProperty("--wp--preset--color--white", "initial"); 
       })
-    }
-    if ( !document.querySelector('.entry-content div:first-child.has-synthesis-blue-background-color') ) {
-      fadeToWhiteDown.play(0);
     }
   }
   init();

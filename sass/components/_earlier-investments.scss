@@ -52,13 +52,21 @@
   @include mq.for-tablet-landscape-up {
     min-height: 412px;
   }
-  & img, & svg {
-    width: 100%;
-    height: auto;
+  & img {
+    max-width: none;
+    width: auto;
+    height: 100%;
     position: absolute;
     bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
   @include mixins.transparent-fade-out-bottom;
+}
+.earlier-investment:nth-child(2n) .earlier-investment-image {
+  & img {
+    height: 66%;
+  }
 }
 
 .earlier-investment-text {
