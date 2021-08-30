@@ -1845,7 +1845,7 @@ body:not(.investments-page) .site-footer a, body:not(.investments-page) .site-fo
 }
 
 @media (max-width: 599px) {
-  .page:not(.home-page, .focus-page, .investments-page, .team-page) h1, .page:not(.home-page, .focus-page, .investments-page, .team-page) h2, .page:not(.home-page, .focus-page, .investments-page, .team-page) h3, .page:not(.home-page, .focus-page, .investments-page, .team-page) p,
+  body:not(.home, .focus-page, .investments-page, .team-page) h1, body:not(.home, .focus-page, .investments-page, .team-page) h2, body:not(.home, .focus-page, .investments-page, .team-page) h3, body:not(.home, .focus-page, .investments-page, .team-page) p,
 .single-post h1,
 .single-post h2,
 .single-post h3,
