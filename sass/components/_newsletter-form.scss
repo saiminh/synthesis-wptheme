@@ -6,10 +6,6 @@
   transition: color 1.5s ease-in-out;
   padding: vars.$gap-space;
   
-  [class*="bluesection-"] & {
-    color: white;
-  }
-  
   margin: 2em auto 6em;
   @include mq.for-tablet-portrait-up {
     max-width: 66.6%;
@@ -73,6 +69,7 @@
 .fake-text-input-bg {
   @include mixins.poly-btn("white", "fill");
   position: absolute;
+  z-index: 0;
   width: 100%;
   @include mq.for-tablet-landscape-up {
     width: 70%;

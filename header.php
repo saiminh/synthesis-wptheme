@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
-  <div class="page-reveal" style="position: fixed; top: 0; right: 0; bottom: -100vh; left: 0; background: linear-gradient(to bottom, #FFF 0%, #FFF 50%, #FFF0 100%); z-index: 1;"></div>
+  <div class="page-reveal" style="position: fixed; top: 0; right: 0; bottom: -100vh; left: 0; background: linear-gradient(to bottom, #FFF 0%, #FFF 50%, #FFF0 100%); z-index: 2;"></div>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'synthesiscapital' ); ?></a>
 

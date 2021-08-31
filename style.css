@@ -808,7 +808,7 @@ textarea {
 
 input[type=email] {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   padding: 0 1em;
   border: 0;
   height: 48px;
@@ -939,7 +939,7 @@ textarea {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
 }
 
 .site-header .logo {
@@ -1359,9 +1359,6 @@ section {
   padding: 20px;
   margin: 2em auto 6em;
 }
-[class*=bluesection-] .synthesis-newsletter-subscribe {
-  color: white;
-}
 @media (min-width: 600px) {
   .synthesis-newsletter-subscribe {
     max-width: 66.6%;
@@ -1480,6 +1477,7 @@ section {
   opacity: 0;
   animation: quickfadein 0.4s ease-in-out 0.2s forwards;
   position: absolute;
+  z-index: 0;
   width: 100%;
 }
 @media (min-width: 900px) {
