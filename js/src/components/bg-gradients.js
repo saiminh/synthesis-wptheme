@@ -5,6 +5,37 @@ gsap.registerPlugin(ScrollTrigger);
 
 function bgGradients(){
   
+  //On load remove the page-reveal container
+  window.addEventListener('load', (event) => {
+    gsap.to('.page-reveal', {
+      yPercent: -100,
+      duration: 2
+    })
+  });
+
+  document.querySelectorAll('a:not(.menu-toggle)').forEach(element => element.addEventListener("click", function(event) {
+    // Remember the link href
+    var href = this.href;
+
+    // Don't follow the link
+    event.preventDefault();
+    // Do the async thing
+      gsap.to( ".page-reveal", {
+        duration: 1,
+        yPercent: 0,
+        onComplete: function(){window.location = href;}
+      });
+      gsap.to('#logo-fill', {
+        yPercent: 0,
+      });
+      gsap.to('.main-navigation', {
+        autoAlpha: 0
+      })
+  }));
+
+
+
+
   let fadeinVideo = document.querySelectorAll('video');
   if ( fadeinVideo.length ) {
     fadeinVideo.forEach( (item) => {

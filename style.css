@@ -1258,6 +1258,7 @@ section {
   mask-image: url("assets/img/img-mask-polygon.svg");
   mask-size: contain;
   mask-repeat: no-repeat;
+  mask-position: 50% 50%;
 }
 @media (min-width: 600px) {
   .food-technology .wp-block-image {

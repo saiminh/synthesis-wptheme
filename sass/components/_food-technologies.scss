@@ -48,6 +48,7 @@
   mask-image: url('assets/img/img-mask-polygon.svg');
   mask-size: contain;
   mask-repeat: no-repeat;
+  mask-position: 50% 50%;
   @include mq.for-tablet-portrait-up {
     height: 175px;
   }
