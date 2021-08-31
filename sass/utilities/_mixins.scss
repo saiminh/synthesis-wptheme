@@ -23,8 +23,9 @@
   } @else {
     color: white
   }
-  border-style: solid;
-  border-width: 23px ;
+  border: 23px solid #FFF;
+  // border-style: solid;
+  // border-width: 23px ;
   border-image: url('./assets/img/button-bg-#{$btncolor}-#{$border}.svg') 49% 23 fill;
   opacity: 0;
   animation: quickfadein .4s ease-in-out .2s forwards;
