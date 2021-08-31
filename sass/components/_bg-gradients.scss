@@ -17,9 +17,11 @@
 }
 section {
   min-height: 70vh;
+  min-height: calc(var(--vh, 1vh) * 70);
 }
 .entry-content > .wp-block-group.has-synthesis-blue-background-color {
   min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
   display: flex;
   flex-direction: column;
   justify-content: center;

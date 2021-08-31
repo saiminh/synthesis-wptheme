@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 function bgGradients(){
   
   //On load remove the page-reveal container
-  window.addEventListener('load', (event) => {
+  window.addEventListener('DOMContentLoaded', (event) => {
     gsap.to('.page-reveal', {
       yPercent: -100,
       duration: 2

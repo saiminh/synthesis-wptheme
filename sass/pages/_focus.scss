@@ -15,14 +15,22 @@
 }
 
 .focus-protein-spectrum {
-  display: flex;
+  // @include mixins.transparent-fade-out-bottom;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
   @include mq.for-tablet-portrait-up {
+    grid-template-columns: 1fr 1fr 1fr;
     margin-left: 7.5%;
     margin-right: 7.5%;
   }
   @include mq.for-tablet-landscape-up {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-left: 10%;
-    margin-right: 0;
+    margin-right: 10%;
+  }
+  @include mq.for-desktop-up {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 }
 .focus-protein-spectrum + h2 {
@@ -121,19 +129,20 @@
   @include mq.for-tablet-landscape-up {
     font-size: 31px;
   }
-  &::after {
-    content: '↙';
-    font-family: "SyntheSans", sans-serif;
-    position: absolute;
-    transform: scaleX(-1);
-    right: 0;
-    top: .5em;
-  }
+  // &::after {
+  //   content: '↙';
+  //   font-family: "SyntheSans", sans-serif;
+  //   position: absolute;
+  //   transform: scaleX(-1);
+  //   right: 0;
+  //   top: .5em;
+  // }
 }
 .focus-alignment-animation {
   overflow: visible;
   position: relative;
   height: 120vh;
+  height: calc(var(--vh, 1vh) * 120);
   margin-top: 8em;
 }
 .focus-alignment-animation-headline {
