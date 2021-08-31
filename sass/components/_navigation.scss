@@ -9,11 +9,23 @@
   }
 }
 .nav-toggled {
-  #primary-menu {
+  & #primary-menu {
     @include mq.for-phone-only {
       display: block;
-      position: absolute;
       margin-top: 2px;
+      position: absolute;
+      top: -2px;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      padding-left: 12.5vw;
+      padding-right: 12.5vw;
+      padding-top: 100px;
+      // background-color: white;
+      & a {
+        width: 100%;
+        text-align: center;
+      }
     }
   }
 }
@@ -43,13 +55,6 @@
   position: absolute;
   bottom: 0;
 }
-// .site-header .logo svg #logo-fill {
-//   transform: translateY(0%);
-//   transition: all 1s ease-out;
-// }
-// [class*="bluesection"] .site-header .logo svg #logo-fill {
-//   transform: translateY(66.666%);
-// }
 
 // Nav List
 ul.nav-menu {
@@ -70,10 +75,14 @@ ul.nav-menu {
 
 ul.nav-menu a,
 .menu-toggle {
-  @include mixins.poly-btn("white", "fill");
   transform: scale(1);
   transition: transform .05s linear;
   margin-right: .25em;
+  @include mixins.poly-btn("white", "fill");
+  @include mq.for-phone-only {
+    @include mixins.poly-btn("blue", "outline" );
+    margin-bottom: .33em;
+  }
 }
 ul.nav-menu .current_page_item a {
   @include mixins.poly-btn("blue", "fill" );
@@ -85,23 +94,10 @@ ul.nav-menu a:hover,
 ul.nav-menu .current_page_item a:hover {
   @include mixins.poly-btn("blue", "fill" );
 }
-// ul.nav-menu:hover .current_page_item a {
-  // opacity: .5;
-// }
-// ul.nav-menu:hover .current_page_item a:hover {
-  // opacity: 1;
-// }
-// [class*="bluesection"] {
-//   ul.nav-menu a,
-//   .menu-toggle {
-//     @include mixins.poly-btn("white", "outline");
-//   }
-//   ul.nav-menu a:hover,
-//   ul.nav-menu .current_page_item a,
-//   .menu-toggle:hover {
-//     @include mixins.poly-btn("white", "fill" );
-//   }
-// }
+.nav-toggled .menu-toggle {
+  @include mixins.poly-btn('pink', 'fill');
+  color: vars.$synth-blue;
+}
 .menu-toggle,
 .home .menu-toggle {
   @include mq.for-tablet-portrait-up {

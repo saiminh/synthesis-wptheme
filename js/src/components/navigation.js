@@ -1,3 +1,4 @@
+import { gsap } from 'gsap';
 /**
  * File navigation.js.
  *
@@ -38,9 +39,15 @@
 		if ( button.getAttribute( 'aria-expanded' ) === 'true' ) {
 			button.setAttribute( 'aria-expanded', 'false' );
       button.innerHTML = origValue;
+      gsap.to('.page-reveal', {
+        yPercent: -100
+      });
 		} else {
       button.setAttribute( 'aria-expanded', 'true' );
-      button.innerHTML = "X";
+      button.innerHTML = "Close";
+      gsap.to('.page-reveal', {
+        yPercent: 0
+      });
 		}
 	} );
 

@@ -652,7 +652,7 @@ input[type=submit],
   border-width: 23px;
   border-image: url("./assets/img/button-bg-green-fill.svg") 49% 23 fill;
   opacity: 0;
-  animation: quickfadein 1s ease-in forwards;
+  animation: quickfadein 0.4s ease-in-out 0.2s forwards;
 }
 @media (min-width: 900px) {
   button,
@@ -684,7 +684,7 @@ input[type=submit]:hover,
   border-width: 23px;
   border-image: url("./assets/img/button-bg-blue-fill.svg") 49% 23 fill;
   opacity: 0;
-  animation: quickfadein 1s ease-in forwards;
+  animation: quickfadein 0.4s ease-in-out 0.2s forwards;
   color: white;
 }
 @media (min-width: 900px) {
@@ -722,7 +722,7 @@ input[type=submit]:focus,
   border-width: 23px;
   border-image: url("./assets/img/button-bg-green-fill.svg") 49% 23 fill;
   opacity: 0;
-  animation: quickfadein 1s ease-in forwards;
+  animation: quickfadein 0.4s ease-in-out 0.2s forwards;
   color: white;
 }
 @media (min-width: 900px) {
@@ -915,8 +915,19 @@ textarea {
 @media (max-width: 599px) {
   .nav-toggled #primary-menu {
     display: block;
-    position: absolute;
     margin-top: 2px;
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding-left: 12.5vw;
+    padding-right: 12.5vw;
+    padding-top: 100px;
+  }
+  .nav-toggled #primary-menu a {
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -967,6 +978,9 @@ ul.nav-menu li {
 
 ul.nav-menu a,
 .menu-toggle {
+  transform: scale(1);
+  transition: transform 0.05s linear;
+  margin-right: 0.25em;
   font-size: 18px;
   line-height: 0;
   height: 48px;
@@ -982,10 +996,29 @@ ul.nav-menu a,
   border-width: 23px;
   border-image: url("./assets/img/button-bg-white-fill.svg") 49% 23 fill;
   opacity: 0;
-  animation: quickfadein 1s ease-in forwards;
-  transform: scale(1);
-  transition: transform 0.05s linear;
-  margin-right: 0.25em;
+  animation: quickfadein 0.4s ease-in-out 0.2s forwards;
+}
+@media (max-width: 599px) {
+  ul.nav-menu a,
+.menu-toggle {
+    font-size: 18px;
+    line-height: 0;
+    height: 48px;
+    white-space: nowrap;
+    padding: 2px 0 0 0;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    background-color: transparent;
+    display: inline-block;
+    color: #120A59;
+    border-style: solid;
+    border-width: 23px;
+    border-image: url("./assets/img/button-bg-blue-outline.svg") 49% 23 fill;
+    opacity: 0;
+    animation: quickfadein 0.4s ease-in-out 0.2s forwards;
+    margin-bottom: 0.33em;
+  }
 }
 
 ul.nav-menu .current_page_item a {
@@ -1004,7 +1037,7 @@ ul.nav-menu .current_page_item a {
   border-width: 23px;
   border-image: url("./assets/img/button-bg-blue-fill.svg") 49% 23 fill;
   opacity: 0;
-  animation: quickfadein 1s ease-in forwards;
+  animation: quickfadein 0.4s ease-in-out 0.2s forwards;
 }
 
 ul.nav-menu a:hover,
@@ -1024,7 +1057,7 @@ ul.nav-menu a:hover,
   border-width: 23px;
   border-image: url("./assets/img/button-bg-green-fill.svg") 49% 23 fill;
   opacity: 0;
-  animation: quickfadein 1s ease-in forwards;
+  animation: quickfadein 0.4s ease-in-out 0.2s forwards;
 }
 
 ul.nav-menu .current_page_item a:hover {
@@ -1043,7 +1076,27 @@ ul.nav-menu .current_page_item a:hover {
   border-width: 23px;
   border-image: url("./assets/img/button-bg-blue-fill.svg") 49% 23 fill;
   opacity: 0;
-  animation: quickfadein 1s ease-in forwards;
+  animation: quickfadein 0.4s ease-in-out 0.2s forwards;
+}
+
+.nav-toggled .menu-toggle {
+  font-size: 18px;
+  line-height: 0;
+  height: 48px;
+  white-space: nowrap;
+  padding: 2px 0 0 0;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  background-color: transparent;
+  display: inline-block;
+  color: white;
+  border-style: solid;
+  border-width: 23px;
+  border-image: url("./assets/img/button-bg-pink-fill.svg") 49% 23 fill;
+  opacity: 0;
+  animation: quickfadein 0.4s ease-in-out 0.2s forwards;
+  color: #120A59;
 }
 
 @media (min-width: 600px) {
@@ -1373,7 +1426,7 @@ section {
   border-width: 23px;
   border-image: url("./assets/img/button-bg-pink-fill.svg") 49% 23 fill;
   opacity: 0;
-  animation: quickfadein 1s ease-in forwards;
+  animation: quickfadein 0.4s ease-in-out 0.2s forwards;
   padding-left: 1.5em;
   padding-right: 1.5em;
   color: #120A59;
@@ -1408,7 +1461,7 @@ section {
   border-width: 23px;
   border-image: url("./assets/img/button-bg-blue-fill.svg") 49% 23 fill;
   opacity: 0;
-  animation: quickfadein 1s ease-in forwards;
+  animation: quickfadein 0.4s ease-in-out 0.2s forwards;
   color: white;
 }
 @media (min-width: 900px) {
@@ -1434,7 +1487,7 @@ section {
   border-width: 23px;
   border-image: url("./assets/img/button-bg-white-fill.svg") 49% 23 fill;
   opacity: 0;
-  animation: quickfadein 1s ease-in forwards;
+  animation: quickfadein 0.4s ease-in-out 0.2s forwards;
   position: absolute;
   width: 100%;
 }
@@ -1738,7 +1791,7 @@ section {
   border-width: 23px;
   border-image: url("./assets/img/button-bg-white-fill.svg") 49% 23 fill;
   opacity: 0;
-  animation: quickfadein 1s ease-in forwards;
+  animation: quickfadein 0.4s ease-in-out 0.2s forwards;
   cursor: pointer;
   transform: scale(1);
   margin-right: 0.5em;
@@ -1764,7 +1817,7 @@ section {
   border-width: 23px;
   border-image: url("./assets/img/button-bg-green-fill.svg") 49% 23 fill;
   opacity: 0;
-  animation: quickfadein 1s ease-in forwards;
+  animation: quickfadein 0.4s ease-in-out 0.2s forwards;
 }
 
 .cc-message {
@@ -1795,7 +1848,7 @@ section {
   border-width: 23px;
   border-image: url("./assets/img/button-bg-white-fill.svg") 49% 23 fill;
   opacity: 0;
-  animation: quickfadein 1s ease-in forwards;
+  animation: quickfadein 0.4s ease-in-out 0.2s forwards;
   display: inline;
   margin-top: 1em;
   transition: 0.1s transform ease-in-out;
