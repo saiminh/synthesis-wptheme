@@ -14,9 +14,6 @@
   flex-direction: column;
   justify-content: flex-end;
 }
-.hero-home h1 {
-  position: relative;
-}
 .home-synthesis-icons {
   position: relative;
   display: flex;
@@ -75,13 +72,20 @@
   }
 }
 .home {
-  h1, h2 {
+  & h1, & h2 {
+    position: relative;
     margin-left: 0;
     @include mq.for-tablet-portrait-up {
       max-width: 85%;
     }
     @include mq.for-tablet-portrait-up {
       max-width: 66.666%;
+    }
+  }
+  & h1 {
+    max-width: 8em;
+    @include mq.for-tablet-portrait-up {
+      max-width: 8em;
     }
   }
   .entry-content > p,

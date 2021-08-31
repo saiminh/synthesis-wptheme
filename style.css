@@ -1114,8 +1114,8 @@ section {
 }
 
 .entry-content > .wp-block-group.has-synthesis-blue-background-color {
-  min-height: 100vh;
-  min-height: calc(var(--vh, 1vh) * 100);
+  min-height: 70vh;
+  min-height: calc(var(--vh, 1vh) * 70);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1982,10 +1982,6 @@ section {
   justify-content: flex-end;
 }
 
-.hero-home h1 {
-  position: relative;
-}
-
 .home-synthesis-icons {
   position: relative;
   display: flex;
@@ -2057,6 +2053,7 @@ section {
 }
 
 .home h1, .home h2 {
+  position: relative;
   margin-left: 0;
 }
 @media (min-width: 600px) {
@@ -2067,6 +2064,14 @@ section {
 @media (min-width: 600px) {
   .home h1, .home h2 {
     max-width: 66.666%;
+  }
+}
+.home h1 {
+  max-width: 8em;
+}
+@media (min-width: 600px) {
+  .home h1 {
+    max-width: 8em;
   }
 }
 @media (min-width: 600px) {

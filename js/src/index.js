@@ -2,6 +2,7 @@ import './components/navigation';
 import { bgGradients } from './components/bg-gradients';
 import { focusAnimation } from './components/focus-animation';
 import { cookieConsent } from './components/cookie-consent';
+import "@lottiefiles/lottie-player";
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
