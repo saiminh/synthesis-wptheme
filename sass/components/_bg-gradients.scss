@@ -1,3 +1,5 @@
+@use '../utilities/vars' as vars;
+
 .bg-grad {
   height: 500vh;
   position: fixed;
@@ -22,3 +24,11 @@ section {
   flex-direction: column;
   justify-content: center;
 }
+
+.page-reveal {
+  
+}
+// .team-page .page-reveal,
+// .home .page-reveal {
+//   background: linear-gradient(to bottom, vars.$synth-blue 0%, vars.$synth-blue 50%, transparentize(vars.$synth-blue, 1) 100%, );
+// }
