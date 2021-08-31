@@ -1102,7 +1102,7 @@ section {
 }
 @media (min-width: 900px) {
   .earlier-investment {
-    flex-basis: 335px;
+    flex-basis: 345px;
   }
 }
 .earlier-investment:first-child {
@@ -1121,7 +1121,7 @@ section {
 
 .earlier-investment-image {
   width: 100%;
-  min-height: 316px;
+  height: 320px;
   display: flex;
   align-items: flex-end;
   position: relative;
@@ -1131,26 +1131,36 @@ section {
 }
 @media (min-width: 600px) {
   .earlier-investment-image {
-    min-height: 250px;
+    height: 250px;
   }
 }
 @media (min-width: 900px) {
   .earlier-investment-image {
-    min-height: 412px;
+    height: 412px;
   }
 }
 .earlier-investment-image img {
   max-width: none;
-  width: auto;
+  width: 100%;
   height: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  object-fit: cover;
 }
 
-.earlier-investment:nth-child(2n) .earlier-investment-image img {
-  height: 66%;
+.earlier-investment:nth-child(2n) .earlier-investment-image {
+  height: 220px;
+  margin-top: 100px;
+}
+@media (min-width: 600px) {
+  .earlier-investment:nth-child(2n) .earlier-investment-image {
+    height: 220px;
+    margin-top: 30px;
+  }
+}
+@media (min-width: 900px) {
+  .earlier-investment:nth-child(2n) .earlier-investment-image {
+    height: 325px;
+    margin-top: 87px;
+  }
 }
 
 .earlier-investment-text p {
@@ -1510,6 +1520,8 @@ section {
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
   gap: 1em;
+  margin-left: 0;
+  margin-right: 0;
   -ms-overflow-style: none;
   /* IE and Edge */
   scrollbar-width: none;
@@ -1523,7 +1535,7 @@ section {
   scroll-snap-align: center;
   align-self: baseline;
   width: auto;
-  flex-basis: 66.6%;
+  flex-basis: calc(220px + 1em);
   flex-grow: 0;
   flex-shrink: 0;
   margin: 0;
@@ -1532,7 +1544,7 @@ section {
 }
 @media (min-width: 600px) {
   .scroll-gallery.wp-block-gallery .blocks-gallery-item {
-    flex-basis: 25%;
+    flex-basis: calc(325px + 1em);
   }
 }
 .scroll-gallery.wp-block-gallery .blocks-gallery-item:first-child {
@@ -1542,13 +1554,45 @@ section {
 @media (min-width: 600px) {
   .scroll-gallery.wp-block-gallery .blocks-gallery-item:first-child {
     scroll-snap-align: start;
-    flex-basis: 45%;
-    padding-left: 20%;
+    flex-basis: 625px;
+    padding-left: 300px;
   }
 }
 .scroll-gallery.wp-block-gallery .blocks-gallery-item:last-child {
   flex-basis: calc(66.6% + vars.$gap-space);
   padding-right: 20px;
+}
+@media (min-width: 600px) {
+  .scroll-gallery.wp-block-gallery .blocks-gallery-item:last-child {
+    flex-basis: 345px;
+  }
+}
+.scroll-gallery.wp-block-gallery .blocks-gallery-item figure {
+  overflow: hidden;
+  height: 275px;
+}
+@media (min-width: 600px) {
+  .scroll-gallery.wp-block-gallery .blocks-gallery-item figure {
+    height: 412px;
+  }
+}
+.scroll-gallery.wp-block-gallery .blocks-gallery-item figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.scroll-gallery.wp-block-gallery .blocks-gallery-item:nth-child(2n) figure {
+  height: 220px;
+}
+@media (min-width: 600px) {
+  .scroll-gallery.wp-block-gallery .blocks-gallery-item:nth-child(2n) figure {
+    height: 220px;
+  }
+}
+@media (min-width: 900px) {
+  .scroll-gallery.wp-block-gallery .blocks-gallery-item:nth-child(2n) figure {
+    height: 325px;
+  }
 }
 .scroll-gallery .blocks-gallery-grid .blocks-gallery-image img, .scroll-gallery .blocks-gallery-grid .blocks-gallery-item img, .scroll-gallery .wp-block-gallery .blocks-gallery-image img, .scroll-gallery .wp-block-gallery .blocks-gallery-item img {
   width: 100%;

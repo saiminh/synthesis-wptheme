@@ -129,10 +129,8 @@ add_action( 'wp_enqueue_scripts', 'synthesiscapital_scripts' );
 add_action( 'after_setup_theme', 'add_gutenberg_css' );
  
 function add_gutenberg_css(){
- 
   add_theme_support( 'editor-styles' ); // if you don't add this line, your stylesheet won't be added
   add_editor_style( 'style-editor.min.css' ); // tries to include style-editor.css directly from your theme folder
- 
 }
 
 /**
@@ -224,7 +222,7 @@ function display_earlier_investments() {
       while ( $loop->have_posts() ) { 
         $loop->the_post();
     echo '<div class="earlier-investment">
-            <div class="earlier-investment-image">'.get_the_post_thumbnail(null, 'sliderimg').'</div>
+            <div class="earlier-investment-image">'.get_the_post_thumbnail(null, 'scrollimg').'</div>
             <div class="earlier-investment-text">'.get_the_content('', true).'</div> 
           </div>';
           $more = 1;
@@ -282,33 +280,29 @@ function synthesiscapital_register_required_plugins() {
 //------------------------
 // Responsive image sizes
 //------------------------
+
 function synthesis_add_image_sizes() {
-  add_image_size( 'sliderimg', 325, 412, true );
+  add_image_size( 'scrollimg', 325, 412, false );
+  add_image_size( 'scrollimg-h', 325, 412, true );
+  add_image_size( 'scrollimg-2', 650, 824, false );
+  add_image_size( 'scrollimg-2-h', 650, 824, true );
 }
 add_action('after_setup_theme', 'synthesis_add_image_sizes');
 
 function synthesis_custom_sizes( $sizes ) {
   return array_merge( $sizes, array(
-    'sliderimg' => __( 'Slider gallery image' ),
+    'scrollimg' => __( 'Scroll gallery image' ),
     ) );
 }
 add_filter( 'image_size_names_choose', 'synthesis_custom_sizes' );
 
-function my_content_image_sizes_attr( $sizes, $size, $alignment ) {
-  $width = $size[0];
-  $height = $size[1];
-
-      if ( is_single() ) { // if blog post images
-        $sizes = '(min-width: 1281px) 720px, (min-width: 900px) 49.68vw, (min-width: 700px) 648px, 100vw';
-      }
-      else {
-        if ( $width >= 1920 ) { //hero image
-          $sizes = '100vw';
-        } 
-        if ( $width === 325 && $height === 412 ) { //founder photo
-          $sizes = '(min-width: 1441px) 18vw, (min-width: 769px) 23vw, (min-width: 600px) 33vw, 66vw';
-        }
-      }
+function my_content_image_sizes_attr( $sizes, $size ) {
+    $width = $size[0];
+    
+    if ( $width === 325 ) { //scrollimg
+      $sizes = '(min-width: 1441px) 18vw, (min-width: 769px) 23vw, (min-width: 600px) 33vw, 66vw';
+    }
+      
   return $sizes;
 }
 add_filter( 'wp_calculate_image_sizes', 'my_content_image_sizes_attr', 10, 3 );

@@ -271,3 +271,7 @@ p {
     margin: 0 0 1em 0;
   }
 }
+.scroll-gallery {
+  @include blocklabel('Scroll-gallery');
+  display: flex; 
+}
