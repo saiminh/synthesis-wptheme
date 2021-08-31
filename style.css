@@ -2261,7 +2261,8 @@ section {
   }
 }
 
-.focus-enabling-technologies-item {
+.focus-enabling-technologies-item,
+.focus-enabling-technologies-table > p {
   margin: 0;
   padding: 0.5em 1em 0.5em 0;
   border-top: 1px solid #FFF;
@@ -2270,12 +2271,14 @@ section {
   font-size: 19px;
 }
 @media (min-width: 600px) {
-  .focus-enabling-technologies-item {
+  .focus-enabling-technologies-item,
+.focus-enabling-technologies-table > p {
     font-size: 17px;
   }
 }
 @media (min-width: 900px) {
-  .focus-enabling-technologies-item {
+  .focus-enabling-technologies-item,
+.focus-enabling-technologies-table > p {
     font-size: 31px;
   }
 }
