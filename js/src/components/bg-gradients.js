@@ -70,9 +70,6 @@ function bgGradients(){
       .to('#logo-fill', {
         yPercent: 66.666,
       }, "start")
-      .to('hr, .wp-block-separator, .food-technology hr, .food-technology .wp-block-separator', {
-        backgroundColor: "#FFFFFF"
-      }, "start")
       .addLabel('middle')
       .to('body', {
         color: "#120A59",
@@ -83,11 +80,17 @@ function bgGradients(){
       .to('#logo-fill', {
         yPercent: 0,
       }, "middle")
-      .to('hr, .wp-block-separator, .food-technology hr, .food-technology .wp-block-separator', {
+      .addLabel('end');
+    
+    if ( document.querySelector('hr') ) {
+      fade.to('hr, .wp-block-separator, .food-technology hr, .food-technology .wp-block-separator', {
+        backgroundColor: "#FFFFFF"
+      }, "start");
+      fade.to('hr, .wp-block-separator, .food-technology hr, .food-technology .wp-block-separator', {
         backgroundColor: "#120A59"
-      }, "middle")
-      .addLabel('end')
-      ;
+      }, "middle");
+    }
+      
 
     if ( bluesections.length ) {
 
