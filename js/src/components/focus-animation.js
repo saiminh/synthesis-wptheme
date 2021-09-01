@@ -20,45 +20,40 @@ function focusAnimation(){
     paused: true,
     defaults: {
       duration: 1,
-      ease: "power2.out"
+      ease: "linear"
     }
   })
+  .addLabel('start')
   .fromTo(polygons[0], 
     { scale: 1.3, xPercent: 150, y: 0}, 
-    { scale: 1, xPercent: 100, y: -headlineCenterY }, 0 )
+    { scale: 1, xPercent: 100, y: -headlineCenterY }, 'start' )
   .fromTo(polygons[1], 
     { scale: 1.3, xPercent: -200, y: 0}, 
-    { scale: 1, xPercent: 0, y : -headlineCenterY - polygonH }, 0 )
+    { scale: 1, xPercent: 0, y : -headlineCenterY - polygonH }, 'start' )
   .fromTo(polygons[2], 
     { scale: 2, xPercent: 0, y: 0 }, 
-    { scale: 1, xPercent: -100, y : -headlineCenterY + polygonH }, 0 );
+    { scale: 1, xPercent: -100, y : -headlineCenterY + polygonH }, 'start' )
+  .addLabel('stacked')
+  .to(polygons[0], 
+    // { scale: 1, xPercent: 100, y: -headlineCenterY }, 
+    { scale: 1, xPercent: 0, y: 0}, 'stacked' )
+  .to(polygons[1], 
+    // { scale: 1, xPercent: 0, y : -headlineCenterY - polygonH }, 
+    { scale: 1, xPercent: 0, y: 0}, 'stacked' )
+  .to(polygons[2], 
+    // { scale: 1, xPercent: -100, y : -headlineCenterY + polygonH  }, 
+    { scale: 1, xPercent: 0, y: 0}, 'stacked' )
+  .addLabel('end');
   
-  let polygons_back = gsap.timeline({
-    paused: true,
-    defaults: {
-      duration: 1,
-      ease: "power3.inOut"
-    }
-  })
-  .fromTo(polygons[0], 
-    { scale: 1, xPercent: 100, y: -headlineCenterY }, 
-    { scale: 1, xPercent: 0, y: 0}, 0 )
-  .fromTo(polygons[1], 
-    { scale: 1, xPercent: 0, y : -headlineCenterY - polygonH }, 
-    { scale: 1, xPercent: 0, y: 0}, 0 )
-  .fromTo(polygons[2], 
-    { scale: 1, xPercent: -100, y : -headlineCenterY + polygonH  }, 
-    { scale: 1, xPercent: 0, y: 0}, 0 );
-
   ScrollTrigger.create({
       trigger: '.focus-alignment-animation',
       start: 'top 50%',
       end: '60% 50%',
       // markers: true,
-      onEnter: () => { console.log('enter'); polygons_back.pause(); polygons_stack.play() },
-      onEnterBack: () => { console.log('enterback'); polygons_stack.pause();  polygons_back.reverse() },
-      onLeave: () => { console.log('leave'); polygons_stack.pause(); polygons_back.play() },
-      onLeaveBack: () => { console.log('leaveback'); polygons_back.pause(); polygons_stack.reverse() }
+      onEnter: () => { polygons_stack.tweenTo('stacked', { duration: 1, ease: 'power3.out' }) },
+      onEnterBack: () => { polygons_stack.tweenTo('stacked', { duration: 1, ease: 'power3.out' }) },
+      onLeave: () => { polygons_stack.tweenTo('end', { duration: 1, ease: 'power3.out' }) },
+      onLeaveBack: () => { polygons_stack.tweenTo('start', { duration: 1, ease: 'power3.out' }) }
     });
     
   gsap.set(polygons, {scale: 1, xPercent: 0, y: 0})

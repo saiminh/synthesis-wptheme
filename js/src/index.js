@@ -12,13 +12,9 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 bgGradients();
 cookieConsent();
 
-// 
-// if ( document.querySelector('.focus-alignment-animation-polygons .wp-block-image') ) {
-//   import('./components/focus-animation').then( script => {
-//     script.focusAnimation();
-//   })
-// }
-focusAnimation();
+if ( document.querySelector('.focus-alignment-animation-polygons .wp-block-image') ) {
+  focusAnimation();
+}
 
 // Hacking the polygon style appearance of input type email fields *sigh*
 document.querySelectorAll('input[type="email"]').forEach( (input) => {
