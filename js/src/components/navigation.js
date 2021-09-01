@@ -40,13 +40,15 @@ import { gsap } from 'gsap';
 			button.setAttribute( 'aria-expanded', 'false' );
       button.innerHTML = origValue;
       gsap.to('.page-reveal', {
-        yPercent: -100
+        yPercent: -100,
+        duration: 2
       });
 		} else {
       button.setAttribute( 'aria-expanded', 'true' );
       button.innerHTML = "Close";
       gsap.to('.page-reveal', {
-        yPercent: 0
+        yPercent: 0,
+        duration: 2
       });
 		}
 	} );

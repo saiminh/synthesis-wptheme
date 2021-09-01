@@ -58,7 +58,7 @@
 }
 
 // Nav List
-ul.nav-menu {
+ul.menu {
   list-style: none;
   display: flex;
   transform: translateY(0%);
@@ -68,13 +68,13 @@ ul.nav-menu {
   }
 }
 
-.nav-hidden ul.nav-menu {
+.nav-hidden ul.menu {
   @include mq.for-tablet-portrait-up{
     transform: translateY(-200%);
   }
 }
 
-ul.nav-menu a,
+ul.menu a,
 .menu-toggle {
   transform: scale(1);
   transition: transform .05s linear;
@@ -85,14 +85,14 @@ ul.nav-menu a,
     margin-bottom: .33em;
   }
 }
-ul.nav-menu .current_page_item a {
+ul.menu .current_page_item a {
   @include mixins.poly-btn("blue", "fill" );
 }
-ul.nav-menu a:hover,
+ul.menu a:hover,
 .menu-toggle:hover {
   @include mixins.poly-btn("green", "fill" )
 }
-ul.nav-menu .current_page_item a:hover {
+ul.menu .current_page_item a:hover {
   @include mixins.poly-btn("blue", "fill" );
 }
 .nav-toggled .menu-toggle {

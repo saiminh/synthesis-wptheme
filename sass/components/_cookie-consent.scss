@@ -6,7 +6,7 @@
   background: linear-gradient(to top, vars.$synth-blue 30%, transparentize(vars.$synth-blue, 1) 99%);
   color: white;
   position: fixed;
-  z-index: 3;
+  z-index: 4;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -38,15 +38,19 @@
 .cc-btn {
   @include mixins.poly-btn('white', 'fill');
   cursor: pointer;
-  transform: scale(1);
   margin-right: .5em;
   transition: .1s transform ease-in-out;
   &:hover {
-    transform: scale(1.1);
+    @include mixins.poly-btn('blue', 'fill');
+    color: white;
   }
 }
 .cc-btn.cc-allow {
   @include mixins.poly-btn('green', 'fill');
+  &:hover {
+    @include mixins.poly-btn('blue', 'fill');
+    color: vars.$neon-green;
+  }
 }
 .cc-message {
   font-size: 18px;
@@ -63,7 +67,8 @@
   margin-top: 1em;
   transition: .1s transform ease-in-out;
   &:hover {
-    transform: scale(1.1);
+    @include mixins.poly-btn('blue', 'fill');
+    color: white;
   }
 }
 .cc-revoke {
