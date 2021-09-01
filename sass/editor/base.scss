@@ -180,7 +180,8 @@ p {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   gap: 1em;
 }
-.focus-enabling-technologies-item {
+.focus-enabling-technologies-item,
+.focus-enabling-technologies-table p {
   @include blocklabel('focus-enabling-technologies-item');
   padding: .5em 1.5em .5em 0;
   border-top: 1px solid #FFF;

@@ -1,6 +1,6 @@
 import './components/navigation';
 import { bgGradients } from './components/bg-gradients';
-// import { focusAnimation } from './components/focus-animation';
+import { focusAnimation } from './components/focus-animation';
 import { cookieConsent } from './components/cookie-consent';
 import "@lottiefiles/lottie-player";
 // import 'lottie-web';
@@ -13,12 +13,12 @@ bgGradients();
 cookieConsent();
 
 // 
-if ( document.querySelector('.focus-alignment-animation-polygons .wp-block-image') ) {
-  import('./components/focus-animation').then( script => {
-    script.focusAnimation();
-  })
-  // focusAnimation();
-}
+// if ( document.querySelector('.focus-alignment-animation-polygons .wp-block-image') ) {
+//   import('./components/focus-animation').then( script => {
+//     script.focusAnimation();
+//   })
+// }
+focusAnimation();
 
 // Hacking the polygon style appearance of input type email fields *sigh*
 document.querySelectorAll('input[type="email"]').forEach( (input) => {
