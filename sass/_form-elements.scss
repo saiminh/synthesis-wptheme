@@ -19,8 +19,8 @@ input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover,
 .wp-block-button__link:hover {
-  @include mixins.poly-btn("blue", "fill", 15px);
-  color: white;
+  @include mixins.poly-btn("pink", "fill", 15px);
+  color: vars.$synth-blue;
   @include mq.for-tablet-landscape-up {
     font-size: 24px;
   }
