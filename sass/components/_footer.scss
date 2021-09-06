@@ -17,6 +17,9 @@
     color: white;
     text-decoration: none;
   }
+  & a:hover {
+    color: vars.$neon-green;
+  }
 }
 .site-footer-colophon {
   padding: vars.$gap-space;

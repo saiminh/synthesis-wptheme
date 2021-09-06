@@ -125,4 +125,5 @@ import { gsap } from 'gsap';
     }
     prevScrollpos = currentScrollPos;
   }
+
 }() );

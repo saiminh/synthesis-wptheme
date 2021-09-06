@@ -1,5 +1,5 @@
 @use '../utilities/mq';
-@use '../utilities/vars';
+@use '../utilities/vars' as vars;
 @use '../utilities/mixins';
 
 .cc-window {
@@ -68,9 +68,12 @@
   transition: .1s transform ease-in-out;
   &:hover {
     @include mixins.poly-btn('blue', 'fill');
-    color: white;
+    color: vars.$neon-green;
   }
 }
 .cc-revoke {
   cursor: pointer;
+  &:hover {
+    color: vars.$neon-green;
+  }
 }

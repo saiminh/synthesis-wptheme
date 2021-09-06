@@ -1,3 +1,4 @@
+@use '../utilities/mixins';
 @use '../utilities/mq';
 @use '../utilities/vars' as vars;
 
@@ -10,21 +11,68 @@ body:not(.home, .focus-page, .investments-page, .team-page),
   }
 }
 .single-post {
-  & .entry-meta,
   & .entry-footer,
   & .entry-content {
-    padding: vars.$gap-space;
     @include mq.for-tablet-portrait-up {
       margin-left: 15%;
-      margin-right: 15%;
+      margin-right: 8%;
     }
     @include mq.for-tablet-landscape-up {
       margin-left: 18%;
-      margin-right: 0;
+      margin-right: 8%;
+    }
+    & p, & h1, & h2, & h3, & h4 {
+      margin-left: 0;
+    }
+  }
+  & .entry-header {
+    margin: 150px vars.$gap-space 0 10%;
+    @include mq.for-tablet-portrait-up {
+      margin-right: 8%;
     }
   }
   & .entry-title {
-    padding: vars.$gap-space;
-    margin-top: 150px;
+    margin: .25em 0;
+  }
+  & .entry-meta {
+    display: flex;
+    justify-content: space-between;
+    & > * {
+      align-self: flex-start;
+    }
+    & .byline {
+      line-height: 1;
+      & .author {
+        display: block;
+      }  
+    }
+    & .posted-on {
+      line-height: 1;
+      & .updated {
+        display: none;
+      }
+    }
+    & a {
+      text-decoration: none;
+      pointer-events: none;
+    }
+  }
+  & .entry-content {
+    & :first-child{
+      margin-top: 2em;
+    }
+    & .wp-block-image {
+      position: relative;
+    }
+    & .wp-block-image figcaption {
+      position: absolute;
+      bottom: 1em;
+      right: 1em;
+      text-align: right
+    }
+    & .wp-block-image img{
+      width: 100%;
+      @include mixins.transparent-fade-out-bottom;
+    }
   }
 }

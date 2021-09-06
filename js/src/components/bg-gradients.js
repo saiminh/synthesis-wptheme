@@ -13,6 +13,30 @@ function bgGradients(){
     })
   });
 
+  //Back button issue
+  window.addEventListener('pageshow', resetOnBackBtn);
+
+  function resetOnBackBtn(event) {
+    if (event.persisted) {
+      gsap.to('.page-reveal', {
+        yPercent: -100,
+        duration: 2
+      })
+      gsap.to('.main-navigation', {
+        autoAlpha: 1,
+        duration: 1
+      })
+      if ( document.body.classList.contains('bg-blue') ) {
+        gsap.to('#logo-fill', {
+          yPercent: 66.666,
+          duration: 1
+        })
+      }
+    } else {
+      console.log("The page was NOT cached by the browser");
+    }
+  }
+
   document.querySelectorAll('a:not(.menu-toggle)').forEach(element => element.addEventListener("click", function(event) {
     // Remember the link href
     var href = this.href;
@@ -73,24 +97,23 @@ function bgGradients(){
       .addLabel('middle')
       .to('body', {
         color: "#120A59",
-      }, "middle")
+      }, 'middle')
       .to('.bg-grad', {
         yPercent: -80,
       }, "middle+=1.2")
       .to('#logo-fill', {
         yPercent: 0,
-      }, "middle")
+      }, 'middle')
       .addLabel('end');
     
     if ( document.querySelector('hr') ) {
       fade.to('hr, .wp-block-separator, .food-technology hr, .food-technology .wp-block-separator', {
-        backgroundColor: "#FFFFFF"
-      }, "start");
+        backgroundColor: '#FFFFFF'
+      }, 'start');
       fade.to('hr, .wp-block-separator, .food-technology hr, .food-technology .wp-block-separator', {
-        backgroundColor: "#120A59"
-      }, "middle");
+        backgroundColor: '#120A59'
+      }, 'middle');
     }
-      
 
     if ( bluesections.length ) {
 
@@ -98,20 +121,16 @@ function bgGradients(){
 
         ScrollTrigger.create( {
           trigger: section,
-          start: "top 50%",
-          end: "bottom 50%",
-          // onEnter: () => { fadeToWhiteDown.pause(); fadeToBlueDown.play(); },
-          // onEnterBack: () => { fadeToBlueDown.pause(); fadeToWhiteDown.reverse(); },
-          // onLeave: () => { fadeToBlueDown.pause(); fadeToWhiteDown.play(); },
-          // onLeaveBack: () => { fadeToWhiteDown.pause(); fadeToBlueDown.reverse(); },
-          onEnter: () => { fade.tweenTo('middle', {duration: 4, ease: 'power4.out'}) },
-          onEnterBack: () => { fade.tweenTo('middle', {duration: 4, ease: 'power4.out'}) },
-          onLeave: () => { fade.tweenTo('end', {duration: 4, ease: 'power4.out'}) },
-          onLeaveBack: () => { fade.tweenTo('start', {duration: 4, ease: 'power4.out'}) },
+          start: 'top 50%',
+          end: 'bottom 50%',
+          onEnter: () => { fade.tweenTo('middle', {duration: 4, ease: 'power4.out'}); document.body.classList.add('bg-blue'); },
+          onEnterBack: () => { fade.tweenTo('middle', {duration: 4, ease: 'power4.out'}); document.body.classList.add('bg-blue'); },
+          onLeave: () => { fade.tweenTo('end', {duration: 4, ease: 'power4.out'}); document.body.classList.remove('bg-blue') },
+          onLeaveBack: () => { fade.tweenTo('start', {duration: 4, ease: 'power4.out'}); document.body.classList.remove('bg-blue') },
           // markers: true
         })
-        section.style.setProperty("--wp--preset--color--synthesis-blue", "transparent"); 
-        section.style.setProperty("--wp--preset--color--white", "initial"); 
+        section.style.setProperty('--wp--preset--color--synthesis-blue', 'transparent'); 
+        section.style.setProperty('--wp--preset--color--white', 'initial'); 
       })
     }
   }

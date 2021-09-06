@@ -13,6 +13,7 @@
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
+      echo '<div class="posttype">Article</div>';
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
@@ -22,14 +23,14 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				synthesiscapital_posted_on();
 				synthesiscapital_posted_by();
+				synthesiscapital_posted_on();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php synthesiscapital_post_thumbnail(); ?>
+	<?php if ( !is_singular() ) { synthesiscapital_post_thumbnail(); } ?>
 
 	<div class="entry-content">
 		<?php
