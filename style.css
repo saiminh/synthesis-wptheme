@@ -2475,6 +2475,9 @@ section {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 }
+.focus-protein-spectrum .synthesis-icon {
+  height: 120px;
+}
 
 .focus-protein-spectrum + h2 {
   margin-top: 4em;
