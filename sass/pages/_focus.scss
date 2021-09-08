@@ -13,6 +13,9 @@
 
 .focus-protein-spectrum-group {
   margin-bottom: 4em;
+  @include mq.for-tablet-portrait-up {
+    margin-bottom: 8em;
+  }
 }
 .focus-protein-spectrum {
   // @include mixins.transparent-fade-out-bottom;

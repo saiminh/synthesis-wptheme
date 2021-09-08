@@ -2445,6 +2445,11 @@ section {
 .focus-protein-spectrum-group {
   margin-bottom: 4em;
 }
+@media (min-width: 600px) {
+  .focus-protein-spectrum-group {
+    margin-bottom: 8em;
+  }
+}
 
 .focus-protein-spectrum {
   display: grid;
