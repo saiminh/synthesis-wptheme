@@ -11,12 +11,14 @@
   padding-bottom: .5em;
 }
 
+.focus-protein-spectrum-group {
+  margin-bottom: 4em;
+}
 .focus-protein-spectrum {
   // @include mixins.transparent-fade-out-bottom;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1em;
-  margin-bottom: 4em;
   @include mq.for-tablet-portrait-up {
     grid-template-columns: 1fr 1fr 1fr;
     margin-left: vars.$col-1;
