@@ -75,6 +75,9 @@ p {
     font-size: 36px;
   }
 }
+h1 + p {
+  text-indent: 1em;
+}
 blockquote > p {
   margin-left: 0;
   margin-right: 0;
