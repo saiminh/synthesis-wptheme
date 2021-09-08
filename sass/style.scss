@@ -15,11 +15,14 @@
 @use 'components/teammembers';
 @use 'components/cookie-consent';
 @use 'components/footer';
+@use 'components/social-share';
 
 @use 'pages/home';
+@use 'pages/blog-page';
 @use 'pages/posts-and-pages';
 @use 'pages/focus';
 @use 'pages/team';
+@use 'pages/investments';
 @use 'accessibility';
 
 body:after{

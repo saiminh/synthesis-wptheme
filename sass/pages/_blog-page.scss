@@ -2,19 +2,21 @@
 @use '../utilities/mq';
 @use '../utilities/vars' as vars;
 
-body:not(.home, .focus-page, .investments-page, .team-page),
-.single-post {
+body.blog {
   & h1, & h2, & h3, & p {
     @include mq.for-phone-only {
       padding: 0 vars.$gap-space;
     }  
   }
 }
-.single-post {
+.blog-header {
+  margin-top: 150px;
+}
+.blog {
   & .entry-footer,
   & .entry-content,
   & .post-thumbnail,
-  & .post-nav {
+  & .entry-header  {
     @include mq.for-tablet-portrait-up {
       margin-left: 15%;
       margin-right: 8%;
@@ -27,18 +29,13 @@ body:not(.home, .focus-page, .investments-page, .team-page),
       margin-left: 0;
     }
   }
-  & .entry-header {
-    margin: 150px vars.$gap-space 0 10%;
-    @include mq.for-tablet-portrait-up {
-      margin-right: 8%;
-    }
-  }
   & .entry-title {
     margin: .25em 0;
   }
-  & .entry-meta {
+  & .entry-header {
     display: flex;
     justify-content: space-between;
+    margin-bottom: .5em;
     & > * {
       align-self: flex-start;
     }
@@ -83,44 +80,5 @@ body:not(.home, .focus-page, .investments-page, .team-page),
   & img {
     width: 100%;
     @include mixins.transparent-fade-out-bottom;
-  }
-}
-.post-nav {
-  margin: 2em vars.$gap-space;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto;
-  @include mq.for-tablet-portrait-up {
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-  }
-  & img {
-    @include mixins.transparent-fade-out-bottom;
-  }
-}
-.post-nav-link {
-  grid-row-start: 1;
-  font-size: 48px;
-  text-decoration: none;
-  @include mq.for-tablet-portrait-up {
-    grid-column-start: 2;
-  }
-}
-.post-nav-thumbnail {
-  grid-row-start: 2;
-  @include mq.for-tablet-portrait-up {
-    grid-row-start: 1;
-    grid-row-end: 3;
-    grid-column-start: 1;
-  }
-}
-.post-nav-back-btn {
-  grid-row-start: 3;
-  @include mixins.poly-btn('pink', 'fill');
-  color: vars.$synth-blue;
-  @include mq.for-tablet-portrait-up {
-    grid-row-start: 2;
-    grid-column-start: 2;
-    align-self: end;
   }
 }

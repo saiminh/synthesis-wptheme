@@ -34,19 +34,12 @@ h1, h2{
   @include mq.for-tablet-portrait-up {
     font-size: 35px;
     line-height: .95;
-    margin-left: 7.5%;
-    margin-right: 7.5%;
+    margin-left: vars.$col-1;
+    margin-right: vars.$col-1;
   }
   @include mq.for-tablet-landscape-up {
     font-size: 55px;
-    margin-left: 10%;
     margin-right: 0;
-  }
-}
-h2 {
-  text-indent: 1em;
-  &.has-text-align-center {
-    text-indent: 0;
   }
 }
 h3 {
@@ -75,13 +68,11 @@ p {
   @include mq.for-tablet-portrait-up {
     font-size: 22px;
     line-height: .97;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: vars.$col-1;
+    margin-right: vars.$col-1;
   }
   @include mq.for-tablet-landscape-up {
     font-size: 36px;
-    margin-left: 18%;
-    margin-right: 0;
   }
 }
 blockquote > p {
@@ -103,7 +94,6 @@ em {
 .label {
   font-size: 26px;
   line-height: 1;
-  margin-left: 0;
   @include mq.for-tablet-portrait-up {
     font-size: 20px;
   }

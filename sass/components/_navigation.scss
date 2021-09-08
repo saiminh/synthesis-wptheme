@@ -67,7 +67,13 @@ ul.menu {
     display: block;
   }
 }
-
+.site-branding {
+  transform: translateY(0%);
+  transition: transform .2s ease-out;
+}
+.nav-hidden .site-branding {
+  transform: translateY(-200%);
+}
 .nav-hidden ul.menu {
   @include mq.for-tablet-portrait-up{
     transform: translateY(-200%);

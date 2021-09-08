@@ -12,7 +12,7 @@
     overflow-x: scroll;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
-    gap: 1em;
+    gap: vars.$gap-space;
     margin-left: 0;
     margin-right: 0;
     @include mixins.hideScrollBar;
@@ -21,15 +21,15 @@
     scroll-snap-align: center;
     align-self: baseline;
     width: auto;
-    flex-basis: calc(220px + 1em);
+    flex-basis: calc(220px + #{vars.$gap-space});
     flex-grow: 0;
     flex-shrink: 0;
     margin: 0;
     @include mq.for-tablet-portrait-up {
-      flex-basis: calc(325px + 1em);
+      flex-basis: calc(325px + #{vars.$gap-space});
     }
     &:first-child {
-      flex-basis: calc(66.6% + vars.$gap-space);
+      flex-basis: calc(66.6% + #{vars.$gap-space});
       padding-left: vars.$gap-space;
       @include mq.for-tablet-portrait-up {
         scroll-snap-align: start;

@@ -6,9 +6,6 @@
   width: 100vw;
   overflow: hidden;
 }
-.focus-page h1 {
-  text-indent: 1em;
-}
 .focus-page h1 + p {
   @include mixins.transparent-fade-out-bottom;
   padding-bottom: .5em;
@@ -21,13 +18,13 @@
   gap: 1em;
   @include mq.for-tablet-portrait-up {
     grid-template-columns: 1fr 1fr 1fr;
-    margin-left: 7.5%;
-    margin-right: 7.5%;
+    margin-left: vars.$col-1;
+    margin-right: vars.$col-1;
   }
   @include mq.for-tablet-landscape-up {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: vars.$col-1;
+    margin-right: vars.$col-1;
   }
   @include mq.for-desktop-up {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -86,11 +83,11 @@
   margin-bottom: 4em;
   & .synthesis-icon {
     @include mq.for-tablet-portrait-up {
-      margin-left: 7.5%;
-      margin-right: 7.5%;
+      margin-left: vars.$col-1;
+      margin-right: vars.$col-1;
     }
     @include mq.for-tablet-landscape-up {
-      margin-left: 10%;
+      margin-left: vars.$col-1;
       margin-right: 0;
     }
     & svg path {
@@ -105,13 +102,13 @@
   gap: 1em;
   @include mq.for-tablet-portrait-up {
     grid-template-columns: 1fr 1fr 1fr;
-    margin-left: 7.5%;
-    margin-right: 7.5%;
+    margin-left: vars.$col-1;
+    margin-right: vars.$col-1;
   }
   @include mq.for-tablet-landscape-up {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: vars.$col-1;
+    margin-right: vars.$col-1;
   }
   @include mq.for-desktop-up {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -143,8 +140,8 @@
 .focus-alignment-animation {
   overflow: visible;
   position: relative;
-  height: 120vh;
-  height: calc(var(--vh, 1vh) * 120);
+  height: 80vh;
+  height: calc(var(--vh, 1vh) * 80);
   margin-top: 8em;
 }
 .focus-alignment-animation-headline {

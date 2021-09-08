@@ -59,56 +59,68 @@ if ( ! function_exists( 'synthesiscapital_entry_footer' ) ) :
 	function synthesiscapital_entry_footer() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
-			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'synthesiscapital' ) );
-			if ( $categories_list ) {
-				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'synthesiscapital' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			}
+			// /* translators: used between list items, there is a space after the comma */
+			// $categories_list = get_the_category_list( esc_html__( ', ', 'synthesiscapital' ) );
+			// if ( $categories_list ) {
+			// 	/* translators: 1: list of categories. */
+			// 	printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'synthesiscapital' ) . '</span>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			// }
 
-			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'synthesiscapital' ) );
-			if ( $tags_list ) {
-				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'synthesiscapital' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			}
+      //Tags
+      if ( !is_singular() ) {
+        /* translators: used between list items, there is a space after the comma */
+        $tags_list = get_the_tag_list( '', esc_html_x( ' ', 'list item separator', 'synthesiscapital' ) );
+        if ( $tags_list ) {
+          /* translators: 1: list of tags. */
+          printf( '<span class="tags-links">' . esc_html__( 'Tags: %1$s', 'synthesiscapital' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+        }
+      }
+      if (is_singular() ) {
+        echo '<div class="social-share">
+                <h3 class="social-share-title">Share this insight</h3>
+                <div class="social-share-links">
+                  <p><a href="https://twitter.com/intent/tweet?text='.get_the_title().':%0A'.url_shorten(get_the_permalink()).'">Twitter</a></p>
+                  <p><a href="https://www.linkedin.com/shareArticle?mini=true&url='.url_shorten(get_the_permalink()).'&title='.get_the_title().'&summary='.get_the_excerpt().'&source=">LinkedIn</a></p>
+                </div>
+              </div>';
+      }
 		}
 
-		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">';
-			comments_popup_link(
-				sprintf(
-					wp_kses(
-						/* translators: %s: post title */
-						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'synthesiscapital' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					wp_kses_post( get_the_title() )
-				)
-			);
-			echo '</span>';
-		}
+		// if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+		// 	echo '<span class="comments-link">';
+		// 	comments_popup_link(
+		// 		sprintf(
+		// 			wp_kses(
+		// 				/* translators: %s: post title */
+		// 				__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'synthesiscapital' ),
+		// 				array(
+		// 					'span' => array(
+		// 						'class' => array(),
+		// 					),
+		// 				)
+		// 			),
+		// 			wp_kses_post( get_the_title() )
+		// 		)
+		// 	);
+		// 	echo '</span>';
+		// }
 
-		edit_post_link(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Edit <span class="screen-reader-text">%s</span>', 'synthesiscapital' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				wp_kses_post( get_the_title() )
-			),
-			'<span class="edit-link">',
-			'</span>'
-		);
+		// edit_post_link(
+		// 	sprintf(
+		// 		wp_kses(
+		// 			/* translators: %s: Name of current post. Only visible to screen readers */
+		// 			__( 'Edit <span class="screen-reader-text">%s</span>', 'synthesiscapital' ),
+		// 			array(
+		// 				'span' => array(
+		// 					'class' => array(),
+		// 				),
+		// 			)
+		// 		),
+		// 		wp_kses_post( get_the_title() )
+		// 	),
+		// 	'<span class="edit-link">',
+		// 	'</span>'
+		// );
 	}
 endif;
 
@@ -120,7 +132,7 @@ if ( ! function_exists( 'synthesiscapital_post_thumbnail' ) ) :
 	 * element when on single views.
 	 */
 	function synthesiscapital_post_thumbnail() {
-		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
+		if ( post_password_required() || is_attachment() ) {
 			return;
 		}
 
@@ -128,23 +140,33 @@ if ( ! function_exists( 'synthesiscapital_post_thumbnail' ) ) :
 			?>
 
 			<div class="post-thumbnail">
-				<?php the_post_thumbnail(); ?>
+				<?php 
+          if( has_post_thumbnail() ) {
+            the_post_thumbnail(); 
+          } else {
+            echo '<a class="post-thumbnail" href="'.get_the_permalink().'"><img src="https://picsum.photos/1100/700" /></a>';
+          }
+        ?>
 			</div><!-- .post-thumbnail -->
 
 		<?php else : ?>
 
 			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 				<?php
-					the_post_thumbnail(
-						'post-thumbnail',
-						array(
-							'alt' => the_title_attribute(
-								array(
-									'echo' => false,
-								)
-							),
-						)
-					);
+           if( has_post_thumbnail() ) {
+            the_post_thumbnail(
+              'post-thumbnail',
+              array(
+                'alt' => the_title_attribute(
+                  array(
+                    'echo' => false,
+                  )
+                ),
+              )
+            );
+          } else {
+            echo '<a class="post-thumbnail" href="'.get_the_permalink().'"><img src="https://picsum.photos/1100/700" /></a>';
+          }
 				?>
 			</a>
 

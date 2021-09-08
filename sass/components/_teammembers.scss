@@ -51,6 +51,11 @@
     opacity: .5;
   }
 }
+.team-teammember-vita {
+  & p:first-child {
+    text-indent: 1em;
+  }
+}
 .team-teammember-sociallinks {
   & p {
     margin-bottom: 0.5em;

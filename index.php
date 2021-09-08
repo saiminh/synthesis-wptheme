@@ -15,6 +15,10 @@
 get_header();
 ?>
 
+  <?php if ( !is_singular() ) : ?>
+    <h1 class="blog-header">Some of our latest thinking and portfolio news…</h1>
+  <?php endif; ?>
+
 	<main id="primary" class="site-main">
 
 		<?php

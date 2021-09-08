@@ -29,14 +29,16 @@ get_header();
       <?php
       $next_post = get_next_post();
       if (!empty( $next_post )): ?>
-          <a href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>">
-              <?php echo get_the_post_thumbnail( $next_post->ID, 'thumbnail' ); ?>
-              <?php echo 'Next Insight'; ?>
+          <a class="post-nav-thumbnail" href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>">
+            <?php echo get_the_post_thumbnail( $next_post->ID, 'large' ); ?>
+          </a>
+          <a class="post-nav-link" href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>">
+            <?php echo 'Next Insight'; ?>
           </a>
       <?php endif; 
 		endwhile; // End of the loop.
 		?>
-      <a class="wp-block-button__link" href="<?php echo home_url(); ?>">Back to insights</a>
+      <a class="wp-block-button__link post-nav-back-btn" href="<?php echo get_home_url(); ?>/insights">Back to insights</a>
       </div>
 	</main><!-- #main -->
 

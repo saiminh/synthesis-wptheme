@@ -1,15 +1,12 @@
+@use '../utilities/vars' as vars;
 @use '../utilities/mq';
 
 .team-page {
-  & h1 {
-    text-indent: 1em;
-  }
   & > p,
   & .team-teammembers {
     @include mq.for-tablet-landscape-up {
-      width: 80%;
-      margin-left: auto;
-      margin-right: auto;
+      margin-left: vars.$col-1;
+      margin-right: vars.$col-1;
     }
   }
 }

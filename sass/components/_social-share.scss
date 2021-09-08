@@ -1,0 +1,28 @@
+@use '../utilities/mq';
+
+
+.social-share {
+  display: flex;
+  justify-content: space-between;
+  @include mq.for-tablet-portrait-up {
+    display: block;
+  }
+}
+.social-share p, .social-share p a, .social-share-title {
+  font-size: 18px;
+  line-height: 1.2;
+  margin: 0;
+  text-decoration: none;
+  @include mq.for-tablet-portrait-up {
+    font-size: 21px;
+  }  
+}
+.social-share-title {
+  margin-bottom: .5em; 
+}
+.social-share-links {
+  text-align: right;
+  @include mq.for-tablet-portrait-up {
+    text-align: left;
+  }
+}

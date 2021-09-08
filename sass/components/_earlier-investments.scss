@@ -31,8 +31,8 @@
     padding-left: vars.$gap-space;
     scroll-snap-align: start;
     @include mq.for-tablet-landscape-up {
-      padding-left: 137px;
-      flex-basis: 472px;
+      padding-left: calc( #{vars.$col-1} + #{vars.$gap-space} ); 
+      flex-basis: calc( 345px + #{vars.$col-1} + #{vars.$gap-space} );
     }
   }
   &:last-child {
