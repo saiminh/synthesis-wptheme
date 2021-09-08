@@ -17,7 +17,7 @@
   @include mq.for-tablet-portrait-up {
     display: flex;
     flex-wrap: wrap;
-    gap: 1em;
+    gap: vars.$col-1;
     margin-left: vars.$col-1;
   }
 }
@@ -27,18 +27,19 @@
   @include mq.for-tablet-portrait-up {
     width: auto;
     flex-basis: calc(33.3% - .666em);
+    margin-bottom: 4em;
   }
 }
 .testimonial:nth-child(2n),
 .testimonial:nth-child(4n) {
   margin-left: 25%;
   @include mq.for-tablet-portrait-up {
-    margin: 0;
+    margin: 0 0 4em 0;
   }
 }
 .testimonial:nth-child(6n+3) {
   @include mq.for-tablet-portrait-up {
-    margin-left: 33.3%;
+    margin-left: vars.$col-1 * 2;
     margin-right: 0;
   }
 }
