@@ -2539,6 +2539,9 @@ section {
   margin-top: 4em;
   margin-bottom: 4em;
 }
+.focus-enabling-technologies .synthesis-icon {
+  height: 120px;
+}
 @media (min-width: 600px) {
   .focus-enabling-technologies .synthesis-icon {
     margin-left: 8.3333333333vw;
