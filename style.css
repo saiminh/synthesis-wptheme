@@ -2446,6 +2446,7 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1em;
+  margin-bottom: 4em;
 }
 @media (min-width: 600px) {
   .focus-protein-spectrum {
