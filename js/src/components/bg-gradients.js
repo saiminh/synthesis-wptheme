@@ -12,7 +12,11 @@ function bgGradients(){
       duration: 2
     })
   });
-
+  
+  document.querySelectorAll('.wp-block-group.has-white-background-color').forEach( (group) => {
+    group.classList.remove('has-white-background-color');
+  } )
+  
   //Back button issue
   window.addEventListener('pageshow', resetOnBackBtn);
 
