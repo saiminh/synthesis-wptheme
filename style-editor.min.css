@@ -40,23 +40,15 @@ h1, h2 {
   h1, h2 {
     font-size: 35px;
     line-height: 0.95;
-    margin-left: 7.5%;
-    margin-right: 7.5%;
+    margin-left: 8.3333333333vw;
+    margin-right: 8.3333333333vw;
   }
 }
 @media (min-width: 900px) {
   h1, h2 {
     font-size: 55px;
-    margin-left: 10%;
     margin-right: 0;
   }
-}
-
-h2 {
-  text-indent: 1em;
-}
-h2.has-text-align-center {
-  text-indent: 0;
 }
 
 h3 {
@@ -93,20 +85,23 @@ p {
   p {
     font-size: 22px;
     line-height: 0.97;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 8.3333333333vw;
+    margin-right: 8.3333333333vw;
   }
 }
 @media (min-width: 900px) {
   p {
     font-size: 36px;
-    margin-left: 18%;
-    margin-right: 0;
   }
+}
+
+h1 + p {
+  text-indent: 1em;
 }
 
 blockquote > p {
   margin-left: 0;
+  margin-right: 0;
 }
 
 strong, b {
@@ -130,7 +125,6 @@ em {
 .label {
   font-size: 26px;
   line-height: 1;
-  margin-left: 0;
 }
 @media (min-width: 600px) {
   .label {
