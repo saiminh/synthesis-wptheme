@@ -45,8 +45,16 @@ input[type="submit"]:focus,
   padding: 2px 1em 0;
 }
 
-input[type="text"],
-input[type="email"],
+button:visited,
+input[type="button"]:visited,
+input[type="reset"]:visited,
+input[type="submit"]:visited,
+.wp-block-button__link:visited {
+  color: vars.$synth-blue;
+} 
+
+input[type="text"], 
+input[type="email"],  
 input[type="url"],
 input[type="password"],
 input[type="search"],
