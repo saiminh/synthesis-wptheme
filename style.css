@@ -1284,7 +1284,7 @@ section {
   content: url("./assets/icons/arrow.svg");
   position: absolute;
   right: 20px;
-  top: calc(50% - 16px);
+  top: 33.333%;
 }
 
 .food-technologies {
