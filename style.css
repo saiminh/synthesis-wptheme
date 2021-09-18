@@ -1831,7 +1831,7 @@ section {
 @media (max-width: 599px) {
   .cc-compliance {
     justify-content: space-between;
-    margin-top: 2em;
+    margin-top: 1em;
   }
 }
 .cc-compliance > * {
@@ -1869,10 +1869,15 @@ section {
   display: inline-block;
   color: white;
   border: 24px solid #FFF;
-  border-image: url("./assets/img/button-bg-blue-fill.svg") 49% 23 fill;
+  border-image: url("./assets/img/button-bg-pink-fill.svg") 49% 23 fill;
   opacity: 0;
   animation: quickfadein 0.4s ease-in-out 0.2s forwards;
-  color: white;
+  color: #120A59;
+}
+@media (max-width: 599px) {
+  .cc-btn {
+    margin-right: 0;
+  }
 }
 
 .cc-btn.cc-allow {
@@ -1903,10 +1908,10 @@ section {
   display: inline-block;
   color: white;
   border: 24px solid #FFF;
-  border-image: url("./assets/img/button-bg-blue-fill.svg") 49% 23 fill;
+  border-image: url("./assets/img/button-bg-pink-fill.svg") 49% 23 fill;
   opacity: 0;
   animation: quickfadein 0.4s ease-in-out 0.2s forwards;
-  color: #C4FF63;
+  color: #120A59;
 }
 
 .cc-message {
@@ -1952,10 +1957,16 @@ section {
   display: inline-block;
   color: white;
   border: 24px solid #FFF;
-  border-image: url("./assets/img/button-bg-blue-fill.svg") 49% 23 fill;
+  border-image: url("./assets/img/button-bg-pink-fill.svg") 49% 23 fill;
   opacity: 0;
   animation: quickfadein 0.4s ease-in-out 0.2s forwards;
-  color: #C4FF63;
+  color: #120A59;
+}
+@media (max-width: 599px) {
+  .cc-link {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .cc-revoke {

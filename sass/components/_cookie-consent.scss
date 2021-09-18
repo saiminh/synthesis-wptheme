@@ -34,7 +34,7 @@
   @include mq.for-phone-only {
     // flex-direction: column;
     justify-content: space-between;
-    margin-top: 2em;
+    margin-top: 1em;
   }
   & > * {
    align-self: flex-end; 
@@ -46,15 +46,18 @@
   margin-right: .5em;
   transition: .1s transform ease-in-out;
   &:hover {
-    @include mixins.poly-btn('blue', 'fill');
-    color: white;
+    @include mixins.poly-btn('pink', 'fill');
+    color: vars.$synth-blue;
+  }
+  @include mq.for-phone-only {
+    margin-right: 0;
   }
 }
 .cc-btn.cc-allow {
   @include mixins.poly-btn('green', 'fill');
   &:hover {
-    @include mixins.poly-btn('blue', 'fill');
-    color: vars.$neon-green;
+    @include mixins.poly-btn('pink', 'fill');
+    color: vars.$synth-blue;
   }
 }
 .cc-message {
@@ -72,8 +75,12 @@
   margin-top: 1em;
   transition: .1s transform ease-in-out;
   &:hover {
-    @include mixins.poly-btn('blue', 'fill');
-    color: vars.$neon-green;
+    @include mixins.poly-btn('pink', 'fill');
+    color: vars.$synth-blue;
+  }
+  @include mq.for-phone-only {
+    width: 100%;
+    text-align: center;
   }
 }
 .cc-revoke {
