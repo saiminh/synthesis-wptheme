@@ -2520,7 +2520,6 @@ section {
   margin: 0;
   padding: 0.5em 0;
   border-top: 1px solid #FFF;
-  border-bottom: 1px solid #FFF;
 }
 @media (min-width: 600px) {
   .focus-protein-spectrum-column p {
@@ -2610,7 +2609,6 @@ section {
   margin: 0;
   padding: 0.5em 1em 0.5em 0;
   border-top: 1px solid #FFF;
-  border-bottom: 1px solid #FFF;
   position: relative;
   font-size: 19px;
 }
