@@ -25,7 +25,7 @@
   @include mq.for-tablet-portrait-up {
     flex-basis: calc( 33.3% - 1.333em);
   }
-  @include mq.for-tablet-landscape-up {
+  @include mq.for-desktop-up {
     flex-basis: calc( 33.3% - 2.666em);
   }
   & .wp-block-image {

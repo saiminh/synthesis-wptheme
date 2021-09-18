@@ -1,11 +1,21 @@
 @use '../utilities/mq';
 @use '../utilities/vars' as vars;
 
+.scrolling-flex-container {
+  padding: 0!important;
+  margin-bottom: 8em;
+  position: relative;
+  &:after {
+    content: url('./assets/icons/arrow.svg');
+    position: absolute;
+    right: vars.$gap-space;
+    top: calc(50% - 16px);
+  }
+}
 .food-technologies {
   display: flex;
   padding-left: 0;
   padding-right: 0;
-  margin-bottom: 8em;
   width: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -36,8 +46,8 @@
     flex-basis: calc(175px + 5em);
   }
   @include mq.for-tablet-landscape-up {
-    padding-left: vars.$col-1;
-    flex-basis: calc(217px + #{vars.$col-1});
+    padding-left: calc(#{vars.$col-1} + #{vars.$gap-space});
+    flex-basis: calc(217px + #{vars.$col-1} + #{vars.$gap-space});
   }
 }
 .food-technology > .wp-block-image {

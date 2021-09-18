@@ -130,6 +130,9 @@ p {
 .has-synthesis-blue-background-color .synthesis-icon img { 
   filter: brightness(100);
 } 
+.scrolling-flex-container {
+  @include blocklabel('Scrolling container');
+}
 .food-technologies {
   @include blocklabel('Food Technologies');
   display: flex;

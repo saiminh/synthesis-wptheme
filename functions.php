@@ -222,7 +222,7 @@ add_action( 'init', 'create_posttype', 0 );
 
 //Shortcode for displaying Past Investments
 function display_earlier_investments() {
-  echo '<div class="earlier-investments">';
+  echo '<div class="scrolling-flex-container"><div class="earlier-investments">';
       $args = array(  
         'post_type' => 'investments-past',
         'post_status' => 'publish',
@@ -242,7 +242,7 @@ function display_earlier_investments() {
           $more = 1;
       }
       wp_reset_postdata(); 
-  echo '</div>';
+  echo '</div></div>';
 }
 function outputbuffer_earlier_investments(){
     ob_start();             // turn on output buffering
