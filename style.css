@@ -1648,6 +1648,14 @@ section {
   height: 100%;
   object-fit: cover;
 }
+.scroll-gallery.wp-block-gallery .blocks-gallery-item:nth-child(2n) {
+  flex-basis: calc(320px + 20px);
+}
+@media (min-width: 900px) {
+  .scroll-gallery.wp-block-gallery .blocks-gallery-item:nth-child(2n) {
+    flex-basis: calc(515px + 20px);
+  }
+}
 .scroll-gallery.wp-block-gallery .blocks-gallery-item:nth-child(2n) figure {
   height: 220px;
 }

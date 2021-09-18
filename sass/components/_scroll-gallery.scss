@@ -58,6 +58,12 @@
       object-fit: cover;
     }
   }
+  &.wp-block-gallery .blocks-gallery-item:nth-child(2n) {
+    flex-basis: calc(320px + #{vars.$gap-space});
+    @include mq.for-tablet-landscape-up {
+      flex-basis: calc(515px + #{vars.$gap-space});
+    }
+  }
   &.wp-block-gallery .blocks-gallery-item:nth-child(2n) figure{
     height: 220px;
     @include mq.for-tablet-portrait-up {
