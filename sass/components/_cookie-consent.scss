@@ -16,7 +16,10 @@
   transition: .5s transform cubic-bezier(.82,.1,.56,.93);
   padding: 20em 4em 2em 4em;
   @include mq.for-phone-only {
-    padding: 2em vars.$gap-space;
+    padding: 10em vars.$gap-space 2em vars.$gap-space;
+    flex-direction: column;
+    background: linear-gradient(to top, vars.$synth-blue 60%, transparentize(vars.$synth-blue, 1) 99%);
+
   }
 }
 .cc-window.cc-invisible {
@@ -29,7 +32,9 @@
   display: flex;
   justify-content: flex-end;
   @include mq.for-phone-only {
-    flex-direction: column;
+    // flex-direction: column;
+    justify-content: space-between;
+    margin-top: 2em;
   }
   & > * {
    align-self: flex-end; 

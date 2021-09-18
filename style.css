@@ -1811,7 +1811,9 @@ section {
 }
 @media (max-width: 599px) {
   .cc-window {
-    padding: 2em 20px;
+    padding: 10em 20px 2em 20px;
+    flex-direction: column;
+    background: linear-gradient(to top, #120A59 60%, rgba(18, 10, 89, 0) 99%);
   }
 }
 
@@ -1828,7 +1830,8 @@ section {
 }
 @media (max-width: 599px) {
   .cc-compliance {
-    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 2em;
   }
 }
 .cc-compliance > * {
