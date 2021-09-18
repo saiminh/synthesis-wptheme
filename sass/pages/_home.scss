@@ -117,7 +117,7 @@
   .scroll-section p {
     @include mq.for-tablet-portrait-up {
       margin-left: 0;
-      margin-right: 33.33%;
+      // margin-right: 33.33%;
     }
   }
 }
