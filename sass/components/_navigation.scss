@@ -44,7 +44,7 @@
 }
 .site-header .logo {
   display: inline-block;
-  overflow: auto;
+  overflow: visible;
   width: 140px;
   height: 58px;
   position: relative;
@@ -67,12 +67,12 @@ ul.menu {
     display: block;
   }
 }
-.site-branding {
+.logo svg {
   transform: translateY(0%);
   transition: transform .2s ease-out;
 }
-.nav-hidden .site-branding {
-  transform: translateY(-200%);
+.nav-hidden .logo svg {
+  transform: translateY(-50%);
 }
 .nav-hidden ul.menu {
   @include mq.for-tablet-portrait-up{

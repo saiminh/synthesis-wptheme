@@ -1,18 +1,39 @@
 @use '../utilities/mq';
 @use '../utilities/animations';
 @use '../utilities/vars' as vars;
+@use '../utilities/mixins';
 
 .home .entry-content > :first-child {
   margin-top: 0;
 }
-.hero-home {
+.home .hero-home {
+  margin: - vars.$gap-space;
+  margin-bottom: vars.$gap-space;
   min-height: 100vh ;
   min-height: calc(var(--vh, 1vh) * 100);
   position: relative;  
-  padding: 0 0 4em 0;
+  padding: vars.$gap-space vars.$gap-space 4em vars.$gap-space;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  background-color: vars.$synth-blue;
+  color: white;
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 95%);
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 95%);
+  & h1 {
+    font-size: 61px;
+    max-width: 8em;
+    @include mq.for-tablet-portrait-up {
+      font-size: 65px;
+      max-width: 8em;
+    }
+    @include mq.for-tablet-landscape-up {
+      font-size: 85px;
+    }
+  }
+  & h2 {
+  text-indent: 1em; 
+  }
 }
 .home-synthesis-icons {
   position: relative;
@@ -22,7 +43,7 @@
     max-width: 66.666%;
   }
   @include mq.for-tablet-landscape-up {
-    max-width: 50%;
+    max-width: 460px;
   }
   & figure {
     width: 26px;
@@ -40,30 +61,30 @@
     }
   }
 }
-.hero-home .wp-block-video {
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
-  position: absolute;
-  top: - vars.$gap-space;
-  left: - vars.$gap-space;
-  right: - vars.$gap-space;
-  height: 100%;
-  overflow: hidden;
-  & video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: 100%;
-    transform: translateX(-50%) translateY(-50%);
-    @media screen and (min-aspect-ratio: 16/9) {
-      height: auto;
-      width: 100%;
-    }
-  }
-}
+// .hero-home .wp-block-video {
+//   -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+//   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+//   position: absolute;
+//   top: - vars.$gap-space;
+//   left: - vars.$gap-space;
+//   right: - vars.$gap-space;
+//   height: 100%;
+//   overflow: hidden;
+//   & video {
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     min-width: 100%;
+//     min-height: 100%;
+//     width: auto;
+//     height: 100%;
+//     transform: translateX(-50%) translateY(-50%);
+//     @media screen and (min-aspect-ratio: 16/9) {
+//       height: auto;
+//       width: 100%;
+//     }
+//   }
+// }
 .home .wp-block-group:not(.synthesis-newsletter-subscribe) > .wp-block-buttons {
   justify-content: end;
   @include mq.for-tablet-portrait-up{
@@ -80,12 +101,6 @@
     }
     @include mq.for-tablet-portrait-up {
       max-width: 66.666%;
-    }
-  }
-  & h1 {
-    max-width: 8em;
-    @include mq.for-tablet-portrait-up {
-      max-width: 8em;
     }
   }
   .entry-content > p,
@@ -106,4 +121,22 @@
     }
   }
 }
-
+// Home Intro setup
+.home {
+  & ul.menu li, 
+  & .hero-home h2 {
+    opacity: 0;
+    visibility: hidden;
+  }
+  & .site-header .logo {
+    transform-origin: 100% 0;
+    transform: scale(2);
+  }
+  & #logo-fill {
+    transform: translateY(66.666%);
+  }
+  & .page-reveal--home {
+    background: rgba(0, 0, 0, 0) linear-gradient(vars.$synth-blue 0%, vars.$synth-blue 50%, transparentize(vars.$synth-blue, 1) 100%) repeat scroll 0% 0%!important;
+    z-index: 6!important;
+  }
+}

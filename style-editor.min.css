@@ -337,16 +337,15 @@ p {
   cursor: pointer;
   font-size: 15px;
   line-height: 0;
-  height: 48px;
   white-space: nowrap;
-  padding: 2px 0 0 0;
+  padding: 0;
   position: relative;
   z-index: 1;
   text-decoration: none;
   background-color: transparent;
   display: inline-block;
   color: #120A59;
-  border: 23px solid #FFF;
+  border: 24px solid #FFF;
   border-image: url("./assets/img/button-bg-green-fill.svg") 49% 23 fill;
   opacity: 0;
   animation: quickfadein 0.4s ease-in-out 0.2s forwards;
@@ -360,16 +359,15 @@ p {
 .synthesis-newsletter-subscribe .wp-block-button__link {
   font-size: 18px;
   line-height: 0;
-  height: 48px;
   white-space: nowrap;
-  padding: 2px 0 0 0;
+  padding: 0;
   position: relative;
   z-index: 1;
   text-decoration: none;
   background-color: transparent;
   display: inline-block;
   color: white;
-  border: 23px solid #FFF;
+  border: 24px solid #FFF;
   border-image: url("./assets/img/button-bg-pink-fill.svg") 49% 23 fill;
   opacity: 0;
   animation: quickfadein 0.4s ease-in-out 0.2s forwards;
@@ -429,6 +427,8 @@ p {
   border: 2px solid #00aeff;
   padding: 16px 10px 10px 10px;
   border-radius: 5px;
+  background-color: #120A59;
+  color: white;
 }
 .wp-block-group.hero-home::before {
   content: "Home Hero";

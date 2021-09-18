@@ -108,7 +108,9 @@ p {
   @include blocklabel('Section Group Blue Background')
 }
 .wp-block-group.hero-home {
-  @include blocklabel('Home Hero')
+  @include blocklabel('Home Hero');
+  background-color: vars.$synth-blue;
+  color: white;
 }
 .img-mob_full-tab_por_33_right {
   @include blocklabel('Image 100% on mobile, 33% on tablet')
