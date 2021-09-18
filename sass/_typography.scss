@@ -199,9 +199,9 @@ a:active {
   color: vars.$neon-green;
 }
 a:focus {
-  outline: thin dotted;
+  outline: none;
 }
 a:hover,
 a:active {
-  outline: 0;
+  outline: none;
 }
