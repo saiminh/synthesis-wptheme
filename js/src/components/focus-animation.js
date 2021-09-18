@@ -25,7 +25,7 @@ function focusAnimation(){
   })
   .addLabel('start')
   .fromTo(polygons[0], 
-    { scale: 1.3, xPercent: 150, y: 0}, 
+    { scale: 1.3, xPercent: 100, y: 0}, 
     { scale: 1, xPercent: 100, y: -headlineCenterY }, 'start' )
   .fromTo(polygons[1], 
     { scale: 1.3, xPercent: -200, y: 0}, 

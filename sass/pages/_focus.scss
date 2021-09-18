@@ -22,15 +22,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1em;
+  @include mixins.default-page-margins;
   @include mq.for-tablet-portrait-up {
     grid-template-columns: 1fr 1fr 1fr;
-    margin-left: vars.$col-1;
-    margin-right: vars.$col-1;
   }
   @include mq.for-tablet-landscape-up {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-left: vars.$col-1;
-    margin-right: vars.$col-1;
   }
   @include mq.for-desktop-up {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -92,14 +89,7 @@
   margin-bottom: 4em;
   & .synthesis-icon {
     height: 120px;
-    @include mq.for-tablet-portrait-up {
-      margin-left: vars.$col-1;
-      margin-right: vars.$col-1;
-    }
-    @include mq.for-tablet-landscape-up {
-      margin-left: vars.$col-1;
-      margin-right: 0;
-    }
+    @include mixins.default-page-margins;
     & svg path {
       fill: #FFFFFF;
     }
@@ -110,15 +100,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1em;
+  @include mixins.default-page-margins;
   @include mq.for-tablet-portrait-up {
     grid-template-columns: 1fr 1fr 1fr;
-    margin-left: vars.$col-1;
-    margin-right: vars.$col-1;
   }
   @include mq.for-tablet-landscape-up {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-left: vars.$col-1;
-    margin-right: vars.$col-1;
   }
   @include mq.for-desktop-up {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -154,6 +141,10 @@
   height: calc(var(--vh, 1vh) * 80);
   margin-top: 8em;
 }
+.focus-alignment-animation > *,
+.focus-alignment-animation + div > * {
+  @include mixins.default-page-margins;
+}
 .focus-alignment-animation-headline {
     text-align: center;
     position: absolute;
@@ -173,11 +164,18 @@
   bottom: 0;
   left: 0;
   width: 100%;
+  @include mq.for-tablet-portrait-up {
+    left: vars.$gap-space;
+    width: calc( 100% - ( #{vars.$col-1} * 2 ) - ( #{vars.$gap-space} * 2 ) );
+  }
+  @include mq.for-tablet-landscape-up {
+    width: calc( 100% - #{vars.$col-1} - ( #{vars.$gap-space} * 2 ) );
+  }
   & .wp-block-image {
     margin: 0;
     position: relative;
     transform-origin: 50% 50%;
-    flex-basis: 33.3%;
+    flex-basis: calc(33.3%);
     & img, & svg {
       display: block;
       width: 66.6%;

@@ -48,3 +48,13 @@
     display: none;
   }
 }
+
+@mixin default-page-margins {
+  @include mq.for-tablet-portrait-up {
+    margin-left: vars.$col-1;
+    margin-right: vars.$col-1;
+  }
+  @include mq.for-tablet-landscape-up {
+    margin-right: 0;
+  }
+}

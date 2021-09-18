@@ -28,18 +28,17 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: .75em;
   font-weight: normal;
 }
+
 h1, h2{
+  @include mixins.default-page-margins;
   font-size: 31px;
   line-height: 85%;
   @include mq.for-tablet-portrait-up {
     font-size: 35px;
     line-height: .95;
-    margin-left: vars.$col-1;
-    margin-right: vars.$col-1;
   }
   @include mq.for-tablet-landscape-up {
     font-size: 55px;
-    margin-right: 0;
   }
 }
 h3 {
@@ -65,11 +64,10 @@ p {
   margin-bottom: 1.5em;
   font-size: 18px;
   line-height: .94;
+  @include mixins.default-page-margins;
   @include mq.for-tablet-portrait-up {
     font-size: 22px;
     line-height: .97;
-    margin-left: vars.$col-1;
-    margin-right: vars.$col-1;
   }
   @include mq.for-tablet-landscape-up {
     font-size: 36px;

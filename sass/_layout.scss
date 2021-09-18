@@ -8,6 +8,9 @@
 .entry-content > .wp-block-group {
   padding: vars.$gap-space;
 }
+body:not(.home) .entry-content > .wp-block-group > .wp-block-columns {
+  @include mixins.default-page-margins;
+}
 .wp-block-columns {
   @include mq.for-tablet-portrait-up {
     flex-wrap: nowrap;
