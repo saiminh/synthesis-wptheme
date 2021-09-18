@@ -1671,6 +1671,7 @@ section {
 @media (min-width: 600px) {
   .team-teammembers {
     display: flex;
+    flex-wrap: wrap;
     gap: 2em;
   }
 }
@@ -1694,7 +1695,12 @@ section {
 }
 @media (min-width: 600px) {
   .team-teammember {
-    flex-basis: 33.3%;
+    flex-basis: calc( 33.3% - 1.333em);
+  }
+}
+@media (min-width: 900px) {
+  .team-teammember {
+    flex-basis: calc( 33.3% - 2.666em);
   }
 }
 .team-teammember .wp-block-image {
