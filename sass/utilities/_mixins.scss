@@ -4,9 +4,9 @@
 @mixin poly-btn($btncolor:"blue", $border:"outline", $fontsize: 18px) {
   font-size: $fontsize;
   line-height: 0;
-  height: 48px;
+  // height: 48px;
   white-space: nowrap;
-  padding: 2px 0 0 0;
+  padding: 0;
   position: relative;
   z-index: 1;
   text-decoration: none;
@@ -23,7 +23,7 @@
   } @else {
     color: white
   }
-  border: 23px solid #FFF;
+  border: 24px solid #FFF;
   // border-style: solid;
   // border-width: 23px ;
   border-image: url('./assets/img/button-bg-#{$btncolor}-#{$border}.svg') 49% 23 fill;
