@@ -2516,10 +2516,10 @@ section {
   padding-right: 0;
 }
 .focus-protein-spectrum-column p {
-  font-size: 11px;
   margin: 0;
   padding: 0.5em 0;
   border-top: 1px solid #FFF;
+  font-size: 19px;
 }
 @media (min-width: 600px) {
   .focus-protein-spectrum-column p {

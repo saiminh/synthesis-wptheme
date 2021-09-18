@@ -56,11 +56,11 @@
     padding-right: 0;
   }
   & p {
-    font-size: 11px;
     margin: 0;
     padding: .5em 0;
     border-top: 1px solid #FFF;
     // border-bottom: 1px solid #FFF;
+    font-size: 19px;
     @include mq.for-tablet-portrait-up {
       font-size: 17px;
     }
