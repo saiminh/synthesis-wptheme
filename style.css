@@ -1359,7 +1359,7 @@ section {
 @media (min-width: 900px) {
   .food-technology:first-child {
     padding-left: calc(8.3333333333vw + 20px);
-    flex-basis: calc(217px + 8.3333333333vw + 20px);
+    flex-basis: calc(217px + 8.3333333333vw + ( 2 * 20px ));
   }
 }
 

@@ -78,7 +78,7 @@
   }
   @include mq.for-tablet-landscape-up {
     padding-left: calc(#{vars.$col-1} + #{vars.$gap-space});
-    flex-basis: calc(217px + #{vars.$col-1} + #{vars.$gap-space});
+    flex-basis: calc(217px + #{vars.$col-1} + ( 2 * #{vars.$gap-space} ));
   }
 }
 .food-technology > .wp-block-image {
