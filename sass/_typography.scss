@@ -27,6 +27,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 1em;
   margin-bottom: .75em;
   font-weight: normal;
+  max-width: 1100px;
 }
 
 h1, h2{
@@ -64,6 +65,7 @@ p {
   margin-bottom: 1.5em;
   font-size: 18px;
   line-height: .94;
+  max-width: 1100px;
   @include mixins.default-page-margins;
   @include mq.for-tablet-portrait-up {
     font-size: 22px;

@@ -401,6 +401,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 1em;
   margin-bottom: 0.75em;
   font-weight: normal;
+  max-width: 1100px;
 }
 
 h1, h2 {
@@ -459,6 +460,7 @@ p {
   margin-bottom: 1.5em;
   font-size: 18px;
   line-height: 0.94;
+  max-width: 1100px;
 }
 @media (min-width: 600px) {
   p {
@@ -2162,41 +2164,43 @@ section {
   min-height: 100vh;
   min-height: calc(var(--vh, 1vh) * 100);
   position: relative;
-  padding: 20px 20px 4em 20px;
+  padding: 4rem 20px 20px 20px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   background-color: #120A59;
   color: white;
-  -webkit-mask-image: linear-gradient(to bottom, black 60%, rgba(0, 0, 0, 0) 95%);
-  mask-image: linear-gradient(to bottom, black 60%, rgba(0, 0, 0, 0) 95%);
+  text-align: center;
+}
+.home .hero-home .hero-bg-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, white 95%);
+  z-index: 0;
+  pointer-events: none;
 }
 .home .hero-home h1 {
-  font-size: 61px;
-  max-width: 8em;
+  margin: 0 auto 1em auto;
 }
-@media (min-width: 600px) {
-  .home .hero-home h1 {
-    font-size: 65px;
-    max-width: 8em;
-  }
-}
-@media (min-width: 900px) {
-  .home .hero-home h1 {
-    font-size: 85px;
-  }
-}
-.home .hero-home h2 {
-  text-indent: 1em;
+.home .hero-home h2, .home .hero-home p {
+  max-width: 657px;
+  margin: 1.5em auto 0 auto;
 }
 
 .home-synthesis-icons {
   position: relative;
   display: flex;
   justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 280px;
 }
 @media (min-width: 600px) {
   .home-synthesis-icons {
+    min-width: 405px;
     max-width: 66.666%;
   }
 }
@@ -2262,13 +2266,9 @@ section {
   }
 }
 
-.home ul.menu li, .home .hero-home h2 {
+.home ul.menu li {
   opacity: 0;
   visibility: hidden;
-}
-.home .site-header .logo {
-  transform-origin: 100% 0;
-  transform: scale(2);
 }
 .home #logo-fill {
   transform: translateY(66.666%);
@@ -2514,8 +2514,6 @@ section {
 }
 
 .focus-page h1 + p {
-  -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
-  mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
   padding-bottom: 0.5em;
 }
 
@@ -2764,6 +2762,16 @@ section {
   max-width: 200px;
   height: auto;
   margin: auto;
+}
+
+.focus-howwedoit-columns .wp-block-column p {
+  border-top: 1px solid;
+  padding-top: 0.5em;
+}
+@media (min-width: 600px) {
+  .focus-howwedoit-columns .wp-block-column:not(:first-child) {
+    margin-left: 2em;
+  }
 }
 
 @media (min-width: 600px) {
