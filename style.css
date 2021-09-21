@@ -2183,6 +2183,12 @@ section {
   max-width: 657px;
   margin: 1.5em auto 0 auto;
 }
+@media (max-width: 599px) {
+  .home .hero-home h2, .home .hero-home p {
+    font-size: 31px;
+    margin-top: 0.75em;
+  }
+}
 
 .home-synthesis-icons {
   position: relative;

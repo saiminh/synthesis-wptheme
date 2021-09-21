@@ -22,8 +22,9 @@ function homeIntro() {
     }, {
       autoAlpha: 1,
       stagger: {
-        amount: .5
+        each: .25
       },
+      duration: 2,
       ease: 'power3.out'
     }, 2.75)
     .fromTo( '.site-header .logo', {
@@ -31,7 +32,7 @@ function homeIntro() {
     }, {
       autoAlpha: 1,
       duration: 1
-    }, 3.25)
+    }, 3.75)
     .fromTo( 'lottie-player', {
       autoAlpha: 0
     }, {
@@ -57,7 +58,7 @@ function homeIntro() {
       autoAlpha: 1,
       duration: 2,
       ease: 'power3.inOut'
-    }, 1.1)
+    }, 1.25)
     .fromTo('.home .hero-home .hero-bg-gradient', {
       transformOrigin: '50% 100%',
       scaleY: 0.4

@@ -33,12 +33,14 @@
   }
   & h1 {
     margin: 0 auto 1em auto;
-    @include mq.for-tablet-portrait-up {
-    }
   }
   & h2, & p {
     max-width: 657px;
     margin: 1.5em auto 0 auto;
+    @include mq.for-phone-only {
+      font-size: 31px;
+      margin-top: .75em;
+    }
   }
 }
 .home-synthesis-icons {
