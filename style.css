@@ -2215,21 +2215,6 @@ section {
   filter: saturate(0) brightness(100);
 }
 
-.home .wp-block-group:not(.synthesis-newsletter-subscribe) > .wp-block-buttons {
-  justify-content: end;
-}
-@media (min-width: 600px) {
-  .home .wp-block-group:not(.synthesis-newsletter-subscribe) > .wp-block-buttons {
-    justify-content: end;
-    margin-right: calc(33.33vw - ( 2 * 20px ));
-  }
-}
-@media (min-width: 1200px) {
-  .home .wp-block-group:not(.synthesis-newsletter-subscribe) > .wp-block-buttons {
-    margin-right: calc(100vw - 1100px - ( 2 * 20px ));
-  }
-}
-
 .home h1, .home h2 {
   position: relative;
   margin-left: 0;
@@ -2248,6 +2233,7 @@ section {
   visibility: hidden;
 }
 .home .page-reveal--home {
+  opacity: 0;
   background: rgba(0, 0, 0, 0) linear-gradient(#120A59 0%, #120A59 50%, rgba(18, 10, 89, 0) 100%) repeat scroll 0% 0% !important;
   z-index: 6 !important;
 }

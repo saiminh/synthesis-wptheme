@@ -20,25 +20,33 @@ function homeIntro() {
     tl.to('.home ul.menu li', {
       autoAlpha: 1,
       stagger: {
-        amount: .5,
-        duration: 1
+        amount: .5
       },
-      duration: 3,
       ease: 'power3.out'
-    }, 3)
+    }, 2.75)
     .fromTo( 'lottie-player', {
       autoAlpha: 0
     }, {
       autoAlpha: 1,
       stagger: {
-        amount: .5,
-        duration: .5
+        each: .125,
       },
-      duration: 2.5
+      duration: 2
     }, 0.25)
     .to('#logo-fill', {
       yPercent: 66.6666,
     }, 0)
+    .fromTo('.home .hero-home h1, .site-header .logo', {
+      autoAlpha: 0
+    }, {
+      stagger: {
+        amount: .25,
+        from: 'end'
+      },
+      autoAlpha: 1,
+      duration: 3,
+      ease: 'power3.out'
+    }, 2)
     .fromTo('.home .hero-home p', {
       autoAlpha: 0
     }, {
@@ -47,13 +55,13 @@ function homeIntro() {
       ease: 'power3.out'
     }, 3)
     .fromTo('.home .hero-home .hero-bg-gradient', {
-      transformOrigin: "50% 100%",
-      scaleY: 0
+      transformOrigin: '50% 100%',
+      scaleY: 0.33
     }, {
       scaleY: 1,
       ease: 'power2.inOut',
-      duration: 3
-    }, .25)
+      duration: 2
+    }, 0)
     ;
 
   gsap.fromTo('#logo-fill', {
