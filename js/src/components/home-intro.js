@@ -36,6 +36,9 @@ function homeIntro() {
       },
       duration: 2.5
     }, 0.25)
+    .to('#logo-fill', {
+      yPercent: 66.6666,
+    }, 0)
     .fromTo('.home .hero-home p', {
       autoAlpha: 0
     }, {
@@ -53,14 +56,16 @@ function homeIntro() {
     }, .25)
     ;
 
-  gsap.to('#logo-fill', {
-    yPercent: -66.666,
+  gsap.fromTo('#logo-fill', {
+    yPercent: 66.6666
+  }, {
+    yPercent: 0,
     scrollTrigger: {
       trigger: '.hero-home',
       start: '90% top',
-      end: '90% top',
+      end: '90.1% top',
       toggleActions: 'play none reverse none ',
-      // markers: true
+      overwrite: true
     }
   })
 

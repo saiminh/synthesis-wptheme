@@ -27,18 +27,7 @@ body:not(.home) .entry-content > .wp-block-group > .wp-block-columns {
     margin-top: 0;
   }
 }
-.img-mob_full-tab_por_33_right {
-  position: relative;
-  max-height: 330px;
-  overflow: hidden;
-  @include mq.for-tablet-landscape-up {
-    max-height: 590px;
-  }
-  & img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+.entry-content .fade-out-bottom {
   @include mixins.transparent-fade-out-bottom;
 }
 .entry-footer .edit-link{

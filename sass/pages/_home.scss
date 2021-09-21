@@ -98,26 +98,17 @@
 .home .wp-block-group:not(.synthesis-newsletter-subscribe) > .wp-block-buttons {
   justify-content: end;
   @include mq.for-tablet-portrait-up{
-    justify-content: start;
-    margin-left: 66.666%;
+    justify-content: end;
+    margin-right: calc(33.33vw - ( 2 * #{vars.$gap-space} ));
+  }
+  @include mq.for-desktop-up{
+    margin-right: calc(100vw - 1100px - ( 2 * #{vars.$gap-space} ));
   }
 }
 .home {
   & h1, & h2 {
     position: relative;
     margin-left: 0;
-    @include mq.for-tablet-portrait-up {
-      max-width: 85%;
-    }
-    @include mq.for-tablet-portrait-up {
-      max-width: 66.666%;
-    }
-  }
-  .entry-content > p,
-  .entry-content > .wp-block-group > p {
-    @include mq.for-tablet-portrait-up {
-      max-width: 66.666%;
-    }
   }
   .wp-block-column {
     h1, h2, p {
@@ -136,9 +127,6 @@
   & ul.menu li {
     opacity: 0;
     visibility: hidden;
-  }
-  & #logo-fill {
-    transform: translateY(66.666%);
   }
   & .page-reveal--home {
     background: rgba(0, 0, 0, 0) linear-gradient(vars.$synth-blue 0%, vars.$synth-blue 50%, transparentize(vars.$synth-blue, 1) 100%) repeat scroll 0% 0%!important;
