@@ -13,7 +13,7 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 bgGradients();
 cookieConsent();
 
-if ( document.querySelector('.focus-alignment-animation-polygons .wp-block-image') ) {
+if ( document.querySelector('.focus-alignment-animation-polygons .wp-block-image')) {
   focusAnimation();
 }
 
@@ -26,6 +26,6 @@ document.querySelectorAll('input[type="email"]').forEach( (input) => {
 });
 
 
-if ( document.querySelector('.sideScroll-scroller') ) {
+if ( document.querySelector('.sideScroll-scroller') || document.querySelector('.blocks-gallery-grid')  ) {
   sideScrollNavigation();
 }
