@@ -25,13 +25,13 @@ function focusAnimation(){
   })
   .addLabel('start')
   .fromTo(polygons[0], 
-    { scale: 1.3, xPercent: 100, y: 0}, 
+    { scale: 1.3, xPercent: 100, y: polygonH}, 
     { scale: 1, xPercent: 100, y: -headlineCenterY }, 'start' )
   .fromTo(polygons[1], 
-    { scale: 1.3, xPercent: -200, y: 0}, 
+    { scale: 1.3, xPercent: -200, y: polygonH}, 
     { scale: 1, xPercent: 0, y : -headlineCenterY - polygonH }, 'start' )
   .fromTo(polygons[2], 
-    { scale: 2, xPercent: 0, y: 0 }, 
+    { scale: 2, xPercent: 0, y: polygonH }, 
     { scale: 1, xPercent: -100, y : -headlineCenterY + polygonH }, 'start' )
   .addLabel('stacked')
   .to(polygons[0], 
@@ -56,7 +56,16 @@ function focusAnimation(){
       onLeaveBack: () => { polygons_stack.tweenTo('start', { duration: 1, ease: 'power3.out' }) }
     });
     
-  gsap.set(polygons, {scale: 1, xPercent: 0, y: 0})
+  // gsap.set(polygons, {scale: 1, xPercent: 0, y: 0})
+  gsap.set(polygons[0],{ 
+    scale: 1.3, xPercent: 100, y: polygonH
+  } )
+  gsap.set(polygons[1],{ 
+    scale: 1.3, xPercent: -200, y: polygonH
+  } )
+  gsap.set(polygons[2],{ 
+    scale: 1.3, xPercent: -100, y: polygonH
+  } )
 
 }
 export { focusAnimation }

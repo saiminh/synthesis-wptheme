@@ -5,12 +5,34 @@
   padding: 0!important;
   margin-bottom: 8em;
   position: relative;
-  &:after {
-    content: url('./assets/icons/arrow.svg');
-    position: absolute;
-    right: vars.$gap-space;
-    top: 33.333%;
-  }
+  // &:after {
+  //   content: url('./assets/icons/arrow.svg');
+  //   position: absolute;
+  //   right: vars.$gap-space;
+  //   top: 33.333%;
+  // }
+}
+.showNavBtns .sideScroll-scroller-nav-scrollNext,
+.showNavBtns .sideScroll-scroller-nav-scrollPrev {
+  display: block;
+}
+.sideScroll-scroller-nav-scrollNext,
+.sideScroll-scroller-nav-scrollPrev {
+  display: none;
+  width: 60px;
+  height: 40px;
+  background: white url('./assets/icons/arrow.svg') no-repeat 50% 50%;
+  background-size: 60%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: auto;
+  border-radius: 5px;
+}
+.sideScroll-scroller-nav-scrollPrev {
+  right: auto;
+  left: 0;
+  transform: scaleX(-1);
 }
 .food-technologies {
   display: flex;

@@ -7,7 +7,7 @@ function sideScrollNavigation(){
   
   let scroller = document.querySelector('.sideScroll-scroller'), 
   nScrollItems = scroller.childNodes.length, 
-  oneScrollW = scroller.childNodes[0].offsetWidth,
+  oneScrollW = scroller.childNodes[1].offsetWidth,
   maxScrollW = scroller.scrollWidth - scroller.offsetWidth, 
   maxFullItems = Math.floor(scroller.offsetWidth / oneScrollW), 
   lastX = ( nScrollItems - maxFullItems - 1 ) * oneScrollW;
@@ -20,10 +20,14 @@ function sideScrollNavigation(){
   scroller.parentElement.append(nextBtn, prevBtn);
 
   function toggleSideScrollNav() {
-    if ( maxScrollW >= 0 ) {
-      scroller.classList.toggle('')
+    if ( scroller.scrollWidth > window.innerWidth ) {
+      scroller.parentElement.classList.add('showNavBtns');
+    } else {
+      scroller.parentElement.classList.remove('showNavBtns');
     }
   }
+  toggleSideScrollNav();
+  window.addEventListener('resize', () => toggleSideScrollNav() );
   
   nextBtn.addEventListener('click', () => {
     scroller.style.scrollSnapType = 'none';

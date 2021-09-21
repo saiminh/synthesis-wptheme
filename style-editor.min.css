@@ -1020,4 +1020,9 @@ p {
   padding-top: 0.5em;
 }
 
+.fade-out-bottom {
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
+  mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
+}
+
 /*# sourceMappingURL=style-editor.min.css.map */

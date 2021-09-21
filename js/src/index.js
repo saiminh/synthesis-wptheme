@@ -2,6 +2,7 @@ import './components/navigation';
 import { bgGradients } from './components/bg-gradients';
 import { focusAnimation } from './components/focus-animation';
 import { cookieConsent } from './components/cookie-consent';
+import { sideScrollNavigation } from './components/side-scroll-navigation';
 import "@lottiefiles/lottie-player";
 // import 'lottie-web';
 
@@ -23,3 +24,8 @@ document.querySelectorAll('input[type="email"]').forEach( (input) => {
   ins.classList.add('fake-text-input-bg');
   input.parentElement.insertBefore(ins, input);
 });
+
+
+if ( document.querySelector('.sideScroll-scroller') ) {
+  sideScrollNavigation();
+}

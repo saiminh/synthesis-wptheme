@@ -290,3 +290,6 @@ p {
   }
   // & .wp-block-column:not()
 }
+.fade-out-bottom {
+  @include mixins.transparent-fade-out-bottom;
+}

@@ -222,7 +222,7 @@ add_action( 'init', 'create_posttype', 0 );
 
 //Shortcode for displaying Past Investments
 function display_earlier_investments() {
-  echo '<div class="scrolling-flex-container"><div class="earlier-investments">';
+  echo '<div class="scrolling-flex-container"><div class="earlier-investments sideScroll-scroller">';
       $args = array(  
         'post_type' => 'investments-past',
         'post_status' => 'publish',

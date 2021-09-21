@@ -1275,16 +1275,29 @@ section {
   position: relative;
 }
 
+.showNavBtns .sideScroll-scroller-nav-scrollNext,
+.showNavBtns .sideScroll-scroller-nav-scrollPrev {
+  display: block;
+}
+
 .sideScroll-scroller-nav-scrollNext,
 .sideScroll-scroller-nav-scrollPrev {
+  display: none;
   width: 60px;
-  height: 60px;
-  background: white url("./assets/icons/arrow.svg") no-repeat 0 0;
-  background-size: 100%;
+  height: 40px;
+  background: white url("./assets/icons/arrow.svg") no-repeat 50% 50%;
+  background-size: 60%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: auto;
+  border-radius: 5px;
 }
 
 .sideScroll-scroller-nav-scrollPrev {
-  background: white url("./assets/icons/arrow.svg") no-repeat 0 0;
+  right: auto;
+  left: 0;
+  transform: scaleX(-1);
 }
 
 .food-technologies {
@@ -1633,7 +1646,7 @@ section {
   overflow-x: scroll;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
-  gap: 20px;
+  width: 100%;
   margin-left: 0;
   margin-right: 0;
   -ms-overflow-style: none;
@@ -1653,6 +1666,7 @@ section {
   flex-grow: 0;
   flex-shrink: 0;
   margin: 0;
+  padding-left: 20px;
   -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
   mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
 }
@@ -1661,12 +1675,9 @@ section {
     flex-basis: calc(325px + 20px);
   }
 }
-.scroll-gallery.wp-block-gallery .blocks-gallery-item:first-child {
-  flex-basis: calc(66.6% + 20px);
-  padding-left: 20px;
-}
 @media (min-width: 600px) {
   .scroll-gallery.wp-block-gallery .blocks-gallery-item:first-child {
+    flex-basis: calc(66.6% + 20px);
     scroll-snap-align: start;
     flex-basis: 625px;
     padding-left: 300px;
@@ -1696,11 +1707,11 @@ section {
   object-fit: cover;
 }
 .scroll-gallery.wp-block-gallery .blocks-gallery-item:nth-child(2n) {
-  flex-basis: calc(320px + 20px);
+  flex-basis: calc(275px + 20px);
 }
 @media (min-width: 900px) {
   .scroll-gallery.wp-block-gallery .blocks-gallery-item:nth-child(2n) {
-    flex-basis: calc(515px + 20px);
+    flex-basis: calc(412px + 20px);
   }
 }
 .scroll-gallery.wp-block-gallery .blocks-gallery-item:nth-child(2n) figure {
@@ -2671,32 +2682,25 @@ section {
 .focus-alignment-animation {
   overflow: visible;
   position: relative;
-  height: 80vh;
-  height: calc(var(--vh, 1vh) * 80);
+  height: 60vh;
+  height: calc(var(--vh, 1vh) * 60);
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 8em;
 }
 
-.focus-alignment-animation > *,
-.focus-alignment-animation + div > * {
-  max-width: 100vw;
-}
-@media (min-width: 600px) {
-  .focus-alignment-animation > *,
-.focus-alignment-animation + div > * {
-    max-width: 66.66vw;
-  }
-}
-@media (min-width: 1200px) {
-  .focus-alignment-animation > *,
-.focus-alignment-animation + div > * {
-    max-width: 1100px;
-  }
+.focus-alignment-animation + .wp-block-group {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .focus-alignment-animation-headline {
   position: absolute;
   top: 25%;
-  transform: translate(0%, -50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1;
   padding: 0;
   margin: 0 auto;
@@ -2711,17 +2715,6 @@ section {
   bottom: 0;
   left: 0;
   width: 100%;
-}
-@media (min-width: 600px) {
-  .focus-alignment-animation-polygons {
-    left: 20px;
-    width: calc( 100% - ( 8.3333333333vw * 2 ) - ( 20px * 2 ) );
-  }
-}
-@media (min-width: 900px) {
-  .focus-alignment-animation-polygons {
-    width: calc( 100% - 8.3333333333vw - ( 20px * 2 ) );
-  }
 }
 .focus-alignment-animation-polygons .wp-block-image {
   margin: 0;

@@ -19,7 +19,7 @@
     overflow-x: scroll;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
-    gap: vars.$gap-space;
+    width: 100%;
     margin-left: 0;
     margin-right: 0;
     @include mixins.hideScrollBar;
@@ -32,13 +32,13 @@
     flex-grow: 0;
     flex-shrink: 0;
     margin: 0;
+    padding-left: vars.$gap-space;
     @include mq.for-tablet-portrait-up {
       flex-basis: calc(325px + #{vars.$gap-space});
     }
     &:first-child {
-      flex-basis: calc(66.6% + #{vars.$gap-space});
-      padding-left: vars.$gap-space;
       @include mq.for-tablet-portrait-up {
+        flex-basis: calc(66.6% + #{vars.$gap-space});
         scroll-snap-align: start;
         flex-basis: 625px;
         padding-left: 300px;
@@ -66,9 +66,9 @@
     }
   }
   &.wp-block-gallery .blocks-gallery-item:nth-child(2n) {
-    flex-basis: calc(320px + #{vars.$gap-space});
+    flex-basis: calc(275px + #{vars.$gap-space});
     @include mq.for-tablet-landscape-up {
-      flex-basis: calc(515px + #{vars.$gap-space});
+      flex-basis: calc(412px + #{vars.$gap-space});
     }
   }
   &.wp-block-gallery .blocks-gallery-item:nth-child(2n) figure{
