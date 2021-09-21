@@ -8,7 +8,7 @@ function sideScrollNavigation(){
   let scroller = document.querySelector('.sideScroll-scroller'), 
   nScrollItems = scroller.childNodes.length, 
   oneScrollW = scroller.childNodes[1].offsetWidth,
-  maxScrollW = scroller.scrollWidth - scroller.offsetWidth, 
+  maxScrollW = scroller.scrollWidth - oneScrollW, 
   maxFullItems = Math.floor(scroller.offsetWidth / oneScrollW), 
   lastX = ( nScrollItems - maxFullItems - 1 ) * oneScrollW;
   
@@ -46,10 +46,6 @@ function sideScrollNavigation(){
     scroller.style.scrollSnapType = 'none';
     if ( scroller.scrollLeft <= oneScrollW ){
       gsap.to(scroller, { duration: .75, scrollTo: { y: 0, x: 0 }, ease: 'power3.out', onComplete: () => {    
-        scroller.style.scrollSnapType = 'x mandatory'; 
-      }, overwrite: true });
-    } else if ( scroller.scrollLeft = maxScrollW ) {
-      gsap.to(scroller, { duration: .75, scrollTo: { y: 0, x: lastX  }, ease: 'power3.out', onComplete: () => {    
         scroller.style.scrollSnapType = 'x mandatory'; 
       }, overwrite: true });
     } else {
