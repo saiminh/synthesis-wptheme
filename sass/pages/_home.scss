@@ -24,9 +24,9 @@
   & .hero-bg-gradient {
     position: absolute;
     top: 0;
+    bottom: -1px; //Chrome thinks 0 is -1...
     left: 0;
     width: 100%;
-    height: 100%;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 1) 95%);
     z-index: 0;
     pointer-events: none;
@@ -90,10 +90,13 @@
 }
 // Home Intro setup
 .home {
-  & ul.menu li {
-    opacity: 0;
-    visibility: hidden;
-  }
+  // & ul.menu li,
+  // & .site-header .logo,
+  // & .hero-home h1, 
+  // & .hero-home p {
+  //   opacity: 0;
+  //   visibility: hidden;
+  // }
   & .page-reveal--home {
     opacity: 0;
     background: rgba(0, 0, 0, 0) linear-gradient(vars.$synth-blue 0%, vars.$synth-blue 50%, transparentize(vars.$synth-blue, 1) 100%) repeat scroll 0% 0%!important;

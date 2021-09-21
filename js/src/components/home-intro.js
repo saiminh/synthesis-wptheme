@@ -17,13 +17,21 @@ function homeIntro() {
   let tl = gsap.timeline({
     onComplete: () => { invertBgGrad(); }
   });
-    tl.to('.home ul.menu li', {
+    tl.fromTo('.home ul.menu li', {
+      autoAlpha: 0
+    }, {
       autoAlpha: 1,
       stagger: {
         amount: .5
       },
       ease: 'power3.out'
     }, 2.75)
+    .fromTo( '.site-header .logo', {
+      autoAlpha: 0
+    }, {
+      autoAlpha: 1,
+      duration: 1
+    }, 3.25)
     .fromTo( 'lottie-player', {
       autoAlpha: 0
     }, {
@@ -32,31 +40,27 @@ function homeIntro() {
         each: .125,
       },
       duration: 2
-    }, 0.25)
+    }, 0.25 )
     .to('#logo-fill', {
       yPercent: 66.6666,
     }, 0)
-    .fromTo('.home .hero-home h1, .site-header .logo', {
+    .fromTo('.home .hero-home h1', {
       autoAlpha: 0
     }, {
-      stagger: {
-        amount: .25,
-        from: 'end'
-      },
       autoAlpha: 1,
-      duration: 3,
-      ease: 'power3.out'
-    }, 2)
+      duration: 2,
+      ease: 'power3.inOut'
+    }, 1)
     .fromTo('.home .hero-home p', {
       autoAlpha: 0
     }, {
       autoAlpha: 1,
-      duration: 3,
-      ease: 'power3.out'
-    }, 3)
+      duration: 2,
+      ease: 'power3.inOut'
+    }, 1.1)
     .fromTo('.home .hero-home .hero-bg-gradient', {
       transformOrigin: '50% 100%',
-      scaleY: 0.33
+      scaleY: 0.4
     }, {
       scaleY: 1,
       ease: 'power2.inOut',
