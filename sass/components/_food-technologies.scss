@@ -19,7 +19,7 @@
 .sideScroll-scroller-nav-scrollNext,
 .sideScroll-scroller-nav-scrollPrev {
   display: none;
-  width: 60px;
+  width: 40px;
   height: 40px;
   background: white url('./assets/icons/arrow.svg') no-repeat 50% 50%;
   background-size: 60%;
@@ -28,6 +28,15 @@
   right: 0;
   left: auto;
   border-radius: 5px;
+}
+.scroll-gallery .sideScroll-scroller-nav-scrollPrev,
+.food-technologies + .sideScroll-scroller-nav-scrollNext + .sideScroll-scroller-nav-scrollPrev {
+  left: vars.$gap-space
+}
+.scroll-gallery .sideScroll-scroller-nav-scrollNext,
+.food-technologies + .sideScroll-scroller-nav-scrollNext {
+  left: auto;
+  right: vars.$gap-space
 }
 .sideScroll-scroller-nav-scrollPrev {
   right: auto;
