@@ -7,7 +7,6 @@
   overflow: hidden;
 }
 .focus-page h1 + p {
-  @include mixins.transparent-fade-out-bottom;
   padding-bottom: .5em;
 }
 
@@ -182,6 +181,17 @@
       max-width: 200px;
       height: auto;
       margin: auto;
+    }
+  }
+}
+.focus-howwedoit-columns {
+  & .wp-block-column p {
+    border-top: 1px solid;
+    padding-top: .5em;
+  }
+  .wp-block-column:not(:first-child) {
+    @include mq.for-tablet-portrait-up {
+      margin-left: 2em;
     }
   }
 }

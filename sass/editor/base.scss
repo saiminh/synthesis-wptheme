@@ -188,6 +188,7 @@ p {
 .focus-enabling-technologies-item,
 .focus-enabling-technologies-table p {
   @include blocklabel('focus-enabling-technologies-item');
+  width: 100%;
   padding: .5em 1.5em .5em 0;
   border-top: 1px solid #FFF;
   border-bottom: 1px solid #FFF;
@@ -280,4 +281,12 @@ p {
 .scroll-gallery {
   @include blocklabel('Scroll-gallery');
   display: flex; 
+}
+.focus-howwedoit-columns {
+  @include blocklabel('How we do it Columns');
+  & .wp-block-column p {
+    border-top: 1px solid;
+    padding-top: .5em;
+  }
+  // & .wp-block-column:not()
 }
