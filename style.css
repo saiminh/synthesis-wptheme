@@ -1634,12 +1634,6 @@ section {
   margin-left: -20px;
   margin-right: -20px;
 }
-.scroll-gallery:after {
-  content: url("./assets/icons/arrow.svg");
-  position: absolute;
-  right: 20px;
-  top: calc(50% - 16px);
-}
 .scroll-gallery .blocks-gallery-grid, .scroll-gallery .wp-block-gallery {
   display: flex;
   flex-wrap: nowrap;

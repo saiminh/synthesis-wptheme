@@ -25,7 +25,6 @@ document.querySelectorAll('input[type="email"]').forEach( (input) => {
   input.parentElement.insertBefore(ins, input);
 });
 
-
 if ( document.querySelector('.sideScroll-scroller') || document.querySelector('.blocks-gallery-grid')  ) {
   sideScrollNavigation();
 }

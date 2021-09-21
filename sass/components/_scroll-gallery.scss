@@ -6,12 +6,6 @@
   position: relative;
   margin-left: - vars.$gap-space;
   margin-right: - vars.$gap-space;
-  &:after {
-    content: url('./assets/icons/arrow.svg');
-    position: absolute;
-    right: vars.$gap-space;
-    top: calc(50% - 16px);
-  }
   & .blocks-gallery-grid,
   & .wp-block-gallery {
     display: flex;
