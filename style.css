@@ -2547,7 +2547,7 @@ section {
 .focus-howwedoit-columns p {
   margin: 0;
   padding: 0.5em 0;
-  border-top: 1px solid #FFF;
+  border-top: 1px solid;
 }
 
 .focus-protein-spectrum-group {
