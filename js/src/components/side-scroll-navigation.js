@@ -65,6 +65,9 @@ function sideScrollNavigation(){
       scroller.addEventListener('wheel', () => {
         scroller.style.scrollSnapType = 'x mandatory';
       })
+      scroller.addEventListener('touchmove', () => {
+        scroller.style.scrollSnapType = 'x mandatory';
+      })
 
       if ( scroller.scrollWidth > window.innerWidth ) {
         scroller.parentElement.classList.add('showNavBtns');
