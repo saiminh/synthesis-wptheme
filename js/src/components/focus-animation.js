@@ -40,8 +40,6 @@ function focusAnimation(){
     let polygonCenterX = document.querySelector('.focus-alignment-animation-polygons .wp-block-image').offsetWidth * 0.5;
     let centerX = headlineCenterX - polygonCenterX;
 
-    console.log( centerX * 1.1 );
-
     // gsap.set(polygons, { scale: 0, x: 0, y: 0 });
   
     polygons_stack = gsap.timeline({
@@ -81,7 +79,7 @@ function focusAnimation(){
       { x: centerX * -1.2, ease: 'power1.out', duration: 1 }, 'start' )
     .fromTo(polygons[2], 
       { y: 0 },
-      { y: -headlineCenterY + polygonCenterY * 0.2, ease: 'power1.in', duration: 1 }, 'start' )
+      { y: -headlineCenterY + polygonCenterY * 0.25, ease: 'power1.in', duration: 1 }, 'start' )
     
     .addLabel('stacked')
     .to(polygons[0], 
@@ -103,10 +101,10 @@ function focusAnimation(){
       start: 'top 50%',
       end: '60% 50%',
       // markers: true,
-      onEnter: () => { polygons_stack.tweenFromTo('start', 'stacked', { duration: 1, ease: 'power3.out' }) },
-      onEnterBack: () => { polygons_stack.tweenFromTo('end','stacked', { duration: 1, ease: 'power3.out' }) },
-      onLeave: () => { polygons_stack.tweenFromTo('stacked', 'end', { duration: 1, ease: 'power3.out' }) },
-      onLeaveBack: () => { polygons_stack.tweenFromTo('stacked', 'start', { duration: 1, ease: 'power3.out' }) }
+      onEnter: () => { polygons_stack.tweenFromTo('start', 'stacked', { duration: 1, ease: 'power4.out' }) },
+      onEnterBack: () => { polygons_stack.tweenFromTo('end','stacked', { duration: 1, ease: 'power4.out' }) },
+      onLeave: () => { polygons_stack.tweenFromTo('stacked', 'end', { duration: 1, ease: 'power4.out' }) },
+      onLeaveBack: () => { polygons_stack.tweenFromTo('stacked', 'start', { duration: 1, ease: 'power4.out' }) }
     });
   };
 
