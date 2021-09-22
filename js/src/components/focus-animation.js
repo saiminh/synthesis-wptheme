@@ -40,8 +40,6 @@ function focusAnimation(){
     let polygonCenterX = document.querySelector('.focus-alignment-animation-polygons .wp-block-image').offsetWidth * 0.5;
     let centerX = headlineCenterX - polygonCenterX;
 
-    // gsap.set(polygons, { scale: 0, x: 0, y: 0 });
-  
     polygons_stack = gsap.timeline({
       paused: true,
       defaults: {
