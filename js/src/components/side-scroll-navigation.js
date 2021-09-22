@@ -70,6 +70,7 @@ function sideScrollNavigation(){
       // on touch-swipe, re-enable scroll snap
       scroller.addEventListener('touchend', () => {
         scroller.style.scrollSnapType = 'x mandatory';
+        scroller.scroll(scroller.scrollLeft, 0); 
       })
 
 
