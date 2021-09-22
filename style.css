@@ -383,6 +383,7 @@ table {
   src: url("./assets/fonts/SyntheSans-Slim.woff2") format("woff2"), url("./assets/fonts/SyntheSans-Slim.woff") format("woff"), url("./assets/fonts/SyntheSans-Slim.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
+  font-feature-settings: "ss01";
 }
 body,
 button,
