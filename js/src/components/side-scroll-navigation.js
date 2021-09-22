@@ -97,12 +97,11 @@ function sideScrollNavigation(){
           var yDiff = yDown - yUp;
                                                                          
           if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
+            scroller.style.scrollSnapType = 'x mandatory';
               if ( xDiff > 0 ) {
                   /* right swipe */ 
-                  scroller.style.scrollSnapType = 'x mandatory';
               } else {
                   /* left swipe */
-                  scroller.style.scrollSnapType = 'x mandatory';
               }                       
           } else {
               if ( yDiff > 0 ) {
