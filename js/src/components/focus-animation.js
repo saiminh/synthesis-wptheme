@@ -51,7 +51,7 @@ function focusAnimation(){
     })
     .addLabel('start')
     .set(polygons,
-      { scale: 1, x: 0, y: 0 }, 'start')
+      { scale: 0, x: 0, y: 0 }, 'start')
     // First Polygon
     .to(polygons[0], 
       { scale: 1 }, 'start' )
