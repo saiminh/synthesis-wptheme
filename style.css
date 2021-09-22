@@ -871,8 +871,10 @@ textarea {
   width: 100%;
 }
 
-.offset-1 {
-  margin-left: 8.3333333333vw;
+@media (min-width: 600px) {
+  .offset-1 {
+    margin-left: 8.3333333333vw;
+  }
 }
 
 .entry-content > :first-child {

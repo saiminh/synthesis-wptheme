@@ -3,7 +3,9 @@
 @use 'utilities/vars' as vars;
 
 .offset-1 {
-  margin-left: vars.$col-1;
+  @include mq.for-tablet-portrait-up {
+    margin-left: vars.$col-1;
+  }
 }
 
 .entry-content > :first-child {
