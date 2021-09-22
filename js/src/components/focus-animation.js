@@ -41,6 +41,8 @@ function focusAnimation(){
     let centerX = headlineCenterX - polygonCenterX;
 
     console.log( centerX * 1.1 );
+
+    // gsap.set(polygons, { scale: 0, x: 0, y: 0 });
   
     polygons_stack = gsap.timeline({
       paused: true,
@@ -50,41 +52,48 @@ function focusAnimation(){
       }
     })
     .addLabel('start')
-    .set(polygons,
-      { scale: 0, x: 0, y: 0 }, 'start')
     // First Polygon
-    .to(polygons[0], 
+    .fromTo(polygons[0], 
+      { scale: 0 },
       { scale: 1 }, 'start' )
-    .to(polygons[0], 
+    .fromTo(polygons[0], 
+      { x: 0 },
       { x: centerX * 1.1, ease: 'power1.in' }, 'start' )
-    .to(polygons[0], 
+    .fromTo(polygons[0], 
+      { y: 0 },
       { y: -headlineCenterY - polygonCenterY * 0.75, ease: 'power1.out' }, 'start' )
     // Second Polygon
-    .to(polygons[1], 
+    .fromTo(polygons[1], 
+      { scale: 0 },
       { scale: 1 }, 'start' )
-    .to(polygons[1], 
+    .fromTo(polygons[1], 
+      { x: 0 },
       { x: centerX * 0.2, ease: 'power1.in' }, 'start' )
-    .to(polygons[1], 
+    .fromTo(polygons[1], 
+      { y: 0 },
       { y: -headlineCenterY + polygonCenterY * 0.5 , ease: 'power1.out' }, 'start' )
     // Third Polygon
-    .to(polygons[2], 
+    .fromTo(polygons[2], 
+      { scale: 0 },
       { scale: 1 }, 'start' )
-    .to(polygons[2], 
+    .fromTo(polygons[2], 
+      { x: 0 },
       { x: centerX * -1.2, ease: 'power1.out' }, 'start' )
-    .to(polygons[2], 
+    .fromTo(polygons[2], 
+      { y: 0 },
       { y: -headlineCenterY + polygonCenterY * 0.2, ease: 'power1.in' }, 'start' )
     
     .addLabel('stacked')
     .to(polygons[0], 
-      { x: 0, ease: 'power1.in' }, 'stacked' )
+      { scale: 1, x: 0, ease: 'power1.in' }, 'stacked' )
     .to(polygons[0], 
       { y: 0, ease: 'power1.out'}, 'stacked' )
     .to(polygons[1], 
-      { x: 0, ease: 'power1.in' }, 'stacked' )
+      { scale: 1, x: 0, ease: 'power1.in' }, 'stacked' )
     .to(polygons[1], 
       { y: 0, ease: 'power1.out'}, 'stacked' )
     .to(polygons[2], 
-      { x: 0, ease: 'power1.in' }, 'stacked' )
+      { scale: 1, x: 0, ease: 'power1.in' }, 'stacked' )
     .to(polygons[2], 
       { y: 0, ease: 'power1.out'}, 'stacked' )
     
@@ -96,10 +105,10 @@ function focusAnimation(){
     start: 'top 50%',
     end: '60% 50%',
     // markers: true,
-    onEnter: () => { polygons_stack.tweenTo('stacked', { duration: 1, ease: 'power3.out' }) },
-    onEnterBack: () => { polygons_stack.tweenTo('stacked', { duration: 1, ease: 'power3.out' }) },
-    onLeave: () => { polygons_stack.tweenTo('end', { duration: 1, ease: 'power3.out' }) },
-    onLeaveBack: () => { polygons_stack.tweenTo('start', { duration: 1, ease: 'power3.out' }) }
+    onEnter: () => { polygons_stack.tweenFromTo('start', 'stacked', { duration: 1, ease: 'power3.out' }) },
+    onEnterBack: () => { polygons_stack.tweenFromTo('end','stacked', { duration: 1, ease: 'power3.out' }) },
+    onLeave: () => { polygons_stack.tweenFromTo('stacked', 'end', { duration: 1, ease: 'power3.out' }) },
+    onLeaveBack: () => { polygons_stack.tweenFromTo('stacked', 'start', { duration: 1, ease: 'power3.out' }) }
   });
 
   
