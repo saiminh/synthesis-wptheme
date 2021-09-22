@@ -2506,6 +2506,50 @@ section {
   padding-bottom: 0.5em;
 }
 
+.focus-protein-spectrum,
+.focus-enabling-technologies-table,
+.focus-howwedoit-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  max-width: 1100px;
+}
+@media (min-width: 600px) {
+  .focus-protein-spectrum,
+.focus-enabling-technologies-table,
+.focus-howwedoit-columns {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 900px) {
+  .focus-protein-spectrum,
+.focus-enabling-technologies-table,
+.focus-howwedoit-columns {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1200px) {
+  .focus-protein-spectrum,
+.focus-enabling-technologies-table,
+.focus-howwedoit-columns {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+.focus-protein-spectrum .synthesis-icon,
+.focus-enabling-technologies-table .synthesis-icon,
+.focus-howwedoit-columns .synthesis-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1.5rem;
+}
+.focus-protein-spectrum p,
+.focus-enabling-technologies-table p,
+.focus-howwedoit-columns p {
+  margin: 0;
+  padding: 0.5em 0;
+  border-top: 1px solid #FFF;
+}
+
 .focus-protein-spectrum-group {
   margin-bottom: 4em;
 }
@@ -2515,48 +2559,13 @@ section {
   }
 }
 
-.focus-protein-spectrum {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1em;
-  max-width: 100vw;
-}
-@media (min-width: 600px) {
-  .focus-protein-spectrum {
-    max-width: 66.66vw;
-  }
-}
-@media (min-width: 1200px) {
-  .focus-protein-spectrum {
-    max-width: 1100px;
-  }
-}
-@media (min-width: 600px) {
-  .focus-protein-spectrum {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-@media (min-width: 900px) {
-  .focus-protein-spectrum {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-}
-@media (min-width: 1200px) {
-  .focus-protein-spectrum {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  }
-}
-.focus-protein-spectrum .synthesis-icon {
-  height: 120px;
-}
-
 .focus-protein-spectrum + h2 {
   margin-top: 4em;
 }
 
 .focus-protein-spectrum-column {
   flex-basis: calc(25% + 1em);
-  padding: 0 0.5em;
+  padding: 0;
 }
 @media (min-width: 600px) {
   .focus-protein-spectrum-column {
@@ -2568,22 +2577,6 @@ section {
 }
 .focus-protein-spectrum-column:last-child {
   padding-right: 0;
-}
-.focus-protein-spectrum-column p {
-  margin: 0;
-  padding: 0.5em 0;
-  border-top: 1px solid #FFF;
-  font-size: 19px;
-}
-@media (min-width: 600px) {
-  .focus-protein-spectrum-column p {
-    font-size: 17px;
-  }
-}
-@media (min-width: 900px) {
-  .focus-protein-spectrum-column p {
-    font-size: 31px;
-  }
 }
 .focus-protein-spectrum-column .wp-block-image {
   width: 32px;
@@ -2613,7 +2606,8 @@ section {
   margin-bottom: 4em;
 }
 .focus-enabling-technologies .synthesis-icon {
-  height: 120px;
+  height: 60px;
+  margin-bottom: 1.5rem;
   max-width: 100vw;
 }
 @media (min-width: 600px) {
@@ -2633,56 +2627,6 @@ section {
 .focus-enabling-technologies-table {
   -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
   mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1em;
-  max-width: 100vw;
-}
-@media (min-width: 600px) {
-  .focus-enabling-technologies-table {
-    max-width: 66.66vw;
-  }
-}
-@media (min-width: 1200px) {
-  .focus-enabling-technologies-table {
-    max-width: 1100px;
-  }
-}
-@media (min-width: 600px) {
-  .focus-enabling-technologies-table {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-@media (min-width: 900px) {
-  .focus-enabling-technologies-table {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-}
-@media (min-width: 1200px) {
-  .focus-enabling-technologies-table {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  }
-}
-
-.focus-enabling-technologies-item,
-.focus-enabling-technologies-table > p {
-  margin: 0;
-  padding: 0.5em 1em 0.5em 0;
-  border-top: 1px solid #FFF;
-  position: relative;
-  font-size: 19px;
-}
-@media (min-width: 600px) {
-  .focus-enabling-technologies-item,
-.focus-enabling-technologies-table > p {
-    font-size: 17px;
-  }
-}
-@media (min-width: 900px) {
-  .focus-enabling-technologies-item,
-.focus-enabling-technologies-table > p {
-    font-size: 31px;
-  }
 }
 
 .focus-alignment-animation {
@@ -2736,14 +2680,8 @@ section {
   margin: auto;
 }
 
-.focus-howwedoit-columns .wp-block-column p {
-  border-top: 1px solid;
-  padding-top: 0.5em;
-}
-@media (min-width: 600px) {
-  .focus-howwedoit-columns .wp-block-column:not(:first-child) {
-    margin-left: 2em;
-  }
+.focus-howwedoit-columns .wp-block-column {
+  margin-left: 0;
 }
 
 .team-page > p, .team-page .team-teammembers {

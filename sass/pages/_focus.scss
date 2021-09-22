@@ -10,18 +10,13 @@
   padding-bottom: .5em;
 }
 
-.focus-protein-spectrum-group {
-  margin-bottom: 4em;
-  @include mq.for-tablet-portrait-up {
-    margin-bottom: 8em;
-  }
-}
-.focus-protein-spectrum {
-  // @include mixins.transparent-fade-out-bottom;
+.focus-protein-spectrum,
+.focus-enabling-technologies-table,
+.focus-howwedoit-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1em;
-  @include mixins.default-page-margins;
+  max-width: 1100px;
   @include mq.for-tablet-portrait-up {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -32,16 +27,31 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
   & .synthesis-icon {
-    height: 120px;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1.5rem;
+  }
+  & p {
+    margin: 0;
+    padding: .5em 0;
+    border-top: 1px solid #FFF;
   }
 }
+
+.focus-protein-spectrum-group {
+  margin-bottom: 4em;
+  @include mq.for-tablet-portrait-up {
+    margin-bottom: 8em;
+  }
+}
+
 .focus-protein-spectrum + h2 {
   margin-top: 4em;
 }
 
 .focus-protein-spectrum-column {
   flex-basis: calc(25% + 1em);
-  padding: 0 .5em;
+  padding: 0;
   @include mq.for-tablet-portrait-up {
     flex-basis: calc(15% + 2em);
   }
@@ -50,19 +60,6 @@
   }
   &:last-child {
     padding-right: 0;
-  }
-  & p {
-    margin: 0;
-    padding: .5em 0;
-    border-top: 1px solid #FFF;
-    // border-bottom: 1px solid #FFF;
-    font-size: 19px;
-    @include mq.for-tablet-portrait-up {
-      font-size: 17px;
-    }
-    @include mq.for-tablet-landscape-up {
-      font-size: 31px;
-    }
   }
   & .wp-block-image {
     width: 32px;
@@ -87,7 +84,8 @@
   margin-top: 4em;
   margin-bottom: 4em;
   & .synthesis-icon {
-    height: 120px;
+    height: 60px;
+    margin-bottom: 1.5rem;
     @include mixins.default-page-margins;
     & svg path {
       fill: #FFFFFF;
@@ -96,42 +94,6 @@
 }
 .focus-enabling-technologies-table {
   @include mixins.transparent-fade-out-bottom;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1em;
-  @include mixins.default-page-margins;
-  @include mq.for-tablet-portrait-up {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  @include mq.for-tablet-landscape-up {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-  @include mq.for-desktop-up {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  }
-}
-.focus-enabling-technologies-item,
-.focus-enabling-technologies-table > p {
-  margin: 0;
-  padding: .5em 1em .5em 0;
-  border-top: 1px solid #FFF;
-  // border-bottom: 1px solid #FFF;
-  position: relative;
-  font-size: 19px;
-  @include mq.for-tablet-portrait-up {
-    font-size: 17px;
-  }
-  @include mq.for-tablet-landscape-up {
-    font-size: 31px;
-  }
-  // &::after {
-  //   content: '↙';
-  //   font-family: "SyntheSans", sans-serif;
-  //   position: absolute;
-  //   transform: scaleX(-1);
-  //   right: 0;
-  //   top: .5em;
-  // }
 }
 .focus-alignment-animation {
   overflow: visible;
@@ -166,13 +128,6 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  // @include mq.for-tablet-portrait-up {
-  //   left: vars.$gap-space;
-  //   width: calc( 100% - ( #{vars.$col-1} * 2 ) - ( #{vars.$gap-space} * 2 ) );
-  // }
-  // @include mq.for-tablet-landscape-up {
-  //   width: calc( 100% - #{vars.$col-1} - ( #{vars.$gap-space} * 2 ) );
-  // }
   & .wp-block-image {
     margin: 0;
     position: relative;
@@ -188,13 +143,7 @@
   }
 }
 .focus-howwedoit-columns {
-  & .wp-block-column p {
-    border-top: 1px solid;
-    padding-top: .5em;
-  }
-  .wp-block-column:not(:first-child) {
-    @include mq.for-tablet-portrait-up {
-      margin-left: 2em;
-    }
+  & .wp-block-column {
+    margin-left: 0;
   }
 }
