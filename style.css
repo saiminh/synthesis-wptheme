@@ -1279,10 +1279,14 @@ section {
   position: relative;
 }
 
-@media (min-width: 900px) {
+.showNavBtns .sideScroll-scroller-nav-scrollNext,
+.showNavBtns .sideScroll-scroller-nav-scrollPrev {
+  display: block;
+}
+@media (hover: none) and (pointer: coarse) {
   .showNavBtns .sideScroll-scroller-nav-scrollNext,
 .showNavBtns .sideScroll-scroller-nav-scrollPrev {
-    display: block;
+    display: none;
   }
 }
 

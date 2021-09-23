@@ -14,8 +14,9 @@
 }
 .showNavBtns .sideScroll-scroller-nav-scrollNext,
 .showNavBtns .sideScroll-scroller-nav-scrollPrev {
-  @include mq.for-tablet-landscape-up {
-    display: block;
+  display: block;
+  @include mq.for-touch-only {
+   display: none; 
   }
 }
 .sideScroll-scroller-nav-scrollNext,

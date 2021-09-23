@@ -16,3 +16,6 @@
 @mixin for-big-desktop-up {
   @media (min-width: 1800px) { @content; }
 }
+@mixin for-touch-only {
+  @media (hover: none) and (pointer: coarse) { @content; }
+}
