@@ -20,6 +20,7 @@ optgroup,
 textarea {
   color: vars.$synth-blue;
   font-family: "SyntheSans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-feature-settings: 'ss01';
   font-size: 1rem;
   line-height: 1.5;
 }
