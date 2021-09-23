@@ -32,12 +32,15 @@ function sideScrollNavigation(){
       nextBtn.addEventListener('click', nextBtnHandler); 
     
       function nextBtnHandler() {
+        
         function reAddListener() {
-          nextBtn.addEventListener( 'click', nextBtnHandler );
           scroller.style.scrollSnapType = 'x mandatory';
+          nextBtn.addEventListener( 'click', nextBtnHandler );
         }
+        
         nextBtn.removeEventListener('click', nextBtnHandler); 
         scroller.style.scrollSnapType = 'none';
+        
         if ( scroller.scrollLeft == maxScrollW ){
           gsap.to(scroller, { duration: .5, scrollTo: { y: 0, x: -10 }, ease: 'power3.out', onComplete: () => { reAddListener(); } });
         } else if ( scroller.scrollLeft >= maxScrollW - oneScrollW ) {
@@ -51,8 +54,8 @@ function sideScrollNavigation(){
       prevBtn.addEventListener('click', prevBtnHandler);
       function prevBtnHandler() {
         function reAddListener() {
-          prevBtn.addEventListener( 'click', prevBtnHandler );
           scroller.style.scrollSnapType = 'x mandatory';
+          prevBtn.addEventListener( 'click', prevBtnHandler );
         }
         prevBtn.removeEventListener( 'click', prevBtnHandler );
         scroller.style.scrollSnapType = 'none';
