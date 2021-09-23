@@ -4,18 +4,17 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin"
 gsap.registerPlugin(ScrollToPlugin);
 
 function sideScrollNavigation(){
+
+  window.addEventListener('resize', () => toggleSideScrollNav() );
+  toggleSideScrollNav();
   
   function toggleSideScrollNav() {
       
     let scrollers = document.querySelectorAll('.sideScroll-scroller, .blocks-gallery-grid');
       
     scrollers.forEach( (scroller) => {
-      scroller.scrollTo({
-        x: 0, y: 0, behavior: 'smooth'
-      })
-      let current
       let nScrollItems = scroller.childNodes.length;
-      let oneScrollW = scroller.childNodes[3].getBoundingClientRect().width;
+      let oneScrollW = scroller.childNodes[1].getBoundingClientRect().width;
       let maxScrollW = scroller.scrollWidth - scroller.clientWidth;
       let maxFullItems = Math.floor(scroller.offsetWidth / oneScrollW);
       let lastX = ( nScrollItems - maxFullItems - 1 ) * oneScrollW;
@@ -27,8 +26,8 @@ function sideScrollNavigation(){
         prevBtn.classList.add('sideScroll-scroller-nav-scrollPrev');
         scroller.parentElement.append(nextBtn, prevBtn);
       } else {
-        nextBtn = scroller.querySelector('.sideScroll-scroller-nav-scrollNext');
-        prevBtn = scroller.querySelector('.sideScroll-scroller-nav-scrollPrev');
+        nextBtn = scroller.parentElement.querySelector('.sideScroll-scroller-nav-scrollNext');
+        prevBtn = scroller.parentElement.querySelector('.sideScroll-scroller-nav-scrollPrev');
       }
   
     
@@ -86,10 +85,6 @@ function sideScrollNavigation(){
       }
 
     })
-  }
-
-  window.addEventListener('resize', () => toggleSideScrollNav() );
-  toggleSideScrollNav();
-   
+  }   
 }
 export { sideScrollNavigation };
