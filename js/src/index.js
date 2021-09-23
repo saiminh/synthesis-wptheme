@@ -2,7 +2,7 @@ import './components/navigation';
 import { bgGradients } from './components/bg-gradients';
 import { focusAnimation } from './components/focus-animation';
 import { cookieConsent } from './components/cookie-consent';
-import { sideScrollNavigation } from './components/side-scroll-navigation';
+import { sideScrollNavigation } from './components/side-scroll-navigation-test';
 import "@lottiefiles/lottie-player";
 // import 'lottie-web';
 
