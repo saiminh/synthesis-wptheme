@@ -10,10 +10,7 @@ function sideScrollNavigation(){
     let scrollers = document.querySelectorAll('.sideScroll-scroller, .blocks-gallery-grid');
       
     scrollers.forEach( (scroller) => {
-      scroller.scrollTo({
-        x: 0, y: 0, behavior: 'smooth'
-      })
-      let current
+        
       let nScrollItems = scroller.childNodes.length;
       let oneScrollW = scroller.childNodes[3].getBoundingClientRect().width;
       let maxScrollW = scroller.scrollWidth - scroller.clientWidth;
@@ -32,15 +29,11 @@ function sideScrollNavigation(){
       nextBtn.addEventListener('click', nextBtnHandler); 
     
       function nextBtnHandler() {
-        
         function reAddListener() {
-          scroller.style.scrollSnapType = 'x mandatory';
           nextBtn.addEventListener( 'click', nextBtnHandler );
         }
-        
         nextBtn.removeEventListener('click', nextBtnHandler); 
         scroller.style.scrollSnapType = 'none';
-        
         if ( scroller.scrollLeft == maxScrollW ){
           gsap.to(scroller, { duration: .5, scrollTo: { y: 0, x: -10 }, ease: 'power3.out', onComplete: () => { reAddListener(); } });
         } else if ( scroller.scrollLeft >= maxScrollW - oneScrollW ) {
@@ -54,7 +47,6 @@ function sideScrollNavigation(){
       prevBtn.addEventListener('click', prevBtnHandler);
       function prevBtnHandler() {
         function reAddListener() {
-          scroller.style.scrollSnapType = 'x mandatory';
           prevBtn.addEventListener( 'click', prevBtnHandler );
         }
         prevBtn.removeEventListener( 'click', prevBtnHandler );
@@ -70,16 +62,16 @@ function sideScrollNavigation(){
         }      
       }
 
-      // // When mousewheel or touchpad is used, re-enable scroll snap
-      // scroller.addEventListener('wheel', () => {
-      //   scroller.style.scrollSnapType = 'x mandatory';
-      // })
+      // When mousewheel or touchpad is used, re-enable scroll snap
+      scroller.addEventListener('wheel', () => {
+        scroller.style.scrollSnapType = 'x mandatory';
+      })
       
-      // // on touch-swipe, re-enable scroll snap
-      // scroller.addEventListener('touchend', () => {
-      //   scroller.style.scrollSnapType = 'x mandatory';
-      //   scroller.scroll(scroller.scrollLeft, 0); 
-      // })
+      // on touch-swipe, re-enable scroll snap
+      scroller.addEventListener('touchend', () => {
+        scroller.style.scrollSnapType = 'x mandatory';
+        scroller.scroll(scroller.scrollLeft, 0); 
+      })
 
 
       if ( scroller.scrollWidth > window.innerWidth ) {

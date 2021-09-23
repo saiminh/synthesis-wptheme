@@ -4,6 +4,6 @@
 .team-page {
   & > p,
   & .team-teammembers {
-    @include mixins.default-page-margins;
+    max-width: 1100px;
   }
 }
