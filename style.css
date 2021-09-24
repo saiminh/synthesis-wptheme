@@ -2507,7 +2507,6 @@ section {
 }
 
 .focus-page .entry-content {
-  width: 100vw;
   overflow: hidden;
 }
 
