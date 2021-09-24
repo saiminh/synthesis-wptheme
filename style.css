@@ -1154,7 +1154,7 @@ section {
   display: flex;
   flex-wrap: nowrap;
   gap: 0;
-  width: 100vw;
+  width: calc(100% + 2 * 20px);
   margin-left: -20px;
   margin-bottom: 4em;
   overflow-x: scroll;
