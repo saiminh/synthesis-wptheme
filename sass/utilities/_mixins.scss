@@ -24,23 +24,18 @@
     color: white
   }
   border: 24px solid #FFF;
-  // border-style: solid;
-  // border-width: 23px ;
   border-image: url('./assets/img/button-bg-#{$btncolor}-#{$border}.svg') 49% 23 fill;
   opacity: 0;
   animation: quickfadein .4s ease-in-out .2s forwards;
 }
-
 @keyframes quickfadein {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
-
 @mixin transparent-fade-out-bottom {
   -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 95%);
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 95%);
 }
-
 @mixin hideScrollBar {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
@@ -48,20 +43,12 @@
     display: none;
   }
 }
-
 @mixin default-page-margins {
-  max-width: 100vw;
+  max-width: 100%;
   @include mq.for-tablet-portrait-up {
     max-width: 66.66vw;
   }
   @include mq.for-desktop-up {
     max-width: 1100px;
   }
-  // @include mq.for-tablet-portrait-up {
-  //   margin-left: vars.$gap-space;
-  //   margin-right: vars.$col-1;
-  // }
-  // @include mq.for-tablet-landscape-up {
-  //   margin-right: 0;
-  // }
 }

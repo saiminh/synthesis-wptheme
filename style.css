@@ -406,7 +406,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2 {
-  max-width: 100vw;
+  max-width: 100%;
   font-size: 31px;
   line-height: 85%;
 }
@@ -462,7 +462,7 @@ p {
   font-size: 18px;
   line-height: 0.94;
   max-width: 1100px;
-  max-width: 100vw;
+  max-width: 100%;
 }
 @media (min-width: 600px) {
   p {
@@ -887,7 +887,7 @@ textarea {
 }
 
 body:not(.home) .entry-content > .wp-block-group > .wp-block-columns {
-  max-width: 100vw;
+  max-width: 100%;
 }
 @media (min-width: 600px) {
   body:not(.home) .entry-content > .wp-block-group > .wp-block-columns {
@@ -2616,7 +2616,7 @@ section {
 .focus-enabling-technologies .synthesis-icon {
   height: 60px;
   margin-bottom: 1.5rem;
-  max-width: 100vw;
+  max-width: 100%;
 }
 @media (min-width: 600px) {
   .focus-enabling-technologies .synthesis-icon {
