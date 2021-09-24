@@ -10,6 +10,15 @@ import "@lottiefiles/lottie-player";
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
+document.querySelectorAll('h1, h2, h3, h4, p').forEach( textelem => {
+  let text = textelem.innerHTML;
+  // only if the word 'Capital' exists WITHOUT the word 'Synthesis' preceding it
+  if ( text.search("Capital") != -1 && text.search("Synthesis") != text.search("Capital") - 10 ) {
+    let newtext = text.replace('Capital', '<span class="no-ligatures">Capital</span>');
+    textelem.innerHTML = newtext;
+  }
+} )
+
 bgGradients();
 cookieConsent();
 

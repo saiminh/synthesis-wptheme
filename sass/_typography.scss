@@ -76,6 +76,9 @@ p {
     font-size: 36px;
   }
 }
+.no-ligatures {
+  font-variant-ligatures: none;
+}
 h1 + p {
   text-indent: 1em;
 }

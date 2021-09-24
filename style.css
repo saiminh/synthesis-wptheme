@@ -486,6 +486,10 @@ p {
   }
 }
 
+.no-ligatures {
+  font-variant-ligatures: none;
+}
+
 h1 + p {
   text-indent: 1em;
 }
@@ -2699,10 +2703,6 @@ section {
 
 .team-page > p, .team-page .team-teammembers {
   max-width: 1100px;
-}
-
-.investments-page .entry-content > .wp-block-group:first-child > p {
-  font-variant-ligatures: none;
 }
 
 /* Accessibility
