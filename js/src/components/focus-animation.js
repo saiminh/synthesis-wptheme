@@ -97,8 +97,8 @@ function focusAnimation(){
     ScrollTrigger.create({
       trigger: '.focus-alignment-animation',
       start: 'top 50%',
-      end: '60% 50%',
-      // markers: true,
+      end: '95% 50%',
+      markers: true,
       onEnter: () => { polygons_stack.tweenFromTo('start', 'stacked', { duration: 1.5, ease: 'power4.out' }) },
       onEnterBack: () => { polygons_stack.tweenFromTo('end','stacked', { duration: 1.5, ease: 'power4.out' }) },
       onLeave: () => { polygons_stack.tweenFromTo('stacked', 'end', { duration: 1.5, ease: 'power4.out' }) },
