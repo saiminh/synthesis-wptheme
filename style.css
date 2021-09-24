@@ -752,7 +752,7 @@ input[type=submit]:focus,
   }
 }
 
-.wp-block-button__link, .wp-block-button__link:hover, .wp-block-button__link:active {
+.wp-block-button__link, .wp-block-button__link:hover, .wp-block-button__link:active, .wp-block-button__link:focus {
   padding: 2px 1em 0;
 }
 
