@@ -109,8 +109,10 @@ function focusAnimation(){
 
   
   window.addEventListener('resize', () => {
-    polygons_stack.kill();
-    debounce( animationsetup(), 250 );
+    if ( window.matchMedia('(min-width: 600px)').matches ){
+      polygons_stack.kill();
+      debounce( animationsetup(), 250 );
+    }
   })
   animationsetup();
 }

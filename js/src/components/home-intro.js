@@ -27,6 +27,13 @@ function homeIntro() {
       duration: 2,
       ease: 'power3.out'
     }, 2.75)
+    .fromTo('.home .main-navigation', {
+      autoAlpha: 0
+    }, {
+      autoAlpha: 1,
+      duration: 1,
+      ease: 'power3.inOut'
+    }, 4)
     .fromTo( '.site-header .logo', {
       autoAlpha: 0
     }, {
