@@ -28,8 +28,9 @@ body:not(.home, .focus-page, .investments-page, .team-page),
     }
   }
   & .entry-header {
-    margin: 150px vars.$gap-space 0 10%;
+    margin: 150px vars.$gap-space 0 vars.$gap-space;
     @include mq.for-tablet-portrait-up {
+      margin-left: 10%;
       margin-right: 8%;
     }
   }

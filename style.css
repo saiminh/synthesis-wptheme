@@ -886,7 +886,7 @@ textarea {
   margin-top: 150px;
 }
 
-.entry-content > .wp-block-group {
+.entry-content {
   padding: 20px;
 }
 
@@ -2385,10 +2385,11 @@ section {
   margin-left: 0;
 }
 .single-post .entry-header {
-  margin: 150px 20px 0 10%;
+  margin: 150px 20px 0 20px;
 }
 @media (min-width: 600px) {
   .single-post .entry-header {
+    margin-left: 10%;
     margin-right: 8%;
   }
 }

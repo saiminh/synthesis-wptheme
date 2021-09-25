@@ -11,7 +11,7 @@
 .entry-content > :first-child {
   margin-top: 150px;
 }
-.entry-content > .wp-block-group {
+.entry-content {
   padding: vars.$gap-space;
 }
 body:not(.home) .entry-content > .wp-block-group > .wp-block-columns {
