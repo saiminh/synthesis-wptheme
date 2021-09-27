@@ -12,7 +12,7 @@
 ?>
   <footer id="colophon" class="site-footer">
     <div class="wp-block-group synthesis-newsletter-subscribe">
-      <p class="has-text-align-center">Synthesis insight by email, to whet your appetite.</p>
+      <p class="has-text-align-center">Be the first to receive the latest Synthesis insights by email.</p>
       <form action="">
         <input type="email" placeholder="Enter your email address">
         <div class="wp-block-buttons">
