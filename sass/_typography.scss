@@ -209,3 +209,10 @@ a:hover,
 a:active {
   outline: none;
 }
+
+/* Special Cases
+--------------------------------------------- */
+.intro-para {
+  @include mq.for-phone-only {
+    font-size: 26px;  
+}
