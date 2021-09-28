@@ -41,10 +41,11 @@
       font-size: 31px;
       margin-top: .75em;
     }
-    & .intro-para {
-  @include mq.for-phone-only {
-    font-size: 26px !important;  
   }
+  & p {
+    @include mq.for-phone-only {
+      font-size: 26px;  
+    }
   }
 }
 .home-synthesis-icons {
