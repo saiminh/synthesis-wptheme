@@ -55,7 +55,7 @@ function cookieConsent(){
     //asynchronously loading GA
     loadScript("https://www.googletagmanager.com/gtag/js?id=G-BTHDQ2MN8L")
     .then((data) => {
-        console.log("Facebook script loaded successfully", data);
+        console.log("Google Analytics script loaded successfully", data);
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
