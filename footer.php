@@ -36,8 +36,7 @@
         <?php the_privacy_policy_link(); ?>
       </div>
       <div class="footer-disclaimer">
-        We use all imagery with the kind permision from the following; Beyond Meat, Impossible Foods, UPSIDE Foods, Perfect Day, Geltor, Redefine Meat, Formo, Aleph Farms, Shiru, Innovopro, Solar Foods, Blue Nalu, JUST and Good Catch.
-      </div>
+	We use all imagery with the kind permission from the following: Beyond Meat, Impossible Foods, UPSIDE Foods, Perfect Day, Geltor, Redefine Meat, Formo, Enough Foods, Aleph Farms, Solar Foods, Blue Nalu, and Gathered Foods.</div>
     </div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
