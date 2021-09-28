@@ -23,7 +23,7 @@
     <div class="site-footer-colophon">
       <div class="footer-address">
         5 Merchant Square<br />
-        London, England<br />
+        London, UK<br />
         W2 1AY
       </div>
       <div class="footer-links">
