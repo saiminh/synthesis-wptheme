@@ -22,14 +22,14 @@
     </div>
     <div class="site-footer-colophon">
       <div class="footer-address">
-        2 Eastbourne Terrace<br />
+        5 Merchant Square<br />
         London, England<br />
-        W2 6LG
+        W2 1AY
       </div>
       <div class="footer-links">
-        <a href="">Contact</a>
+        <a href="mailto:contact@synthesis.capital">Contact</a>
         <a href="https://www.linkedin.com/company/synthesiscapital/">Linkedin</a>
-        <a href="">Twitter</a>
+        <a href="https://twitter.com/Synthesis_Cap">Twitter</a>
       </div>
       <div class="footer-copyright">
         Synthesis Capital © 2021<br />
