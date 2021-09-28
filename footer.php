@@ -33,7 +33,7 @@
       </div>
       <div class="footer-copyright">
         Synthesis Capital © 2021<br />
-         <a href="https://5bq.fb0.myftpupload.com/disclaimers/">Disclainer</a>
+         <a href="https://5bq.fb0.myftpupload.com/disclaimers/">Disclaimers</a>
         <a href="https://www.iubenda.com/privacy-policy/44196549/legal">Privacy Policy</a>
       </div>
       <div class="footer-disclaimer">
