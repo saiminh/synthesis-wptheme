@@ -33,8 +33,7 @@
   100% { opacity: 1; }
 }
 @mixin transparent-fade-out-bottom {
- // -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 95%);
- // mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 95%);
+
 }
 @mixin hideScrollBar {
   -ms-overflow-style: none;  /* IE and Edge */
