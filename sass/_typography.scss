@@ -21,6 +21,7 @@ textarea {
   color: vars.$synth-blue;
   font-family: "SyntheSans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-feature-settings: 'ss01';
+  font-variant-ligatures: none;
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -78,6 +79,9 @@ p {
 }
 .no-ligatures {
   font-variant-ligatures: none;
+}
+.show-ligatures {
+  font-variant-ligatures: initial;
 }
 h1 + p {
   text-indent: 1em;
@@ -208,12 +212,4 @@ a:focus {
 a:hover,
 a:active {
   outline: none;
-}
-
-/* Special Cases
---------------------------------------------- */
-.intro-para {
-  @include mq.for-phone-only {
-    font-size: 26px !important;  
-  }
 }
