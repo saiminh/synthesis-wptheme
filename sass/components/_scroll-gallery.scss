@@ -39,7 +39,7 @@
       }
     }
     &:last-child {
-      flex-basis: calc(66.6% + vars.$gap-space);
+      flex-basis: calc(66.6% + #{vars.$gap-space});
       padding-right: vars.$gap-space;
       @include mq.for-tablet-portrait-up {
         flex-basis: 325px + vars.$gap-space;

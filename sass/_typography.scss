@@ -215,4 +215,5 @@ a:active {
 .intro-para {
   @include mq.for-phone-only {
     font-size: 26px;  
+  }
 }
