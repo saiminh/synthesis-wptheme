@@ -1852,17 +1852,24 @@ section {
   .team-teammembers {
     display: flex;
     flex-wrap: wrap;
-    gap: 2em;
-  }
-}
-@media (min-width: 1200px) {
-  .team-teammembers {
-    gap: 4em;
   }
 }
 
 .team-teammember {
   margin-bottom: 3em;
+}
+@media (min-width: 600px) {
+  .team-teammember {
+    margin-left: 2em;
+  }
+}
+@media (min-width: 1200px) {
+  .team-teammember {
+    margin-left: 4em;
+  }
+}
+.team-teammember:first-child {
+  margin-left: 0;
 }
 .team-teammember p {
   margin: 0 0 0.5em 0;

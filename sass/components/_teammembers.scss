@@ -7,14 +7,19 @@
   @include mq.for-tablet-portrait-up {
     display: flex;
     flex-wrap: wrap;
-    gap: 2em;
-  }
-  @include mq.for-desktop-up {
-    gap: 4em;
   }
 }
 .team-teammember {
   margin-bottom: 3em;
+  @include mq.for-tablet-portrait-up {
+    margin-left: 2em;
+  }
+  @include mq.for-desktop-up {
+    margin-left: 4em;
+  }
+  &:first-child {
+    margin-left: 0;
+  }
   & p {
     margin: 0 0 .5em 0;
     font-size: 18px;
