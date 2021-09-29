@@ -74,9 +74,10 @@ function cookieConsent(){
   window.cookieconsent.initialise({
     type: 'opt-in',
     revokable: true,
-    // cookie:{
-    //   domain: thisDomain
-    // },      
+    cookie:{
+      // domain: thisDomain
+      secure: true,
+    },      
     onInitialise: function (status) {
       var type = this.options.type;
       var didConsent = this.hasConsented();
