@@ -1654,6 +1654,7 @@ section {
 #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
   position: absolute;
   bottom: calc(100% + 3px);
+  font-weight: normal;
   left: 30px;
   border-radius: 3px;
   background-color: #FFC9FD;
@@ -1671,7 +1672,8 @@ section {
   border-top-color: #FFC9FD;
 }
 
-.mce-success-response {
+#mce-error-response,
+#mce-success-response {
   font-size: 1.5rem;
   text-align: center;
   margin-top: 1em;
