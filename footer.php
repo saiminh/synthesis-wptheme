@@ -11,7 +11,8 @@
 
 ?>
   <footer id="colophon" class="site-footer">
-    <div class="wp-block-group synthesis-newsletter-subscribe">
+   <?php get_template_part( 'template-parts/footer', 'mailchimp' ); ?>
+    <!-- <div class="wp-block-group synthesis-newsletter-subscribe">
       <p class="has-text-align-center">Receive the latest Synthesis insights by email.</p>
       <form action="">
         <input type="email" placeholder="Enter your email address">
@@ -19,7 +20,7 @@
           <div class="wp-block-button"><a class="wp-block-button__link">Submit</a></div>
         </div>
       </form>
-    </div>
+    </div> -->
     <div class="site-footer-colophon">
       <div class="footer-address">
         5 Merchant Square<br />
@@ -33,11 +34,11 @@
       </div>
       <div class="footer-copyright">
         Synthesis Capital © 2021<br />
-         <a href="https://5bq.fb0.myftpupload.com/disclaimers/">Disclaimers</a>
+        <a href="https://5bq.fb0.myftpupload.com/disclaimers/">Disclaimers</a>
         <a href="https://www.iubenda.com/privacy-policy/44196549/legal">Privacy Policy</a>
       </div>
       <div class="footer-disclaimer">
-	We use all imagery with the kind permission from the following: Beyond Meat, Impossible Foods, UPSIDE Foods, Perfect Day, Geltor, Redefine Meat, Formo, Enough Foods, Aleph Farms, Solar Foods, Blue Nalu, and Gathered Foods.</div>
+        We use all imagery with the kind permission from the following: Beyond Meat, Impossible Foods, UPSIDE Foods, Perfect Day, Geltor, Redefine Meat, Formo, Enough Foods, Aleph Farms, Solar Foods, Blue Nalu, and Gathered Foods.</div>
     </div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

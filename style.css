@@ -654,9 +654,6 @@ a:active {
 }
 
 button,
-input[type=button],
-input[type=reset],
-input[type=submit],
 .wp-block-button__link {
   border: none;
   cursor: pointer;
@@ -677,18 +674,26 @@ input[type=submit],
 }
 @media (min-width: 900px) {
   button,
-input[type=button],
-input[type=reset],
-input[type=submit],
 .wp-block-button__link {
     font-size: 24px;
   }
 }
 
+input[type=button],
+input[type=reset],
+input[type=submit] {
+  border: none;
+  cursor: pointer;
+}
+@media (min-width: 900px) {
+  input[type=button],
+input[type=reset],
+input[type=submit] {
+    font-size: 24px;
+  }
+}
+
 button:hover,
-input[type=button]:hover,
-input[type=reset]:hover,
-input[type=submit]:hover,
 .wp-block-button__link:hover {
   font-size: 15px;
   line-height: 0;
@@ -708,22 +713,26 @@ input[type=submit]:hover,
 }
 @media (min-width: 900px) {
   button:hover,
+.wp-block-button__link:hover {
+    font-size: 24px;
+  }
+}
+
 input[type=button]:hover,
 input[type=reset]:hover,
-input[type=submit]:hover,
-.wp-block-button__link:hover {
+input[type=submit]:hover {
+  color: #120A59;
+}
+@media (min-width: 900px) {
+  input[type=button]:hover,
+input[type=reset]:hover,
+input[type=submit]:hover {
     font-size: 24px;
   }
 }
 
 button:active,
 button:focus,
-input[type=button]:active,
-input[type=button]:focus,
-input[type=reset]:active,
-input[type=reset]:focus,
-input[type=submit]:active,
-input[type=submit]:focus,
 .wp-block-button__link:active,
 .wp-block-button__link:focus {
   font-size: 15px;
@@ -745,14 +754,27 @@ input[type=submit]:focus,
 @media (min-width: 900px) {
   button:active,
 button:focus,
+.wp-block-button__link:active,
+.wp-block-button__link:focus {
+    font-size: 24px;
+  }
+}
+
 input[type=button]:active,
 input[type=button]:focus,
 input[type=reset]:active,
 input[type=reset]:focus,
 input[type=submit]:active,
-input[type=submit]:focus,
-.wp-block-button__link:active,
-.wp-block-button__link:focus {
+input[type=submit]:focus {
+  color: white;
+}
+@media (min-width: 900px) {
+  input[type=button]:active,
+input[type=button]:focus,
+input[type=reset]:active,
+input[type=reset]:focus,
+input[type=submit]:active,
+input[type=submit]:focus {
     font-size: 24px;
   }
 }
@@ -840,7 +862,7 @@ input[type=email] {
   padding: 0 1em;
   border: 0;
   height: 48px;
-  line-height: 48px;
+  line-height: 1;
   text-align: left;
 }
 @media (min-width: 900px) {
@@ -1454,6 +1476,36 @@ section {
     margin: 0 auto;
   }
 }
+.synthesis-newsletter-subscribe #mc_embed_signup form {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+}
+@media (min-width: 600px) {
+  .synthesis-newsletter-subscribe #mc_embed_signup form {
+    display: block;
+  }
+}
+.synthesis-newsletter-subscribe #mc_embed_signup form .wp-block-button {
+  position: relative;
+}
+.synthesis-newsletter-subscribe #mc_embed_signup form .mc-field-group {
+  position: relative;
+}
+@media (min-width: 600px) {
+  .synthesis-newsletter-subscribe #mc_embed_signup form .mc-field-group {
+    display: flex;
+    gap: 0.25em;
+    margin: 0 auto;
+    align-items: center;
+  }
+}
+.synthesis-newsletter-subscribe #mc-embedded-subscribe {
+  position: relative;
+  height: 48px;
+  padding: 0 2em;
+  width: 100%;
+}
 .synthesis-newsletter-subscribe p {
   max-width: 12em;
   margin-left: auto;
@@ -1563,6 +1615,7 @@ section {
   opacity: 0;
   animation: quickfadein 0.4s ease-in-out 0.2s forwards;
   position: absolute;
+  top: 0;
   z-index: 0;
   width: 100%;
 }
@@ -1570,6 +1623,52 @@ section {
   .fake-text-input-bg {
     width: 70%;
   }
+}
+
+.fake-submit-input-bg {
+  font-size: 18px;
+  line-height: 0;
+  white-space: nowrap;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  background-color: transparent;
+  display: inline-block;
+  color: white;
+  border: 24px solid #FFF;
+  border-image: url("./assets/img/button-bg-pink-fill.svg") 49% 23 fill;
+  opacity: 0;
+  animation: quickfadein 0.4s ease-in-out 0.2s forwards;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  width: 100%;
+}
+@media (min-width: 900px) {
+  .fake-submit-input-bg {
+    width: 100%;
+  }
+}
+
+#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+  position: absolute;
+  bottom: calc(100% + 3px);
+  left: 30px;
+  border-radius: 3px;
+  background-color: #FFC9FD;
+  margin: 0;
+  color: #120A59;
+}
+#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 10px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: #FFC9FD;
 }
 
 .testimonials p {
@@ -2066,6 +2165,7 @@ section {
 }
 
 .footer-copyright {
+  font-variant-ligatures: initial;
   grid-column-start: 1;
   grid-column-end: span 2;
   grid-row-start: 2;

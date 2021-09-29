@@ -10,15 +10,6 @@ import "@lottiefiles/lottie-player";
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-document.querySelectorAll('h1, h2, h3, h4, p').forEach( textelem => {
-  let text = textelem.innerHTML;
-  // only if the word 'Capital' exists WITHOUT the word 'Synthesis' preceding it
-  if ( text.search("Synthesis Capital") != -1 ) {
-    let newtext = text.replace('Synthesis Capital', '<span class="show-ligatures">Synthesis Capital</span>');
-    textelem.innerHTML = newtext;
-  }
-} )
-
 bgGradients();
 cookieConsent();
 
@@ -33,6 +24,12 @@ document.querySelectorAll('input[type="email"]').forEach( (input) => {
   ins.classList.add('fake-text-input-bg');
   input.parentElement.insertBefore(ins, input);
 });
+
+let newsletterBtn = document.querySelector('#mc-embedded-subscribe-form input[type="submit"]');
+newsletterBtn.style.backgroundColor = "#FFFFFF00";
+let newsletterBtnIns = document.createElement('div');
+newsletterBtnIns.classList.add('fake-submit-input-bg');
+newsletterBtn.parentElement.insertBefore(newsletterBtnIns, newsletterBtn);
 
 if ( document.querySelector('.sideScroll-scroller') || document.querySelector('.blocks-gallery-grid')  ) {
   sideScrollNavigation();

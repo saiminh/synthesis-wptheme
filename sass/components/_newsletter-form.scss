@@ -19,6 +19,34 @@
       margin: 0 auto;
     }
   } 
+  & #mc_embed_signup {
+    & form {
+      position: relative;
+      max-width: 700px;
+      margin: 0 auto;
+      @include mq.for-tablet-portrait-up {
+        display: block;
+    } 
+    & .wp-block-button {
+      position: relative;
+    }
+  }
+    & form .mc-field-group {
+      position: relative;
+      @include mq.for-tablet-portrait-up {
+        display: flex;
+        gap: .25em;
+        margin: 0 auto;
+        align-items: center;
+      }
+    }
+  }
+  & #mc-embedded-subscribe {
+    position: relative;
+    height: 48px;
+    padding: 0 2em;
+    width: 100%;
+  }
   & p {
     max-width: 12em;
     margin-left: auto;
@@ -77,9 +105,39 @@
 .fake-text-input-bg {
   @include mixins.poly-btn("white", "fill");
   position: absolute;
+  top: 0;
   z-index: 0;
   width: 100%;
   @include mq.for-tablet-landscape-up {
     width: 70%;
+  }
+}
+.fake-submit-input-bg {
+  @include mixins.poly-btn("pink", "fill");
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  width: 100%;
+  @include mq.for-tablet-landscape-up {
+    width: 100%;
+  }
+}
+#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+  position: absolute;
+  bottom: calc(100% + 3px);
+  left: 30px;
+  border-radius: 3px;
+  background-color: vars.$pink;
+  margin: 0;
+  color: vars.$synth-blue;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 10px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: vars.$pink;
   }
 }

@@ -3,9 +3,6 @@
 @use 'utilities/mixins';
 
 button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"],
 .wp-block-button__link {
   border: none;
   cursor: pointer;
@@ -14,10 +11,17 @@ input[type="submit"],
     font-size: 24px;
   }
 }
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  // Need to implement via js hack like input type=email
+  border: none;
+  cursor: pointer;
+  @include mq.for-tablet-landscape-up {
+    font-size: 24px;
+  }
+}
 button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover,
 .wp-block-button__link:hover {
   @include mixins.poly-btn("pink", "fill", 15px);
   color: vars.$synth-blue;
@@ -25,17 +29,32 @@ input[type="submit"]:hover,
     font-size: 24px;
   }
 }
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  // Need to implement via js hack like input type=email
+  color: vars.$synth-blue;
+  @include mq.for-tablet-landscape-up {
+    font-size: 24px;
+  }
+}
 button:active,
 button:focus,
+.wp-block-button__link:active,
+.wp-block-button__link:focus {
+  @include mixins.poly-btn("green", "fill", 15px);
+  color: white;
+  @include mq.for-tablet-landscape-up {
+    font-size: 24px;
+  }
+}
 input[type="button"]:active,
 input[type="button"]:focus,
 input[type="reset"]:active,
 input[type="reset"]:focus,
 input[type="submit"]:active,
-input[type="submit"]:focus,
-.wp-block-button__link:active,
-.wp-block-button__link:focus {
-  @include mixins.poly-btn("green", "fill", 15px);
+input[type="submit"]:focus {
+  // Need to implement via js hack like input type=email
   color: white;
   @include mq.for-tablet-landscape-up {
     font-size: 24px;
@@ -89,7 +108,7 @@ input[type="email"] {
   padding: 0 1em;
   border: 0;
   height: 48px;
-  line-height: 48px;
+  line-height: 1;
   text-align: left;
   @include mq.for-tablet-landscape-up {
     font-size: 24px;

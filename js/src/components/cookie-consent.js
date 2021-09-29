@@ -59,7 +59,9 @@ function cookieConsent(){
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-BTHDQ2MN8L');
+      gtag('config', 'G-BTHDQ2MN8L', {
+        'cookie_expires': 182 * 24 * 60 * 60
+      });
     })
     .catch((err) => {
         console.error(err);
@@ -107,6 +109,11 @@ function cookieConsent(){
      regionalLaw: true,
     },
     location: true,
+    content: {
+      link: 'Learn more',
+      href: '/cookie-policy',
+      message: 'This website uses cookies to ensure you get the best experience on our website.',
+    }
    });
    if (document.querySelector('.cc-revoke')) {
      document.querySelector('.footer-copyright').appendChild(document.querySelector('.cc-revoke'));
