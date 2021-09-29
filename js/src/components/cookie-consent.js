@@ -77,6 +77,7 @@ function cookieConsent(){
     cookie:{
       // domain: thisDomain
       secure: true,
+      expiryDays: 182,
     },      
     onInitialise: function (status) {
       var type = this.options.type;
