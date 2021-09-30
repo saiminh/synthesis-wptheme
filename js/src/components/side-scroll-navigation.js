@@ -48,7 +48,6 @@ function sideScrollNavigation(){
         if ( scroller.scrollLeft == maxScrollW ){
           gsap.to(scroller, { duration: .5, scrollTo: { y: 0, x: -10 }, ease: 'power3.out', onComplete: () => { reAddListener() } })
         } else if ( scroller.scrollLeft >= maxScrollW - oneScrollW ) {
-          // lastBefore = scroller.scrollLeft;
           gsap.to(scroller, { duration: .5, scrollTo: { y: 0, x: maxScrollW }, ease: 'power3.out', onComplete: () => { reAddListener() } })
         } else {
           gsap.to(scroller, { duration: .5, scrollTo: { y: 0, x: "+="+ oneScrollW }, ease: 'power3.out', onComplete: () => { reAddListener() } })
