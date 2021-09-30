@@ -24,7 +24,7 @@
   background-size: 60%;
   position: absolute;
   top: 25%;
-  right: 0;
+  right: vars.$gap-space;
   left: auto;
   border-radius: 5px;
 }
@@ -39,7 +39,7 @@
 }
 .sideScroll-scroller-nav-scrollPrev {
   right: auto;
-  left: 0;
+  left: vars.$gap-space;
   transform: scaleX(-1);
 }
 .food-technologies {

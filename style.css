@@ -1348,7 +1348,7 @@ section {
   background-size: 60%;
   position: absolute;
   top: 25%;
-  right: 0;
+  right: 20px;
   left: auto;
   border-radius: 5px;
 }
@@ -1366,7 +1366,7 @@ section {
 
 .sideScroll-scroller-nav-scrollPrev {
   right: auto;
-  left: 0;
+  left: 20px;
   transform: scaleX(-1);
 }
 
