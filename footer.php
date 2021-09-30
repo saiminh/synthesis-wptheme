@@ -24,21 +24,23 @@
     <div class="site-footer-colophon">
       <div class="footer-address">
         5 Merchant Square<br />
-        London, UK<br />
-        W2 1AY
+        London, W2 1AY<br />
+        UK
       </div>
       <div class="footer-links">
-        <a href="mailto:contact@synthesis.capital">Contact</a>
+        <a href="mailto:contact@synthesis.capital">Email</a>
         <a href="https://www.linkedin.com/company/synthesiscapital/">Linkedin</a>
         <a href="https://twitter.com/Synthesis_Cap">Twitter</a>
       </div>
       <div class="footer-copyright">
         Synthesis Capital © 2021<br />
-        <a href="https://5bq.fb0.myftpupload.com/disclaimers/">Disclaimers</a>
-        <a href="https://www.iubenda.com/privacy-policy/44196549/legal">Privacy Policy</a>
+        <a href="/disclaimers/">Disclaimers</a>
+        <a href="/privacy-policy/">Privacy Policy</a>
       </div>
       <div class="footer-disclaimer">
-        We use all imagery with the kind permission from the following: Beyond Meat, Impossible Foods, UPSIDE Foods, Perfect Day, Geltor, Redefine Meat, Formo, Enough Foods, Aleph Farms, Solar Foods, Blue Nalu, and Gathered Foods.</div>
+        We use all imagery with the kind permission from the following: Beyond Meat, Impossible Foods, UPSIDE Foods, Perfect Day, Geltor, Redefine Meat, Formo, Enough Foods, Aleph Farms, Solar Foods, Blue Nalu, and Gathered Foods.<br>
+	Synthesis Capital LLP (FRN 944408) is an Appointed Representative of Frank Investments Limited (FRN 627697) which is authorised and regulated by the Financial Conduct Authority. 
+	</div>
     </div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
