@@ -6,7 +6,7 @@
   display: flex;
   flex-wrap: nowrap;
   gap: 0;
-  width: calc(100% + 2 * #{vars.$gap-space});
+  // width: calc(100% + 2 * #{vars.$gap-space});
   margin-left: - vars.$gap-space;
   margin-bottom: 4em;
   // margin-right: - vars.$gap-space;

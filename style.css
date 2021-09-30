@@ -1202,7 +1202,6 @@ section {
   display: flex;
   flex-wrap: nowrap;
   gap: 0;
-  width: calc(100% + 2 * 20px);
   margin-left: -20px;
   margin-bottom: 4em;
   overflow-x: scroll;
@@ -1324,6 +1323,8 @@ section {
 .scrolling-flex-container {
   padding: 0 !important;
   margin-bottom: 8em;
+  margin-left: -20px;
+  margin-right: -20px;
   position: relative;
 }
 

@@ -4,13 +4,9 @@
 .scrolling-flex-container {
   padding: 0!important;
   margin-bottom: 8em;
+  margin-left: - vars.$gap-space;
+  margin-right: - vars.$gap-space;
   position: relative;
-  // &:after {
-  //   content: url('./assets/icons/arrow.svg');
-  //   position: absolute;
-  //   right: vars.$gap-space;
-  //   top: 33.333%;
-  // }
 }
 .showNavBtns .sideScroll-scroller-nav-scrollNext,
 .showNavBtns .sideScroll-scroller-nav-scrollPrev {
