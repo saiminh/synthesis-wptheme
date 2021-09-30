@@ -75,7 +75,7 @@ function cookieConsent(){
     type: 'opt-in',
     revokable: true,
     cookie:{
-      // domain: thisDomain
+      domain: thisDomain,
       secure: true,
       expiryDays: 182,
     },      

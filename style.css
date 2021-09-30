@@ -1218,7 +1218,7 @@ section {
 }
 
 .earlier-investment {
-  scroll-snap-align: center;
+  scroll-snap-align: start;
   flex-basis: 250px;
   flex-shrink: 0;
   padding: 10px;
@@ -1389,11 +1389,11 @@ section {
 }
 
 .food-technology {
-  scroll-snap-align: center;
+  scroll-snap-align: start;
   flex-basis: calc(217px + 2em);
   flex-shrink: 0;
   flex-grow: 0;
-  padding-right: 1em;
+  padding-left: 1em;
 }
 @media (min-width: 600px) {
   .food-technology {
@@ -1811,7 +1811,7 @@ section {
   display: none;
 }
 .scroll-gallery.wp-block-gallery .blocks-gallery-item {
-  scroll-snap-align: center;
+  scroll-snap-align: start;
   align-self: baseline;
   width: auto;
   flex-basis: calc(220px + 20px);
@@ -1987,8 +1987,6 @@ section {
   left: 0;
   bottom: 0;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
   transform: translateY(0);
   transition: 0.5s transform cubic-bezier(0.82, 0.1, 0.56, 0.93);
   padding: 20em 4em 2em 4em;
@@ -1997,14 +1995,20 @@ section {
 @media (max-width: 599px) {
   .cc-window {
     padding: 10em 20px 2em 20px;
-    flex-direction: column;
     background: linear-gradient(to bottom, rgba(18, 10, 89, 0) 0%, #120A59 10em);
   }
 }
 
 .cc-window p, .cc-banner p {
-  font-size: 14px;
   margin: 0 0 1em 0;
+  font-size: 14px;
+  max-width: 100%;
+  width: 100%;
+}
+@media (min-width: 900px) {
+  .cc-window p, .cc-banner p {
+    font-size: 16px;
+  }
 }
 
 .cc-window.cc-invisible {
@@ -2109,6 +2113,11 @@ section {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+@media (min-width: 600px) {
+  .cc-message {
+    margin-bottom: -48px;
+  }
 }
 @media (min-width: 900px) {
   .cc-message {

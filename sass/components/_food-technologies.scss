@@ -57,11 +57,11 @@
   display: none;
 }
 .food-technology {
-  scroll-snap-align: center;
+  scroll-snap-align: start;
   flex-basis: calc(217px + 2em);
   flex-shrink: 0;
   flex-grow: 0;
-  padding-right: 1em;
+  padding-left: 1em;
   @include mq.for-tablet-portrait-up {
     flex-basis: calc(175px + 2em);
   }

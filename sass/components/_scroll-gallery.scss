@@ -19,7 +19,7 @@
     @include mixins.hideScrollBar;
   }
   &.wp-block-gallery .blocks-gallery-item {
-    scroll-snap-align: center;
+    scroll-snap-align: start;
     align-self: baseline;
     width: auto;
     flex-basis: calc(220px + #{vars.$gap-space});
