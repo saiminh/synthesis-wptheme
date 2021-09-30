@@ -3,7 +3,6 @@
 @use '../utilities/mixins';
 
 .cc-window {
-  background: linear-gradient(to top, vars.$synth-blue 30%, transparentize(vars.$synth-blue, 1) 99%);
   color: white;
   position: fixed;
   z-index: 4;
@@ -15,12 +14,17 @@
   transform: translateY(0);
   transition: .5s transform cubic-bezier(.82,.1,.56,.93);
   padding: 20em 4em 2em 4em;
+  background: linear-gradient(to bottom, transparentize(vars.$synth-blue, 1) 0%, vars.$synth-blue 20em);
   @include mq.for-phone-only {
     padding: 10em vars.$gap-space 2em vars.$gap-space;
     flex-direction: column;
-    background: linear-gradient(to top, vars.$synth-blue 60%, transparentize(vars.$synth-blue, 1) 99%);
+    background: linear-gradient(to bottom, transparentize(vars.$synth-blue, 1) 0%, vars.$synth-blue 10em);
 
   }
+}
+.cc-window p, .cc-banner p {
+  font-size: 18px;
+  margin: 0 0 1em 0;
 }
 .cc-window.cc-invisible {
   transform: translateY(100%);

@@ -17,6 +17,9 @@ input[type="submit"] {
   // Need to implement via js hack like input type=email
   border: none;
   cursor: pointer;
+  height: 48px;
+  padding: 0 2em;
+  width: 100%;
   @include mq.for-tablet-landscape-up {
     font-size: 24px;
   }
@@ -95,7 +98,7 @@ textarea {
   width: 100%;
   font-size: 15px;
   @include mq.for-tablet-portrait-up {
-    text-align: center;
+    // text-align: center;
     font-size: 18px;
   }
   @include mq.for-tablet-landscape-up {
@@ -145,4 +148,11 @@ select {
 
 textarea {
   width: 100%;
+}
+
+.error404 .search-form {
+  display: flex;
+  & .search-field {
+    height: 48px;
+  }
 }

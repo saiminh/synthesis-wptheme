@@ -117,9 +117,11 @@ function cookieConsent(){
     },
     location: true,
     content: {
-      link: 'Learn more',
+      allow: 'Accept cookies',
+      deny: 'Decline Cookies',
+      link: 'Cookie Policy',
       href: '/cookie-policy',
-      message: 'This website uses cookies to ensure you get the best experience on our website.',
+      message: '<p>This website uses strictly necessary cookies to enable the website to function, namely to secure our website and to save certain preferences and repeat visits, including recording your cookies preferences.</p><p>If you agree, we would also like to use non-essential cookies to enable us to observe traffic levels to the website which allows us to understand interaction with the website and helps us to improve the website and our services.</p><p>To learn more about this, visit our Cookie Policy. You may consent or decline to the use of non-essential cookies by clicking “Accept Cookies” or “Decline Cookies” below.</p>',
     }
    });
    if (document.querySelector('.cc-revoke')) {

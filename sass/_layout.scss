@@ -7,10 +7,12 @@
     margin-left: vars.$col-1;
   }
 }
-.entry-content > :first-child {
+.entry-content > :first-child,
+.error404 .site-main > :first-child {
   margin-top: 150px;
 }
-.entry-content {
+.entry-content,
+.error404 .site-main {
   padding: vars.$gap-space;
 }
 body:not(.home) .entry-content > .wp-block-group > .wp-block-columns {

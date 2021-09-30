@@ -602,7 +602,7 @@ hr, .wp-block-separator {
 ul,
 ol {
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 1em;
 }
 
 ul {
@@ -684,6 +684,9 @@ input[type=reset],
 input[type=submit] {
   border: none;
   cursor: pointer;
+  height: 48px;
+  padding: 0 2em;
+  width: 100%;
 }
 @media (min-width: 900px) {
   input[type=button],
@@ -831,7 +834,6 @@ input[type=datetime],
 input[type=datetime-local],
 input[type=color],
 textarea {
-    text-align: center;
     font-size: 18px;
   }
 }
@@ -903,17 +905,26 @@ textarea {
   width: 100%;
 }
 
+.error404 .search-form {
+  display: flex;
+}
+.error404 .search-form .search-field {
+  height: 48px;
+}
+
 @media (min-width: 600px) {
   .offset-1 {
     margin-left: 8.3333333333vw;
   }
 }
 
-.entry-content > :first-child {
+.entry-content > :first-child,
+.error404 .site-main > :first-child {
   margin-top: 150px;
 }
 
-.entry-content {
+.entry-content,
+.error404 .site-main {
   padding: 20px;
 }
 
@@ -1016,6 +1027,7 @@ body:not(.home) .entry-content > .wp-block-group > .wp-block-columns {
 }
 
 ul.menu {
+  padding: 0;
   list-style: none;
   display: flex;
   transform: translateY(0%);
@@ -1030,6 +1042,10 @@ ul.menu li {
   transition: transform 0.2s ease-out;
 }
 
+.nav-hidden .site-header {
+  pointer-events: none;
+}
+
 .nav-hidden .logo svg {
   transform: translateY(-50%);
 }
@@ -1042,6 +1058,7 @@ ul.menu li {
 
 ul.menu a,
 .menu-toggle {
+  pointer-events: all;
   transform: scale(1);
   transition: transform 0.05s linear;
   margin-right: 0.25em;
@@ -1963,7 +1980,6 @@ section {
 }
 
 .cc-window {
-  background: linear-gradient(to top, #120A59 30%, rgba(18, 10, 89, 0) 99%);
   color: white;
   position: fixed;
   z-index: 4;
@@ -1975,13 +1991,19 @@ section {
   transform: translateY(0);
   transition: 0.5s transform cubic-bezier(0.82, 0.1, 0.56, 0.93);
   padding: 20em 4em 2em 4em;
+  background: linear-gradient(to bottom, rgba(18, 10, 89, 0) 0%, #120A59 20em);
 }
 @media (max-width: 599px) {
   .cc-window {
     padding: 10em 20px 2em 20px;
     flex-direction: column;
-    background: linear-gradient(to top, #120A59 60%, rgba(18, 10, 89, 0) 99%);
+    background: linear-gradient(to bottom, rgba(18, 10, 89, 0) 0%, #120A59 10em);
   }
+}
+
+.cc-window p, .cc-banner p {
+  font-size: 18px;
+  margin: 0 0 1em 0;
 }
 
 .cc-window.cc-invisible {

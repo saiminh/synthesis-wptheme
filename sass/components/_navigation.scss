@@ -58,6 +58,7 @@
 
 // Nav List
 ul.menu {
+  padding: 0;
   list-style: none;
   display: flex;
   transform: translateY(0%);
@@ -70,6 +71,9 @@ ul.menu {
   transform: translateY(0%);
   transition: transform .2s ease-out;
 }
+.nav-hidden .site-header {
+  pointer-events: none;
+}
 .nav-hidden .logo svg {
   transform: translateY(-50%);
 }
@@ -81,6 +85,7 @@ ul.menu {
 
 ul.menu a,
 .menu-toggle {
+  pointer-events: all;
   transform: scale(1);
   transition: transform .05s linear;
   margin-right: .25em;
