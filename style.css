@@ -948,6 +948,11 @@ body:not(.home) .entry-content > .wp-block-group > .wp-block-columns {
   margin-top: 0;
 }
 
+.entry-content .fade-out-bottom {
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
+  mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
+}
+
 .entry-footer .edit-link {
   display: none;
 }
@@ -1228,6 +1233,8 @@ section {
   align-items: flex-end;
   position: relative;
   margin-bottom: 20px;
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
+  mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
 }
 @media (min-width: 600px) {
   .earlier-investment-image {
@@ -1791,6 +1798,8 @@ section {
   flex-shrink: 0;
   margin: 0;
   padding-left: 20px;
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
+  mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
 }
 @media (min-width: 600px) {
   .scroll-gallery.wp-block-gallery .blocks-gallery-item {
@@ -1899,6 +1908,8 @@ section {
   }
 }
 .team-teammember .wp-block-image {
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
+  mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
   margin-bottom: 0;
 }
 
@@ -2460,6 +2471,8 @@ section {
 }
 .blog .entry-content .wp-block-image img {
   width: 100%;
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
+  mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
 }
 
 .post-thumbnail {
@@ -2467,6 +2480,8 @@ section {
 }
 .post-thumbnail img {
   width: 100%;
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
+  mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
 }
 
 @media (max-width: 599px) {
@@ -2543,6 +2558,8 @@ section {
 }
 .single-post .entry-content .wp-block-image img {
   width: 100%;
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
+  mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
 }
 
 .post-thumbnail {
@@ -2550,6 +2567,8 @@ section {
 }
 .post-thumbnail img {
   width: 100%;
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
+  mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
 }
 
 .post-nav {
@@ -2564,6 +2583,11 @@ section {
     grid-template-rows: auto auto;
   }
 }
+.post-nav img {
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
+  mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
+}
+
 .post-nav-link {
   grid-row-start: 1;
   font-size: 48px;
@@ -2736,6 +2760,11 @@ section {
 }
 .focus-enabling-technologies .synthesis-icon svg path {
   fill: #FFFFFF;
+}
+
+.focus-enabling-technologies-table {
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
+  mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
 }
 
 .focus-alignment-animation {
