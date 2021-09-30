@@ -1882,9 +1882,6 @@ section {
   width: 100%;
 }
 
-.team-teammembers {
-  padding: 20px;
-}
 @media (min-width: 600px) {
   .team-teammembers {
     display: flex;
@@ -1899,14 +1896,14 @@ section {
   .team-teammember {
     margin-left: 2em;
   }
+  .team-teammember:nth-child(3n+1) {
+    margin-left: 0;
+  }
 }
 @media (min-width: 1200px) {
   .team-teammember {
     margin-left: 4em;
   }
-}
-.team-teammember:first-child {
-  margin-left: 0;
 }
 .team-teammember p {
   margin: 0 0 0.5em 0;
