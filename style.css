@@ -2784,11 +2784,6 @@ section {
   fill: #FFFFFF;
 }
 
-.focus-enabling-technologies-table {
-  -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
-  mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
-}
-
 .focus-alignment-animation {
   overflow: visible;
   position: relative;
