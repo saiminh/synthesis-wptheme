@@ -15,6 +15,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Future Food Investors. We invest in game-changing founders, whose companies are transforming the food system through the synthesis of food technology and modern biotechnology." >
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
 </head>
