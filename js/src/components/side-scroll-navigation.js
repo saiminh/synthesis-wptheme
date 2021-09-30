@@ -12,7 +12,8 @@ function sideScrollNavigation(){
     let scrollers = document.querySelectorAll('.sideScroll-scroller, .blocks-gallery-grid');
       
     scrollers.forEach( (scroller) => {
-      let oneScrollW = scroller.childNodes[1].getBoundingClientRect().width;
+      let oneScrollW = scroller.children[1].getBoundingClientRect().width;
+      let firstScrollW = scroller.children[0].getBoundingClientRect().width;
       let maxScrollW = scroller.scrollWidth - scroller.clientWidth;
       let nextBtn, prevBtn;
       if ( !scroller.parentElement.querySelector('.sideScroll-scroller-nav-scrollNext') ) {
@@ -31,7 +32,7 @@ function sideScrollNavigation(){
         maxScrollW = scroller.scrollWidth - scroller.clientWidth;
       } );
 
-      scroller.scrollTo(0,0);
+      // scroller.scrollTo(0,0);
       let lastBefore = maxScrollW - ( ( maxScrollW / oneScrollW ) - Math.floor(maxScrollW / oneScrollW) ) * oneScrollW;
     
       nextBtn.addEventListener('click', nextBtnHandler); 
@@ -81,8 +82,11 @@ function sideScrollNavigation(){
         scroller.style.scrollSnapType = 'none';
 
         for( let i=0; i <= scroller.children.length; i++ ){
-          if ( scroller.children[i].getBoundingClientRect().x > 0 ) {
-            nextSlideX = scroller.children[i].getBoundingClientRect().x;
+          if ( scroller.children[i].getBoundingClientRect().x < 0 ) {
+            nextSlideX = Math.round(scroller.children[i].getBoundingClientRect().x);
+            console.log('x: '+ nextSlideX );
+            console.log('scrollx: '+ scroller.scrollLeft );
+            console.log( scroller.scrollLeft + nextSlideX );
             break;
           } 
         }
@@ -91,10 +95,10 @@ function sideScrollNavigation(){
           gsap.to(scroller, { duration: .5, scrollTo: { y: 0, x: maxScrollW }, ease: 'power3.out', onComplete: () => { reAddListener() } })
         } else if ( scroller.scrollLeft == maxScrollW ){
           gsap.to(scroller, { duration: .5, scrollTo: { y: 0, x: lastBefore }, ease: 'power3.out' , onComplete: () => { reAddListener() } })
-        } else if ( scroller.scrollLeft <= oneScrollW ){
+        } else if ( scroller.scrollLeft <= firstScrollW ){
           gsap.to(scroller, { duration: .5, scrollTo: { y: 0, x: 0 }, ease: 'power3.out' , onComplete: () => { reAddListener() } })
         } else {
-          gsap.to(scroller, { duration: .5, scrollTo: { y: 0, x: scroller.scrollLeft - nextSlideX }, ease: 'power3.out' , onComplete: () => { reAddListener() } })
+          gsap.to(scroller, { duration: .5, scrollTo: { y: 0, x: scroller.scrollLeft - oneScrollW }, ease: 'power3.out' , onComplete: () => { reAddListener() } })
         }      
       }
 
