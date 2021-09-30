@@ -23,7 +23,7 @@
   scroll-snap-align: start;
   flex-basis: 250px;
   flex-shrink: 0;
-  padding: vars.$gap-space * .5;
+  padding-left: vars.$gap-space;
   @include mq.for-tablet-landscape-up {
     flex-basis: 345px;
   }

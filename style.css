@@ -1221,7 +1221,7 @@ section {
   scroll-snap-align: start;
   flex-basis: 250px;
   flex-shrink: 0;
-  padding: 10px;
+  padding-left: 20px;
 }
 @media (min-width: 900px) {
   .earlier-investment {

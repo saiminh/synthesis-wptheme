@@ -41,6 +41,7 @@ function sideScrollNavigation(){
       function nextBtnHandler() {
         
         function reAddListenerNextBtn() {
+          console.log(nextSlideX);
           nextBtn.addEventListener( 'click', nextBtnHandler );
         }
         
@@ -50,7 +51,7 @@ function sideScrollNavigation(){
         
         for( let i=0; i <= scroller.children.length; i++ ){
           if ( scroller.children[i].getBoundingClientRect().x > 0 ) {
-            nextSlideX = scroller.children[i].getBoundingClientRect().x;
+            nextSlideX = Math.round(scroller.children[i].getBoundingClientRect().x) + 1;
             break;
           }
         }
@@ -93,7 +94,7 @@ function sideScrollNavigation(){
         } else if ( scroller.scrollLeft <= oneScrollW ){
           gsap.to(scroller, { duration: .5, scrollTo: { y: 0, x: 0 }, ease: 'power3.out' , onComplete: () => { reAddListener() } })
         } else {
-          gsap.to(scroller, { duration: .5, scrollTo: { y: 0, x: nextSlideX }, ease: 'power3.out' , onComplete: () => { reAddListener() } })
+          gsap.to(scroller, { duration: .5, scrollTo: { y: 0, x: scroller.scrollLeft - nextSlideX }, ease: 'power3.out' , onComplete: () => { reAddListener() } })
         }      
       }
 
