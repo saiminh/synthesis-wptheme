@@ -1489,6 +1489,9 @@ section {
     max-width: 66.6%;
   }
 }
+.synthesis-newsletter-subscribe p {
+  font-variant-ligatures: initial;
+}
 .synthesis-newsletter-subscribe form {
   position: relative;
 }
