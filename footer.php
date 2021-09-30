@@ -30,7 +30,7 @@
       <div class="footer-links">
         <a href="mailto:contact@synthesis.capital">Email</a>
         <a href="https://www.linkedin.com/company/synthesiscapital/">Linkedin</a>
-        <a href="https://twitter.com/Synthesis_Cap">Twitter</a>
+        <!-- <a href="https://twitter.com/Synthesis_Cap">Twitter</a> -->
       </div>
       <div class="footer-copyright">
         Synthesis Capital © 2021<br />
