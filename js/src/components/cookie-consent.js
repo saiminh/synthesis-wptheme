@@ -21,7 +21,6 @@ function cookieConsent(){
   };
 
   function addCookies() {
-
     //creating asynchronous loadScript function
     const loadScript = (src, async = true, type = "text/javascript") => {
       return new Promise((resolve, reject) => {
@@ -69,13 +68,10 @@ function cookieConsent(){
 
   };
   
-  const thisDomain = window.location.hostname;
-
   window.cookieconsent.initialise({
     type: 'opt-in',
     revokable: true,
     cookie:{
-      domain: thisDomain,
       secure: true,
       expiryDays: 182,
     },      
@@ -83,7 +79,7 @@ function cookieConsent(){
       var type = this.options.type;
       var didConsent = this.hasConsented();
       if (type == 'opt-in' && didConsent) {
-        addCookies();
+        addCookies();        
       }
       if (type == 'opt-out' && !didConsent) {
         clearCookies();
