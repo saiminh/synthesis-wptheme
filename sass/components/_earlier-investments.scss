@@ -6,10 +6,8 @@
   display: flex;
   flex-wrap: nowrap;
   gap: 0;
-  // width: calc(100% + 2 * #{vars.$gap-space});
-  margin-left: - vars.$gap-space;
+  margin-left: 0;
   margin-bottom: 4em;
-  // margin-right: - vars.$gap-space;
   overflow-x: scroll;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;

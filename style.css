@@ -1202,7 +1202,7 @@ section {
   display: flex;
   flex-wrap: nowrap;
   gap: 0;
-  margin-left: -20px;
+  margin-left: 0;
   margin-bottom: 4em;
   overflow-x: scroll;
   overflow-y: hidden;
