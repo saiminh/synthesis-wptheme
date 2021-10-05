@@ -15,22 +15,3 @@
     rgba(255,255,255,1) 100%);
   z-index: -1;
 }
-section {
-  min-height: 70vh;
-  min-height: calc(var(--vh, 1vh) * 70);
-}
-.entry-content > .wp-block-group.has-synthesis-blue-background-color {
-  min-height: 70vh;
-  min-height: calc(var(--vh, 1vh) * 70);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-// .page-reveal {
-  
-// }
-// .team-page .page-reveal,
-// .home .page-reveal {
-//   background: linear-gradient(to bottom, vars.$synth-blue 0%, vars.$synth-blue 50%, transparentize(vars.$synth-blue, 1) 100%, );
-// }

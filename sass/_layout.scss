@@ -11,6 +11,12 @@
 .error404 .site-main > :first-child {
   margin-top: 150px;
 }
+.entry-content > * {
+  margin-bottom: 10rem;
+}
+.entry-content > :last-child {
+  margin-bottom: 0;
+}
 .entry-content,
 .error404 .site-main {
   padding: vars.$gap-space;
