@@ -44,7 +44,7 @@ function bgGradients(){
   document.querySelectorAll('a:not(.menu-toggle)').forEach(element => element.addEventListener("click", function(event) {
     // Remember the link href
     var href = this.href;
-    
+
     if ( !href.startsWith('mailto:')  ) {
       // Don't follow the link
       event.preventDefault();
@@ -62,9 +62,6 @@ function bgGradients(){
         })
     }
   }));
-
-
-
 
   let fadeinVideo = document.querySelectorAll('video');
   if ( fadeinVideo.length ) {
