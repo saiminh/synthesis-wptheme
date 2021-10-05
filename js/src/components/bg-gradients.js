@@ -44,21 +44,23 @@ function bgGradients(){
   document.querySelectorAll('a:not(.menu-toggle)').forEach(element => element.addEventListener("click", function(event) {
     // Remember the link href
     var href = this.href;
-
-    // Don't follow the link
-    event.preventDefault();
-    // Do the async thing
-      gsap.to( ".page-reveal", {
-        duration: 1,
-        yPercent: 0,
-        onComplete: function(){window.location = href;}
-      });
-      gsap.to('#logo-fill', {
-        yPercent: 0,
-      });
-      gsap.to('.main-navigation', {
-        autoAlpha: 0
-      })
+    
+    if ( !href.startsWith('mailto:')  ) {
+      // Don't follow the link
+      event.preventDefault();
+      // Do the async thing
+        gsap.to( ".page-reveal", {
+          duration: 1,
+          yPercent: 0,
+          onComplete: function(){window.location = href;}
+        });
+        gsap.to('#logo-fill', {
+          yPercent: 0,
+        });
+        gsap.to('.main-navigation', {
+          autoAlpha: 0
+        })
+    }
   }));
 
 
