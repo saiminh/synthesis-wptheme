@@ -84,54 +84,26 @@
     position: relative;
     margin-left: 0;
   }
-  .wp-block-column {
+  & .wp-block-column {
     h1, h2, p {
       max-width: 100%;
     }
   }
-  .scroll-section p {
+  & .scroll-section p {
     @include mq.for-tablet-portrait-up {
       margin-left: 0;
       // margin-right: 33.33%;
     }
   }
+  & .scrolling-flex-container {
+    margin-bottom: 0;
+  }
 }
 // Home Intro setup
 .home {
-  // & ul.menu li,
-  // & .site-header .logo,
-  // & .hero-home h1, 
-  // & .hero-home p {
-  //   opacity: 0;
-  //   visibility: hidden;
-  // }
   & .page-reveal--home {
     opacity: 0;
     background: rgba(0, 0, 0, 0) linear-gradient(vars.$synth-blue 0%, vars.$synth-blue 50%, transparentize(vars.$synth-blue, 1) 100%) repeat scroll 0% 0%!important;
     z-index: 6!important;
   }
 }
-// .hero-home .wp-block-video {
-//   -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
-//   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
-//   position: absolute;
-//   top: - vars.$gap-space;
-//   left: - vars.$gap-space;
-//   right: - vars.$gap-space;
-//   height: 100%;
-//   overflow: hidden;
-//   & video {
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     min-width: 100%;
-//     min-height: 100%;
-//     width: auto;
-//     height: 100%;
-//     transform: translateX(-50%) translateY(-50%);
-//     @media screen and (min-aspect-ratio: 16/9) {
-//       height: auto;
-//       width: 100%;
-//     }
-//   }
-// }
