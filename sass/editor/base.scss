@@ -80,8 +80,8 @@ p {
 }
 
 @mixin blocklabel($blocklabelname) {
-  border: 2px solid rgb(0, 174, 255);
-  padding: 16px 10px 10px 10px;
+  border: 2px solid rgb(18, 10, 89);
+  padding: 24px 10px 10px 10px;
   border-radius: 5px;
   &::before {
     content: $blocklabelname;
@@ -91,7 +91,7 @@ p {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgb(0, 174, 255);
+    background-color: rgb(18, 10, 89);
     color: #FFF;
     padding: 2px 5px;
     border-radius: 0 0 3px 0;
@@ -103,6 +103,12 @@ p {
   @include blocklabel('Section Group');
   padding: vars.$gap-space;
   margin-bottom: 1em;
+}
+.wp-block-group > .wp-block-group {
+  border: 2px solid rgb(0, 174, 255);
+  &::before {
+    background-color: rgb(0, 174, 255);
+  }
 }
 .wp-block-group.has-synthesis-blue-background-color {
   @include blocklabel('Section Group Blue Background')
@@ -292,4 +298,23 @@ p {
 }
 .fade-out-bottom {
   @include mixins.transparent-fade-out-bottom;
+}
+
+.investment-portfolio {
+  @include blocklabel('investment-portfolio');
+}
+.investment-portfolio-image {
+  @include blocklabel('investment-portfolio-image');
+}
+.investment-portfolio-logo {
+  @include blocklabel('investment-portfolio-logo');
+}
+.investment-portfolio-description {
+  @include blocklabel('investment-portfolio-description');
+}
+.investment-portfolio-factsheet {
+  @include blocklabel('investment-portfolio-factsheet');
+}
+.investment-portfolio-tech-icons {
+  @include blocklabel('investment-portfolio-tech-icons');
 }

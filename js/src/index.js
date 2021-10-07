@@ -25,20 +25,12 @@ document.querySelectorAll('input[type="email"]').forEach( (input) => {
   input.parentElement.insertBefore(ins, input);
 });
 
+// Hacking the polygon style appearance of input type submit and fields *sigh*
 document.querySelectorAll('input[type="submit"], input[type="button"], input[type="reset"]').forEach( (input) => {
   input.style.backgroundColor = "#FFFFFF00";
   input.style.position = "relative";
   input.outerHTML = '<div style="position:relative; display: inline-block;"><div class="fake-submit-input-bg"></div>' + input.outerHTML + "</div>";
-  // let ins = document.createElement('div');
-  // ins.classList.add('fake-submit-input-bg');
-  // input.parentElement.insertBefore(ins, input);
 });
-
-// let newsletterBtn = document.querySelector('#mc-embedded-subscribe-form input[type="submit"]');
-// newsletterBtn.style.backgroundColor = "#FFFFFF00";
-// let newsletterBtnIns = document.createElement('div');
-// newsletterBtnIns.classList.add('fake-submit-input-bg');
-// newsletterBtn.parentElement.insertBefore(newsletterBtnIns, newsletterBtn);
 
 if ( document.querySelector('.sideScroll-scroller') || document.querySelector('.blocks-gallery-grid')  ) {
   sideScrollNavigation();
