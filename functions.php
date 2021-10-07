@@ -251,6 +251,37 @@ function outputbuffer_earlier_investments(){
 }
 add_shortcode( 'earlier-investments', 'outputbuffer_earlier_investments' ); 
 
+//Shortcode for displaying Investment Portfolio
+function display_investment_portfolio() {
+  echo '<div class="investment-portfolio">';
+      $args = array(  
+        'post_type' => 'investment-portfolio',
+        'post_status' => 'publish',
+        'posts_per_page' => -1, 
+        //'orderby’ => 'title', 
+        //'order’ => 'ASC', 
+      );
+      global $more;
+      $loop = new WP_Query( $args ); 
+            
+      while ( $loop->have_posts() ) { 
+        $loop->the_post();
+    echo '<div class="investment-portfolio">
+            <div class="investment-portfolio-image">'.get_the_post_thumbnail(null, 'scrollimg').'</div>
+            <div class="investment-portfolio-text">'.get_the_content('', true).'</div> 
+          </div>';
+          $more = 1;
+      }
+      wp_reset_postdata(); 
+  echo '</div>';
+}
+function outputbuffer_investment_portfolio(){
+    ob_start();             // turn on output buffering
+    display_investment_portfolio(); // put the output to the buffer
+    return ob_get_clean();  // capture and return the buffer
+}
+add_shortcode( 'investment-portfolio', 'outputbuffer_investment_portfolio' ); 
+
 /**
  * Get Dependency Plugins for theme
  */
