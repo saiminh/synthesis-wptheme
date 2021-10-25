@@ -2,6 +2,7 @@
 @use '../utilities/mq';
 @use '../utilities/mixins';
 @use '../typography';
+@use '../pages/investments';
 
 h1, h2 {
   font-size: 31px;
@@ -122,10 +123,10 @@ p {
   @include blocklabel('Image 100% on mobile, 33% on tablet')
 }
 .synthesis-newsletter-subscribe {
-  @include blocklabel('Newsletter Subscription');
+  @include blocklabel('synthesis-newsletter-subscribe');
 }
 .home-synthesis-icons {
-  @include blocklabel('Home Synthesis icons');
+  @include blocklabel('home-synthesis-icons');
   &::after {
     content: '';
     display: block;
@@ -137,15 +138,15 @@ p {
   filter: brightness(100);
 } 
 .scrolling-flex-container {
-  @include blocklabel('Scrolling container');
+  @include blocklabel('scrolling-flex-container');
 }
 .food-technologies {
-  @include blocklabel('Food Technologies');
+  @include blocklabel('food-technologies');
   display: flex;
 }
 .food-technology {
   flex-basis: 33.3%;
-  @include blocklabel('Tech');
+  @include blocklabel('food-technology');
 }
 .food-technology-title{
   margin: 0;
@@ -159,15 +160,15 @@ p {
   }
 }
 .food-technology-icons {
-  @include blocklabel('Food Tech Icons');
+  @include blocklabel('food-technology-icons');
   display: flex;
 }
 .focus-protein-spectrum {
-  @include blocklabel('Protein Spectrum');
+  @include blocklabel('focus-protein-spectrum');
   display: flex;
 }
 .focus-protein-spectrum-column {
-  @include blocklabel('Protein Spectrum Column');
+  @include blocklabel('focus-protein-spectrum-column');
   flex-basis: 25%;
   & p {
     margin: 0;
@@ -248,22 +249,22 @@ p {
 
 //teammembers
 .team-teammembers {
-  @include blocklabel('Team Members');
+  @include blocklabel('team-teammembers');
   display: flex;
 }
 .team-teammember {
-  @include blocklabel('Team Member');
+  @include blocklabel('team-teammember');
   flex-basis: 33.3%;
 }
 .team-teammember-title {
-  @include blocklabel('title');
+  @include blocklabel('team-teammember-title');
   & p {
     font-size: 1rem;
     margin: 0 0 1em 0;
   }
 }
 .team-teammember-quote {
-  @include blocklabel('quote');
+  @include blocklabel('team-teammember-quote');
   margin: 0 0 1em 0;
   & p {
     font-size: 1rem;
@@ -271,25 +272,25 @@ p {
   }
 }
 .team-teammember-vita {
-  @include blocklabel('Vita');
+  @include blocklabel('team-teammember-vita');
   & p {
     font-size: 1rem;
     margin: 0 0 1em 0;
   }
 }
 .team-teammember-sociallinks {
-  @include blocklabel('Links');
+  @include blocklabel('team-teammember-sociallinks');
   & p {
     font-size: 1rem;
     margin: 0 0 1em 0;
   }
 }
 .scroll-gallery {
-  @include blocklabel('Scroll-gallery');
+  @include blocklabel('scroll-gallery');
   display: flex; 
 }
 .focus-howwedoit-columns {
-  @include blocklabel('How we do it Columns');
+  @include blocklabel('focus-howwedoit-columns');
   & .wp-block-column p {
     border-top: 1px solid;
     padding-top: .5em;
@@ -300,21 +301,32 @@ p {
   @include mixins.transparent-fade-out-bottom;
 }
 
-.investment-portfolio {
-  @include blocklabel('investment-portfolio');
+.investment-portfolio-piece {
+  @include blocklabel('investment-portfolio-piece');
+  & p {
+    font-size: 18px;
+    @include mq.for-tablet-landscape-up {
+      font-size: 19px;
+    }
+  }
 }
-.investment-portfolio-image {
-  @include blocklabel('investment-portfolio-image');
+.investment-portfolio-piece-image {
+  @include blocklabel('investment-portfolio-piece-image');
 }
-.investment-portfolio-logo {
-  @include blocklabel('investment-portfolio-logo');
+.investment-portfolio-piece-logo {
+  @include blocklabel('investment-portfolio-piece-logo');
 }
-.investment-portfolio-description {
-  @include blocklabel('investment-portfolio-description');
+.investment-portfolio-piece-description {
+  @include blocklabel('investment-portfolio-piece-description');
 }
-.investment-portfolio-factsheet {
-  @include blocklabel('investment-portfolio-factsheet');
+.investment-portfolio-piece-factsheet {
+  @include blocklabel('investment-portfolio-piece-factsheet');
 }
-.investment-portfolio-tech-icons {
-  @include blocklabel('investment-portfolio-tech-icons');
+.investment-portfolio-piece-tech-icons {
+  @include blocklabel('investment-portfolio-piece-tech-icons');
+  grid-column: 1 / span 3;
+  display: block;
+  & > * {
+    width: 100%;
+  }
 }

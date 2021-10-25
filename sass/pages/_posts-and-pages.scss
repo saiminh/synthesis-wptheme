@@ -2,14 +2,6 @@
 @use '../utilities/mq';
 @use '../utilities/vars' as vars;
 
-body:not(.home, .focus-page, .investments-page, .team-page),
-.single-post {
-  & h1, & h2, & h3, & p {
-    @include mq.for-phone-only {
-      padding: 0 vars.$gap-space;
-    }  
-  }
-}
 .single-post {
   & .entry-footer,
   & .entry-content,

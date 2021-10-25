@@ -11,15 +11,19 @@
 .error404 .site-main > :first-child {
   margin-top: 150px;
 }
-.entry-content > * {
+.entry-content > div,
+.entry-content > section {
   margin-bottom: 10rem;
 }
 .entry-content > :last-child {
   margin-bottom: 0;
 }
+// All containers that have the basic layout:
 .entry-content,
-.error404 .site-main {
-  padding: vars.$gap-space;
+.error404 .site-main,
+.entry-footer,
+.blog .site-main {
+  padding: 0 vars.$gap-space;
 }
 body:not(.home) .entry-content > .wp-block-group > .wp-block-columns {
   @include mixins.default-page-margins;

@@ -266,10 +266,7 @@ function display_investment_portfolio() {
             
       while ( $loop->have_posts() ) { 
         $loop->the_post();
-    echo '<div class="investment-portfolio">
-            <div class="investment-portfolio-image">'.get_the_post_thumbnail(null, 'scrollimg').'</div>
-            <div class="investment-portfolio-text">'.get_the_content('', true).'</div> 
-          </div>';
+        the_content();
           $more = 1;
       }
       wp_reset_postdata(); 

@@ -10,7 +10,6 @@
 .home .hero-home {
   margin: - vars.$gap-space;
   margin-bottom: vars.$gap-space;
-  min-height: 100vh ;
   min-height: calc(var(--vh, 1vh) * 100);
   position: relative;  
   padding: 4rem vars.$gap-space vars.$gap-space vars.$gap-space;
@@ -20,8 +19,9 @@
   background-color: vars.$synth-blue;
   color: white;
   text-align: center;
-  // -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 95%);
-  // mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 95%);
+  @include mq.for-tablet-landscape-up {
+    min-height: 100vh;
+  }
   & .hero-bg-gradient {
     position: absolute;
     top: 0;

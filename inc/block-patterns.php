@@ -120,6 +120,65 @@ if ( function_exists( 'register_block_pattern' ) ) {
         '
       )
     );
+
+    //Investment Portfolio 
+    register_block_pattern(
+      'synthesis2021/investment-portfolio',
+      array(
+        'title'         => esc_html( 'Investment Portfolio Piece', 'synthesis2021' ),
+        'description'         => esc_html( 'Block for one investment portfolio piece', 'synthesis2021' ),
+        'categories'    => array( 'synthesis2021' ),
+        'viewportWidth' => 300,
+        'content'       => '
+        <!-- wp:group {"className":"investment-portfolio-piece"} -->
+        <div class="wp-block-group investment-portfolio-piece"><!-- wp:group {"className":"investment-portfolio-piece-image"} -->
+        <div class="wp-block-group investment-portfolio-piece-image"><!-- wp:image {"id":322,"sizeSlug":"large","linkDestination":"none"} -->
+        <figure class="wp-block-image size-large"><img src="" alt=""/></figure>
+        <!-- /wp:image --></div>
+        <!-- /wp:group -->
+
+        <!-- wp:group {"className":"investment-portfolio-piece-logo"} -->
+        <div class="wp-block-group investment-portfolio-piece-logo"><!-- wp:image {"id":42,"sizeSlug":"large","linkDestination":"none"} -->
+        <figure class="wp-block-image size-large"><img src="" alt="" /></figure>
+        <!-- /wp:image --></div>
+        <!-- /wp:group -->
+
+        <!-- wp:group {"className":"investment-portfolio-piece-description"} -->
+        <div class="wp-block-group investment-portfolio-piece-description"><!-- wp:paragraph -->
+        <p>Formo is a food biotech company on a mission to bring the next generation of sustainable, healthy, and equitable dairy products to consumers.</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Formo, formerly known as LegenDairy Foods, is Europe\'s first cellular agriculture company developing cultivated dairy products - that is dairy which is based on real, animal-free milk proteins produced using precision fermentation.</p>
+        <!-- /wp:paragraph --></div>
+        <!-- /wp:group -->
+
+        <!-- wp:group {"className":"investment-portfolio-piece-factsheet"} -->
+        <div class="wp-block-group investment-portfolio-piece-factsheet"><!-- wp:paragraph -->
+        <p>2021<br>Precision Fermentation<br>Berlin</p>
+        <!-- /wp:paragraph -->
+
+        <!-- wp:paragraph -->
+        <p>Formo.bio</p>
+        <!-- /wp:paragraph --></div>
+        <!-- /wp:group -->
+
+        <!-- wp:group {"className":"investment-portfolio-piece-tech-icons"} -->
+        <div class="wp-block-group investment-portfolio-piece-tech-icons"><!-- wp:html -->
+        <lottie-player autoplay="" loop="" mode="normal" src="../wp-content/themes/synthesiscapital/assets/lottie/Plant-based-white.json" style="width: 45px">
+        </lottie-player>
+        <!-- /wp:html -->
+
+        <!-- wp:html -->
+        <lottie-player autoplay="" loop="" mode="normal" src="../wp-content/themes/synthesiscapital/assets/lottie/Cultivated-white.json" style="width: 45px">
+        </lottie-player>
+        <!-- /wp:html -->
+        
+        <!-- /wp:group --></div>
+        <!-- /wp:group --></div>
+        '
+      )
+    );
 }
 
 

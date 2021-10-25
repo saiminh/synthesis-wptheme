@@ -15,20 +15,22 @@
 get_header();
 ?>
 
-  <?php if ( !is_singular() ) : ?>
-    <h1 class="blog-header">Some of our latest thinking and portfolio news…</h1>
-  <?php endif; ?>
 
-	<main id="primary" class="site-main">
+<main id="primary" class="site-main">
+    <?php if ( !is_singular() ) : ?>
+      <h1 class="blog-header">Some of our latest thinking and portfolio news…</h1>
+    <?php endif; ?>
 
 		<?php
 		if ( have_posts() ) :
 
-			if ( is_home() && ! is_front_page() ) :
+			if ( is_home() && !is_front_page() ) :
 				?>
 				<header>
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 				</header>
+
+        <div class="articles">
 				<?php
 			endif;
 
@@ -53,7 +55,7 @@ get_header();
 
 		endif;
 		?>
-
+        </div>
 	</main><!-- #main -->
 
 <?php

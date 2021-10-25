@@ -1,0 +1,103 @@
+@use '../utilities/mq';
+@use '../utilities/mixins';
+@use '../utilities/vars';
+
+.investment-portfolio-piece {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-row-gap: 1.5em;
+  row-gap: 1.5em;
+  grid-column-gap: 1.5em;
+  column-gap: 1.5em;
+  @include mq.for-tablet-landscape-up {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-row-gap: 2em;
+    row-gap: 2em;
+    grid-column-gap: 2em;
+    column-gap: 2em;
+  }
+}
+.investment-portfolio-piece .wp-block-image {
+    margin: 0;
+  }
+.investment-portfolio-piece p {
+  font-size: 18px;
+  @include mq.for-tablet-landscape-up {
+    font-size: 19px;
+  }
+}
+.investment-portfolio-piece img, 
+.investment-portfolio-piece svg {
+  max-width: 100%;
+  height: auto;
+}
+// .investment-portfolio-piece-image,
+// .investment-portfolio-piece-logo,
+// .investment-portfolio-piece-description,
+// .investment-portfolio-piece-factsheet, 
+// .investment-portfolio-piece-tech-icons {
+//   padding: 1rem 0;
+// }
+.investment-portfolio-piece-image {
+  grid-column: 1 / span 2;
+  grid-row: 1 / 1;
+  border-bottom: 1px solid vars.$synth-blue;
+  @include mq.for-tablet-landscape-up {
+    grid-column: 1 / span 3;
+  }
+}
+.investment-portfolio-piece-image .wp-block-image img {
+  width: 100%;
+  @include mixins.transparent-fade-out-bottom;
+}
+.investment-portfolio-piece-logo {
+  grid-column: 1 / 1;
+  grid-row: 2 / 2;
+  @include mq.for-tablet-landscape-up {
+    grid-column: 1 / 1;
+    grid-row: 2 / 2;
+  }
+}
+.investment-portfolio-piece-logo .wp-block-image {
+  @include mq.for-tablet-landscape-up {
+    max-width: 144px;
+  }
+}
+.investment-portfolio-piece-description {
+  grid-column: 1 / span 2;
+  grid-row: 4 / 4;
+  @include mq.for-tablet-landscape-up {
+    grid-column: 2 / 2;
+    grid-row: 2 / 2;
+  }
+}
+.investment-portfolio-piece-factsheet {
+  grid-column: 2 / 2;
+  grid-row: 2 / 2;
+  @include mq.for-tablet-landscape-up {
+    grid-column: 3 / 3;
+    grid-row: 2 / 2;
+  }
+}
+.investment-portfolio-piece-factsheet p {
+  font-size: 16px;
+  @include mq.for-tablet-landscape-up {
+    font-size: 18px;
+  }
+}
+.investment-portfolio-piece-tech-icons {
+  display: flex;
+  grid-column: 1 / span 2;
+  grid-row: 3 / 3;
+  border-bottom: 1px solid vars.$synth-blue;
+  @include mq.for-tablet-landscape-up {
+    grid-column: 3 / 3;
+    grid-row: 3 / 3;
+  }
+}
+.investment-portfolio-piece-tech-icons > * {
+  width: 32px;
+  height: auto;
+}

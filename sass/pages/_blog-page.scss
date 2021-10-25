@@ -2,29 +2,38 @@
 @use '../utilities/mq';
 @use '../utilities/vars' as vars;
 
-body.blog {
-  & h1, & h2, & h3, & p {
-    @include mq.for-phone-only {
-      padding: 0 vars.$gap-space;
-    }  
-  }
-}
 .blog-header {
   margin-top: 150px;
+  max-width: 100%;
 }
 .blog {
+  & .articles {
+    @include mq.for-tablet-landscape-up {
+      margin-left: 16.666%;
+      margin-right: 8.333%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+  & article {
+    margin-bottom: 4em;    
+    @include mq.for-tablet-landscape-up {
+      flex-basis: calc(45.8333%);
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+  }
+  & article:nth-child(3n + 1){
+    @include mq.for-tablet-landscape-up {
+      flex-basis: 100%;
+    }
+  }
   & .entry-footer,
   & .entry-content,
   & .post-thumbnail,
   & .entry-header  {
-    @include mq.for-tablet-portrait-up {
-      margin-left: 15%;
-      margin-right: 8%;
-    }
-    @include mq.for-tablet-landscape-up {
-      margin-left: 18%;
-      margin-right: 8%;
-    }
+    padding: 0;
     & p, & h1, & h2, & h3, & h4 {
       margin-left: 0;
     }
@@ -57,6 +66,12 @@ body.blog {
     }
   }
   & .entry-content {
+    & p {
+      font-size: 18px;
+      @include mq.for-tablet-landscape-up {
+        font-size: 21px;
+      }
+    }
     & :first-child{
       margin-top: 2em;
     }
