@@ -113,7 +113,7 @@ function cookieConsent(){
     },
     location: true,
     content: {
-      allow: 'Accept cookies',
+      allow: 'Accept Cookies',
       deny: 'Decline Cookies',
       link: 'Cookie Policy',
       href: '/cookie-policy',
