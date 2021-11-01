@@ -7,7 +7,6 @@
 h1, h2 {
   font-size: 31px;
   line-height: 85%;
-  text-indent: 1em;
   @include mq.for-tablet-portrait-up {
     font-size: 35px;
     line-height: .95;
@@ -15,6 +14,9 @@ h1, h2 {
   @include mq.for-tablet-landscape-up {
     font-size: 55px;
   }
+}
+.text-indent {
+  text-indent: 1em;
 }
 .entry-content > h1,
 .entry-content > h2,

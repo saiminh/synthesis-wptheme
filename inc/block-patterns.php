@@ -74,7 +74,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
       'synthesis2021/img-mob_full-tab_por_33_right',
       array(
         'title'         => esc_html( 'Image on right ', 'synthesis2021' ),
-        'description'         => esc_html( 'This image is full width on mobile and becomes a right aligned 33% wide image on tablets and bigger', 'synthesis2021' ),
+        'description'   => esc_html( 'This image is full width on mobile and becomes a right aligned 33% wide image on tablets and bigger', 'synthesis2021' ),
         'categories'    => array( 'synthesis2021' ),
         'viewportWidth' => 300,
         'content'       => '
@@ -126,20 +126,20 @@ if ( function_exists( 'register_block_pattern' ) ) {
       'synthesis2021/investment-portfolio',
       array(
         'title'         => esc_html( 'Investment Portfolio Piece', 'synthesis2021' ),
-        'description'         => esc_html( 'Block for one investment portfolio piece', 'synthesis2021' ),
+        'description'   => esc_html( 'Block for one investment portfolio piece', 'synthesis2021' ),
         'categories'    => array( 'synthesis2021' ),
         'viewportWidth' => 300,
         'content'       => '
         <!-- wp:group {"className":"investment-portfolio-piece"} -->
         <div class="wp-block-group investment-portfolio-piece"><!-- wp:group {"className":"investment-portfolio-piece-image"} -->
-        <div class="wp-block-group investment-portfolio-piece-image"><!-- wp:image {"id":322,"sizeSlug":"large","linkDestination":"none"} -->
+        <div class="wp-block-group investment-portfolio-piece-image"><!-- wp:image {"linkDestination":"none","className":"size-large"} -->
         <figure class="wp-block-image size-large"><img src="" alt=""/></figure>
         <!-- /wp:image --></div>
         <!-- /wp:group -->
 
         <!-- wp:group {"className":"investment-portfolio-piece-logo"} -->
-        <div class="wp-block-group investment-portfolio-piece-logo"><!-- wp:image {"id":42,"sizeSlug":"large","linkDestination":"none"} -->
-        <figure class="wp-block-image size-large"><img src="" alt="" /></figure>
+        <div class="wp-block-group investment-portfolio-piece-logo"><!-- wp:image {"linkDestination":"none","className":"size-large"} -->
+        <figure class="wp-block-image size-large"><img src="" alt=""/></figure>
         <!-- /wp:image --></div>
         <!-- /wp:group -->
 
@@ -149,33 +149,20 @@ if ( function_exists( 'register_block_pattern' ) ) {
         <!-- /wp:paragraph -->
 
         <!-- wp:paragraph -->
-        <p>Formo, formerly known as LegenDairy Foods, is Europe\'s first cellular agriculture company developing cultivated dairy products - that is dairy which is based on real, animal-free milk proteins produced using precision fermentation.</p>
+        <p>Formo, formerly known as LegenDairy Foods, is the first cellular agriculture company developing cultivated dairy products in Europe - that is dairy which is based on real, animal-free milk proteins produced using precision fermentation.</p>
         <!-- /wp:paragraph --></div>
         <!-- /wp:group -->
 
         <!-- wp:group {"className":"investment-portfolio-piece-factsheet"} -->
         <div class="wp-block-group investment-portfolio-piece-factsheet"><!-- wp:paragraph -->
-        <p>2021<br>Precision Fermentation<br>Berlin</p>
+        <p>2021<br>Precision Fermentation<br>🌺🌻🥀🌷🌼<br>Berlin</p>
         <!-- /wp:paragraph -->
 
         <!-- wp:paragraph -->
         <p>Formo.bio</p>
         <!-- /wp:paragraph --></div>
+        <!-- /wp:group --></div>
         <!-- /wp:group -->
-
-        <!-- wp:group {"className":"investment-portfolio-piece-tech-icons"} -->
-        <div class="wp-block-group investment-portfolio-piece-tech-icons"><!-- wp:html -->
-        <lottie-player autoplay="" loop="" mode="normal" src="../wp-content/themes/synthesiscapital/assets/lottie/Plant-based-white.json" style="width: 45px">
-        </lottie-player>
-        <!-- /wp:html -->
-
-        <!-- wp:html -->
-        <lottie-player autoplay="" loop="" mode="normal" src="../wp-content/themes/synthesiscapital/assets/lottie/Cultivated-white.json" style="width: 45px">
-        </lottie-player>
-        <!-- /wp:html -->
-        
-        <!-- /wp:group --></div>
-        <!-- /wp:group --></div>
         '
       )
     );

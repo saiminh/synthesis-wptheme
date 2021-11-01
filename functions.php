@@ -253,7 +253,7 @@ add_shortcode( 'earlier-investments', 'outputbuffer_earlier_investments' );
 
 //Shortcode for displaying Investment Portfolio
 function display_investment_portfolio() {
-  echo '<div class="investment-portfolio">';
+  echo '<div class="scrolling-flex-container"><div class="investment-portfolio sideScroll-scroller">';
       $args = array(  
         'post_type' => 'investment-portfolio',
         'post_status' => 'publish',
@@ -270,7 +270,7 @@ function display_investment_portfolio() {
           $more = 1;
       }
       wp_reset_postdata(); 
-  echo '</div>';
+  echo '</div></div>';
 }
 function outputbuffer_investment_portfolio(){
     ob_start();             // turn on output buffering
