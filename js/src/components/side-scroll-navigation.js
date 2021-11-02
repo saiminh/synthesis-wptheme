@@ -71,17 +71,16 @@ function sideScrollNavigation(){
       prevBtn.addEventListener('click', prevBtnHandler);
 
       function prevBtnHandler() {
-      
         function reAddListener() {
           // scroller.style.scrollSnapType = 'x mandatory';
-          console.log('newscrollpos: ' + scroller.scrollLeft);
+          // console.log('newscrollpos: ' + scroller.scrollLeft);
           prevBtn.addEventListener( 'click', prevBtnHandler );
         }
       
         prevBtn.removeEventListener( 'click', prevBtnHandler );
         scroller.style.scrollSnapType = 'none';
 
-        for( let i=0; i <= scroller.children.length; i++ ){
+        for( let i=0; i < scroller.children.length; i++ ){
           if ( scroller.children[i].getBoundingClientRect().x < 0 ) {
             nextSlideX = Math.round(scroller.children[i].getBoundingClientRect().x);
             console.log('x: '+ nextSlideX );
