@@ -9,8 +9,7 @@
 .blog {
   & .articles {
     @include mq.for-tablet-landscape-up {
-      margin-left: 16.666%;
-      margin-right: 8.333%;
+      margin-right: vars.$col-2;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -45,6 +44,9 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: .5em;
+    @include mq.for-tablet-landscape-up {
+      flex-direction: row-reverse;
+    }
     & > * {
       align-self: flex-start;
     }
@@ -95,5 +97,13 @@
   & img {
     width: 100%;
     @include mixins.transparent-fade-out-bottom;
+  }
+  @include mq.for-tablet-landscape-up {
+    overflow: hidden;
+    height: 665px;
+    & img {
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }

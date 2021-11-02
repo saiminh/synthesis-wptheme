@@ -282,128 +282,6 @@ a:active {
   outline: none;
 }
 
-.investment-portfolio-piece {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto auto;
-  grid-row-gap: 1.5em;
-  row-gap: 1.5em;
-  grid-column-gap: 1.5em;
-  column-gap: 1.5em;
-}
-@media (min-width: 900px) {
-  .investment-portfolio-piece {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    grid-row-gap: 2em;
-    row-gap: 2em;
-    grid-column-gap: 2em;
-    column-gap: 2em;
-  }
-}
-
-.investment-portfolio-piece .wp-block-image {
-  margin: 0;
-}
-
-.investment-portfolio-piece p {
-  font-size: 18px;
-}
-@media (min-width: 900px) {
-  .investment-portfolio-piece p {
-    font-size: 19px;
-  }
-}
-
-.investment-portfolio-piece img,
-.investment-portfolio-piece svg {
-  max-width: 100%;
-  height: auto;
-}
-
-.investment-portfolio-piece-image {
-  grid-column: 1/span 2;
-  grid-row: 1/1;
-  border-bottom: 1px solid #120A59;
-}
-@media (min-width: 900px) {
-  .investment-portfolio-piece-image {
-    grid-column: 1/span 3;
-  }
-}
-
-.investment-portfolio-piece-image .wp-block-image img {
-  width: 100%;
-  -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
-  mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
-}
-
-.investment-portfolio-piece-logo {
-  grid-column: 1/1;
-  grid-row: 2/2;
-}
-@media (min-width: 900px) {
-  .investment-portfolio-piece-logo {
-    grid-column: 1/1;
-    grid-row: 2/2;
-  }
-}
-
-@media (min-width: 900px) {
-  .investment-portfolio-piece-logo .wp-block-image {
-    max-width: 144px;
-  }
-}
-
-.investment-portfolio-piece-description {
-  grid-column: 1/span 2;
-  grid-row: 4/4;
-}
-@media (min-width: 900px) {
-  .investment-portfolio-piece-description {
-    grid-column: 2/2;
-    grid-row: 2/2;
-  }
-}
-
-.investment-portfolio-piece-factsheet {
-  grid-column: 2/2;
-  grid-row: 2/2;
-}
-@media (min-width: 900px) {
-  .investment-portfolio-piece-factsheet {
-    grid-column: 3/3;
-    grid-row: 2/2;
-  }
-}
-
-.investment-portfolio-piece-factsheet p {
-  font-size: 16px;
-}
-@media (min-width: 900px) {
-  .investment-portfolio-piece-factsheet p {
-    font-size: 18px;
-  }
-}
-
-.investment-portfolio-piece-tech-icons {
-  display: flex;
-  grid-column: 1/span 2;
-  grid-row: 3/3;
-  border-bottom: 1px solid #120A59;
-}
-@media (min-width: 900px) {
-  .investment-portfolio-piece-tech-icons {
-    grid-column: 3/3;
-    grid-row: 3/3;
-  }
-}
-
-.investment-portfolio-piece-tech-icons > * {
-  width: 32px;
-  height: auto;
-}
-
 h1, h2 {
   font-size: 31px;
   line-height: 85%;
@@ -683,6 +561,93 @@ p {
 }
 .scrolling-flex-container::before {
   content: "scrolling-flex-container";
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #120a59;
+  color: #FFF;
+  padding: 2px 5px;
+  border-radius: 0 0 3px 0;
+  z-index: 4;
+}
+
+.sideScroll-scroller {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.home-investments-piece {
+  border: 2px solid #120a59;
+  padding: 24px 10px 10px 10px;
+  border-radius: 5px;
+  flex-basis: 25%;
+}
+.home-investments-piece::before {
+  content: "home-investments-piece";
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #120a59;
+  color: #FFF;
+  padding: 2px 5px;
+  border-radius: 0 0 3px 0;
+  z-index: 4;
+}
+
+.home-investments-piece-image {
+  border: 2px solid #120a59;
+  padding: 24px 10px 10px 10px;
+  border-radius: 5px;
+}
+.home-investments-piece-image::before {
+  content: "home-investments-piece-image";
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #120a59;
+  color: #FFF;
+  padding: 2px 5px;
+  border-radius: 0 0 3px 0;
+  z-index: 4;
+}
+
+.home-investments-piece-logo {
+  border: 2px solid #120a59;
+  padding: 24px 10px 10px 10px;
+  border-radius: 5px;
+}
+.home-investments-piece-logo::before {
+  content: "home-investments-piece-logo";
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #120a59;
+  color: #FFF;
+  padding: 2px 5px;
+  border-radius: 0 0 3px 0;
+  z-index: 4;
+}
+
+.home-investments-piece-text {
+  border: 2px solid #120a59;
+  padding: 24px 10px 10px 10px;
+  border-radius: 5px;
+  font-size: 23px;
+}
+.home-investments-piece-text::before {
+  content: "home-investments-piece-text";
   font-size: 12px;
   font-style: italic;
   font-weight: 400;

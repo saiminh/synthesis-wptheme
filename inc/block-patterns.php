@@ -62,7 +62,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
         'categories'    => array( 'synthesis2021' ),
         'viewportWidth' => 1440,
         'content'       => '
-          <!-- wp:image {"id":42,"sizeSlug":"large","linkDestination":"none","className":"investment-logo"} -->
+          <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"investment-logo"} -->
           <figure class="wp-block-image size-large investment-logo"><img alt=""/></figure>
           <!-- /wp:image -->
         '
@@ -161,6 +161,134 @@ if ( function_exists( 'register_block_pattern' ) ) {
         <!-- wp:paragraph -->
         <p>Formo.bio</p>
         <!-- /wp:paragraph --></div>
+        <!-- /wp:group --></div>
+        <!-- /wp:group -->
+        '
+      )
+    );
+    
+    //Investment Portfolio 
+    register_block_pattern(
+      'synthesis2021/investment-portfolio-home',
+      array(
+        'title'         => esc_html( 'Home Investment Portfolio', 'synthesis2021' ),
+        'description'   => esc_html( 'Block for 8 investment portfolio pieces on home page', 'synthesis2021' ),
+        'categories'    => array( 'synthesis2021' ),
+        'viewportWidth' => 300,
+        'content'       => '
+        <!-- wp:group {"className":"home-investment-carousel scrolling-flex-container"} -->
+        <div class="wp-block-group home-investment-carousel scrolling-flex-container"><!-- wp:group {"className":"sideScroll-scroller"} -->
+        <div class="wp-block-group sideScroll-scroller"><!-- wp:group {"className":"home-investments-piece"} -->
+        <div class="wp-block-group home-investments-piece"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"home-investments-piece-image"} -->
+        <figure class="wp-block-image size-large home-investments-piece-image"><img src="" alt=""/></figure>
+        <!-- /wp:image -->
+
+        <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"home-investments-piece-logo"} -->
+        <figure class="wp-block-image size-large home-investments-piece-logo"><img src="" alt=""/></figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph {"className":"home-investments-piece-text"} -->
+        <p class="home-investments-piece-text">Precision Fermentation<br>Berlin<br>2020</p>
+        <!-- /wp:paragraph --></div>
+        <!-- /wp:group -->
+
+        <!-- wp:group {"className":"home-investments-piece"} -->
+        <div class="wp-block-group home-investments-piece"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"home-investments-piece-image"} -->
+        <figure class="wp-block-image size-large home-investments-piece-image"><img src="" alt=""/></figure>
+        <!-- /wp:image -->
+
+        <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"home-investments-piece-logo"} -->
+        <figure class="wp-block-image size-large home-investments-piece-logo"><img src="" alt=""/></figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph {"className":"home-investments-piece-text"} -->
+        <p class="home-investments-piece-text">Precision Fermentation<br>Berlin<br>2020</p>
+        <!-- /wp:paragraph --></div>
+        <!-- /wp:group -->
+
+        <!-- wp:group {"className":"home-investments-piece"} -->
+        <div class="wp-block-group home-investments-piece"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"home-investments-piece-image"} -->
+        <figure class="wp-block-image size-large home-investments-piece-image"><img src="" alt=""/></figure>
+        <!-- /wp:image -->
+
+        <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"home-investments-piece-logo"} -->
+        <figure class="wp-block-image size-large home-investments-piece-logo"><img src="" alt=""/></figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph {"className":"home-investments-piece-text"} -->
+        <p class="home-investments-piece-text">Precision Fermentation<br>Berlin<br>2020</p>
+        <!-- /wp:paragraph --></div>
+        <!-- /wp:group -->
+
+        <!-- wp:group {"className":"home-investments-piece"} -->
+        <div class="wp-block-group home-investments-piece"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"home-investments-piece-image"} -->
+        <figure class="wp-block-image size-large home-investments-piece-image"><img src="" alt=""/></figure>
+        <!-- /wp:image -->
+
+        <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"home-investments-piece-logo"} -->
+        <figure class="wp-block-image size-large home-investments-piece-logo"><img src="" alt=""/></figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph {"className":"home-investments-piece-text"} -->
+        <p class="home-investments-piece-text">Precision Fermentation<br>Berlin<br>2020</p>
+        <!-- /wp:paragraph --></div>
+        <!-- /wp:group -->
+
+        <!-- wp:group {"className":"home-investments-piece"} -->
+        <div class="wp-block-group home-investments-piece"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"home-investments-piece-image"} -->
+        <figure class="wp-block-image size-large home-investments-piece-image"><img src="" alt=""/></figure>
+        <!-- /wp:image -->
+
+        <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"home-investments-piece-logo"} -->
+        <figure class="wp-block-image size-large home-investments-piece-logo"><img src="" alt=""/></figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph {"className":"home-investments-piece-text"} -->
+        <p class="home-investments-piece-text">Precision Fermentation<br>Berlin<br>2020</p>
+        <!-- /wp:paragraph --></div>
+        <!-- /wp:group -->
+
+        <!-- wp:group {"className":"home-investments-piece"} -->
+        <div class="wp-block-group home-investments-piece"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"home-investments-piece-image"} -->
+        <figure class="wp-block-image size-large home-investments-piece-image"><img src="" alt=""/></figure>
+        <!-- /wp:image -->
+
+        <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"home-investments-piece-logo"} -->
+        <figure class="wp-block-image size-large home-investments-piece-logo"><img src="" alt=""/></figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph {"className":"home-investments-piece-text"} -->
+        <p class="home-investments-piece-text">Precision Fermentation<br>Berlin<br>2020</p>
+        <!-- /wp:paragraph --></div>
+        <!-- /wp:group -->
+
+        <!-- wp:group {"className":"home-investments-piece"} -->
+        <div class="wp-block-group home-investments-piece"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"home-investments-piece-image"} -->
+        <figure class="wp-block-image size-large home-investments-piece-image"><img src="" alt=""/></figure>
+        <!-- /wp:image -->
+
+        <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"home-investments-piece-logo"} -->
+        <figure class="wp-block-image size-large home-investments-piece-logo"><img src="" alt=""/></figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph {"className":"home-investments-piece-text"} -->
+        <p class="home-investments-piece-text">Precision Fermentation<br>Berlin<br>2020</p>
+        <!-- /wp:paragraph --></div>
+        <!-- /wp:group -->
+
+        <!-- wp:group {"className":"home-investments-piece"} -->
+        <div class="wp-block-group home-investments-piece"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"home-investments-piece-image"} -->
+        <figure class="wp-block-image size-large home-investments-piece-image"><img src="" alt=""/></figure>
+        <!-- /wp:image -->
+
+        <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"home-investments-piece-logo"} -->
+        <figure class="wp-block-image size-large home-investments-piece-logo"><img src="" alt=""/></figure>
+        <!-- /wp:image -->
+
+        <!-- wp:paragraph {"className":"home-investments-piece-text"} -->
+        <p class="home-investments-piece-text">Precision Fermentation<br>Berlin<br>2020</p>
+        <!-- /wp:paragraph --></div>
+        <!-- /wp:group --></div>
         <!-- /wp:group --></div>
         <!-- /wp:group -->
         '

@@ -1348,13 +1348,13 @@ ul.menu .current_page_item a:hover {
 }
 
 .investment-portfolio-piece {
-  scroll-snap-align: start;
+  scroll-snap-align: center;
   flex-basis: calc(100% - 30px);
   flex-shrink: 0;
   padding-left: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: auto auto 1fr;
   grid-row-gap: 1.5em;
   row-gap: 1.5em;
   grid-column-gap: 1.5em;
@@ -1365,7 +1365,7 @@ ul.menu .current_page_item a:hover {
     scroll-snap-align: center;
     flex-basis: calc( 100vw - 16.6666666667vw);
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto 1fr;
     grid-row-gap: 2em;
     row-gap: 2em;
     grid-column-gap: 2em;
@@ -1378,11 +1378,17 @@ ul.menu .current_page_item a:hover {
 @media (min-width: 900px) {
   .investment-portfolio-piece:first-child {
     flex-basis: calc(100vw - 8.3333333333vw - 20px );
-    padding-left: calc( 8.3333333333vw );
+    padding-left: calc( 8.3333333333vw + 20px );
   }
 }
 .investment-portfolio-piece:last-child {
   padding-right: 20px;
+  flex-basis: calc(100% - 30px + 20px);
+}
+@media (min-width: 900px) {
+  .investment-portfolio-piece:last-child {
+    flex-basis: calc( 100vw - 16.6666666667vw + 20px );
+  }
 }
 
 .investment-portfolio-piece .wp-block-image {
@@ -1415,10 +1421,22 @@ ul.menu .current_page_item a:hover {
   }
 }
 
-.investment-portfolio-piece-image .wp-block-image img {
-  width: 100%;
+.investment-portfolio-piece-image .wp-block-image {
+  height: 185px;
+  overflow: hidden;
   -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
   mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
+}
+@media (min-width: 900px) {
+  .investment-portfolio-piece-image .wp-block-image {
+    height: 465px;
+  }
+}
+
+.investment-portfolio-piece-image .wp-block-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .investment-portfolio-piece-logo {
@@ -1432,6 +1450,9 @@ ul.menu .current_page_item a:hover {
   }
 }
 
+.investment-portfolio-piece-logo .wp-block-image {
+  max-width: 75%;
+}
 @media (min-width: 900px) {
   .investment-portfolio-piece-logo .wp-block-image {
     max-width: 144px;
@@ -1444,8 +1465,8 @@ ul.menu .current_page_item a:hover {
 }
 @media (min-width: 900px) {
   .investment-portfolio-piece-description {
-    grid-column: 2/2;
-    grid-row: 2/2;
+    grid-column: 2/span 2;
+    grid-row: 2/span 2;
   }
 }
 
@@ -1455,8 +1476,8 @@ ul.menu .current_page_item a:hover {
 }
 @media (min-width: 900px) {
   .investment-portfolio-piece-factsheet {
-    grid-column: 3/3;
-    grid-row: 2/2;
+    grid-column: 1/1;
+    grid-row: 3/3;
   }
 }
 .investment-portfolio-piece-factsheet > :last-child {
@@ -2639,6 +2660,113 @@ ul.menu .current_page_item a:hover {
   z-index: 6 !important;
 }
 
+.home-investment-carousel .sideScroll-scroller {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0;
+  margin-left: 0;
+  margin-bottom: 2em;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+@media (min-width: 900px) {
+  .home-investment-carousel .sideScroll-scroller {
+    margin-bottom: 4em;
+  }
+}
+.home-investment-carousel .sideScroll-scroller::-webkit-scrollbar {
+  /* Chrome, Safari, Opera */
+  display: none;
+}
+
+.home-investments-piece {
+  scroll-snap-align: center;
+  flex-basis: calc(100% - 30px);
+  flex-shrink: 0;
+  padding-left: 20px;
+}
+@media (min-width: 900px) {
+  .home-investments-piece {
+    scroll-snap-align: center;
+    flex-basis: 335px;
+  }
+}
+.home-investments-piece:first-child {
+  padding-left: 20px;
+}
+@media (min-width: 900px) {
+  .home-investments-piece:first-child {
+    flex-basis: calc( 335px + 8.3333333333vw);
+    padding-left: calc( 8.3333333333vw + 20px );
+  }
+}
+.home-investments-piece:last-child {
+  padding-right: 20px;
+  flex-basis: calc(100% - 30px + 20px);
+}
+@media (min-width: 900px) {
+  .home-investments-piece:last-child {
+    flex-basis: calc( 335px + 20px );
+  }
+}
+
+.home-investments-piece-image {
+  height: 185px;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
+  mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
+}
+@media (min-width: 900px) {
+  .home-investments-piece-image {
+    height: 415px;
+  }
+}
+
+@media (min-width: 900px) {
+  .home-investments-piece:nth-child(2n) .home-investments-piece-image {
+    height: 285px;
+    margin-top: 130px;
+  }
+}
+
+.home-investments-piece-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-investments-piece-logo {
+  max-height: 52px;
+  max-width: 200px;
+  display: flex;
+  align-items: center;
+}
+.home-investments-piece-logo > img, .home-investments-piece-logo > svg {
+  height: 52px;
+  width: auto;
+}
+
+.home-investments-piece-text {
+  font-size: 14px;
+  line-height: 0.94;
+  margin: 0;
+}
+@media (min-width: 600px) {
+  .home-investments-piece-text {
+    font-size: 20px;
+  }
+}
+@media (min-width: 900px) {
+  .home-investments-piece-text {
+    font-size: 23px;
+  }
+}
+
 .blog-header {
   margin-top: 150px;
   max-width: 100%;
@@ -2646,8 +2774,7 @@ ul.menu .current_page_item a:hover {
 
 @media (min-width: 900px) {
   .blog .articles {
-    margin-left: 16.666%;
-    margin-right: 8.333%;
+    margin-right: 16.6666666667vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -2681,6 +2808,11 @@ ul.menu .current_page_item a:hover {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.5em;
+}
+@media (min-width: 900px) {
+  .blog .entry-header {
+    flex-direction: row-reverse;
+  }
 }
 .blog .entry-header > * {
   align-self: flex-start;
@@ -2734,6 +2866,16 @@ ul.menu .current_page_item a:hover {
   width: 100%;
   -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
   mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0) 95%);
+}
+@media (min-width: 900px) {
+  .post-thumbnail {
+    overflow: hidden;
+    height: 665px;
+  }
+  .post-thumbnail img {
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 @media (min-width: 600px) {

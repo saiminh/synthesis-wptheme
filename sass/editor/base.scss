@@ -142,6 +142,24 @@ p {
 .scrolling-flex-container {
   @include blocklabel('scrolling-flex-container');
 }
+.sideScroll-scroller {
+  display: flex;
+  flex-wrap: wrap;
+}
+.home-investments-piece {
+  @include blocklabel('home-investments-piece');
+  flex-basis: 25%;
+}
+.home-investments-piece-image {
+  @include blocklabel('home-investments-piece-image');
+}
+.home-investments-piece-logo {
+  @include blocklabel('home-investments-piece-logo');
+}
+.home-investments-piece-text {
+  @include blocklabel('home-investments-piece-text');
+  font-size: 23px;
+}
 .food-technologies {
   @include blocklabel('food-technologies');
   display: flex;
