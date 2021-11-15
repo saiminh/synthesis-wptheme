@@ -4,6 +4,26 @@
 @use '../typography';
 @use '../pages/investments';
 
+@mixin blocklabel($blocklabelname) {
+  border: 2px solid rgb(18, 10, 89);
+  padding: 24px 10px 10px 10px;
+  border-radius: 5px;
+  &::before {
+    content: $blocklabelname;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 400;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(18, 10, 89);
+    color: #FFF;
+    padding: 2px 5px;
+    border-radius: 0 0 3px 0;
+    z-index: 4;
+  }
+}
+
 h1, h2 {
   font-size: 31px;
   line-height: 85%;
@@ -36,15 +56,6 @@ p {
   @include mq.for-tablet-portrait-up {
     font-size: 22px;
     line-height: .97;
-  }
-  @include mq.for-tablet-landscape-up {
-    font-size: 36px;
-  }
-}
-.entry-content > p,
-.entry-content > .wp-block-group > p {
-  @include mq.for-tablet-portrait-up {
-    max-width: 66.666%;
   }
 }
 .wp-block-column {
@@ -80,26 +91,6 @@ p {
     font-size: 24px;
   }
   color: vars.$synth-blue;
-}
-
-@mixin blocklabel($blocklabelname) {
-  border: 2px solid rgb(18, 10, 89);
-  padding: 24px 10px 10px 10px;
-  border-radius: 5px;
-  &::before {
-    content: $blocklabelname;
-    font-size: 12px;
-    font-style: italic;
-    font-weight: 400;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgb(18, 10, 89);
-    color: #FFF;
-    padding: 2px 5px;
-    border-radius: 0 0 3px 0;
-    z-index: 4;
-  }
 }
 
 .wp-block-group {
@@ -349,4 +340,18 @@ p {
   & > * {
     width: 100%;
   }
+}
+//blog posts:
+
+.hero-quote {
+  @include blocklabel('Additional CSS class: \'hero-quote\'');
+  font-size: 31px;
+  @include mq.for-tablet-landscape-up {
+    font-size: 36px;
+  }
+}
+.blog-image-columns-2 {
+  @include blocklabel('blog-image-columns-2');
+  margin-left: vars.$col-1;
+  margin-right: vars.$col-1;
 }

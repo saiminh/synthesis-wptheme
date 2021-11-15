@@ -1,0 +1,106 @@
+@use '../utilities/mixins';
+@use '../utilities/mq';
+@use '../utilities/vars' as vars;
+
+.single-team-members {
+  
+  .entry-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+    @include mq.for-tablet-landscape-up {
+      display: block;
+    }
+    & .team-member-name {
+      order: 1;
+      font-size: 31px;
+      margin-bottom: .5em;
+      @include mq.for-tablet-landscape-up {
+        font-size: 55px;
+        margin-bottom: .25em;
+      }
+    }
+    & .team-teammember-title {
+      order: 2;
+      font-size: 22px;
+      margin-top: 0;
+      margin-bottom: 1em;
+      opacity: .5;
+      @include mq.for-tablet-landscape-up {
+        font-size: 36px;
+        margin-bottom: 2em;
+      }
+    }
+    & .team-teammember-quote {
+      order: 3;
+      font-size: 18px;
+      margin-top: 0;
+      margin-bottom: 1.5em;
+      @include mq.for-tablet-landscape-up {
+        font-size: 26px;
+        line-height: 1;
+        margin-bottom: 2em;
+      }
+    }
+    & .team-member-photo {
+      order: 4;
+      margin-top: 0;
+      margin-bottom: 1em;
+      @include mq.for-tablet-landscape-up {
+        margin: 0;
+        position: absolute;
+        width: vars.$col-4;
+        left: vars.$col-6;   
+        height: 580px;
+        overflow: hidden     
+      }
+      & img {
+        @include mixins.transparent-fade-out-bottom;
+        @include mq.for-tablet-landscape-up {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    & .team-teammember-sociallinks {
+      order: 5;
+      margin-bottom: 2em;
+      @include mq.for-tablet-landscape-up {
+        position: absolute;
+        left: vars.$col-6;
+        margin: 0;
+        top: 750px;
+        & p {
+          font-size: 14px;
+          margin: 0 0 .5em 0;
+        }
+      }
+    }
+    & > * {
+      order: 6;
+      @include mq.for-tablet-landscape-up {       
+        width: vars.$col-4;
+        margin-left: vars.$col-1;
+      }
+    }
+    & > p {
+      margin-top: 0;
+      margin-bottom: 1em;
+      @include mq.for-tablet-landscape-up {
+        font-size: 21px;
+      }
+    }
+    & .team-member-backlink {
+      display: inline-block;
+      text-decoration: none;
+      margin-top: 2em;
+    }
+    span[id^="more"] {
+      display: none;
+    }
+  }
+  .site-footer {
+    clear: both;
+  }
+}

@@ -12,14 +12,14 @@
 .team-teammember {
   margin-bottom: 3em;
   @include mq.for-tablet-portrait-up {
-    margin-left: 2em;
+    margin-left: vars.$gap-space;
     &:nth-child(3n+1) {
       margin-left: 0;
     }
   }
-  @include mq.for-desktop-up {
-    margin-left: 4em;
-  }
+  // @include mq.for-desktop-up {
+  //   margin-left: 4em;
+  // }
   & p {
     margin: 0 0 .5em 0;
     font-size: 18px;
@@ -52,12 +52,42 @@
     }
   }
 }
+p.team-teammember-quote {
+  font-size: 22px;
+  margin: 2rem 0;
+  opacity: 1;
+  @include mq.for-tablet-portrait-up {
+    font-size: 26px;
+  }
+}
 .team-teammember-title {
   & p {
     margin-bottom: 0;
   }
   & p + p {
     opacity: .5;
+  }
+  & p + p + p {
+    opacity: 1;
+  }
+}
+.team-teammember-button {
+  @include mixins.poly-btn('green', 'fill');
+  font-size: 20px;
+  padding-left: 1em;
+  padding-right: 1em;
+  @include mq.for-tablet-portrait-up {
+    font-size: 24px;
+  }
+  &:hover, &:focus {
+    @include mixins.poly-btn('pink', 'fill');
+    color: vars.$synth-blue;
+    font-size: 20px;
+    padding-left: 1em;
+    padding-right: 1em;
+    @include mq.for-tablet-portrait-up {
+      font-size: 24px;
+    }
   }
 }
 .team-teammember-vita {
@@ -73,17 +103,5 @@
     text-decoration: none;
     display: inline-block;
     position: relative;
-    &::after {
-      content: "↙";
-      font-family: "SyntheSans", sans-serif;
-      position: absolute;
-      transform: scaleX(-1) translate(0, 0);
-      transition: transform .2s ease-in-out;
-      left: calc(100% + .25em);
-      top: 0;
-    }
-    &:hover::after {
-      transform: scaleX(-1) translate(-2px, 2px);
-    }
   }
 }

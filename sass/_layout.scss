@@ -7,12 +7,12 @@
     margin-left: vars.$col-1;
   }
 }
-.entry-content > :first-child,
+body:not(.blog, .single, .home) .entry-content > :first-child,
 .error404 .site-main > :first-child {
   margin-top: 150px;
 }
-.entry-content > div,
-.entry-content > section {
+body.page .entry-content > div,
+body.page .entry-content > section {
   margin-bottom: 10rem;
 }
 .entry-content > :last-child {
@@ -22,7 +22,8 @@
 .entry-content,
 .error404 .site-main,
 .entry-footer,
-.blog .site-main {
+.blog .site-main,
+.archive .site-main {
   padding: 0 vars.$gap-space;
 }
 body:not(.home) .entry-content > .wp-block-group > .wp-block-columns {

@@ -180,9 +180,25 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 /**
- * Create custom post type 'Teammembers'
+ * Create custom post types
  */
+  
 function create_posttype() {
+  register_post_type( 'team-members',
+  // CPT Options
+    array(
+      'labels' => array(
+        'name' => __( 'Team members' ),
+        'all_items' => __( 'See All' ),
+        'singular_name' => __( 'Team member' ),
+      ),
+      'public' => true,
+      'show_ui' => true,
+      'show_in_rest' => true,
+      'has_archive' => 'team-member-archive',
+      'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail', 'custom-fields', 'permalinks', 'featured_image' ),
+    )
+  );
   register_post_type( 'investments-past',
   // CPT Options
     array(
@@ -219,6 +235,41 @@ function create_posttype() {
 }
 // Hooking up our function to theme setup
 add_action( 'init', 'create_posttype', 0 );
+
+//Shortcode for displaying Past Investments
+function display_team_members() {
+  echo '<div class="wp-block-group team-teammembers offset-1">';
+      $args = array(  
+        'post_type' => 'team-members',
+        'post_status' => 'publish',
+        'posts_per_page' => -1, 
+        //'orderby’ => 'title', 
+        //'order’ => 'ASC', 
+      );
+      global $more;
+      $loop = new WP_Query( $args ); 
+            
+      while ( $loop->have_posts() ) { 
+        $loop->the_post();
+    echo '<div class="wp-block-group team-teammember">
+            <figure class="wp-block-image team-teammember-image">'.get_the_post_thumbnail(null, 'scrollimg').'</figure>
+            <div class="wp-block-group team-teammember-title">
+              <p>'.get_the_title().'</p>'
+              .get_the_content('', true).'
+            </div> 
+            <a href="'. get_the_permalink() .'" role="button" class="team-teammember-button">Learn More</a>
+          </div>';
+          $more = 1;
+      }
+      wp_reset_postdata(); 
+  echo '</div></div>';
+}
+function outputbuffer_team_members(){
+    ob_start();             // turn on output buffering
+    display_team_members(); // put the output to the buffer
+    return ob_get_clean();  // capture and return the buffer
+}
+add_shortcode( 'team-members', 'outputbuffer_team_members' ); 
 
 //Shortcode for displaying Past Investments
 function display_earlier_investments() {
@@ -324,6 +375,7 @@ function synthesiscapital_register_required_plugins() {
 //------------------------
 
 function synthesis_add_image_sizes() {
+  add_image_size( 'hero', 2000, 1500, false );
   add_image_size( 'scrollimg', 325, 412, false );
   add_image_size( 'scrollimg-h', 325, 412, true );
   add_image_size( 'scrollimg-2', 650, 824, false );
@@ -344,10 +396,13 @@ function my_content_image_sizes_attr( $sizes, $size ) {
     if ( $width === 325 ) { //scrollimg
       $sizes = '(min-width: 1441px) 18vw, (min-width: 769px) 23vw, (min-width: 600px) 33vw, 66vw';
     }
+    if ( $width === 2000) { //hero
+      $sizes = '100vw';
+    }
       
   return $sizes;
 }
-add_filter( 'wp_calculate_image_sizes', 'my_content_image_sizes_attr', 10, 3 );
+add_filter( 'wp_calculate_image_sizes', 'my_content_image_sizes_attr', 10, 5 );
 
 /**
  * Disable the emoji's

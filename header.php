@@ -16,6 +16,12 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="The Future Food Investors. We invest in game-changing founders, whose companies are transforming the food system through the synthesis of food technology and modern biotechnology." >
+
+  <meta property='og:title' content='<?php the_title(); ?>'/>
+  <meta property='og:image' content='<?php if ( has_post_thumbnail() ) { the_post_thumbnail_url(); } else { echo get_theme_root().'/assets/img/og_image.jpg'; } ?>'/>
+  <meta property='og:description' content='<?php if ( has_excerpt() ) { the_excerpt(); } else { echo 'The Future Food Investors. We invest in game-changing founders, whose companies are transforming the food system through the synthesis of food technology and modern biotechnology.'; } ?>'/>
+  <meta property='og:url' content='<?php the_permalink(); ?>'/>
+
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
 </head>

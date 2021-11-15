@@ -136,24 +136,11 @@ if ( ! function_exists( 'synthesiscapital_post_thumbnail' ) ) :
 			return;
 		}
 
-		if ( is_singular() ) :
 			?>
-
-			<div class="post-thumbnail">
-				<?php 
-          if( has_post_thumbnail() ) {
-            the_post_thumbnail(); 
-          } else {
-            echo '<a class="post-thumbnail" href="'.get_the_permalink().'"><img src="https://picsum.photos/1100/700" /></a>';
-          }
-        ?>
-			</div><!-- .post-thumbnail -->
-
-		<?php else : ?>
 
 			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 				<?php
-           if( has_post_thumbnail() ) {
+          if( has_post_thumbnail() ) {
             the_post_thumbnail(
               'post-thumbnail',
               array(
@@ -165,13 +152,12 @@ if ( ! function_exists( 'synthesiscapital_post_thumbnail' ) ) :
               )
             );
           } else {
-            echo '<a class="post-thumbnail" href="'.get_the_permalink().'"><img src="https://picsum.photos/1100/700" /></a>';
+            echo '<img src="https://via.placeholder.com/728x728.png?text=This+post+is+missing+a+featured+image" />';
           }
 				?>
 			</a>
 
 			<?php
-		endif; // End is_singular().
 	}
 endif;
 

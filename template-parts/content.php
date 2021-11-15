@@ -9,42 +9,36 @@
 
 ?>
 
+<?php 
+   echo '<figure class="post-hero">';
+   if ( has_post_thumbnail() ) {
+     the_post_thumbnail( 'hero' );
+   } else {
+    echo '<img src="https://via.placeholder.com/1280x900.png?text=This+post+is+missing+a+featured+image" />';
+   }
+   echo '</figure>';
+?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php
+	
+		<?php 
+      the_title( '<h2 class="entry-title">', '</h2>' );
       if ( 'post' === get_post_type() ) :
     ?>
-			<div class="entry-meta">
-				<?php
+      <div class="entry-meta">
+        <?php
           synthesiscapital_posted_on();
           synthesiscapital_posted_by();
           the_tags( '', ', ', '' )
         ?>
-			</div><!-- .entry-meta -->
-		<?php 
-      endif; 
-      the_title( '<h2 class="entry-title">', '</h2>' );
-    ?>
+      </div><!-- .entry-meta -->
+    <?php endif ?>
 	</header><!-- .entry-header -->
-
-	<?php if ( !is_singular() ) { synthesiscapital_post_thumbnail(); } ?>
 
 	<div class="entry-content">
 		<?php
-		the_excerpt(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'synthesiscapital' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				wp_kses_post( get_the_title() )
-			)
-		);
+      the_content();
 
 		wp_link_pages(
 			array(
@@ -54,8 +48,18 @@
 		);
 		?>
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php synthesiscapital_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+  <footer class="entry-footer">
+    <div class="entry-meta">
+      <?php
+        synthesiscapital_posted_on();
+        synthesiscapital_posted_by();
+        the_tags( '', ', ', '' )
+      ?>
+    </div><!-- .entry-meta -->
+    <div class="social-share">
+      <a target="_blank" href="https://twitter.com/intent/tweet?text=<?php the_title(); echo ': '; esc_url(the_permalink()); ?>">Share on Twitter ↘</a>
+      <a target="_blank" href="https://www.linkedin.com/sharing/share-offsite/?url=<?php esc_url(the_permalink()); ?>">Share on LinkedIn ↘</a>
+      <a href="/insights">Back to Insights ↘</a>
+    </div>
+  </footer>
 </article><!-- #post-<?php the_ID(); ?> -->

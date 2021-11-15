@@ -5,8 +5,12 @@
 .blog-header {
   margin-top: 150px;
   max-width: 100%;
+  @include mq.for-tablet-landscape-up {
+    max-width: calc( 100% - #{vars.$col-2} );
+  }
 }
-.blog {
+.blog,
+.archive {
   & .articles {
     @include mq.for-tablet-landscape-up {
       margin-right: vars.$col-2;
@@ -37,19 +41,26 @@
       margin-left: 0;
     }
   }
+  & .entry-meta {
+    margin-bottom: 1rem;
+    font-size: 16px;
+  }
   & .entry-title {
     margin: .25em 0;
+    font-size: 22px;
+    @include mq.for-tablet-landscape-up {
+      font-size: 35px;
+    }
+  }
+  & article:nth-child(3n + 1) .entry-meta {
+    @include mq.for-tablet-landscape-up {
+      margin-bottom: 0;
+      font-size: 22px;
+      text-align: right;
+    }
   }
   & .entry-header {
-    display: flex;
-    justify-content: space-between;
     margin-bottom: .5em;
-    @include mq.for-tablet-landscape-up {
-      flex-direction: row-reverse;
-    }
-    & > * {
-      align-self: flex-start;
-    }
     & .byline {
       line-height: 1;
       & .author {
@@ -67,15 +78,33 @@
       pointer-events: none;
     }
   }
+  & article:nth-child(3n + 1) .entry-header {
+    @include mq.for-tablet-landscape-up {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+    }
+    & > * {
+      @include mq.for-tablet-landscape-up {
+        align-self: flex-end;
+      }
+    }
+  }
   & .entry-content {
+    @include mq.for-tablet-landscape-up {
+      display: flex;
+      gap: 2em;
+      justify-content: space-between;
+    }
+    & > * {
+      align-self: flex-start;
+      margin-top: 1em;
+    }
     & p {
       font-size: 18px;
       @include mq.for-tablet-landscape-up {
         font-size: 21px;
       }
-    }
-    & :first-child{
-      margin-top: 2em;
     }
     & .wp-block-image {
       position: relative;
@@ -92,6 +121,9 @@
     }
   }
 }
+.archive .page-header {
+  margin-top: 150px;
+}
 .post-thumbnail {
   display: block;
   & img {
@@ -105,5 +137,23 @@
       height: 100%;
       object-fit: cover;
     }
+  }
+}
+.blog-tags {
+  font-size: 16px;
+  margin-bottom: 1.5em;
+  @include mq.for-tablet-landscape-up {
+    font-size: 18px;
+  }
+}
+.blog-tags-title {
+  display: block;
+}
+.blog-tags-tag {
+  text-decoration: none;
+  margin-right: .33em;
+  opacity: .3;
+  &.active-tag {
+    opacity: 1;
   }
 }

@@ -20,7 +20,25 @@ get_header();
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
-
+      <div class="blog-tags">
+        <span class="blog-tags-title">Tags:</span> 
+        <a class="blog-tags-tag" href="/insights">All</a>
+        <?php 
+          $tags = get_tags(); 
+          if ( $tags ) :
+            foreach ( $tags as $tag ) : ?>
+              <a class="blog-tags-tag <?php
+                $termurl = esc_url( get_tag_link( $tag->term_id ) );
+                $requrl = $_SERVER['REQUEST_URI'];
+                if ( strpos($termurl,$requrl) !== false ) { 
+                  echo 'active-tag'; 
+                }?>" href="<?php echo esc_url( get_tag_link( $tag->term_id ) ); ?>" title="<?php echo esc_attr( $tag->name ); ?>">
+                <?php echo esc_html( $tag->name ); ?>
+              </a>
+            <?php endforeach; ?>
+          <?php endif; ?>
+      </div>
+      <div class="articles">
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
@@ -31,11 +49,9 @@ get_header();
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+				get_template_part( 'template-parts/content', 'preview' );
 
 			endwhile;
-
-			the_posts_navigation();
 
 		else :
 
@@ -43,7 +59,8 @@ get_header();
 
 		endif;
 		?>
-
+      </div>
+    <?php the_posts_navigation(); ?>
 	</main><!-- #main -->
 
 <?php

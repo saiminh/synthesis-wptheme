@@ -166,7 +166,7 @@ if ( function_exists( 'register_block_pattern' ) ) {
         '
       )
     );
-    
+
     //Investment Portfolio 
     register_block_pattern(
       'synthesis2021/investment-portfolio-home',
@@ -182,109 +182,109 @@ if ( function_exists( 'register_block_pattern' ) ) {
         <div class="wp-block-group home-investments-piece"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"home-investments-piece-image"} -->
         <figure class="wp-block-image size-large home-investments-piece-image"><img src="" alt=""/></figure>
         <!-- /wp:image -->
-
+        
         <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"home-investments-piece-logo"} -->
         <figure class="wp-block-image size-large home-investments-piece-logo"><img src="" alt=""/></figure>
         <!-- /wp:image -->
-
+        
         <!-- wp:paragraph {"className":"home-investments-piece-text"} -->
         <p class="home-investments-piece-text">Precision Fermentation<br>Berlin<br>2020</p>
         <!-- /wp:paragraph --></div>
         <!-- /wp:group -->
-
+        
         <!-- wp:group {"className":"home-investments-piece"} -->
         <div class="wp-block-group home-investments-piece"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"home-investments-piece-image"} -->
         <figure class="wp-block-image size-large home-investments-piece-image"><img src="" alt=""/></figure>
         <!-- /wp:image -->
-
+        
         <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"home-investments-piece-logo"} -->
         <figure class="wp-block-image size-large home-investments-piece-logo"><img src="" alt=""/></figure>
         <!-- /wp:image -->
-
+        
         <!-- wp:paragraph {"className":"home-investments-piece-text"} -->
         <p class="home-investments-piece-text">Precision Fermentation<br>Berlin<br>2020</p>
         <!-- /wp:paragraph --></div>
         <!-- /wp:group -->
-
+        
         <!-- wp:group {"className":"home-investments-piece"} -->
         <div class="wp-block-group home-investments-piece"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"home-investments-piece-image"} -->
         <figure class="wp-block-image size-large home-investments-piece-image"><img src="" alt=""/></figure>
         <!-- /wp:image -->
-
+        
         <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"home-investments-piece-logo"} -->
         <figure class="wp-block-image size-large home-investments-piece-logo"><img src="" alt=""/></figure>
         <!-- /wp:image -->
-
+        
         <!-- wp:paragraph {"className":"home-investments-piece-text"} -->
         <p class="home-investments-piece-text">Precision Fermentation<br>Berlin<br>2020</p>
         <!-- /wp:paragraph --></div>
         <!-- /wp:group -->
-
+        
         <!-- wp:group {"className":"home-investments-piece"} -->
         <div class="wp-block-group home-investments-piece"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"home-investments-piece-image"} -->
         <figure class="wp-block-image size-large home-investments-piece-image"><img src="" alt=""/></figure>
         <!-- /wp:image -->
-
+        
         <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"home-investments-piece-logo"} -->
         <figure class="wp-block-image size-large home-investments-piece-logo"><img src="" alt=""/></figure>
         <!-- /wp:image -->
-
+        
         <!-- wp:paragraph {"className":"home-investments-piece-text"} -->
         <p class="home-investments-piece-text">Precision Fermentation<br>Berlin<br>2020</p>
         <!-- /wp:paragraph --></div>
         <!-- /wp:group -->
-
+        
         <!-- wp:group {"className":"home-investments-piece"} -->
         <div class="wp-block-group home-investments-piece"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"home-investments-piece-image"} -->
         <figure class="wp-block-image size-large home-investments-piece-image"><img src="" alt=""/></figure>
         <!-- /wp:image -->
-
+        
         <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"home-investments-piece-logo"} -->
         <figure class="wp-block-image size-large home-investments-piece-logo"><img src="" alt=""/></figure>
         <!-- /wp:image -->
-
+        
         <!-- wp:paragraph {"className":"home-investments-piece-text"} -->
         <p class="home-investments-piece-text">Precision Fermentation<br>Berlin<br>2020</p>
         <!-- /wp:paragraph --></div>
         <!-- /wp:group -->
-
+        
         <!-- wp:group {"className":"home-investments-piece"} -->
         <div class="wp-block-group home-investments-piece"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"home-investments-piece-image"} -->
         <figure class="wp-block-image size-large home-investments-piece-image"><img src="" alt=""/></figure>
         <!-- /wp:image -->
-
+        
         <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"home-investments-piece-logo"} -->
         <figure class="wp-block-image size-large home-investments-piece-logo"><img src="" alt=""/></figure>
         <!-- /wp:image -->
-
+        
         <!-- wp:paragraph {"className":"home-investments-piece-text"} -->
         <p class="home-investments-piece-text">Precision Fermentation<br>Berlin<br>2020</p>
         <!-- /wp:paragraph --></div>
         <!-- /wp:group -->
-
+        
         <!-- wp:group {"className":"home-investments-piece"} -->
         <div class="wp-block-group home-investments-piece"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"home-investments-piece-image"} -->
         <figure class="wp-block-image size-large home-investments-piece-image"><img src="" alt=""/></figure>
         <!-- /wp:image -->
-
+        
         <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"home-investments-piece-logo"} -->
         <figure class="wp-block-image size-large home-investments-piece-logo"><img src="" alt=""/></figure>
         <!-- /wp:image -->
-
+        
         <!-- wp:paragraph {"className":"home-investments-piece-text"} -->
         <p class="home-investments-piece-text">Precision Fermentation<br>Berlin<br>2020</p>
         <!-- /wp:paragraph --></div>
         <!-- /wp:group -->
-
+        
         <!-- wp:group {"className":"home-investments-piece"} -->
         <div class="wp-block-group home-investments-piece"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"home-investments-piece-image"} -->
         <figure class="wp-block-image size-large home-investments-piece-image"><img src="" alt=""/></figure>
         <!-- /wp:image -->
-
+        
         <!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"home-investments-piece-logo"} -->
         <figure class="wp-block-image size-large home-investments-piece-logo"><img src="" alt=""/></figure>
         <!-- /wp:image -->
-
+        
         <!-- wp:paragraph {"className":"home-investments-piece-text"} -->
         <p class="home-investments-piece-text">Precision Fermentation<br>Berlin<br>2020</p>
         <!-- /wp:paragraph --></div>
@@ -292,8 +292,85 @@ if ( function_exists( 'register_block_pattern' ) ) {
         <!-- /wp:group --></div>
         <!-- /wp:group -->
         '
-      )
-    );
-}
+        )
+      );
+      
+      //Blog image columns 
+      register_block_pattern(
+        'synthesis2021/blog-image-columns-2',
+        array(
+          'title'         => esc_html( 'Blog Image Columns', 'synthesis2021' ),
+          'description'   => esc_html( 'Block with 2 images side by side on desktop', 'synthesis2021' ),
+          'categories'    => array( 'synthesis2021' ),
+          'viewportWidth' => 300,
+          'content'       => '
+          <!-- wp:columns {"className":"blog-image-columns-2"} -->
+          <div class="wp-block-columns blog-image-columns-2"><!-- wp:column -->
+          <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
+          <figure class="wp-block-image size-large"><img src="" alt="" /></figure>
+          <!-- /wp:image --></div>
+          <!-- /wp:column -->
+
+          <!-- wp:column -->
+          <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
+          <figure class="wp-block-image size-large"><img src="" alt="" /></figure>
+          <!-- /wp:image --></div>
+          <!-- /wp:column --></div>
+          <!-- /wp:columns -->
+          '
+        )
+      );
+      
+      //Team members 
+      register_block_pattern(
+        'synthesis2021/team-member-title',
+        array(
+          'title'         => esc_html( 'Team member Job title', 'synthesis2021' ),
+          'description'   => esc_html( 'Block for job title of team member', 'synthesis2021' ),
+          'categories'    => array( 'synthesis2021' ),
+          'viewportWidth' => 300,
+          'content'       => '
+          <!-- wp:paragraph {"className":"team-teammember-title"} -->
+          <p class="team-teammember-title">Managing Partner</p>
+          <!-- /wp:paragraph -->
+          '
+        )
+      );
+      register_block_pattern(
+        'synthesis2021/team-member-quote',
+        array(
+          'title'         => esc_html( 'Team member quote', 'synthesis2021' ),
+          'description'   => esc_html( 'Block for quote of team member', 'synthesis2021' ),
+          'categories'    => array( 'synthesis2021' ),
+          'viewportWidth' => 300,
+          'content'       => '
+          <!-- wp:paragraph {"className":"team-teammember-quote"} -->
+          <p class="team-teammember-quote">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a mi at risus molestie maximus id quis.”</p>
+          <!-- /wp:paragraph -->
+          '
+        )
+      );
+      register_block_pattern(
+        'synthesis2021/team-member-social-links',
+        array(
+          'title'         => esc_html( 'Team member social links', 'synthesis2021' ),
+          'description'   => esc_html( 'Block for social links of team member', 'synthesis2021' ),
+          'categories'    => array( 'synthesis2021' ),
+          'viewportWidth' => 300,
+          'content'       => '
+          <!-- wp:group {"className":"team-teammember-sociallinks"} -->
+          <div class="wp-block-group team-teammember-sociallinks"><!-- wp:paragraph -->
+          <p><a href="https://twitter.com">Twitter ↘</a></p>
+          <!-- /wp:paragraph -->
+
+          <!-- wp:paragraph -->
+          <p><a href="https://linkedin.com">LinkedIn ↘</a></p>
+          <!-- /wp:paragraph --></div>
+          <!-- /wp:group -->
+          '
+        )
+      );
+      
+    }
 
 

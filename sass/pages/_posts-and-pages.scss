@@ -3,38 +3,37 @@
 @use '../utilities/vars' as vars;
 
 .single-post {
-  & .entry-footer,
-  & .entry-content,
-  & .post-thumbnail,
-  & .post-nav {
+  & .post {
+    position: relative;
+    top: 400px;
+    margin-bottom: 400px;
     @include mq.for-tablet-portrait-up {
-      margin-left: 15%;
-      margin-right: 8%;
+      top: 80vh;
+      margin-bottom: 80vh;
     }
-    @include mq.for-tablet-landscape-up {
-      margin-left: 18%;
-      margin-right: 8%;
+  }
+  & .post-hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    overflow: hidden;
+    @include mixins.transparent-fade-out-bottom;
+    height: 400px;
+    @include mq.for-tablet-portrait-up {
+      height: 80vh;
     }
-    & p, & h1, & h2, & h3, & h4 {
-      margin-left: 0;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
   & .entry-header {
-    margin: 150px vars.$gap-space 0 vars.$gap-space;
-    @include mq.for-tablet-portrait-up {
-      margin-left: 10%;
-      margin-right: 8%;
-    }
-  }
-  & .entry-title {
-    margin: .25em 0;
+    padding: 0 vars.$gap-space;
   }
   & .entry-meta {
-    display: flex;
-    justify-content: space-between;
-    & > * {
-      align-self: flex-start;
-    }
     & .byline {
       line-height: 1;
       & .author {
@@ -52,22 +51,89 @@
       pointer-events: none;
     }
   }
+  & .entry-title {
+    margin: .25em vars.$col-2 .25em 0;
+  }
   & .entry-content {
-    & :first-child{
+    & p {
+      font-size: 18px;
+      line-height: 1;
+      letter-spacing: .01em;
+      @include mq.for-tablet-landscape-up {
+        font-size: 22px;
+        max-width: vars.$col-8;
+      }
+      & a {
+        text-decoration: underline;
+      }
+      &.hero-quote {
+        font-size: 31px;
+        @include mq.for-tablet-landscape-up {
+          font-size: 36px;
+        }
+      }
+    }
+    & > :first-child{
       margin-top: 2em;
     }
     & .wp-block-image {
       position: relative;
     }
+    & > .wp-block-image {
+      @include mq.for-tablet-landscape-up {
+        margin-left: vars.$col-1;
+        margin-right: vars.$col-2;
+      }
+    }
     & .wp-block-image figcaption {
       position: absolute;
-      bottom: 1em;
+      bottom: 0;
       right: 1em;
       text-align: right
     }
     & .wp-block-image img{
       width: 100%;
       @include mixins.transparent-fade-out-bottom;
+    }
+  }
+  & .entry-footer {
+    margin-top: 5em;
+    font-size: 16px;
+    @include mq.for-tablet-landscape-up {  
+      font-size: 22px;
+      margin-right: vars.$col-4;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+    & .entry-meta {
+      text-align: right;
+      margin-bottom: 5em;
+      @include mq.for-tablet-landscape-up {
+        margin-bottom: 0;
+      }
+      @include mq.for-tablet-landscape-up {  
+        text-align: left;
+      }
+    }
+    & .social-share {
+      & a {
+        display: block;
+        margin-bottom: .5em;
+        text-decoration: none;
+      }
+
+    }
+  }
+}
+.blog-image-columns-2 {
+  @include mq.for-tablet-landscape-up {  
+    margin-left: vars.$col-1;
+    margin-right: vars.$col-3;
+  }
+  & .wp-block-column:not(:first-child) {
+    @include mq.for-tablet-landscape-up {
+      margin-left: vars.$gap-space;
     }
   }
 }
