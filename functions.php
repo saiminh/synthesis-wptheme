@@ -252,7 +252,7 @@ function display_team_members() {
       while ( $loop->have_posts() ) { 
         $loop->the_post();
     echo '<div class="wp-block-group team-teammember">
-            <figure class="wp-block-image team-teammember-image">'.get_the_post_thumbnail(null, 'scrollimg').'</figure>
+            <figure class="wp-block-image team-teammember-image">'.get_the_post_thumbnail(null, 'large').'</figure>
             
               <p>'.get_the_title().'</p>'
               .get_the_content('', true).'
