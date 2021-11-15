@@ -1456,7 +1456,6 @@ ul.menu .current_page_item a:hover {
 @media (min-width: 900px) {
   .investment-portfolio-piece-logo .wp-block-image {
     max-width: 200px;
-    max-height: 52px;
   }
 }
 
