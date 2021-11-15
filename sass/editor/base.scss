@@ -326,6 +326,9 @@ p {
 }
 .investment-portfolio-piece-logo {
   @include blocklabel('investment-portfolio-piece-logo');
+  & figure {
+    max-width: 300px;
+  }
 }
 .investment-portfolio-piece-description {
   @include blocklabel('investment-portfolio-piece-description');

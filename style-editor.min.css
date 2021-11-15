@@ -1206,6 +1206,9 @@ p {
   border-radius: 0 0 3px 0;
   z-index: 4;
 }
+.investment-portfolio-piece-logo figure {
+  max-width: 300px;
+}
 
 .investment-portfolio-piece-description {
   border: 2px solid #120a59;
