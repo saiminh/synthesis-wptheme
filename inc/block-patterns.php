@@ -370,6 +370,56 @@ if ( function_exists( 'register_block_pattern' ) ) {
           '
         )
       );
+      register_block_pattern(
+        'synthesis2021/team-member-content',
+        array(
+          'title'         => esc_html( 'Team member content block', 'synthesis2021' ),
+          'description'   => esc_html( 'Block for all team member content', 'synthesis2021' ),
+          'categories'    => array( 'synthesis2021' ),
+          'viewportWidth' => 300,
+          'content'       => '
+          <!-- wp:group {"className":"team-teammember-content"} -->
+          <div class="wp-block-group team-teammember-content"><!-- wp:paragraph {"className":"team-teammember-title"} -->
+          <p class="team-teammember-title">Managing Partner</p>
+          <!-- /wp:paragraph -->
+
+          <!-- wp:paragraph {"className":"team-teammember-quote"} -->
+          <p class="team-teammember-quote">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a mi at risus molestie maximus id quis.”</p>
+          <!-- /wp:paragraph -->
+
+          <!-- wp:more -->
+          <!--more-->
+          <!-- /wp:more -->
+
+          <!-- wp:paragraph -->
+          <p>Costa is energised by helping food tech founders build their businesses and realise their unique visions. His background combines investment banking, management consulting and venture capital, in top tier firms. It is this broad experience that he brings to support founders across all stages, to take their businesses to the next level.</p>
+          <!-- /wp:paragraph -->
+
+          <!-- wp:paragraph -->
+          <p>Costa’s motivation to build a sustainable food system was inspired by the birth of his first child in 2016, and the understanding of the urgent need to work on a healthier planet for his children and the next generation after that.</p>
+          <!-- /wp:paragraph -->
+
+          <!-- wp:paragraph -->
+          <p>Previously, as the Investment Director at CPT Capital, Costa led the building and management of their 35-strong food tech portfolio, working alongside founders in the trenches through ups and downs. He has been an active board member of several front runners in the alternative protein space across technology verticals: Plantbased (Redefine Meat and Gathered Foods/Good Catch); Fermentation (Geltor, Legendairy Foods/Formo, and Enough/3FBio); and Cultivated (BlueNalu).</p>
+          <!-- /wp:paragraph -->
+
+          <!-- wp:paragraph -->
+          <p>Costa holds a BA and MA in Economics from Cambridge University and an MBA from INSEAD.</p>
+          <!-- /wp:paragraph -->
+
+          <!-- wp:group {"className":"team-teammember-sociallinks"} -->
+          <div class="wp-block-group team-teammember-sociallinks"><!-- wp:paragraph -->
+          <p><a href="http://twitter.com">Twitter ↘</a></p>
+          <!-- /wp:paragraph -->
+
+          <!-- wp:paragraph -->
+          <p><a href="http://linkedin.com">LinkedIn ↘</a></p>
+          <!-- /wp:paragraph --></div>
+          <!-- /wp:group --></div>
+          <!-- /wp:group -->
+          '
+        )
+      );
       
     }
 

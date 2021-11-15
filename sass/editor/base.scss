@@ -296,6 +296,9 @@ p {
     margin: 0 0 1em 0;
   }
 }
+.team-teammember-content {
+  @include blocklabel('team-teammember-content');
+}
 .scroll-gallery {
   @include blocklabel('scroll-gallery');
   display: flex; 

@@ -1089,6 +1089,26 @@ p {
   margin: 0 0 1em 0;
 }
 
+.team-teammember-content {
+  border: 2px solid #120a59;
+  padding: 24px 10px 10px 10px;
+  border-radius: 5px;
+}
+.team-teammember-content::before {
+  content: "team-teammember-content";
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #120a59;
+  color: #FFF;
+  padding: 2px 5px;
+  border-radius: 0 0 3px 0;
+  z-index: 4;
+}
+
 .scroll-gallery {
   border: 2px solid #120a59;
   padding: 24px 10px 10px 10px;
