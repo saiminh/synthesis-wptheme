@@ -25,6 +25,6 @@
       
       the_content();
 		?>
-    <p><a class="team-member-backlink" href="/insights">Back to Team ↘</a></p>
+    <p><a class="team-member-backlink" href="/team">Back to Team ↘</a></p>
 	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->
