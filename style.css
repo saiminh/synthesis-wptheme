@@ -2983,6 +2983,9 @@ p.team-teammember-quote {
 .blog-tags-tag.active-tag {
   opacity: 1;
 }
+.blog-tags-tag:hover {
+  opacity: 1;
+}
 
 .single-post .post {
   position: relative;
