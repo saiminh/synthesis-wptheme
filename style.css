@@ -2118,11 +2118,11 @@ ul.menu .current_page_item a:hover {
 }
 .team-teammember p {
   margin: 0 0 0.5em 0;
-  font-size: 18px;
+  font-size: 22px;
 }
 @media (min-width: 900px) {
   .team-teammember p {
-    font-size: 21px;
+    font-size: 26px;
   }
 }
 @media (min-width: 600px) {
@@ -2159,24 +2159,12 @@ ul.menu .current_page_item a:hover {
 }
 
 p.team-teammember-quote {
-  font-size: 22px;
   margin: 2rem 0;
   opacity: 1;
 }
-@media (min-width: 600px) {
-  p.team-teammember-quote {
-    font-size: 26px;
-  }
-}
 
-.team-teammember-title p {
-  margin-bottom: 0;
-}
-.team-teammember-title p + p {
+.team-teammember-title {
   opacity: 0.5;
-}
-.team-teammember-title p + p + p {
-  opacity: 1;
 }
 
 .team-teammember-button {
@@ -3413,6 +3401,14 @@ p.team-teammember-quote {
 @media (min-width: 900px) {
   .single-team-members .entry-content {
     display: block;
+  }
+}
+.single-team-members .entry-content p {
+  font-size: 18px;
+}
+@media (min-width: 900px) {
+  .single-team-members .entry-content p {
+    font-size: 21px;
   }
 }
 .single-team-members .entry-content .team-member-name {

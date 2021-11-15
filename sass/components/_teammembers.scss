@@ -22,9 +22,9 @@
   // }
   & p {
     margin: 0 0 .5em 0;
-    font-size: 18px;
+    font-size: 22px;
     @include mq.for-tablet-landscape-up {
-      font-size: 21px;
+      font-size: 26px;
     }
   }
   @include mq.for-tablet-portrait-up {
@@ -53,23 +53,11 @@
   }
 }
 p.team-teammember-quote {
-  font-size: 22px;
   margin: 2rem 0;
   opacity: 1;
-  @include mq.for-tablet-portrait-up {
-    font-size: 26px;
-  }
 }
 .team-teammember-title {
-  & p {
-    margin-bottom: 0;
-  }
-  & p + p {
     opacity: .5;
-  }
-  & p + p + p {
-    opacity: 1;
-  }
 }
 .team-teammember-button {
   @include mixins.poly-btn('green', 'fill');

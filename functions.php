@@ -253,10 +253,10 @@ function display_team_members() {
         $loop->the_post();
     echo '<div class="wp-block-group team-teammember">
             <figure class="wp-block-image team-teammember-image">'.get_the_post_thumbnail(null, 'scrollimg').'</figure>
-            <div class="wp-block-group team-teammember-title">
+            
               <p>'.get_the_title().'</p>'
               .get_the_content('', true).'
-            </div> 
+            
             <a href="'. get_the_permalink() .'" role="button" class="team-teammember-button">Learn More</a>
           </div>';
           $more = 1;

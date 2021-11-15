@@ -11,6 +11,12 @@
     @include mq.for-tablet-landscape-up {
       display: block;
     }
+    & p {
+      font-size: 18px;
+      @include mq.for-tablet-landscape-up {
+        font-size: 21px;
+      }
+    }
     & .team-member-name {
       order: 1;
       font-size: 31px;
