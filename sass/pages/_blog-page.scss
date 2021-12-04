@@ -50,7 +50,7 @@
     font-size: 22px;
     @include mq.for-tablet-landscape-up {
       font-size: 35px;
-      width: vars.$col-6;
+      max-width: vars.$col-6;
     }
   }
   & article:nth-child(3n + 1) .entry-meta {
