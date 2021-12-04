@@ -74,7 +74,7 @@
 .investment-portfolio-piece-image {
   grid-column: 1 / span 2;
   grid-row: 1 / 1;
-  border-bottom: 1px solid vars.$synth-blue;
+  // border-bottom: 1px solid vars.$synth-blue;
   @include mq.for-tablet-landscape-up {
     grid-column: 1 / span 3;
   }
@@ -112,6 +112,10 @@
   @include mq.for-tablet-landscape-up {
     grid-column: 2 / span 2;
     grid-row: 2 / span 2;
+    padding-right: vars.$col-1;
+  }
+  & p {
+    max-width: 100%;
   }
 }
 .investment-portfolio-piece-factsheet {

@@ -25,6 +25,25 @@
       
       the_content();
 		?>
-    <p><a class="team-member-backlink" href="/team">Back to Team ↘</a></p>
+    <div class="wp-block-buttons">
+      <div class="wp-block-button"><a class="wp-block-button__link" href="/team">Our Team</a></div>
+    </div>
 	</div><!-- .entry-content -->
+  <script>
+    function hank() {
+      let parent = document.querySelector('.entry-content');
+      let featuredimg = document.querySelector('.team-member-photo').outerHTML;
+      let name = document.querySelector('.team-member-name').outerHTML;
+      let quote = document.querySelector('.team-teammember-quote').outerHTML;
+      let title = document.querySelector('.team-teammember-title').outerHTML;
+      document.querySelector('.team-member-photo').remove();
+      document.querySelector('.team-member-name').remove();
+      document.querySelector('.team-teammember-quote').remove();
+      document.querySelector('.team-teammember-title').remove();
+      let parentcontent = parent.innerHTML;
+      let newparentcontent =  featuredimg + name  + title + quote + parentcontent;
+      parent.innerHTML = newparentcontent;
+    }
+    hank();
+  </script>
 </article><!-- #post-<?php the_ID(); ?> -->

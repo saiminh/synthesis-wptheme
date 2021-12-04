@@ -7,7 +7,7 @@
     margin-left: vars.$col-1;
   }
 }
-body:not(.blog, .single, .home) .entry-content > :first-child,
+body:not(.blog, .single, .home, .archive) .entry-content > :first-child,
 .error404 .site-main > :first-child {
   margin-top: 150px;
 }

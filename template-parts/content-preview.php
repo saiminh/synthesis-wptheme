@@ -23,8 +23,10 @@
 			</div><!-- .entry-meta -->
 		<?php 
       endif; 
-      the_title( '<h2 class="entry-title">', '</h2>' );
+      // echo '<h2 class="entry-title><a href="'.the_permalink().'">'.get_the_title().'</a></h2>';
+      // the_title( '<h2 class="entry-title">', '</h2>' );
     ?>
+    <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 	</header><!-- .entry-header -->
 
 	<?php synthesiscapital_post_thumbnail(); ?>

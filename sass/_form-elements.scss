@@ -8,7 +8,7 @@ button,
   cursor: pointer;
   @include mixins.poly-btn("green", "fill", 15px);
   @include mq.for-tablet-landscape-up {
-    font-size: 24px;
+    font-size: 18px;
   }
 }
 input[type="button"],
@@ -21,7 +21,7 @@ input[type="submit"] {
   padding: 0 2em;
   width: 100%;
   @include mq.for-tablet-landscape-up {
-    font-size: 24px;
+    font-size: 18px;
   }
 }
 button:hover,
@@ -29,7 +29,7 @@ button:hover,
   @include mixins.poly-btn("pink", "fill", 15px);
   color: vars.$synth-blue;
   @include mq.for-tablet-landscape-up {
-    font-size: 24px;
+    font-size: 18px;
   }
 }
 input[type="button"]:hover,
@@ -38,7 +38,7 @@ input[type="submit"]:hover {
   // Need to implement via js hack like input type=email
   color: vars.$synth-blue;
   @include mq.for-tablet-landscape-up {
-    font-size: 24px;
+    font-size: 18px;
   }
 }
 button:active,
@@ -48,7 +48,7 @@ button:focus,
   @include mixins.poly-btn("green", "fill", 15px);
   color: white;
   @include mq.for-tablet-landscape-up {
-    font-size: 24px;
+    font-size: 18px;
   }
 }
 input[type="button"]:active,
@@ -60,7 +60,7 @@ input[type="submit"]:focus {
   // Need to implement via js hack like input type=email
   color: white;
   @include mq.for-tablet-landscape-up {
-    font-size: 24px;
+    font-size: 18px;
   }
 }
 .wp-block-button__link, .wp-block-button__link:hover, .wp-block-button__link:active, .wp-block-button__link:focus {
@@ -102,7 +102,7 @@ textarea {
     font-size: 18px;
   }
   @include mq.for-tablet-landscape-up {
-    font-size: 24px;
+    font-size: 18px;
   }
 }
 input[type="email"] {
@@ -114,8 +114,8 @@ input[type="email"] {
   line-height: 1;
   text-align: left;
   @include mq.for-tablet-landscape-up {
-    font-size: 24px;
-    height: 24px;
+    font-size: 18px;
+    height: 18px;
   }
   &:focus {
     outline: none;

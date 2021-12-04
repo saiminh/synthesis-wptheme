@@ -3,7 +3,6 @@
 @use '../utilities/mixins';
 
 .team-teammembers {
-  // padding: vars.$gap-space;
   @include mq.for-tablet-portrait-up {
     display: flex;
     flex-wrap: wrap;
@@ -17,9 +16,6 @@
       margin-left: 0;
     }
   }
-  // @include mq.for-desktop-up {
-  //   margin-left: 4em;
-  // }
   & p {
     margin: 0 0 .5em 0;
     font-size: 22px;
@@ -29,6 +25,8 @@
   }
   @include mq.for-tablet-portrait-up {
     flex-basis: calc( 33.3% - 1.333em);
+    display: flex;
+    flex-direction: column;
   }
   @include mq.for-desktop-up {
     flex-basis: calc( 33.3% - 2.666em);
@@ -66,6 +64,8 @@ p.team-teammember-quote {
   padding-right: 1em;
   @include mq.for-tablet-portrait-up {
     font-size: 24px;
+    align-self: flex-start;
+    margin-top: auto;
   }
   &:hover, &:focus {
     @include mixins.poly-btn('pink', 'fill');

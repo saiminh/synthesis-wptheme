@@ -49,17 +49,21 @@
 		?>
 	</div><!-- .entry-content -->
   <footer class="entry-footer">
+    <div class="wp-block-buttons">
+      <div class="wp-block-button">
+        <a class="wp-block-button__link" href="/insights">Our insights</a>
+      </div>
+    </div>
     <div class="entry-meta">
       <?php
         synthesiscapital_posted_on();
         synthesiscapital_posted_by();
         the_tags( '', ', ', '' )
       ?>
-    </div><!-- .entry-meta -->
     <div class="social-share">
       <a target="_blank" href="https://twitter.com/intent/tweet?text=<?php the_title(); echo ': '; esc_url(the_permalink()); ?>">Share on Twitter ↘</a>
       <a target="_blank" href="https://www.linkedin.com/sharing/share-offsite/?url=<?php esc_url(the_permalink()); ?>">Share on LinkedIn ↘</a>
-      <a href="/insights">Back to Insights ↘</a>
     </div>
+    </div><!-- .entry-meta -->
   </footer>
 </article><!-- #post-<?php the_ID(); ?> -->

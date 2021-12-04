@@ -75,7 +75,6 @@
     }
     & a {
       text-decoration: none;
-      pointer-events: none;
     }
   }
   & article:nth-child(3n + 1) .entry-header {
@@ -92,9 +91,9 @@
   }
   & .entry-content {
     @include mq.for-tablet-landscape-up {
-      display: flex;
-      gap: 2em;
-      justify-content: space-between;
+      display: block;
+      // gap: 2em;
+      // justify-content: space-between;
     }
     & > * {
       align-self: flex-start;
@@ -118,6 +117,13 @@
     & .wp-block-image img{
       width: 100%;
       @include mixins.transparent-fade-out-bottom;
+    }
+  }
+  & article:nth-child(3n + 1) .entry-content {
+    @include mq.for-tablet-landscape-up {
+      display: flex;
+      gap: 2em;
+      justify-content: space-between;
     }
   }
 }
