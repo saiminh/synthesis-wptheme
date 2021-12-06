@@ -59,23 +59,17 @@ p.team-teammember-quote {
 }
 .team-teammember-button {
   @include mixins.poly-btn('green', 'fill');
-  font-size: 20px;
   padding-left: 1em;
   padding-right: 1em;
   @include mq.for-tablet-portrait-up {
-    font-size: 24px;
     align-self: flex-start;
     margin-top: auto;
   }
   &:hover, &:focus {
     @include mixins.poly-btn('pink', 'fill');
     color: vars.$synth-blue;
-    font-size: 20px;
     padding-left: 1em;
     padding-right: 1em;
-    @include mq.for-tablet-portrait-up {
-      font-size: 24px;
-    }
   }
 }
 .team-teammember-vita {
