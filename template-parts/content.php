@@ -51,7 +51,7 @@
   <footer class="entry-footer">
     <div class="wp-block-buttons">
       <div class="wp-block-button">
-        <a class="wp-block-button__link" href="/insights">Our insights</a>
+        <a class="wp-block-button__link" href="/insights">Our Insights</a>
       </div>
     </div>
     <div class="entry-meta">
