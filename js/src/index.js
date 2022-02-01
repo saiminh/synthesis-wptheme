@@ -32,6 +32,6 @@ document.querySelectorAll('input[type="submit"], input[type="button"], input[typ
   input.outerHTML = '<div style="position:relative; display: inline-block;"><div class="fake-submit-input-bg"></div>' + input.outerHTML + "</div>";
 });
 
-if ( document.querySelector('.sideScroll-scroller') || document.querySelector('.blocks-gallery-grid')  ) {
+if ( document.querySelector('.sideScroll-scroller') || document.querySelector('.blocks-gallery-grid') || document.querySelector('.scroll-gallery-wp59')  ) {
   sideScrollNavigation();
 }

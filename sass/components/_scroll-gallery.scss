@@ -81,3 +81,81 @@
     width: 100%;
   }
 }
+
+.wp-block-gallery.scroll-gallery-wp59 {
+  position: relative;
+  margin-left: - vars.$gap-space;
+  margin-right: - vars.$gap-space;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  // width: 100%;
+  @include mixins.hideScrollBar;
+  & .wp-block-image {
+    scroll-snap-align: start;
+    align-self: baseline;
+    width: auto;
+    flex-basis: calc(220px + #{vars.$gap-space});
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: 0;
+    padding-left: vars.$gap-space;
+    @include mq.for-tablet-portrait-up {
+      flex-basis: calc(325px + #{vars.$gap-space});
+    }
+    &:first-child {
+      @include mq.for-tablet-portrait-up {
+        flex-basis: calc(66.6% + #{vars.$gap-space});
+        scroll-snap-align: start;
+        flex-basis: 625px;
+        padding-left: 300px;
+      }
+    }
+    &:last-child {
+      flex-basis: calc(66.6% + #{vars.$gap-space});
+      padding-right: vars.$gap-space;
+      @include mq.for-tablet-portrait-up {
+        flex-basis: 325px + vars.$gap-space;
+      }
+    }
+    @include mixins.transparent-fade-out-bottom;
+  }
+  &.wp-block-gallery .blocks-gallery-item figure{
+    overflow: hidden;
+    height: 275px;
+    @include mq.for-tablet-portrait-up {
+      height: 412px;
+    }
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &.wp-block-gallery .blocks-gallery-item:nth-child(2n) {
+    flex-basis: calc(275px + #{vars.$gap-space});
+    @include mq.for-tablet-landscape-up {
+      flex-basis: calc(412px + #{vars.$gap-space});
+    }
+  }
+  &.wp-block-gallery .blocks-gallery-item:nth-child(2n) figure{
+    height: 220px;
+    @include mq.for-tablet-portrait-up {
+      height: 220px;
+    }
+    @include mq.for-tablet-landscape-up {
+      height: 325px;
+    }
+  }
+  & .blocks-gallery-grid .blocks-gallery-image img, 
+  & .blocks-gallery-grid .blocks-gallery-item img, 
+  & .wp-block-gallery .blocks-gallery-image img, 
+  & .wp-block-gallery .blocks-gallery-item img {
+    width: 100%;
+  }
+}
+.scroll-gallery-wp59-wrapper {
+  position: relative;
+}

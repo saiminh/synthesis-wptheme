@@ -8,10 +8,16 @@ function sideScrollNavigation(){
   toggleSideScrollNav();
   
   function toggleSideScrollNav() {
-      
-    let scrollers = document.querySelectorAll('.sideScroll-scroller, .blocks-gallery-grid');
+
+    let scrollers = document.querySelectorAll('.sideScroll-scroller, .blocks-gallery-grid, .scroll-gallery-wp59');
       
     scrollers.forEach( (scroller) => {
+      if ( scroller.classList.contains('scroll-gallery-wp59') ){
+        let scrollGalleryWp59Parent = document.createElement('div');
+        scrollGalleryWp59Parent.classList.add('scroll-gallery-wp59-wrapper');
+        scroller.parentNode.insertBefore(scrollGalleryWp59Parent, scroller);
+        scrollGalleryWp59Parent.append(scroller);
+      }
       let oneScrollW = scroller.children[1].getBoundingClientRect().width;
       let firstScrollW = scroller.children[0].getBoundingClientRect().width;
       let maxScrollW = scroller.scrollWidth - scroller.clientWidth;
